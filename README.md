@@ -5,7 +5,7 @@
 
   <h1 align="center" style="margin-bottom: 0; margin-top: 1rem;">datamine</h1>
 
-  <p align="center">A Gleam package for accessing Minecraft data</p>
+  <p align="center">Minecraft data in Gleam</p>
 
 </div>
 

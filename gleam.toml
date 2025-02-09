@@ -1,7 +1,7 @@
 name = "datamine"
 version = "0.1.0"
 
-description = "A Gleam package for accessing Minecraft data"
+description = "Minecraft data in Gleam"
 licences = ["Apache-2.0"]
 repository = { type = "github", user = "zwubs", repo = "datamine" }
 
