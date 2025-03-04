@@ -1,7 +1,7 @@
 import datamine/common/protocol.{Phase}
 import datamine/common/protocol/phase_id
-import datamine/versions/v1_21_4/protocol/packets/clientbound
-import datamine/versions/v1_21_4/protocol/packets/serverbound
+import datamine/version/v1_21_4/protocol/packet/clientbound
+import datamine/version/v1_21_4/protocol/packet/serverbound
 
 pub const phases = [
   Phase(phase_id.Handshake, [], [serverbound.intention]),

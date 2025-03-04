@@ -10,7 +10,7 @@ pub const blocks = [
   Block("polished_diorite", []),
   Block("andesite", []),
   Block("polished_andesite", []),
-  Block("grass_block", state.grass_like),
+  Block("grass_block", state.snowy),
   Block("dirt", []),
   Block("coarse_dirt", []),
 ]
