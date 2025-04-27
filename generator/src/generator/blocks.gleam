@@ -1,289 +1,198 @@
-import datamine/common/block/state/property as datamine_property
-import generator/block/property
+import datamine/common/block
+import datamine/common/block/block_property
+import datamine/common/identifier
+import datamine/common/registry
+import datamine/common/version_number
 import glam/doc
 import gleam/dict
 import gleam/dynamic/decode
 import gleam/int
-import gleam/io
 import gleam/list
+import gleam/pair
 import gleam/result
-import gleam/set
 import gleam/string
-import gleamgen/import_
-import gleamgen/module
-import gleamgen/render
+import internal/code
+import simplifile
 
 const identifier_prefix = "minecraft:"
 
-pub type Block {
-  Block(
-    id: String,
-    block_type: String,
-    properties: dict.Dict(String, List(String)),
-    states: List(BlockState),
-  )
+pub type DecodedBlocks =
+  dict.Dict(identifier.Identifier, DecodedBlock)
+
+pub type DecodedBlock {
+  DecodedBlock(type_identifier: String, properties: DecodedBlockProperties)
 }
 
-fn block_decoder() {
-  use block_type <- decode.subfield(
-    ["definition", "type"],
-    decode.map(decode.string, string.replace(_, identifier_prefix, "")),
-  )
-  use properties <- decode.optional_field(
-    "properties",
-    dict.new(),
-    decode.dict(decode.string, decode.list(decode.string)),
-  )
-  use states <- decode.field("states", decode.list(block_state_decoder()))
-  decode.success(Block("", block_type:, properties:, states:))
-}
+pub type DecodedBlockProperties =
+  dict.Dict(String, List(String))
 
-pub type BlockState {
-  BlockState(id: Int, default: Bool, properties: dict.Dict(String, String))
-}
-
-fn block_state_decoder() {
-  use id <- decode.field("id", decode.int)
-  use default <- decode.optional_field("default", False, decode.bool)
-  use properties <- decode.optional_field(
-    "properties",
-    dict.new(),
-    decode.dict(decode.string, decode.string),
-  )
-  decode.success(BlockState(id:, default:, properties:))
-}
-
-pub fn decoder() {
-  decode.map(decode.dict(decode.string, block_decoder()), fn(blocks) {
-    dict.to_list(blocks)
-    |> list.map(fn(block) {
-      let identifier = block.0
-      let id = string.replace(identifier, identifier_prefix, "")
-      let block = block.1
-      Block(..block, id:)
-    })
-    |> list.sort(fn(a, b) {
-      let assert Ok(a_state) = list.first(a.states)
-      let assert Ok(b_state) = list.first(b.states)
-      int.compare(a_state.id, b_state.id)
-    })
-  })
-}
-
-fn generate_property_consts(
-  properties: List(property.Property),
-  existing_properties: set.Set(datamine_property.Property),
-  builder: property.ExpressionBuilder(a),
-  handler: fn() -> module.Module,
-) {
-  case properties {
-    [] -> handler()
-    [#(name, _) as property, ..properties] -> {
-      use _ <- module.with_constant(
-        module.DefinitionDetails(name, is_public: True, attributes: []),
-        builder(property),
-      )
-      generate_property_consts(
-        properties,
-        existing_properties,
-        builder,
-        handler,
-      )
-    }
-  }
-}
-
-pub fn generate_block_properties(blocks: List(Block)) {
-  let properties =
-    list.map(blocks, fn(block) { dict.to_list(block.properties) })
-    |> list.flatten
-
-  let mod = {
-    use property_module <- module.with_import(
-      import_.new(["datamine", "common", "block", "state", "property"]),
+pub fn decoder() -> decode.Decoder(DecodedBlocks) {
+  decode.dict(decode.string, {
+    use type_identifier <- decode.subfield(
+      ["definition", "type"],
+      decode.string,
     )
-
-    let property_type = import_.unchecked_type(property_module, "Property")
-
-    use <- generate_property_consts(properties, set.new(), property.expression(
-      property_module,
-      property_type,
-      _,
-    ))
-
-    module.eof()
-  }
-
-  mod
-  |> module.render(render.default_context())
-  |> render.to_string()
-  |> io.println()
+    use properties <- decode.optional_field(
+      "properties",
+      dict.new(),
+      decode.dict(decode.string, decode.list(decode.string)),
+    )
+    decode.success(DecodedBlock(type_identifier:, properties:))
+  })
 }
 
-pub fn generate_block_properties_glam(blocks: List(Block)) {
-  let properties =
-    list.map(blocks, fn(block) { dict.to_list(block.properties) })
-    |> list.flatten
+pub fn map(decoded_blocks: DecodedBlocks, block_registry: registry.Registry) {
+  let index_by_identifier =
+    dict.from_list(list.index_map(block_registry.entries, pair.new))
 
-  list.map(properties, fn(property) {
-    let #(name, values) = property
-    doc.from_string("const " <> name <> " = ")
-    let ints =
-      result.all(list.map(values, int.parse))
-      |> result.map(fn(ints) {
-        use min <- result.try(list.first(ints))
-        use max <- result.try(list.last(ints))
-        Ok(#(min, max))
-      })
-      |> result.flatten
-    case property.1, ints {
-      ["true", "false"], Error(_) ->
-        call_doc("property.Bool", [string_doc(name), string_doc(name)])
-      _, Ok(#(min, max)) ->
-        call_doc("property.Int", [
-          string_doc(name),
-          string_doc(name),
-          doc.from_string(int.to_string(min)),
-          doc.from_string(int.to_string(max)),
-        ])
-      values, Error(_) ->
-        call_doc("property.Enum", [
-          string_doc(name),
-          string_doc(name),
-          comma_list("[", list.map(values, string_doc), "]"),
-        ])
+  dict.to_list(decoded_blocks)
+  |> list.sort(fn(a, b) {
+    let assert Ok(a_index) = dict.get(index_by_identifier, a.0)
+    let assert Ok(b_index) = dict.get(index_by_identifier, b.0)
+    int.compare(a_index, b_index)
+  })
+  |> list.map(fn(key_value) {
+    let #(identifier, DecodedBlock(type_identifier, decoded_properties)) =
+      key_value
+    let properties = map_properties(decoded_properties)
+    block.Block(identifier:, type_identifier:, properties:)
+  })
+}
+
+fn map_properties(decoded_properties: DecodedBlockProperties) {
+  dict.to_list(decoded_properties)
+  |> list.sort(fn(a, b) { string.compare(a.0, b.0) })
+  |> list.map(fn(key_value) {
+    let #(name, values) = key_value
+    case values {
+      ["true", "false"] -> block_property.Bool(name)
+      values -> {
+        case result.all(list.map(values, int.parse)) {
+          Ok(values) -> {
+            let assert Ok(min) = list.first(values)
+            let assert Ok(max) = list.last(values)
+            block_property.Int(name, min, max)
+          }
+          Error(_) -> block_property.Enum(name, values)
+        }
+      }
     }
   })
-  |> doc.concat()
-  |> doc.to_string(80)
-  |> io.println
 }
 
-const indent = 2
-
-/// A pretty printed function call where the first argument is piped into
-/// the function.
-///
-fn pipe_call_doc(
-  function: String,
-  first: doc.Document,
-  rest: List(doc.Document),
-) -> doc.Document {
-  [first, doc.line, call_doc("|> " <> function, rest)]
-  |> doc.concat
-}
-
-/// A pretty printed function call.
-///
-fn call_doc(function: String, args: List(doc.Document)) -> doc.Document {
-  [doc.from_string(function), comma_list("(", args, ")")]
-  |> doc.concat
-  |> doc.group
-}
-
-/// A pretty printed Gleam block.
-///
-fn block(body: List(doc.Document)) -> doc.Document {
+pub fn generate(blocks: List(block.Block)) {
   [
-    doc.from_string("{"),
-    [doc.line, ..body]
-      |> doc.concat
-      |> doc.nest(by: indent),
-    doc.line,
-    doc.from_string("}"),
+    "import datamine/common/block.{Block}",
+    "import datamine/common/block/block_property.{Bool, Enum, Int}",
   ]
-  |> doc.concat
+  |> list.map(doc.from_string)
+  |> doc.join(doc.lines(1))
+  |> doc.append(doc.lines(2))
+  |> doc.append(
+    list.map(blocks, fn(block) {
+      let assert Ok(variable_name) = identifier.path(block.identifier)
+      doc.from_string("pub const " <> variable_name <> " = ")
+      |> doc.append(
+        code.call_doc("Block", [
+          code.string_doc(block.identifier),
+          code.string_doc(block.type_identifier),
+          code.list_doc(
+            list.map(block.properties, fn(property) {
+              case property {
+                block_property.Bool(name) ->
+                  code.call_doc("Bool", [code.string_doc(name)])
+                block_property.Enum(name, values) ->
+                  code.call_doc("Enum", [
+                    code.string_doc(name),
+                    code.list_doc(list.map(values, code.string_doc)),
+                  ])
+                block_property.Int(name, min, max) ->
+                  code.call_doc("Int", [
+                    code.string_doc(name),
+                    doc.from_string(int.to_string(min)),
+                    doc.from_string(int.to_string(max)),
+                  ])
+              }
+            }),
+          ),
+        ]),
+      )
+    })
+    |> doc.join(doc.lines(2)),
+  )
+  |> doc.to_string(code.max_width)
 }
+// fn block_decoder() {
+//   use block_type <- decode.subfield(
+//     ["definition", "type"],
+//     decode.map(decode.string, string.replace(_, identifier_prefix, "")),
+//   )
+//   use properties <- decode.optional_field(
+//     "properties",
+//     dict.new(),
+//     decode.dict(decode.string, decode.list(decode.string)),
+//   )
+//   decode.success(Block("", block_type:, properties:))
+// }
 
-/// A pretty printed public function definition.
-///
-fn fun_doc(
-  name: String,
-  args: List(String),
-  body: List(doc.Document),
-) -> doc.Document {
-  let args = list.map(args, doc.from_string)
+// pub fn decoder() {
+//   decode.map(decode.dict(decode.string, block_decoder()), fn(blocks) {
+//     dict.to_list(blocks)
+//     |> list.map(fn(block) {
+//       let identifier = block.0
+//       let id = string.replace(identifier, identifier_prefix, "")
+//       let block = block.1
+//       Block(..block, id:)
+//     })
+//     |> list.sort(fn(a, b) {
+//       let assert Ok(a_state) = list.first(a.states)
+//       let assert Ok(b_state) = list.first(b.states)
+//       int.compare(a_state.id, b_state.id)
+//     })
+//   })
+// }
 
-  [
-    doc.from_string("pub fn " <> name),
-    comma_list("(", args, ") "),
-    block([body |> doc.join(with: doc.lines(2))]),
-  ]
-  |> doc.concat
-  |> doc.group
-}
+// pub fn generate_block_properties(blocks: List(Block)) {
+//   list.map(blocks, fn(block) { dict.to_list(block.properties) })
+//   |> list.flatten
+//   |> list.unique
+//   |> list.map(generate_block_property)
+//   |> list.prepend(doc.from_string("import datamine/common/block/state/property"))
+//   |> doc.join(doc.lines(2))
+//   |> doc.to_string(80)
+//   |> io.println
+// }
 
-fn fn_doc(args: List(String), body: doc.Document) -> doc.Document {
-  [
-    doc.from_string("fn"),
-    comma_list("(", list.map(args, doc.from_string), ") {"),
-    [doc.space, body]
-      |> doc.concat
-      |> doc.nest(by: indent),
-    doc.space,
-    doc.from_string("}"),
-  ]
-  |> doc.concat
-  |> doc.group
-}
-
-/// A pretty printed let assignment.
-///
-fn let_var(name: String, body: doc.Document) -> doc.Document {
-  [doc.from_string("let " <> name <> " ="), doc.space, body]
-  |> doc.concat
-}
-
-/// A pretty printed const assignment.
-///
-fn const_var(name: String, body: doc.Document) -> doc.Document {
-  [doc.from_string("const " <> name <> " ="), doc.space, body]
-  |> doc.concat
-}
-
-/// A pretty printed public const assignment.
-///
-fn pub_const_var(name: String, body: doc.Document) -> doc.Document {
-  doc.from_string("pub ") |> doc.append(const_var(name, body))
-}
-
-/// A pretty printed Gleam string.
-///
-/// > ⚠️ This function escapes all `\` and `"` inside the original string to
-/// > avoid generating invalid Gleam code.
-///
-fn string_doc(content: String) -> doc.Document {
-  let escaped_string =
-    content
-    |> string.replace(each: "\\", with: "\\\\")
-    |> string.replace(each: "\"", with: "\\\"")
-    |> doc.from_string
-
-  [doc.from_string("\""), escaped_string, doc.from_string("\"")]
-  |> doc.concat
-}
-
-/// A comma separated list of items with some given open and closed delimiters.
-///
-fn comma_list(
-  open: String,
-  content: List(doc.Document),
-  close: String,
-) -> doc.Document {
-  [
-    doc.from_string(open),
-    [
-      // We want the first break to be nested
-      // in case the group is broken.
-      doc.soft_break,
-      doc.join(content, doc.break(", ", ",")),
-    ]
-      |> doc.concat
-      |> doc.group
-      |> doc.nest(by: indent),
-    doc.break("", ","),
-    doc.from_string(close),
-  ]
-  |> doc.concat
-  |> doc.group
-}
+// fn generate_block_property(property: BlockProperty) {
+//   let #(name, values) = property
+//   let ints =
+//     result.all(list.map(values, int.parse))
+//     |> result.map(fn(ints) {
+//       use min <- result.try(list.first(ints))
+//       use max <- result.try(list.last(ints))
+//       Ok(#(min, max))
+//     })
+//     |> result.flatten
+//   let value = case values, ints {
+//     ["true", "false"], Error(_) ->
+//       code.call_doc("property.Bool", [
+//         code.string_doc(name),
+//         code.string_doc(name),
+//       ])
+//     _, Ok(#(min, max)) ->
+//       code.call_doc("property.Int", [
+//         code.string_doc(name),
+//         code.string_doc(name),
+//         doc.from_string(int.to_string(min)),
+//         doc.from_string(int.to_string(max)),
+//       ])
+//     values, Error(_) ->
+//       code.call_doc("property.Enum", [
+//         code.string_doc(name),
+//         code.string_doc(name),
+//         code.list_doc(list.map(values, code.string_doc)),
+//       ])
+//   }
+//   doc.from_string("pub const " <> name <> " = ")
+//   |> doc.append(value)
+// }
