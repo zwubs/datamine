@@ -11,7 +11,7 @@
 
 ## About
 `datamine` is a Gleam package built for making accessing Minecraft data easy.
-It's intended use is for code generation but has many other applications.
+It's intended use is for code generation, but it has many other applications.
 This package is heavily inspired by the [`minecraft-data`](https://github.com/PrismarineJS/minecraft-data) project.
 
 ## Roadmap
@@ -19,6 +19,5 @@ This project is in an extremely alpha phase, so there's a lot that needs to be a
 Also, this project mostly acts a learning opportunity for myself, so I have no dates planned for features.
 But, Here's a small breakdown of some of the things that are on my mind for the future:
 
-- More Supported Versions
-- More Data Points (Registries, blocks, items, etc.)
-- Data Generation (From [`minecraft-data`](https://github.com/PrismarineJS/minecraft-data) and [Minecraft data generators](https://minecraft.wiki/w/Minecraft_Wiki:Projects/wiki.vg_merge/Data_Generators))
+- More versions
+- More data points (items, etc.) & generation
