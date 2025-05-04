@@ -11,8 +11,7 @@ import gleam/list
 import gleam/result
 import simplifile
 
-pub fn main() {
-  let assert Ok(version) = version_number.from_string("1.21.5")
+pub fn generate(version: version_number.VersionNumber) {
   let module_name = version_number.to_module_name(version)
   let module_path = "datamine/version/" <> module_name
   let relative_path = "./src/" <> module_path
