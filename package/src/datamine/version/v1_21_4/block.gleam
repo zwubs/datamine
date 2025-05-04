@@ -49,18 +49,30 @@ pub const cobblestone = Block("minecraft:cobblestone", "minecraft:block", [])
 
 pub const oak_planks = Block("minecraft:oak_planks", "minecraft:block", [])
 
-pub const spruce_planks = Block("minecraft:spruce_planks", "minecraft:block", [],
+pub const spruce_planks = Block(
+  "minecraft:spruce_planks",
+  "minecraft:block",
+  [],
 )
 
 pub const birch_planks = Block("minecraft:birch_planks", "minecraft:block", [])
 
-pub const jungle_planks = Block("minecraft:jungle_planks", "minecraft:block", [],
+pub const jungle_planks = Block(
+  "minecraft:jungle_planks",
+  "minecraft:block",
+  [],
 )
 
-pub const acacia_planks = Block("minecraft:acacia_planks", "minecraft:block", [],
+pub const acacia_planks = Block(
+  "minecraft:acacia_planks",
+  "minecraft:block",
+  [],
 )
 
-pub const cherry_planks = Block("minecraft:cherry_planks", "minecraft:block", [],
+pub const cherry_planks = Block(
+  "minecraft:cherry_planks",
+  "minecraft:block",
+  [],
 )
 
 pub const dark_oak_planks = Block(
@@ -87,10 +99,16 @@ pub const mangrove_planks = Block(
   [],
 )
 
-pub const bamboo_planks = Block("minecraft:bamboo_planks", "minecraft:block", [],
+pub const bamboo_planks = Block(
+  "minecraft:bamboo_planks",
+  "minecraft:block",
+  [],
 )
 
-pub const bamboo_mosaic = Block("minecraft:bamboo_mosaic", "minecraft:block", [],
+pub const bamboo_mosaic = Block(
+  "minecraft:bamboo_mosaic",
+  "minecraft:block",
+  [],
 )
 
 pub const oak_sapling = Block(
@@ -169,7 +187,10 @@ pub const suspicious_sand = Block(
   [Int("dusted", 0, 3)],
 )
 
-pub const red_sand = Block("minecraft:red_sand", "minecraft:colored_falling", [],
+pub const red_sand = Block(
+  "minecraft:red_sand",
+  "minecraft:colored_falling",
+  [],
 )
 
 pub const gravel = Block("minecraft:gravel", "minecraft:colored_falling", [])
@@ -180,7 +201,10 @@ pub const suspicious_gravel = Block(
   [Int("dusted", 0, 3)],
 )
 
-pub const gold_ore = Block("minecraft:gold_ore", "minecraft:drop_experience", [],
+pub const gold_ore = Block(
+  "minecraft:gold_ore",
+  "minecraft:drop_experience",
+  [],
 )
 
 pub const deepslate_gold_ore = Block(
@@ -189,7 +213,10 @@ pub const deepslate_gold_ore = Block(
   [],
 )
 
-pub const iron_ore = Block("minecraft:iron_ore", "minecraft:drop_experience", [],
+pub const iron_ore = Block(
+  "minecraft:iron_ore",
+  "minecraft:drop_experience",
+  [],
 )
 
 pub const deepslate_iron_ore = Block(
@@ -198,7 +225,10 @@ pub const deepslate_iron_ore = Block(
   [],
 )
 
-pub const coal_ore = Block("minecraft:coal_ore", "minecraft:drop_experience", [],
+pub const coal_ore = Block(
+  "minecraft:coal_ore",
+  "minecraft:drop_experience",
+  [],
 )
 
 pub const deepslate_coal_ore = Block(
@@ -537,9 +567,8 @@ pub const dispenser = Block(
   "minecraft:dispenser",
   "minecraft:dispenser",
   [
-    Enum("facing", ["north", "east", "south", "west", "up", "down"]), Bool(
-      "triggered",
-    ),
+    Enum("facing", ["north", "east", "south", "west", "up", "down"]),
+    Bool("triggered"),
   ],
 )
 
@@ -551,7 +580,10 @@ pub const chiseled_sandstone = Block(
   [],
 )
 
-pub const cut_sandstone = Block("minecraft:cut_sandstone", "minecraft:block", [],
+pub const cut_sandstone = Block(
+  "minecraft:cut_sandstone",
+  "minecraft:block",
+  [],
 )
 
 pub const note_block = Block(
@@ -566,7 +598,9 @@ pub const note_block = Block(
         "banjo", "pling", "zombie", "skeleton", "creeper", "dragon",
         "wither_skeleton", "piglin", "custom_head",
       ],
-    ), Int("note", 0, 24), Bool("powered"),
+    ),
+    Int("note", 0, 24),
+    Bool("powered"),
   ],
 )
 
@@ -574,10 +608,9 @@ pub const white_bed = Block(
   "minecraft:white_bed",
   "minecraft:bed",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Bool("occupied"), Enum(
-      "part",
-      ["head", "foot"],
-    ),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Bool("occupied"),
+    Enum("part", ["head", "foot"]),
   ],
 )
 
@@ -585,10 +618,9 @@ pub const orange_bed = Block(
   "minecraft:orange_bed",
   "minecraft:bed",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Bool("occupied"), Enum(
-      "part",
-      ["head", "foot"],
-    ),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Bool("occupied"),
+    Enum("part", ["head", "foot"]),
   ],
 )
 
@@ -596,10 +628,9 @@ pub const magenta_bed = Block(
   "minecraft:magenta_bed",
   "minecraft:bed",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Bool("occupied"), Enum(
-      "part",
-      ["head", "foot"],
-    ),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Bool("occupied"),
+    Enum("part", ["head", "foot"]),
   ],
 )
 
@@ -607,10 +638,9 @@ pub const light_blue_bed = Block(
   "minecraft:light_blue_bed",
   "minecraft:bed",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Bool("occupied"), Enum(
-      "part",
-      ["head", "foot"],
-    ),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Bool("occupied"),
+    Enum("part", ["head", "foot"]),
   ],
 )
 
@@ -618,10 +648,9 @@ pub const yellow_bed = Block(
   "minecraft:yellow_bed",
   "minecraft:bed",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Bool("occupied"), Enum(
-      "part",
-      ["head", "foot"],
-    ),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Bool("occupied"),
+    Enum("part", ["head", "foot"]),
   ],
 )
 
@@ -629,10 +658,9 @@ pub const lime_bed = Block(
   "minecraft:lime_bed",
   "minecraft:bed",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Bool("occupied"), Enum(
-      "part",
-      ["head", "foot"],
-    ),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Bool("occupied"),
+    Enum("part", ["head", "foot"]),
   ],
 )
 
@@ -640,10 +668,9 @@ pub const pink_bed = Block(
   "minecraft:pink_bed",
   "minecraft:bed",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Bool("occupied"), Enum(
-      "part",
-      ["head", "foot"],
-    ),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Bool("occupied"),
+    Enum("part", ["head", "foot"]),
   ],
 )
 
@@ -651,10 +678,9 @@ pub const gray_bed = Block(
   "minecraft:gray_bed",
   "minecraft:bed",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Bool("occupied"), Enum(
-      "part",
-      ["head", "foot"],
-    ),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Bool("occupied"),
+    Enum("part", ["head", "foot"]),
   ],
 )
 
@@ -662,10 +688,9 @@ pub const light_gray_bed = Block(
   "minecraft:light_gray_bed",
   "minecraft:bed",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Bool("occupied"), Enum(
-      "part",
-      ["head", "foot"],
-    ),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Bool("occupied"),
+    Enum("part", ["head", "foot"]),
   ],
 )
 
@@ -673,10 +698,9 @@ pub const cyan_bed = Block(
   "minecraft:cyan_bed",
   "minecraft:bed",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Bool("occupied"), Enum(
-      "part",
-      ["head", "foot"],
-    ),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Bool("occupied"),
+    Enum("part", ["head", "foot"]),
   ],
 )
 
@@ -684,10 +708,9 @@ pub const purple_bed = Block(
   "minecraft:purple_bed",
   "minecraft:bed",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Bool("occupied"), Enum(
-      "part",
-      ["head", "foot"],
-    ),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Bool("occupied"),
+    Enum("part", ["head", "foot"]),
   ],
 )
 
@@ -695,10 +718,9 @@ pub const blue_bed = Block(
   "minecraft:blue_bed",
   "minecraft:bed",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Bool("occupied"), Enum(
-      "part",
-      ["head", "foot"],
-    ),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Bool("occupied"),
+    Enum("part", ["head", "foot"]),
   ],
 )
 
@@ -706,10 +728,9 @@ pub const brown_bed = Block(
   "minecraft:brown_bed",
   "minecraft:bed",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Bool("occupied"), Enum(
-      "part",
-      ["head", "foot"],
-    ),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Bool("occupied"),
+    Enum("part", ["head", "foot"]),
   ],
 )
 
@@ -717,10 +738,9 @@ pub const green_bed = Block(
   "minecraft:green_bed",
   "minecraft:bed",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Bool("occupied"), Enum(
-      "part",
-      ["head", "foot"],
-    ),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Bool("occupied"),
+    Enum("part", ["head", "foot"]),
   ],
 )
 
@@ -728,10 +748,9 @@ pub const red_bed = Block(
   "minecraft:red_bed",
   "minecraft:bed",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Bool("occupied"), Enum(
-      "part",
-      ["head", "foot"],
-    ),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Bool("occupied"),
+    Enum("part", ["head", "foot"]),
   ],
 )
 
@@ -739,10 +758,9 @@ pub const black_bed = Block(
   "minecraft:black_bed",
   "minecraft:bed",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Bool("occupied"), Enum(
-      "part",
-      ["head", "foot"],
-    ),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Bool("occupied"),
+    Enum("part", ["head", "foot"]),
   ],
 )
 
@@ -750,13 +768,15 @@ pub const powered_rail = Block(
   "minecraft:powered_rail",
   "minecraft:powered_rail",
   [
-    Bool("powered"), Enum(
+    Bool("powered"),
+    Enum(
       "shape",
       [
         "north_south", "east_west", "ascending_east", "ascending_west",
         "ascending_north", "ascending_south",
       ],
-    ), Bool("waterlogged"),
+    ),
+    Bool("waterlogged"),
   ],
 )
 
@@ -764,13 +784,15 @@ pub const detector_rail = Block(
   "minecraft:detector_rail",
   "minecraft:detector_rail",
   [
-    Bool("powered"), Enum(
+    Bool("powered"),
+    Enum(
       "shape",
       [
         "north_south", "east_west", "ascending_east", "ascending_west",
         "ascending_north", "ascending_south",
       ],
-    ), Bool("waterlogged"),
+    ),
+    Bool("waterlogged"),
   ],
 )
 
@@ -778,10 +800,8 @@ pub const sticky_piston = Block(
   "minecraft:sticky_piston",
   "minecraft:piston_base",
   [
-    Bool("extended"), Enum(
-      "facing",
-      ["north", "east", "south", "west", "up", "down"],
-    ),
+    Bool("extended"),
+    Enum("facing", ["north", "east", "south", "west", "up", "down"]),
   ],
 )
 
@@ -809,10 +829,8 @@ pub const piston = Block(
   "minecraft:piston",
   "minecraft:piston_base",
   [
-    Bool("extended"), Enum(
-      "facing",
-      ["north", "east", "south", "west", "up", "down"],
-    ),
+    Bool("extended"),
+    Enum("facing", ["north", "east", "south", "west", "up", "down"]),
   ],
 )
 
@@ -820,9 +838,9 @@ pub const piston_head = Block(
   "minecraft:piston_head",
   "minecraft:piston_head",
   [
-    Enum("facing", ["north", "east", "south", "west", "up", "down"]), Bool(
-      "short",
-    ), Enum("type", ["normal", "sticky"]),
+    Enum("facing", ["north", "east", "south", "west", "up", "down"]),
+    Bool("short"),
+    Enum("type", ["normal", "sticky"]),
   ],
 )
 
@@ -870,10 +888,8 @@ pub const moving_piston = Block(
   "minecraft:moving_piston",
   "minecraft:moving_piston",
   [
-    Enum("facing", ["north", "east", "south", "west", "up", "down"]), Enum(
-      "type",
-      ["normal", "sticky"],
-    ),
+    Enum("facing", ["north", "east", "south", "west", "up", "down"]),
+    Enum("type", ["normal", "sticky"]),
   ],
 )
 
@@ -939,9 +955,13 @@ pub const chiseled_bookshelf = Block(
   "minecraft:chiseled_bookshelf",
   "minecraft:chiseled_book_shelf",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Bool("slot_0_occupied"),
-    Bool("slot_1_occupied"), Bool("slot_2_occupied"), Bool("slot_3_occupied"),
-    Bool("slot_4_occupied"), Bool("slot_5_occupied"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Bool("slot_0_occupied"),
+    Bool("slot_1_occupied"),
+    Bool("slot_2_occupied"),
+    Bool("slot_3_occupied"),
+    Bool("slot_4_occupied"),
+    Bool("slot_5_occupied"),
   ],
 )
 
@@ -965,7 +985,11 @@ pub const fire = Block(
   "minecraft:fire",
   "minecraft:fire",
   [
-    Int("age", 0, 15), Bool("east"), Bool("north"), Bool("south"), Bool("up"),
+    Int("age", 0, 15),
+    Bool("east"),
+    Bool("north"),
+    Bool("south"),
+    Bool("up"),
     Bool("west"),
   ],
 )
@@ -984,13 +1008,13 @@ pub const oak_stairs = Block(
   "minecraft:oak_stairs",
   "minecraft:stair",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Enum(
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Enum(
       "shape",
       ["straight", "inner_left", "inner_right", "outer_left", "outer_right"],
-    ), Bool("waterlogged"),
+    ),
+    Bool("waterlogged"),
   ],
 )
 
@@ -998,10 +1022,9 @@ pub const chest = Block(
   "minecraft:chest",
   "minecraft:chest",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "type",
-      ["single", "left", "right"],
-    ), Bool("waterlogged"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("type", ["single", "left", "right"]),
+    Bool("waterlogged"),
   ],
 )
 
@@ -1009,11 +1032,11 @@ pub const redstone_wire = Block(
   "minecraft:redstone_wire",
   "minecraft:redstone_wire",
   [
-    Enum("east", ["up", "side", "none"]), Enum("north", ["up", "side", "none"]),
-    Int("power", 0, 15), Enum("south", ["up", "side", "none"]), Enum(
-      "west",
-      ["up", "side", "none"],
-    ),
+    Enum("east", ["up", "side", "none"]),
+    Enum("north", ["up", "side", "none"]),
+    Int("power", 0, 15),
+    Enum("south", ["up", "side", "none"]),
+    Enum("west", ["up", "side", "none"]),
   ],
 )
 
@@ -1029,7 +1052,10 @@ pub const deepslate_diamond_ore = Block(
   [],
 )
 
-pub const diamond_block = Block("minecraft:diamond_block", "minecraft:block", [],
+pub const diamond_block = Block(
+  "minecraft:diamond_block",
+  "minecraft:block",
+  [],
 )
 
 pub const crafting_table = Block(
@@ -1116,10 +1142,11 @@ pub const oak_door = Block(
   "minecraft:oak_door",
   "minecraft:door",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["upper", "lower"],
-    ), Enum("hinge", ["left", "right"]), Bool("open"), Bool("powered"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["upper", "lower"]),
+    Enum("hinge", ["left", "right"]),
+    Bool("open"),
+    Bool("powered"),
   ],
 )
 
@@ -1140,7 +1167,8 @@ pub const rail = Block(
         "ascending_north", "ascending_south", "south_east", "south_west",
         "north_west", "north_east",
       ],
-    ), Bool("waterlogged"),
+    ),
+    Bool("waterlogged"),
   ],
 )
 
@@ -1148,13 +1176,13 @@ pub const cobblestone_stairs = Block(
   "minecraft:cobblestone_stairs",
   "minecraft:stair",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Enum(
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Enum(
       "shape",
       ["straight", "inner_left", "inner_right", "outer_left", "outer_right"],
-    ), Bool("waterlogged"),
+    ),
+    Bool("waterlogged"),
   ],
 )
 
@@ -1366,10 +1394,9 @@ pub const lever = Block(
   "minecraft:lever",
   "minecraft:lever",
   [
-    Enum("face", ["floor", "wall", "ceiling"]), Enum(
-      "facing",
-      ["north", "south", "west", "east"],
-    ), Bool("powered"),
+    Enum("face", ["floor", "wall", "ceiling"]),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Bool("powered"),
   ],
 )
 
@@ -1383,10 +1410,11 @@ pub const iron_door = Block(
   "minecraft:iron_door",
   "minecraft:door",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["upper", "lower"],
-    ), Enum("hinge", ["left", "right"]), Bool("open"), Bool("powered"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["upper", "lower"]),
+    Enum("hinge", ["left", "right"]),
+    Bool("open"),
+    Bool("powered"),
   ],
 )
 
@@ -1478,10 +1506,9 @@ pub const stone_button = Block(
   "minecraft:stone_button",
   "minecraft:button",
   [
-    Enum("face", ["floor", "wall", "ceiling"]), Enum(
-      "facing",
-      ["north", "south", "west", "east"],
-    ), Bool("powered"),
+    Enum("face", ["floor", "wall", "ceiling"]),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Bool("powered"),
   ],
 )
 
@@ -1518,7 +1545,12 @@ pub const jukebox = Block(
 pub const oak_fence = Block(
   "minecraft:oak_fence",
   "minecraft:fence",
-  [Bool("east"), Bool("north"), Bool("south"), Bool("waterlogged"), Bool("west"),
+  [
+    Bool("east"),
+    Bool("north"),
+    Bool("south"),
+    Bool("waterlogged"),
+    Bool("west"),
   ],
 )
 
@@ -1574,8 +1606,10 @@ pub const repeater = Block(
   "minecraft:repeater",
   "minecraft:repeater",
   [
-    Int("delay", 1, 4), Enum("facing", ["north", "south", "west", "east"]),
-    Bool("locked"), Bool("powered"),
+    Int("delay", 1, 4),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Bool("locked"),
+    Bool("powered"),
   ],
 )
 
@@ -1679,10 +1713,11 @@ pub const oak_trapdoor = Block(
   "minecraft:oak_trapdoor",
   "minecraft:trapdoor",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Bool("open"), Bool("powered"), Bool("waterlogged"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Bool("open"),
+    Bool("powered"),
+    Bool("waterlogged"),
   ],
 )
 
@@ -1690,10 +1725,11 @@ pub const spruce_trapdoor = Block(
   "minecraft:spruce_trapdoor",
   "minecraft:trapdoor",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Bool("open"), Bool("powered"), Bool("waterlogged"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Bool("open"),
+    Bool("powered"),
+    Bool("waterlogged"),
   ],
 )
 
@@ -1701,10 +1737,11 @@ pub const birch_trapdoor = Block(
   "minecraft:birch_trapdoor",
   "minecraft:trapdoor",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Bool("open"), Bool("powered"), Bool("waterlogged"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Bool("open"),
+    Bool("powered"),
+    Bool("waterlogged"),
   ],
 )
 
@@ -1712,10 +1749,11 @@ pub const jungle_trapdoor = Block(
   "minecraft:jungle_trapdoor",
   "minecraft:trapdoor",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Bool("open"), Bool("powered"), Bool("waterlogged"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Bool("open"),
+    Bool("powered"),
+    Bool("waterlogged"),
   ],
 )
 
@@ -1723,10 +1761,11 @@ pub const acacia_trapdoor = Block(
   "minecraft:acacia_trapdoor",
   "minecraft:trapdoor",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Bool("open"), Bool("powered"), Bool("waterlogged"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Bool("open"),
+    Bool("powered"),
+    Bool("waterlogged"),
   ],
 )
 
@@ -1734,10 +1773,11 @@ pub const cherry_trapdoor = Block(
   "minecraft:cherry_trapdoor",
   "minecraft:trapdoor",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Bool("open"), Bool("powered"), Bool("waterlogged"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Bool("open"),
+    Bool("powered"),
+    Bool("waterlogged"),
   ],
 )
 
@@ -1745,10 +1785,11 @@ pub const dark_oak_trapdoor = Block(
   "minecraft:dark_oak_trapdoor",
   "minecraft:trapdoor",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Bool("open"), Bool("powered"), Bool("waterlogged"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Bool("open"),
+    Bool("powered"),
+    Bool("waterlogged"),
   ],
 )
 
@@ -1756,10 +1797,11 @@ pub const pale_oak_trapdoor = Block(
   "minecraft:pale_oak_trapdoor",
   "minecraft:trapdoor",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Bool("open"), Bool("powered"), Bool("waterlogged"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Bool("open"),
+    Bool("powered"),
+    Bool("waterlogged"),
   ],
 )
 
@@ -1767,10 +1809,11 @@ pub const mangrove_trapdoor = Block(
   "minecraft:mangrove_trapdoor",
   "minecraft:trapdoor",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Bool("open"), Bool("powered"), Bool("waterlogged"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Bool("open"),
+    Bool("powered"),
+    Bool("waterlogged"),
   ],
 )
 
@@ -1778,10 +1821,11 @@ pub const bamboo_trapdoor = Block(
   "minecraft:bamboo_trapdoor",
   "minecraft:trapdoor",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Bool("open"), Bool("powered"), Bool("waterlogged"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Bool("open"),
+    Bool("powered"),
+    Bool("waterlogged"),
   ],
 )
 
@@ -1849,9 +1893,12 @@ pub const brown_mushroom_block = Block(
   "minecraft:brown_mushroom_block",
   "minecraft:huge_mushroom",
   [
-    Bool("down"), Bool("east"), Bool("north"), Bool("south"), Bool("up"), Bool(
-      "west",
-    ),
+    Bool("down"),
+    Bool("east"),
+    Bool("north"),
+    Bool("south"),
+    Bool("up"),
+    Bool("west"),
   ],
 )
 
@@ -1859,9 +1906,12 @@ pub const red_mushroom_block = Block(
   "minecraft:red_mushroom_block",
   "minecraft:huge_mushroom",
   [
-    Bool("down"), Bool("east"), Bool("north"), Bool("south"), Bool("up"), Bool(
-      "west",
-    ),
+    Bool("down"),
+    Bool("east"),
+    Bool("north"),
+    Bool("south"),
+    Bool("up"),
+    Bool("west"),
   ],
 )
 
@@ -1869,16 +1919,24 @@ pub const mushroom_stem = Block(
   "minecraft:mushroom_stem",
   "minecraft:huge_mushroom",
   [
-    Bool("down"), Bool("east"), Bool("north"), Bool("south"), Bool("up"), Bool(
-      "west",
-    ),
+    Bool("down"),
+    Bool("east"),
+    Bool("north"),
+    Bool("south"),
+    Bool("up"),
+    Bool("west"),
   ],
 )
 
 pub const iron_bars = Block(
   "minecraft:iron_bars",
   "minecraft:iron_bars",
-  [Bool("east"), Bool("north"), Bool("south"), Bool("waterlogged"), Bool("west"),
+  [
+    Bool("east"),
+    Bool("north"),
+    Bool("south"),
+    Bool("waterlogged"),
+    Bool("west"),
   ],
 )
 
@@ -1891,7 +1949,12 @@ pub const chain = Block(
 pub const glass_pane = Block(
   "minecraft:glass_pane",
   "minecraft:iron_bars",
-  [Bool("east"), Bool("north"), Bool("south"), Bool("waterlogged"), Bool("west"),
+  [
+    Bool("east"),
+    Bool("north"),
+    Bool("south"),
+    Bool("waterlogged"),
+    Bool("west"),
   ],
 )
 
@@ -1933,9 +1996,13 @@ pub const glow_lichen = Block(
   "minecraft:glow_lichen",
   "minecraft:glow_lichen",
   [
-    Bool("down"), Bool("east"), Bool("north"), Bool("south"), Bool("up"), Bool(
-      "waterlogged",
-    ), Bool("west"),
+    Bool("down"),
+    Bool("east"),
+    Bool("north"),
+    Bool("south"),
+    Bool("up"),
+    Bool("waterlogged"),
+    Bool("west"),
   ],
 )
 
@@ -1943,9 +2010,13 @@ pub const resin_clump = Block(
   "minecraft:resin_clump",
   "minecraft:multiface",
   [
-    Bool("down"), Bool("east"), Bool("north"), Bool("south"), Bool("up"), Bool(
-      "waterlogged",
-    ), Bool("west"),
+    Bool("down"),
+    Bool("east"),
+    Bool("north"),
+    Bool("south"),
+    Bool("up"),
+    Bool("waterlogged"),
+    Bool("west"),
   ],
 )
 
@@ -1953,9 +2024,10 @@ pub const oak_fence_gate = Block(
   "minecraft:oak_fence_gate",
   "minecraft:fence_gate",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Bool("in_wall"), Bool(
-      "open",
-    ), Bool("powered"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Bool("in_wall"),
+    Bool("open"),
+    Bool("powered"),
   ],
 )
 
@@ -1963,13 +2035,13 @@ pub const brick_stairs = Block(
   "minecraft:brick_stairs",
   "minecraft:stair",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Enum(
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Enum(
       "shape",
       ["straight", "inner_left", "inner_right", "outer_left", "outer_right"],
-    ), Bool("waterlogged"),
+    ),
+    Bool("waterlogged"),
   ],
 )
 
@@ -1977,13 +2049,13 @@ pub const stone_brick_stairs = Block(
   "minecraft:stone_brick_stairs",
   "minecraft:stair",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Enum(
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Enum(
       "shape",
       ["straight", "inner_left", "inner_right", "outer_left", "outer_right"],
-    ), Bool("waterlogged"),
+    ),
+    Bool("waterlogged"),
   ],
 )
 
@@ -1991,13 +2063,13 @@ pub const mud_brick_stairs = Block(
   "minecraft:mud_brick_stairs",
   "minecraft:stair",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Enum(
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Enum(
       "shape",
       ["straight", "inner_left", "inner_right", "outer_left", "outer_right"],
-    ), Bool("waterlogged"),
+    ),
+    Bool("waterlogged"),
   ],
 )
 
@@ -2017,13 +2089,13 @@ pub const resin_brick_stairs = Block(
   "minecraft:resin_brick_stairs",
   "minecraft:stair",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Enum(
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Enum(
       "shape",
       ["straight", "inner_left", "inner_right", "outer_left", "outer_right"],
-    ), Bool("waterlogged"),
+    ),
+    Bool("waterlogged"),
   ],
 )
 
@@ -2037,8 +2109,11 @@ pub const resin_brick_wall = Block(
   "minecraft:resin_brick_wall",
   "minecraft:wall",
   [
-    Enum("east", ["none", "low", "tall"]), Enum("north", ["none", "low", "tall"],
-    ), Enum("south", ["none", "low", "tall"]), Bool("up"), Bool("waterlogged"),
+    Enum("east", ["none", "low", "tall"]),
+    Enum("north", ["none", "low", "tall"]),
+    Enum("south", ["none", "low", "tall"]),
+    Bool("up"),
+    Bool("waterlogged"),
     Enum("west", ["none", "low", "tall"]),
   ],
 )
@@ -2049,13 +2124,21 @@ pub const chiseled_resin_bricks = Block(
   [],
 )
 
-pub const nether_bricks = Block("minecraft:nether_bricks", "minecraft:block", [],
+pub const nether_bricks = Block(
+  "minecraft:nether_bricks",
+  "minecraft:block",
+  [],
 )
 
 pub const nether_brick_fence = Block(
   "minecraft:nether_brick_fence",
   "minecraft:fence",
-  [Bool("east"), Bool("north"), Bool("south"), Bool("waterlogged"), Bool("west"),
+  [
+    Bool("east"),
+    Bool("north"),
+    Bool("south"),
+    Bool("waterlogged"),
+    Bool("west"),
   ],
 )
 
@@ -2063,13 +2146,13 @@ pub const nether_brick_stairs = Block(
   "minecraft:nether_brick_stairs",
   "minecraft:stair",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Enum(
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Enum(
       "shape",
       ["straight", "inner_left", "inner_right", "outer_left", "outer_right"],
-    ), Bool("waterlogged"),
+    ),
+    Bool("waterlogged"),
   ],
 )
 
@@ -2139,13 +2222,13 @@ pub const sandstone_stairs = Block(
   "minecraft:sandstone_stairs",
   "minecraft:stair",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Enum(
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Enum(
       "shape",
       ["straight", "inner_left", "inner_right", "outer_left", "outer_right"],
-    ), Bool("waterlogged"),
+    ),
+    Bool("waterlogged"),
   ],
 )
 
@@ -2171,9 +2254,9 @@ pub const tripwire_hook = Block(
   "minecraft:tripwire_hook",
   "minecraft:trip_wire_hook",
   [
-    Bool("attached"), Enum("facing", ["north", "south", "west", "east"]), Bool(
-      "powered",
-    ),
+    Bool("attached"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Bool("powered"),
   ],
 )
 
@@ -2181,26 +2264,33 @@ pub const tripwire = Block(
   "minecraft:tripwire",
   "minecraft:tripwire",
   [
-    Bool("attached"), Bool("disarmed"), Bool("east"), Bool("north"), Bool(
-      "powered",
-    ), Bool("south"), Bool("west"),
+    Bool("attached"),
+    Bool("disarmed"),
+    Bool("east"),
+    Bool("north"),
+    Bool("powered"),
+    Bool("south"),
+    Bool("west"),
   ],
 )
 
-pub const emerald_block = Block("minecraft:emerald_block", "minecraft:block", [],
+pub const emerald_block = Block(
+  "minecraft:emerald_block",
+  "minecraft:block",
+  [],
 )
 
 pub const spruce_stairs = Block(
   "minecraft:spruce_stairs",
   "minecraft:stair",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Enum(
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Enum(
       "shape",
       ["straight", "inner_left", "inner_right", "outer_left", "outer_right"],
-    ), Bool("waterlogged"),
+    ),
+    Bool("waterlogged"),
   ],
 )
 
@@ -2208,13 +2298,13 @@ pub const birch_stairs = Block(
   "minecraft:birch_stairs",
   "minecraft:stair",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Enum(
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Enum(
       "shape",
       ["straight", "inner_left", "inner_right", "outer_left", "outer_right"],
-    ), Bool("waterlogged"),
+    ),
+    Bool("waterlogged"),
   ],
 )
 
@@ -2222,13 +2312,13 @@ pub const jungle_stairs = Block(
   "minecraft:jungle_stairs",
   "minecraft:stair",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Enum(
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Enum(
       "shape",
       ["straight", "inner_left", "inner_right", "outer_left", "outer_right"],
-    ), Bool("waterlogged"),
+    ),
+    Bool("waterlogged"),
   ],
 )
 
@@ -2236,10 +2326,8 @@ pub const command_block = Block(
   "minecraft:command_block",
   "minecraft:command",
   [
-    Bool("conditional"), Enum(
-      "facing",
-      ["north", "east", "south", "west", "up", "down"],
-    ),
+    Bool("conditional"),
+    Enum("facing", ["north", "east", "south", "west", "up", "down"]),
   ],
 )
 
@@ -2249,8 +2337,11 @@ pub const cobblestone_wall = Block(
   "minecraft:cobblestone_wall",
   "minecraft:wall",
   [
-    Enum("east", ["none", "low", "tall"]), Enum("north", ["none", "low", "tall"],
-    ), Enum("south", ["none", "low", "tall"]), Bool("up"), Bool("waterlogged"),
+    Enum("east", ["none", "low", "tall"]),
+    Enum("north", ["none", "low", "tall"]),
+    Enum("south", ["none", "low", "tall"]),
+    Bool("up"),
+    Bool("waterlogged"),
     Enum("west", ["none", "low", "tall"]),
   ],
 )
@@ -2259,8 +2350,11 @@ pub const mossy_cobblestone_wall = Block(
   "minecraft:mossy_cobblestone_wall",
   "minecraft:wall",
   [
-    Enum("east", ["none", "low", "tall"]), Enum("north", ["none", "low", "tall"],
-    ), Enum("south", ["none", "low", "tall"]), Bool("up"), Bool("waterlogged"),
+    Enum("east", ["none", "low", "tall"]),
+    Enum("north", ["none", "low", "tall"]),
+    Enum("south", ["none", "low", "tall"]),
+    Bool("up"),
+    Bool("waterlogged"),
     Enum("west", ["none", "low", "tall"]),
   ],
 )
@@ -2451,10 +2545,9 @@ pub const oak_button = Block(
   "minecraft:oak_button",
   "minecraft:button",
   [
-    Enum("face", ["floor", "wall", "ceiling"]), Enum(
-      "facing",
-      ["north", "south", "west", "east"],
-    ), Bool("powered"),
+    Enum("face", ["floor", "wall", "ceiling"]),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Bool("powered"),
   ],
 )
 
@@ -2462,10 +2555,9 @@ pub const spruce_button = Block(
   "minecraft:spruce_button",
   "minecraft:button",
   [
-    Enum("face", ["floor", "wall", "ceiling"]), Enum(
-      "facing",
-      ["north", "south", "west", "east"],
-    ), Bool("powered"),
+    Enum("face", ["floor", "wall", "ceiling"]),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Bool("powered"),
   ],
 )
 
@@ -2473,10 +2565,9 @@ pub const birch_button = Block(
   "minecraft:birch_button",
   "minecraft:button",
   [
-    Enum("face", ["floor", "wall", "ceiling"]), Enum(
-      "facing",
-      ["north", "south", "west", "east"],
-    ), Bool("powered"),
+    Enum("face", ["floor", "wall", "ceiling"]),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Bool("powered"),
   ],
 )
 
@@ -2484,10 +2575,9 @@ pub const jungle_button = Block(
   "minecraft:jungle_button",
   "minecraft:button",
   [
-    Enum("face", ["floor", "wall", "ceiling"]), Enum(
-      "facing",
-      ["north", "south", "west", "east"],
-    ), Bool("powered"),
+    Enum("face", ["floor", "wall", "ceiling"]),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Bool("powered"),
   ],
 )
 
@@ -2495,10 +2585,9 @@ pub const acacia_button = Block(
   "minecraft:acacia_button",
   "minecraft:button",
   [
-    Enum("face", ["floor", "wall", "ceiling"]), Enum(
-      "facing",
-      ["north", "south", "west", "east"],
-    ), Bool("powered"),
+    Enum("face", ["floor", "wall", "ceiling"]),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Bool("powered"),
   ],
 )
 
@@ -2506,10 +2595,9 @@ pub const cherry_button = Block(
   "minecraft:cherry_button",
   "minecraft:button",
   [
-    Enum("face", ["floor", "wall", "ceiling"]), Enum(
-      "facing",
-      ["north", "south", "west", "east"],
-    ), Bool("powered"),
+    Enum("face", ["floor", "wall", "ceiling"]),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Bool("powered"),
   ],
 )
 
@@ -2517,10 +2605,9 @@ pub const dark_oak_button = Block(
   "minecraft:dark_oak_button",
   "minecraft:button",
   [
-    Enum("face", ["floor", "wall", "ceiling"]), Enum(
-      "facing",
-      ["north", "south", "west", "east"],
-    ), Bool("powered"),
+    Enum("face", ["floor", "wall", "ceiling"]),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Bool("powered"),
   ],
 )
 
@@ -2528,10 +2615,9 @@ pub const pale_oak_button = Block(
   "minecraft:pale_oak_button",
   "minecraft:button",
   [
-    Enum("face", ["floor", "wall", "ceiling"]), Enum(
-      "facing",
-      ["north", "south", "west", "east"],
-    ), Bool("powered"),
+    Enum("face", ["floor", "wall", "ceiling"]),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Bool("powered"),
   ],
 )
 
@@ -2539,10 +2625,9 @@ pub const mangrove_button = Block(
   "minecraft:mangrove_button",
   "minecraft:button",
   [
-    Enum("face", ["floor", "wall", "ceiling"]), Enum(
-      "facing",
-      ["north", "south", "west", "east"],
-    ), Bool("powered"),
+    Enum("face", ["floor", "wall", "ceiling"]),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Bool("powered"),
   ],
 )
 
@@ -2550,10 +2635,9 @@ pub const bamboo_button = Block(
   "minecraft:bamboo_button",
   "minecraft:button",
   [
-    Enum("face", ["floor", "wall", "ceiling"]), Enum(
-      "facing",
-      ["north", "south", "west", "east"],
-    ), Bool("powered"),
+    Enum("face", ["floor", "wall", "ceiling"]),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Bool("powered"),
   ],
 )
 
@@ -2663,10 +2747,9 @@ pub const trapped_chest = Block(
   "minecraft:trapped_chest",
   "minecraft:trapped_chest",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "type",
-      ["single", "left", "right"],
-    ), Bool("waterlogged"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("type", ["single", "left", "right"]),
+    Bool("waterlogged"),
   ],
 )
 
@@ -2686,10 +2769,9 @@ pub const comparator = Block(
   "minecraft:comparator",
   "minecraft:comparator",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "mode",
-      ["compare", "subtract"],
-    ), Bool("powered"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("mode", ["compare", "subtract"]),
+    Bool("powered"),
   ],
 )
 
@@ -2735,13 +2817,13 @@ pub const quartz_stairs = Block(
   "minecraft:quartz_stairs",
   "minecraft:stair",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Enum(
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Enum(
       "shape",
       ["straight", "inner_left", "inner_right", "outer_left", "outer_right"],
-    ), Bool("waterlogged"),
+    ),
+    Bool("waterlogged"),
   ],
 )
 
@@ -2749,13 +2831,15 @@ pub const activator_rail = Block(
   "minecraft:activator_rail",
   "minecraft:powered_rail",
   [
-    Bool("powered"), Enum(
+    Bool("powered"),
+    Enum(
       "shape",
       [
         "north_south", "east_west", "ascending_east", "ascending_west",
         "ascending_north", "ascending_south",
       ],
-    ), Bool("waterlogged"),
+    ),
+    Bool("waterlogged"),
   ],
 )
 
@@ -2763,9 +2847,8 @@ pub const dropper = Block(
   "minecraft:dropper",
   "minecraft:dropper",
   [
-    Enum("facing", ["north", "east", "south", "west", "up", "down"]), Bool(
-      "triggered",
-    ),
+    Enum("facing", ["north", "east", "south", "west", "up", "down"]),
+    Bool("triggered"),
   ],
 )
 
@@ -2868,112 +2951,192 @@ pub const black_terracotta = Block(
 pub const white_stained_glass_pane = Block(
   "minecraft:white_stained_glass_pane",
   "minecraft:stained_glass_pane",
-  [Bool("east"), Bool("north"), Bool("south"), Bool("waterlogged"), Bool("west"),
+  [
+    Bool("east"),
+    Bool("north"),
+    Bool("south"),
+    Bool("waterlogged"),
+    Bool("west"),
   ],
 )
 
 pub const orange_stained_glass_pane = Block(
   "minecraft:orange_stained_glass_pane",
   "minecraft:stained_glass_pane",
-  [Bool("east"), Bool("north"), Bool("south"), Bool("waterlogged"), Bool("west"),
+  [
+    Bool("east"),
+    Bool("north"),
+    Bool("south"),
+    Bool("waterlogged"),
+    Bool("west"),
   ],
 )
 
 pub const magenta_stained_glass_pane = Block(
   "minecraft:magenta_stained_glass_pane",
   "minecraft:stained_glass_pane",
-  [Bool("east"), Bool("north"), Bool("south"), Bool("waterlogged"), Bool("west"),
+  [
+    Bool("east"),
+    Bool("north"),
+    Bool("south"),
+    Bool("waterlogged"),
+    Bool("west"),
   ],
 )
 
 pub const light_blue_stained_glass_pane = Block(
   "minecraft:light_blue_stained_glass_pane",
   "minecraft:stained_glass_pane",
-  [Bool("east"), Bool("north"), Bool("south"), Bool("waterlogged"), Bool("west"),
+  [
+    Bool("east"),
+    Bool("north"),
+    Bool("south"),
+    Bool("waterlogged"),
+    Bool("west"),
   ],
 )
 
 pub const yellow_stained_glass_pane = Block(
   "minecraft:yellow_stained_glass_pane",
   "minecraft:stained_glass_pane",
-  [Bool("east"), Bool("north"), Bool("south"), Bool("waterlogged"), Bool("west"),
+  [
+    Bool("east"),
+    Bool("north"),
+    Bool("south"),
+    Bool("waterlogged"),
+    Bool("west"),
   ],
 )
 
 pub const lime_stained_glass_pane = Block(
   "minecraft:lime_stained_glass_pane",
   "minecraft:stained_glass_pane",
-  [Bool("east"), Bool("north"), Bool("south"), Bool("waterlogged"), Bool("west"),
+  [
+    Bool("east"),
+    Bool("north"),
+    Bool("south"),
+    Bool("waterlogged"),
+    Bool("west"),
   ],
 )
 
 pub const pink_stained_glass_pane = Block(
   "minecraft:pink_stained_glass_pane",
   "minecraft:stained_glass_pane",
-  [Bool("east"), Bool("north"), Bool("south"), Bool("waterlogged"), Bool("west"),
+  [
+    Bool("east"),
+    Bool("north"),
+    Bool("south"),
+    Bool("waterlogged"),
+    Bool("west"),
   ],
 )
 
 pub const gray_stained_glass_pane = Block(
   "minecraft:gray_stained_glass_pane",
   "minecraft:stained_glass_pane",
-  [Bool("east"), Bool("north"), Bool("south"), Bool("waterlogged"), Bool("west"),
+  [
+    Bool("east"),
+    Bool("north"),
+    Bool("south"),
+    Bool("waterlogged"),
+    Bool("west"),
   ],
 )
 
 pub const light_gray_stained_glass_pane = Block(
   "minecraft:light_gray_stained_glass_pane",
   "minecraft:stained_glass_pane",
-  [Bool("east"), Bool("north"), Bool("south"), Bool("waterlogged"), Bool("west"),
+  [
+    Bool("east"),
+    Bool("north"),
+    Bool("south"),
+    Bool("waterlogged"),
+    Bool("west"),
   ],
 )
 
 pub const cyan_stained_glass_pane = Block(
   "minecraft:cyan_stained_glass_pane",
   "minecraft:stained_glass_pane",
-  [Bool("east"), Bool("north"), Bool("south"), Bool("waterlogged"), Bool("west"),
+  [
+    Bool("east"),
+    Bool("north"),
+    Bool("south"),
+    Bool("waterlogged"),
+    Bool("west"),
   ],
 )
 
 pub const purple_stained_glass_pane = Block(
   "minecraft:purple_stained_glass_pane",
   "minecraft:stained_glass_pane",
-  [Bool("east"), Bool("north"), Bool("south"), Bool("waterlogged"), Bool("west"),
+  [
+    Bool("east"),
+    Bool("north"),
+    Bool("south"),
+    Bool("waterlogged"),
+    Bool("west"),
   ],
 )
 
 pub const blue_stained_glass_pane = Block(
   "minecraft:blue_stained_glass_pane",
   "minecraft:stained_glass_pane",
-  [Bool("east"), Bool("north"), Bool("south"), Bool("waterlogged"), Bool("west"),
+  [
+    Bool("east"),
+    Bool("north"),
+    Bool("south"),
+    Bool("waterlogged"),
+    Bool("west"),
   ],
 )
 
 pub const brown_stained_glass_pane = Block(
   "minecraft:brown_stained_glass_pane",
   "minecraft:stained_glass_pane",
-  [Bool("east"), Bool("north"), Bool("south"), Bool("waterlogged"), Bool("west"),
+  [
+    Bool("east"),
+    Bool("north"),
+    Bool("south"),
+    Bool("waterlogged"),
+    Bool("west"),
   ],
 )
 
 pub const green_stained_glass_pane = Block(
   "minecraft:green_stained_glass_pane",
   "minecraft:stained_glass_pane",
-  [Bool("east"), Bool("north"), Bool("south"), Bool("waterlogged"), Bool("west"),
+  [
+    Bool("east"),
+    Bool("north"),
+    Bool("south"),
+    Bool("waterlogged"),
+    Bool("west"),
   ],
 )
 
 pub const red_stained_glass_pane = Block(
   "minecraft:red_stained_glass_pane",
   "minecraft:stained_glass_pane",
-  [Bool("east"), Bool("north"), Bool("south"), Bool("waterlogged"), Bool("west"),
+  [
+    Bool("east"),
+    Bool("north"),
+    Bool("south"),
+    Bool("waterlogged"),
+    Bool("west"),
   ],
 )
 
 pub const black_stained_glass_pane = Block(
   "minecraft:black_stained_glass_pane",
   "minecraft:stained_glass_pane",
-  [Bool("east"), Bool("north"), Bool("south"), Bool("waterlogged"), Bool("west"),
+  [
+    Bool("east"),
+    Bool("north"),
+    Bool("south"),
+    Bool("waterlogged"),
+    Bool("west"),
   ],
 )
 
@@ -2981,13 +3144,13 @@ pub const acacia_stairs = Block(
   "minecraft:acacia_stairs",
   "minecraft:stair",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Enum(
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Enum(
       "shape",
       ["straight", "inner_left", "inner_right", "outer_left", "outer_right"],
-    ), Bool("waterlogged"),
+    ),
+    Bool("waterlogged"),
   ],
 )
 
@@ -2995,13 +3158,13 @@ pub const cherry_stairs = Block(
   "minecraft:cherry_stairs",
   "minecraft:stair",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Enum(
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Enum(
       "shape",
       ["straight", "inner_left", "inner_right", "outer_left", "outer_right"],
-    ), Bool("waterlogged"),
+    ),
+    Bool("waterlogged"),
   ],
 )
 
@@ -3009,13 +3172,13 @@ pub const dark_oak_stairs = Block(
   "minecraft:dark_oak_stairs",
   "minecraft:stair",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Enum(
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Enum(
       "shape",
       ["straight", "inner_left", "inner_right", "outer_left", "outer_right"],
-    ), Bool("waterlogged"),
+    ),
+    Bool("waterlogged"),
   ],
 )
 
@@ -3023,13 +3186,13 @@ pub const pale_oak_stairs = Block(
   "minecraft:pale_oak_stairs",
   "minecraft:stair",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Enum(
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Enum(
       "shape",
       ["straight", "inner_left", "inner_right", "outer_left", "outer_right"],
-    ), Bool("waterlogged"),
+    ),
+    Bool("waterlogged"),
   ],
 )
 
@@ -3037,13 +3200,13 @@ pub const mangrove_stairs = Block(
   "minecraft:mangrove_stairs",
   "minecraft:stair",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Enum(
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Enum(
       "shape",
       ["straight", "inner_left", "inner_right", "outer_left", "outer_right"],
-    ), Bool("waterlogged"),
+    ),
+    Bool("waterlogged"),
   ],
 )
 
@@ -3051,13 +3214,13 @@ pub const bamboo_stairs = Block(
   "minecraft:bamboo_stairs",
   "minecraft:stair",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Enum(
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Enum(
       "shape",
       ["straight", "inner_left", "inner_right", "outer_left", "outer_right"],
-    ), Bool("waterlogged"),
+    ),
+    Bool("waterlogged"),
   ],
 )
 
@@ -3065,13 +3228,13 @@ pub const bamboo_mosaic_stairs = Block(
   "minecraft:bamboo_mosaic_stairs",
   "minecraft:stair",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Enum(
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Enum(
       "shape",
       ["straight", "inner_left", "inner_right", "outer_left", "outer_right"],
-    ), Bool("waterlogged"),
+    ),
+    Bool("waterlogged"),
   ],
 )
 
@@ -3093,10 +3256,11 @@ pub const iron_trapdoor = Block(
   "minecraft:iron_trapdoor",
   "minecraft:trapdoor",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Bool("open"), Bool("powered"), Bool("waterlogged"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Bool("open"),
+    Bool("powered"),
+    Bool("waterlogged"),
   ],
 )
 
@@ -3118,13 +3282,13 @@ pub const prismarine_stairs = Block(
   "minecraft:prismarine_stairs",
   "minecraft:stair",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Enum(
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Enum(
       "shape",
       ["straight", "inner_left", "inner_right", "outer_left", "outer_right"],
-    ), Bool("waterlogged"),
+    ),
+    Bool("waterlogged"),
   ],
 )
 
@@ -3132,13 +3296,13 @@ pub const prismarine_brick_stairs = Block(
   "minecraft:prismarine_brick_stairs",
   "minecraft:stair",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Enum(
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Enum(
       "shape",
       ["straight", "inner_left", "inner_right", "outer_left", "outer_right"],
-    ), Bool("waterlogged"),
+    ),
+    Bool("waterlogged"),
   ],
 )
 
@@ -3146,13 +3310,13 @@ pub const dark_prismarine_stairs = Block(
   "minecraft:dark_prismarine_stairs",
   "minecraft:stair",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Enum(
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Enum(
       "shape",
       ["straight", "inner_left", "inner_right", "outer_left", "outer_right"],
-    ), Bool("waterlogged"),
+    ),
+    Bool("waterlogged"),
   ],
 )
 
@@ -3266,7 +3430,10 @@ pub const green_carpet = Block(
   [],
 )
 
-pub const red_carpet = Block("minecraft:red_carpet", "minecraft:wool_carpet", [],
+pub const red_carpet = Block(
+  "minecraft:red_carpet",
+  "minecraft:wool_carpet",
+  [],
 )
 
 pub const black_carpet = Block(
@@ -3509,7 +3676,10 @@ pub const black_wall_banner = Block(
   [Enum("facing", ["north", "south", "west", "east"])],
 )
 
-pub const red_sandstone = Block("minecraft:red_sandstone", "minecraft:block", [],
+pub const red_sandstone = Block(
+  "minecraft:red_sandstone",
+  "minecraft:block",
+  [],
 )
 
 pub const chiseled_red_sandstone = Block(
@@ -3528,13 +3698,13 @@ pub const red_sandstone_stairs = Block(
   "minecraft:red_sandstone_stairs",
   "minecraft:stair",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Enum(
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Enum(
       "shape",
       ["straight", "inner_left", "inner_right", "outer_left", "outer_right"],
-    ), Bool("waterlogged"),
+    ),
+    Bool("waterlogged"),
   ],
 )
 
@@ -3696,7 +3866,10 @@ pub const smooth_sandstone = Block(
   [],
 )
 
-pub const smooth_quartz = Block("minecraft:smooth_quartz", "minecraft:block", [],
+pub const smooth_quartz = Block(
+  "minecraft:smooth_quartz",
+  "minecraft:block",
+  [],
 )
 
 pub const smooth_red_sandstone = Block(
@@ -3709,9 +3882,10 @@ pub const spruce_fence_gate = Block(
   "minecraft:spruce_fence_gate",
   "minecraft:fence_gate",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Bool("in_wall"), Bool(
-      "open",
-    ), Bool("powered"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Bool("in_wall"),
+    Bool("open"),
+    Bool("powered"),
   ],
 )
 
@@ -3719,9 +3893,10 @@ pub const birch_fence_gate = Block(
   "minecraft:birch_fence_gate",
   "minecraft:fence_gate",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Bool("in_wall"), Bool(
-      "open",
-    ), Bool("powered"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Bool("in_wall"),
+    Bool("open"),
+    Bool("powered"),
   ],
 )
 
@@ -3729,9 +3904,10 @@ pub const jungle_fence_gate = Block(
   "minecraft:jungle_fence_gate",
   "minecraft:fence_gate",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Bool("in_wall"), Bool(
-      "open",
-    ), Bool("powered"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Bool("in_wall"),
+    Bool("open"),
+    Bool("powered"),
   ],
 )
 
@@ -3739,9 +3915,10 @@ pub const acacia_fence_gate = Block(
   "minecraft:acacia_fence_gate",
   "minecraft:fence_gate",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Bool("in_wall"), Bool(
-      "open",
-    ), Bool("powered"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Bool("in_wall"),
+    Bool("open"),
+    Bool("powered"),
   ],
 )
 
@@ -3749,9 +3926,10 @@ pub const cherry_fence_gate = Block(
   "minecraft:cherry_fence_gate",
   "minecraft:fence_gate",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Bool("in_wall"), Bool(
-      "open",
-    ), Bool("powered"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Bool("in_wall"),
+    Bool("open"),
+    Bool("powered"),
   ],
 )
 
@@ -3759,9 +3937,10 @@ pub const dark_oak_fence_gate = Block(
   "minecraft:dark_oak_fence_gate",
   "minecraft:fence_gate",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Bool("in_wall"), Bool(
-      "open",
-    ), Bool("powered"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Bool("in_wall"),
+    Bool("open"),
+    Bool("powered"),
   ],
 )
 
@@ -3769,9 +3948,10 @@ pub const pale_oak_fence_gate = Block(
   "minecraft:pale_oak_fence_gate",
   "minecraft:fence_gate",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Bool("in_wall"), Bool(
-      "open",
-    ), Bool("powered"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Bool("in_wall"),
+    Bool("open"),
+    Bool("powered"),
   ],
 )
 
@@ -3779,9 +3959,10 @@ pub const mangrove_fence_gate = Block(
   "minecraft:mangrove_fence_gate",
   "minecraft:fence_gate",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Bool("in_wall"), Bool(
-      "open",
-    ), Bool("powered"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Bool("in_wall"),
+    Bool("open"),
+    Bool("powered"),
   ],
 )
 
@@ -3789,72 +3970,118 @@ pub const bamboo_fence_gate = Block(
   "minecraft:bamboo_fence_gate",
   "minecraft:fence_gate",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Bool("in_wall"), Bool(
-      "open",
-    ), Bool("powered"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Bool("in_wall"),
+    Bool("open"),
+    Bool("powered"),
   ],
 )
 
 pub const spruce_fence = Block(
   "minecraft:spruce_fence",
   "minecraft:fence",
-  [Bool("east"), Bool("north"), Bool("south"), Bool("waterlogged"), Bool("west"),
+  [
+    Bool("east"),
+    Bool("north"),
+    Bool("south"),
+    Bool("waterlogged"),
+    Bool("west"),
   ],
 )
 
 pub const birch_fence = Block(
   "minecraft:birch_fence",
   "minecraft:fence",
-  [Bool("east"), Bool("north"), Bool("south"), Bool("waterlogged"), Bool("west"),
+  [
+    Bool("east"),
+    Bool("north"),
+    Bool("south"),
+    Bool("waterlogged"),
+    Bool("west"),
   ],
 )
 
 pub const jungle_fence = Block(
   "minecraft:jungle_fence",
   "minecraft:fence",
-  [Bool("east"), Bool("north"), Bool("south"), Bool("waterlogged"), Bool("west"),
+  [
+    Bool("east"),
+    Bool("north"),
+    Bool("south"),
+    Bool("waterlogged"),
+    Bool("west"),
   ],
 )
 
 pub const acacia_fence = Block(
   "minecraft:acacia_fence",
   "minecraft:fence",
-  [Bool("east"), Bool("north"), Bool("south"), Bool("waterlogged"), Bool("west"),
+  [
+    Bool("east"),
+    Bool("north"),
+    Bool("south"),
+    Bool("waterlogged"),
+    Bool("west"),
   ],
 )
 
 pub const cherry_fence = Block(
   "minecraft:cherry_fence",
   "minecraft:fence",
-  [Bool("east"), Bool("north"), Bool("south"), Bool("waterlogged"), Bool("west"),
+  [
+    Bool("east"),
+    Bool("north"),
+    Bool("south"),
+    Bool("waterlogged"),
+    Bool("west"),
   ],
 )
 
 pub const dark_oak_fence = Block(
   "minecraft:dark_oak_fence",
   "minecraft:fence",
-  [Bool("east"), Bool("north"), Bool("south"), Bool("waterlogged"), Bool("west"),
+  [
+    Bool("east"),
+    Bool("north"),
+    Bool("south"),
+    Bool("waterlogged"),
+    Bool("west"),
   ],
 )
 
 pub const pale_oak_fence = Block(
   "minecraft:pale_oak_fence",
   "minecraft:fence",
-  [Bool("east"), Bool("north"), Bool("south"), Bool("waterlogged"), Bool("west"),
+  [
+    Bool("east"),
+    Bool("north"),
+    Bool("south"),
+    Bool("waterlogged"),
+    Bool("west"),
   ],
 )
 
 pub const mangrove_fence = Block(
   "minecraft:mangrove_fence",
   "minecraft:fence",
-  [Bool("east"), Bool("north"), Bool("south"), Bool("waterlogged"), Bool("west"),
+  [
+    Bool("east"),
+    Bool("north"),
+    Bool("south"),
+    Bool("waterlogged"),
+    Bool("west"),
   ],
 )
 
 pub const bamboo_fence = Block(
   "minecraft:bamboo_fence",
   "minecraft:fence",
-  [Bool("east"), Bool("north"), Bool("south"), Bool("waterlogged"), Bool("west"),
+  [
+    Bool("east"),
+    Bool("north"),
+    Bool("south"),
+    Bool("waterlogged"),
+    Bool("west"),
   ],
 )
 
@@ -3862,10 +4089,11 @@ pub const spruce_door = Block(
   "minecraft:spruce_door",
   "minecraft:door",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["upper", "lower"],
-    ), Enum("hinge", ["left", "right"]), Bool("open"), Bool("powered"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["upper", "lower"]),
+    Enum("hinge", ["left", "right"]),
+    Bool("open"),
+    Bool("powered"),
   ],
 )
 
@@ -3873,10 +4101,11 @@ pub const birch_door = Block(
   "minecraft:birch_door",
   "minecraft:door",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["upper", "lower"],
-    ), Enum("hinge", ["left", "right"]), Bool("open"), Bool("powered"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["upper", "lower"]),
+    Enum("hinge", ["left", "right"]),
+    Bool("open"),
+    Bool("powered"),
   ],
 )
 
@@ -3884,10 +4113,11 @@ pub const jungle_door = Block(
   "minecraft:jungle_door",
   "minecraft:door",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["upper", "lower"],
-    ), Enum("hinge", ["left", "right"]), Bool("open"), Bool("powered"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["upper", "lower"]),
+    Enum("hinge", ["left", "right"]),
+    Bool("open"),
+    Bool("powered"),
   ],
 )
 
@@ -3895,10 +4125,11 @@ pub const acacia_door = Block(
   "minecraft:acacia_door",
   "minecraft:door",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["upper", "lower"],
-    ), Enum("hinge", ["left", "right"]), Bool("open"), Bool("powered"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["upper", "lower"]),
+    Enum("hinge", ["left", "right"]),
+    Bool("open"),
+    Bool("powered"),
   ],
 )
 
@@ -3906,10 +4137,11 @@ pub const cherry_door = Block(
   "minecraft:cherry_door",
   "minecraft:door",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["upper", "lower"],
-    ), Enum("hinge", ["left", "right"]), Bool("open"), Bool("powered"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["upper", "lower"]),
+    Enum("hinge", ["left", "right"]),
+    Bool("open"),
+    Bool("powered"),
   ],
 )
 
@@ -3917,10 +4149,11 @@ pub const dark_oak_door = Block(
   "minecraft:dark_oak_door",
   "minecraft:door",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["upper", "lower"],
-    ), Enum("hinge", ["left", "right"]), Bool("open"), Bool("powered"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["upper", "lower"]),
+    Enum("hinge", ["left", "right"]),
+    Bool("open"),
+    Bool("powered"),
   ],
 )
 
@@ -3928,10 +4161,11 @@ pub const pale_oak_door = Block(
   "minecraft:pale_oak_door",
   "minecraft:door",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["upper", "lower"],
-    ), Enum("hinge", ["left", "right"]), Bool("open"), Bool("powered"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["upper", "lower"]),
+    Enum("hinge", ["left", "right"]),
+    Bool("open"),
+    Bool("powered"),
   ],
 )
 
@@ -3939,10 +4173,11 @@ pub const mangrove_door = Block(
   "minecraft:mangrove_door",
   "minecraft:door",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["upper", "lower"],
-    ), Enum("hinge", ["left", "right"]), Bool("open"), Bool("powered"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["upper", "lower"]),
+    Enum("hinge", ["left", "right"]),
+    Bool("open"),
+    Bool("powered"),
   ],
 )
 
@@ -3950,10 +4185,11 @@ pub const bamboo_door = Block(
   "minecraft:bamboo_door",
   "minecraft:door",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["upper", "lower"],
-    ), Enum("hinge", ["left", "right"]), Bool("open"), Bool("powered"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["upper", "lower"]),
+    Enum("hinge", ["left", "right"]),
+    Bool("open"),
+    Bool("powered"),
   ],
 )
 
@@ -3967,9 +4203,12 @@ pub const chorus_plant = Block(
   "minecraft:chorus_plant",
   "minecraft:chorus_plant",
   [
-    Bool("down"), Bool("east"), Bool("north"), Bool("south"), Bool("up"), Bool(
-      "west",
-    ),
+    Bool("down"),
+    Bool("east"),
+    Bool("north"),
+    Bool("south"),
+    Bool("up"),
+    Bool("west"),
   ],
 )
 
@@ -3991,13 +4230,13 @@ pub const purpur_stairs = Block(
   "minecraft:purpur_stairs",
   "minecraft:stair",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Enum(
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Enum(
       "shape",
       ["straight", "inner_left", "inner_right", "outer_left", "outer_right"],
-    ), Bool("waterlogged"),
+    ),
+    Bool("waterlogged"),
   ],
 )
 
@@ -4043,10 +4282,8 @@ pub const repeating_command_block = Block(
   "minecraft:repeating_command_block",
   "minecraft:command",
   [
-    Bool("conditional"), Enum(
-      "facing",
-      ["north", "east", "south", "west", "up", "down"],
-    ),
+    Bool("conditional"),
+    Enum("facing", ["north", "east", "south", "west", "up", "down"]),
   ],
 )
 
@@ -4054,10 +4291,8 @@ pub const chain_command_block = Block(
   "minecraft:chain_command_block",
   "minecraft:command",
   [
-    Bool("conditional"), Enum(
-      "facing",
-      ["north", "east", "south", "west", "up", "down"],
-    ),
+    Bool("conditional"),
+    Enum("facing", ["north", "east", "south", "west", "up", "down"]),
   ],
 )
 
@@ -4097,9 +4332,8 @@ pub const observer = Block(
   "minecraft:observer",
   "minecraft:observer",
   [
-    Enum("facing", ["north", "east", "south", "west", "up", "down"]), Bool(
-      "powered",
-    ),
+    Enum("facing", ["north", "east", "south", "west", "up", "down"]),
+    Bool("powered"),
   ],
 )
 
@@ -4331,13 +4565,22 @@ pub const yellow_concrete = Block(
   [],
 )
 
-pub const lime_concrete = Block("minecraft:lime_concrete", "minecraft:block", [],
+pub const lime_concrete = Block(
+  "minecraft:lime_concrete",
+  "minecraft:block",
+  [],
 )
 
-pub const pink_concrete = Block("minecraft:pink_concrete", "minecraft:block", [],
+pub const pink_concrete = Block(
+  "minecraft:pink_concrete",
+  "minecraft:block",
+  [],
 )
 
-pub const gray_concrete = Block("minecraft:gray_concrete", "minecraft:block", [],
+pub const gray_concrete = Block(
+  "minecraft:gray_concrete",
+  "minecraft:block",
+  [],
 )
 
 pub const light_gray_concrete = Block(
@@ -4346,7 +4589,10 @@ pub const light_gray_concrete = Block(
   [],
 )
 
-pub const cyan_concrete = Block("minecraft:cyan_concrete", "minecraft:block", [],
+pub const cyan_concrete = Block(
+  "minecraft:cyan_concrete",
+  "minecraft:block",
+  [],
 )
 
 pub const purple_concrete = Block(
@@ -4355,7 +4601,10 @@ pub const purple_concrete = Block(
   [],
 )
 
-pub const blue_concrete = Block("minecraft:blue_concrete", "minecraft:block", [],
+pub const blue_concrete = Block(
+  "minecraft:blue_concrete",
+  "minecraft:block",
+  [],
 )
 
 pub const brown_concrete = Block(
@@ -4764,11 +5013,9 @@ pub const bamboo = Block(
   "minecraft:bamboo",
   "minecraft:bamboo_stalk",
   [
-    Int("age", 0, 1), Enum("leaves", ["none", "small", "large"]), Int(
-      "stage",
-      0,
-      1,
-    ),
+    Int("age", 0, 1),
+    Enum("leaves", ["none", "small", "large"]),
+    Int("stage", 0, 1),
   ],
 )
 
@@ -4792,13 +5039,13 @@ pub const polished_granite_stairs = Block(
   "minecraft:polished_granite_stairs",
   "minecraft:stair",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Enum(
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Enum(
       "shape",
       ["straight", "inner_left", "inner_right", "outer_left", "outer_right"],
-    ), Bool("waterlogged"),
+    ),
+    Bool("waterlogged"),
   ],
 )
 
@@ -4806,13 +5053,13 @@ pub const smooth_red_sandstone_stairs = Block(
   "minecraft:smooth_red_sandstone_stairs",
   "minecraft:stair",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Enum(
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Enum(
       "shape",
       ["straight", "inner_left", "inner_right", "outer_left", "outer_right"],
-    ), Bool("waterlogged"),
+    ),
+    Bool("waterlogged"),
   ],
 )
 
@@ -4820,13 +5067,13 @@ pub const mossy_stone_brick_stairs = Block(
   "minecraft:mossy_stone_brick_stairs",
   "minecraft:stair",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Enum(
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Enum(
       "shape",
       ["straight", "inner_left", "inner_right", "outer_left", "outer_right"],
-    ), Bool("waterlogged"),
+    ),
+    Bool("waterlogged"),
   ],
 )
 
@@ -4834,13 +5081,13 @@ pub const polished_diorite_stairs = Block(
   "minecraft:polished_diorite_stairs",
   "minecraft:stair",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Enum(
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Enum(
       "shape",
       ["straight", "inner_left", "inner_right", "outer_left", "outer_right"],
-    ), Bool("waterlogged"),
+    ),
+    Bool("waterlogged"),
   ],
 )
 
@@ -4848,13 +5095,13 @@ pub const mossy_cobblestone_stairs = Block(
   "minecraft:mossy_cobblestone_stairs",
   "minecraft:stair",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Enum(
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Enum(
       "shape",
       ["straight", "inner_left", "inner_right", "outer_left", "outer_right"],
-    ), Bool("waterlogged"),
+    ),
+    Bool("waterlogged"),
   ],
 )
 
@@ -4862,13 +5109,13 @@ pub const end_stone_brick_stairs = Block(
   "minecraft:end_stone_brick_stairs",
   "minecraft:stair",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Enum(
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Enum(
       "shape",
       ["straight", "inner_left", "inner_right", "outer_left", "outer_right"],
-    ), Bool("waterlogged"),
+    ),
+    Bool("waterlogged"),
   ],
 )
 
@@ -4876,13 +5123,13 @@ pub const stone_stairs = Block(
   "minecraft:stone_stairs",
   "minecraft:stair",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Enum(
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Enum(
       "shape",
       ["straight", "inner_left", "inner_right", "outer_left", "outer_right"],
-    ), Bool("waterlogged"),
+    ),
+    Bool("waterlogged"),
   ],
 )
 
@@ -4890,13 +5137,13 @@ pub const smooth_sandstone_stairs = Block(
   "minecraft:smooth_sandstone_stairs",
   "minecraft:stair",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Enum(
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Enum(
       "shape",
       ["straight", "inner_left", "inner_right", "outer_left", "outer_right"],
-    ), Bool("waterlogged"),
+    ),
+    Bool("waterlogged"),
   ],
 )
 
@@ -4904,13 +5151,13 @@ pub const smooth_quartz_stairs = Block(
   "minecraft:smooth_quartz_stairs",
   "minecraft:stair",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Enum(
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Enum(
       "shape",
       ["straight", "inner_left", "inner_right", "outer_left", "outer_right"],
-    ), Bool("waterlogged"),
+    ),
+    Bool("waterlogged"),
   ],
 )
 
@@ -4918,13 +5165,13 @@ pub const granite_stairs = Block(
   "minecraft:granite_stairs",
   "minecraft:stair",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Enum(
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Enum(
       "shape",
       ["straight", "inner_left", "inner_right", "outer_left", "outer_right"],
-    ), Bool("waterlogged"),
+    ),
+    Bool("waterlogged"),
   ],
 )
 
@@ -4932,13 +5179,13 @@ pub const andesite_stairs = Block(
   "minecraft:andesite_stairs",
   "minecraft:stair",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Enum(
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Enum(
       "shape",
       ["straight", "inner_left", "inner_right", "outer_left", "outer_right"],
-    ), Bool("waterlogged"),
+    ),
+    Bool("waterlogged"),
   ],
 )
 
@@ -4946,13 +5193,13 @@ pub const red_nether_brick_stairs = Block(
   "minecraft:red_nether_brick_stairs",
   "minecraft:stair",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Enum(
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Enum(
       "shape",
       ["straight", "inner_left", "inner_right", "outer_left", "outer_right"],
-    ), Bool("waterlogged"),
+    ),
+    Bool("waterlogged"),
   ],
 )
 
@@ -4960,13 +5207,13 @@ pub const polished_andesite_stairs = Block(
   "minecraft:polished_andesite_stairs",
   "minecraft:stair",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Enum(
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Enum(
       "shape",
       ["straight", "inner_left", "inner_right", "outer_left", "outer_right"],
-    ), Bool("waterlogged"),
+    ),
+    Bool("waterlogged"),
   ],
 )
 
@@ -4974,13 +5221,13 @@ pub const diorite_stairs = Block(
   "minecraft:diorite_stairs",
   "minecraft:stair",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Enum(
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Enum(
       "shape",
       ["straight", "inner_left", "inner_right", "outer_left", "outer_right"],
-    ), Bool("waterlogged"),
+    ),
+    Bool("waterlogged"),
   ],
 )
 
@@ -5066,8 +5313,11 @@ pub const brick_wall = Block(
   "minecraft:brick_wall",
   "minecraft:wall",
   [
-    Enum("east", ["none", "low", "tall"]), Enum("north", ["none", "low", "tall"],
-    ), Enum("south", ["none", "low", "tall"]), Bool("up"), Bool("waterlogged"),
+    Enum("east", ["none", "low", "tall"]),
+    Enum("north", ["none", "low", "tall"]),
+    Enum("south", ["none", "low", "tall"]),
+    Bool("up"),
+    Bool("waterlogged"),
     Enum("west", ["none", "low", "tall"]),
   ],
 )
@@ -5076,8 +5326,11 @@ pub const prismarine_wall = Block(
   "minecraft:prismarine_wall",
   "minecraft:wall",
   [
-    Enum("east", ["none", "low", "tall"]), Enum("north", ["none", "low", "tall"],
-    ), Enum("south", ["none", "low", "tall"]), Bool("up"), Bool("waterlogged"),
+    Enum("east", ["none", "low", "tall"]),
+    Enum("north", ["none", "low", "tall"]),
+    Enum("south", ["none", "low", "tall"]),
+    Bool("up"),
+    Bool("waterlogged"),
     Enum("west", ["none", "low", "tall"]),
   ],
 )
@@ -5086,8 +5339,11 @@ pub const red_sandstone_wall = Block(
   "minecraft:red_sandstone_wall",
   "minecraft:wall",
   [
-    Enum("east", ["none", "low", "tall"]), Enum("north", ["none", "low", "tall"],
-    ), Enum("south", ["none", "low", "tall"]), Bool("up"), Bool("waterlogged"),
+    Enum("east", ["none", "low", "tall"]),
+    Enum("north", ["none", "low", "tall"]),
+    Enum("south", ["none", "low", "tall"]),
+    Bool("up"),
+    Bool("waterlogged"),
     Enum("west", ["none", "low", "tall"]),
   ],
 )
@@ -5096,8 +5352,11 @@ pub const mossy_stone_brick_wall = Block(
   "minecraft:mossy_stone_brick_wall",
   "minecraft:wall",
   [
-    Enum("east", ["none", "low", "tall"]), Enum("north", ["none", "low", "tall"],
-    ), Enum("south", ["none", "low", "tall"]), Bool("up"), Bool("waterlogged"),
+    Enum("east", ["none", "low", "tall"]),
+    Enum("north", ["none", "low", "tall"]),
+    Enum("south", ["none", "low", "tall"]),
+    Bool("up"),
+    Bool("waterlogged"),
     Enum("west", ["none", "low", "tall"]),
   ],
 )
@@ -5106,8 +5365,11 @@ pub const granite_wall = Block(
   "minecraft:granite_wall",
   "minecraft:wall",
   [
-    Enum("east", ["none", "low", "tall"]), Enum("north", ["none", "low", "tall"],
-    ), Enum("south", ["none", "low", "tall"]), Bool("up"), Bool("waterlogged"),
+    Enum("east", ["none", "low", "tall"]),
+    Enum("north", ["none", "low", "tall"]),
+    Enum("south", ["none", "low", "tall"]),
+    Bool("up"),
+    Bool("waterlogged"),
     Enum("west", ["none", "low", "tall"]),
   ],
 )
@@ -5116,8 +5378,11 @@ pub const stone_brick_wall = Block(
   "minecraft:stone_brick_wall",
   "minecraft:wall",
   [
-    Enum("east", ["none", "low", "tall"]), Enum("north", ["none", "low", "tall"],
-    ), Enum("south", ["none", "low", "tall"]), Bool("up"), Bool("waterlogged"),
+    Enum("east", ["none", "low", "tall"]),
+    Enum("north", ["none", "low", "tall"]),
+    Enum("south", ["none", "low", "tall"]),
+    Bool("up"),
+    Bool("waterlogged"),
     Enum("west", ["none", "low", "tall"]),
   ],
 )
@@ -5126,8 +5391,11 @@ pub const mud_brick_wall = Block(
   "minecraft:mud_brick_wall",
   "minecraft:wall",
   [
-    Enum("east", ["none", "low", "tall"]), Enum("north", ["none", "low", "tall"],
-    ), Enum("south", ["none", "low", "tall"]), Bool("up"), Bool("waterlogged"),
+    Enum("east", ["none", "low", "tall"]),
+    Enum("north", ["none", "low", "tall"]),
+    Enum("south", ["none", "low", "tall"]),
+    Bool("up"),
+    Bool("waterlogged"),
     Enum("west", ["none", "low", "tall"]),
   ],
 )
@@ -5136,8 +5404,11 @@ pub const nether_brick_wall = Block(
   "minecraft:nether_brick_wall",
   "minecraft:wall",
   [
-    Enum("east", ["none", "low", "tall"]), Enum("north", ["none", "low", "tall"],
-    ), Enum("south", ["none", "low", "tall"]), Bool("up"), Bool("waterlogged"),
+    Enum("east", ["none", "low", "tall"]),
+    Enum("north", ["none", "low", "tall"]),
+    Enum("south", ["none", "low", "tall"]),
+    Bool("up"),
+    Bool("waterlogged"),
     Enum("west", ["none", "low", "tall"]),
   ],
 )
@@ -5146,8 +5417,11 @@ pub const andesite_wall = Block(
   "minecraft:andesite_wall",
   "minecraft:wall",
   [
-    Enum("east", ["none", "low", "tall"]), Enum("north", ["none", "low", "tall"],
-    ), Enum("south", ["none", "low", "tall"]), Bool("up"), Bool("waterlogged"),
+    Enum("east", ["none", "low", "tall"]),
+    Enum("north", ["none", "low", "tall"]),
+    Enum("south", ["none", "low", "tall"]),
+    Bool("up"),
+    Bool("waterlogged"),
     Enum("west", ["none", "low", "tall"]),
   ],
 )
@@ -5156,8 +5430,11 @@ pub const red_nether_brick_wall = Block(
   "minecraft:red_nether_brick_wall",
   "minecraft:wall",
   [
-    Enum("east", ["none", "low", "tall"]), Enum("north", ["none", "low", "tall"],
-    ), Enum("south", ["none", "low", "tall"]), Bool("up"), Bool("waterlogged"),
+    Enum("east", ["none", "low", "tall"]),
+    Enum("north", ["none", "low", "tall"]),
+    Enum("south", ["none", "low", "tall"]),
+    Bool("up"),
+    Bool("waterlogged"),
     Enum("west", ["none", "low", "tall"]),
   ],
 )
@@ -5166,8 +5443,11 @@ pub const sandstone_wall = Block(
   "minecraft:sandstone_wall",
   "minecraft:wall",
   [
-    Enum("east", ["none", "low", "tall"]), Enum("north", ["none", "low", "tall"],
-    ), Enum("south", ["none", "low", "tall"]), Bool("up"), Bool("waterlogged"),
+    Enum("east", ["none", "low", "tall"]),
+    Enum("north", ["none", "low", "tall"]),
+    Enum("south", ["none", "low", "tall"]),
+    Bool("up"),
+    Bool("waterlogged"),
     Enum("west", ["none", "low", "tall"]),
   ],
 )
@@ -5176,8 +5456,11 @@ pub const end_stone_brick_wall = Block(
   "minecraft:end_stone_brick_wall",
   "minecraft:wall",
   [
-    Enum("east", ["none", "low", "tall"]), Enum("north", ["none", "low", "tall"],
-    ), Enum("south", ["none", "low", "tall"]), Bool("up"), Bool("waterlogged"),
+    Enum("east", ["none", "low", "tall"]),
+    Enum("north", ["none", "low", "tall"]),
+    Enum("south", ["none", "low", "tall"]),
+    Bool("up"),
+    Bool("waterlogged"),
     Enum("west", ["none", "low", "tall"]),
   ],
 )
@@ -5186,8 +5469,11 @@ pub const diorite_wall = Block(
   "minecraft:diorite_wall",
   "minecraft:wall",
   [
-    Enum("east", ["none", "low", "tall"]), Enum("north", ["none", "low", "tall"],
-    ), Enum("south", ["none", "low", "tall"]), Bool("up"), Bool("waterlogged"),
+    Enum("east", ["none", "low", "tall"]),
+    Enum("north", ["none", "low", "tall"]),
+    Enum("south", ["none", "low", "tall"]),
+    Bool("up"),
+    Bool("waterlogged"),
     Enum("west", ["none", "low", "tall"]),
   ],
 )
@@ -5208,9 +5494,8 @@ pub const barrel = Block(
   "minecraft:barrel",
   "minecraft:barrel",
   [
-    Enum("facing", ["north", "east", "south", "west", "up", "down"]), Bool(
-      "open",
-    ),
+    Enum("facing", ["north", "east", "south", "west", "up", "down"]),
+    Bool("open"),
   ],
 )
 
@@ -5242,10 +5527,8 @@ pub const grindstone = Block(
   "minecraft:grindstone",
   "minecraft:grindstone",
   [
-    Enum("face", ["floor", "wall", "ceiling"]), Enum(
-      "facing",
-      ["north", "south", "west", "east"],
-    ),
+    Enum("face", ["floor", "wall", "ceiling"]),
+    Enum("facing", ["north", "south", "west", "east"]),
   ],
 )
 
@@ -5253,9 +5536,9 @@ pub const lectern = Block(
   "minecraft:lectern",
   "minecraft:lectern",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Bool("has_book"), Bool(
-      "powered",
-    ),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Bool("has_book"),
+    Bool("powered"),
   ],
 )
 
@@ -5276,7 +5559,8 @@ pub const bell = Block(
   "minecraft:bell",
   [
     Enum("attachment", ["floor", "ceiling", "single_wall", "double_wall"]),
-    Enum("facing", ["north", "south", "west", "east"]), Bool("powered"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Bool("powered"),
   ],
 )
 
@@ -5296,9 +5580,10 @@ pub const campfire = Block(
   "minecraft:campfire",
   "minecraft:campfire",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Bool("lit"), Bool(
-      "signal_fire",
-    ), Bool("waterlogged"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Bool("lit"),
+    Bool("signal_fire"),
+    Bool("waterlogged"),
   ],
 )
 
@@ -5306,9 +5591,10 @@ pub const soul_campfire = Block(
   "minecraft:soul_campfire",
   "minecraft:campfire",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Bool("lit"), Bool(
-      "signal_fire",
-    ), Bool("waterlogged"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Bool("lit"),
+    Bool("signal_fire"),
+    Bool("waterlogged"),
   ],
 )
 
@@ -5430,7 +5716,10 @@ pub const twisting_vines_plant = Block(
   [],
 )
 
-pub const crimson_roots = Block("minecraft:crimson_roots", "minecraft:roots", [],
+pub const crimson_roots = Block(
+  "minecraft:crimson_roots",
+  "minecraft:roots",
+  [],
 )
 
 pub const crimson_planks = Block(
@@ -5439,7 +5728,10 @@ pub const crimson_planks = Block(
   [],
 )
 
-pub const warped_planks = Block("minecraft:warped_planks", "minecraft:block", [],
+pub const warped_planks = Block(
+  "minecraft:warped_planks",
+  "minecraft:block",
+  [],
 )
 
 pub const crimson_slab = Block(
@@ -5469,14 +5761,24 @@ pub const warped_pressure_plate = Block(
 pub const crimson_fence = Block(
   "minecraft:crimson_fence",
   "minecraft:fence",
-  [Bool("east"), Bool("north"), Bool("south"), Bool("waterlogged"), Bool("west"),
+  [
+    Bool("east"),
+    Bool("north"),
+    Bool("south"),
+    Bool("waterlogged"),
+    Bool("west"),
   ],
 )
 
 pub const warped_fence = Block(
   "minecraft:warped_fence",
   "minecraft:fence",
-  [Bool("east"), Bool("north"), Bool("south"), Bool("waterlogged"), Bool("west"),
+  [
+    Bool("east"),
+    Bool("north"),
+    Bool("south"),
+    Bool("waterlogged"),
+    Bool("west"),
   ],
 )
 
@@ -5484,10 +5786,11 @@ pub const crimson_trapdoor = Block(
   "minecraft:crimson_trapdoor",
   "minecraft:trapdoor",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Bool("open"), Bool("powered"), Bool("waterlogged"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Bool("open"),
+    Bool("powered"),
+    Bool("waterlogged"),
   ],
 )
 
@@ -5495,10 +5798,11 @@ pub const warped_trapdoor = Block(
   "minecraft:warped_trapdoor",
   "minecraft:trapdoor",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Bool("open"), Bool("powered"), Bool("waterlogged"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Bool("open"),
+    Bool("powered"),
+    Bool("waterlogged"),
   ],
 )
 
@@ -5506,9 +5810,10 @@ pub const crimson_fence_gate = Block(
   "minecraft:crimson_fence_gate",
   "minecraft:fence_gate",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Bool("in_wall"), Bool(
-      "open",
-    ), Bool("powered"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Bool("in_wall"),
+    Bool("open"),
+    Bool("powered"),
   ],
 )
 
@@ -5516,9 +5821,10 @@ pub const warped_fence_gate = Block(
   "minecraft:warped_fence_gate",
   "minecraft:fence_gate",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Bool("in_wall"), Bool(
-      "open",
-    ), Bool("powered"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Bool("in_wall"),
+    Bool("open"),
+    Bool("powered"),
   ],
 )
 
@@ -5526,13 +5832,13 @@ pub const crimson_stairs = Block(
   "minecraft:crimson_stairs",
   "minecraft:stair",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Enum(
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Enum(
       "shape",
       ["straight", "inner_left", "inner_right", "outer_left", "outer_right"],
-    ), Bool("waterlogged"),
+    ),
+    Bool("waterlogged"),
   ],
 )
 
@@ -5540,13 +5846,13 @@ pub const warped_stairs = Block(
   "minecraft:warped_stairs",
   "minecraft:stair",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Enum(
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Enum(
       "shape",
       ["straight", "inner_left", "inner_right", "outer_left", "outer_right"],
-    ), Bool("waterlogged"),
+    ),
+    Bool("waterlogged"),
   ],
 )
 
@@ -5554,10 +5860,9 @@ pub const crimson_button = Block(
   "minecraft:crimson_button",
   "minecraft:button",
   [
-    Enum("face", ["floor", "wall", "ceiling"]), Enum(
-      "facing",
-      ["north", "south", "west", "east"],
-    ), Bool("powered"),
+    Enum("face", ["floor", "wall", "ceiling"]),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Bool("powered"),
   ],
 )
 
@@ -5565,10 +5870,9 @@ pub const warped_button = Block(
   "minecraft:warped_button",
   "minecraft:button",
   [
-    Enum("face", ["floor", "wall", "ceiling"]), Enum(
-      "facing",
-      ["north", "south", "west", "east"],
-    ), Bool("powered"),
+    Enum("face", ["floor", "wall", "ceiling"]),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Bool("powered"),
   ],
 )
 
@@ -5576,10 +5880,11 @@ pub const crimson_door = Block(
   "minecraft:crimson_door",
   "minecraft:door",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["upper", "lower"],
-    ), Enum("hinge", ["left", "right"]), Bool("open"), Bool("powered"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["upper", "lower"]),
+    Enum("hinge", ["left", "right"]),
+    Bool("open"),
+    Bool("powered"),
   ],
 )
 
@@ -5587,10 +5892,11 @@ pub const warped_door = Block(
   "minecraft:warped_door",
   "minecraft:door",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["upper", "lower"],
-    ), Enum("hinge", ["left", "right"]), Bool("open"), Bool("powered"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["upper", "lower"]),
+    Enum("hinge", ["left", "right"]),
+    Bool("open"),
+    Bool("powered"),
   ],
 )
 
@@ -5727,13 +6033,13 @@ pub const blackstone_stairs = Block(
   "minecraft:blackstone_stairs",
   "minecraft:stair",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Enum(
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Enum(
       "shape",
       ["straight", "inner_left", "inner_right", "outer_left", "outer_right"],
-    ), Bool("waterlogged"),
+    ),
+    Bool("waterlogged"),
   ],
 )
 
@@ -5741,8 +6047,11 @@ pub const blackstone_wall = Block(
   "minecraft:blackstone_wall",
   "minecraft:wall",
   [
-    Enum("east", ["none", "low", "tall"]), Enum("north", ["none", "low", "tall"],
-    ), Enum("south", ["none", "low", "tall"]), Bool("up"), Bool("waterlogged"),
+    Enum("east", ["none", "low", "tall"]),
+    Enum("north", ["none", "low", "tall"]),
+    Enum("south", ["none", "low", "tall"]),
+    Bool("up"),
+    Bool("waterlogged"),
     Enum("west", ["none", "low", "tall"]),
   ],
 )
@@ -5787,13 +6096,13 @@ pub const polished_blackstone_brick_stairs = Block(
   "minecraft:polished_blackstone_brick_stairs",
   "minecraft:stair",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Enum(
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Enum(
       "shape",
       ["straight", "inner_left", "inner_right", "outer_left", "outer_right"],
-    ), Bool("waterlogged"),
+    ),
+    Bool("waterlogged"),
   ],
 )
 
@@ -5801,8 +6110,11 @@ pub const polished_blackstone_brick_wall = Block(
   "minecraft:polished_blackstone_brick_wall",
   "minecraft:wall",
   [
-    Enum("east", ["none", "low", "tall"]), Enum("north", ["none", "low", "tall"],
-    ), Enum("south", ["none", "low", "tall"]), Bool("up"), Bool("waterlogged"),
+    Enum("east", ["none", "low", "tall"]),
+    Enum("north", ["none", "low", "tall"]),
+    Enum("south", ["none", "low", "tall"]),
+    Bool("up"),
+    Bool("waterlogged"),
     Enum("west", ["none", "low", "tall"]),
   ],
 )
@@ -5817,13 +6129,13 @@ pub const polished_blackstone_stairs = Block(
   "minecraft:polished_blackstone_stairs",
   "minecraft:stair",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Enum(
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Enum(
       "shape",
       ["straight", "inner_left", "inner_right", "outer_left", "outer_right"],
-    ), Bool("waterlogged"),
+    ),
+    Bool("waterlogged"),
   ],
 )
 
@@ -5843,10 +6155,9 @@ pub const polished_blackstone_button = Block(
   "minecraft:polished_blackstone_button",
   "minecraft:button",
   [
-    Enum("face", ["floor", "wall", "ceiling"]), Enum(
-      "facing",
-      ["north", "south", "west", "east"],
-    ), Bool("powered"),
+    Enum("face", ["floor", "wall", "ceiling"]),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Bool("powered"),
   ],
 )
 
@@ -5854,8 +6165,11 @@ pub const polished_blackstone_wall = Block(
   "minecraft:polished_blackstone_wall",
   "minecraft:wall",
   [
-    Enum("east", ["none", "low", "tall"]), Enum("north", ["none", "low", "tall"],
-    ), Enum("south", ["none", "low", "tall"]), Bool("up"), Bool("waterlogged"),
+    Enum("east", ["none", "low", "tall"]),
+    Enum("north", ["none", "low", "tall"]),
+    Enum("south", ["none", "low", "tall"]),
+    Bool("up"),
+    Bool("waterlogged"),
     Enum("west", ["none", "low", "tall"]),
   ],
 )
@@ -5872,7 +6186,10 @@ pub const cracked_nether_bricks = Block(
   [],
 )
 
-pub const quartz_bricks = Block("minecraft:quartz_bricks", "minecraft:block", [],
+pub const quartz_bricks = Block(
+  "minecraft:quartz_bricks",
+  "minecraft:block",
+  [],
 )
 
 pub const candle = Block(
@@ -6095,9 +6412,8 @@ pub const amethyst_cluster = Block(
   "minecraft:amethyst_cluster",
   "minecraft:amethyst_cluster",
   [
-    Enum("facing", ["north", "east", "south", "west", "up", "down"]), Bool(
-      "waterlogged",
-    ),
+    Enum("facing", ["north", "east", "south", "west", "up", "down"]),
+    Bool("waterlogged"),
   ],
 )
 
@@ -6105,9 +6421,8 @@ pub const large_amethyst_bud = Block(
   "minecraft:large_amethyst_bud",
   "minecraft:amethyst_cluster",
   [
-    Enum("facing", ["north", "east", "south", "west", "up", "down"]), Bool(
-      "waterlogged",
-    ),
+    Enum("facing", ["north", "east", "south", "west", "up", "down"]),
+    Bool("waterlogged"),
   ],
 )
 
@@ -6115,9 +6430,8 @@ pub const medium_amethyst_bud = Block(
   "minecraft:medium_amethyst_bud",
   "minecraft:amethyst_cluster",
   [
-    Enum("facing", ["north", "east", "south", "west", "up", "down"]), Bool(
-      "waterlogged",
-    ),
+    Enum("facing", ["north", "east", "south", "west", "up", "down"]),
+    Bool("waterlogged"),
   ],
 )
 
@@ -6125,9 +6439,8 @@ pub const small_amethyst_bud = Block(
   "minecraft:small_amethyst_bud",
   "minecraft:amethyst_cluster",
   [
-    Enum("facing", ["north", "east", "south", "west", "up", "down"]), Bool(
-      "waterlogged",
-    ),
+    Enum("facing", ["north", "east", "south", "west", "up", "down"]),
+    Bool("waterlogged"),
   ],
 )
 
@@ -6143,13 +6456,13 @@ pub const tuff_stairs = Block(
   "minecraft:tuff_stairs",
   "minecraft:stair",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Enum(
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Enum(
       "shape",
       ["straight", "inner_left", "inner_right", "outer_left", "outer_right"],
-    ), Bool("waterlogged"),
+    ),
+    Bool("waterlogged"),
   ],
 )
 
@@ -6157,13 +6470,19 @@ pub const tuff_wall = Block(
   "minecraft:tuff_wall",
   "minecraft:wall",
   [
-    Enum("east", ["none", "low", "tall"]), Enum("north", ["none", "low", "tall"],
-    ), Enum("south", ["none", "low", "tall"]), Bool("up"), Bool("waterlogged"),
+    Enum("east", ["none", "low", "tall"]),
+    Enum("north", ["none", "low", "tall"]),
+    Enum("south", ["none", "low", "tall"]),
+    Bool("up"),
+    Bool("waterlogged"),
     Enum("west", ["none", "low", "tall"]),
   ],
 )
 
-pub const polished_tuff = Block("minecraft:polished_tuff", "minecraft:block", [],
+pub const polished_tuff = Block(
+  "minecraft:polished_tuff",
+  "minecraft:block",
+  [],
 )
 
 pub const polished_tuff_slab = Block(
@@ -6176,13 +6495,13 @@ pub const polished_tuff_stairs = Block(
   "minecraft:polished_tuff_stairs",
   "minecraft:stair",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Enum(
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Enum(
       "shape",
       ["straight", "inner_left", "inner_right", "outer_left", "outer_right"],
-    ), Bool("waterlogged"),
+    ),
+    Bool("waterlogged"),
   ],
 )
 
@@ -6190,13 +6509,19 @@ pub const polished_tuff_wall = Block(
   "minecraft:polished_tuff_wall",
   "minecraft:wall",
   [
-    Enum("east", ["none", "low", "tall"]), Enum("north", ["none", "low", "tall"],
-    ), Enum("south", ["none", "low", "tall"]), Bool("up"), Bool("waterlogged"),
+    Enum("east", ["none", "low", "tall"]),
+    Enum("north", ["none", "low", "tall"]),
+    Enum("south", ["none", "low", "tall"]),
+    Bool("up"),
+    Bool("waterlogged"),
     Enum("west", ["none", "low", "tall"]),
   ],
 )
 
-pub const chiseled_tuff = Block("minecraft:chiseled_tuff", "minecraft:block", [],
+pub const chiseled_tuff = Block(
+  "minecraft:chiseled_tuff",
+  "minecraft:block",
+  [],
 )
 
 pub const tuff_bricks = Block("minecraft:tuff_bricks", "minecraft:block", [])
@@ -6211,13 +6536,13 @@ pub const tuff_brick_stairs = Block(
   "minecraft:tuff_brick_stairs",
   "minecraft:stair",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Enum(
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Enum(
       "shape",
       ["straight", "inner_left", "inner_right", "outer_left", "outer_right"],
-    ), Bool("waterlogged"),
+    ),
+    Bool("waterlogged"),
   ],
 )
 
@@ -6225,8 +6550,11 @@ pub const tuff_brick_wall = Block(
   "minecraft:tuff_brick_wall",
   "minecraft:wall",
   [
-    Enum("east", ["none", "low", "tall"]), Enum("north", ["none", "low", "tall"],
-    ), Enum("south", ["none", "low", "tall"]), Bool("up"), Bool("waterlogged"),
+    Enum("east", ["none", "low", "tall"]),
+    Enum("north", ["none", "low", "tall"]),
+    Enum("south", ["none", "low", "tall"]),
+    Bool("up"),
+    Bool("waterlogged"),
     Enum("west", ["none", "low", "tall"]),
   ],
 )
@@ -6255,10 +6583,9 @@ pub const sculk_sensor = Block(
   "minecraft:sculk_sensor",
   "minecraft:sculk_sensor",
   [
-    Int("power", 0, 15), Enum(
-      "sculk_sensor_phase",
-      ["inactive", "active", "cooldown"],
-    ), Bool("waterlogged"),
+    Int("power", 0, 15),
+    Enum("sculk_sensor_phase", ["inactive", "active", "cooldown"]),
+    Bool("waterlogged"),
   ],
 )
 
@@ -6266,10 +6593,10 @@ pub const calibrated_sculk_sensor = Block(
   "minecraft:calibrated_sculk_sensor",
   "minecraft:calibrated_sculk_sensor",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Int("power", 0, 15),
-    Enum("sculk_sensor_phase", ["inactive", "active", "cooldown"]), Bool(
-      "waterlogged",
-    ),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Int("power", 0, 15),
+    Enum("sculk_sensor_phase", ["inactive", "active", "cooldown"]),
+    Bool("waterlogged"),
   ],
 )
 
@@ -6279,9 +6606,13 @@ pub const sculk_vein = Block(
   "minecraft:sculk_vein",
   "minecraft:sculk_vein",
   [
-    Bool("down"), Bool("east"), Bool("north"), Bool("south"), Bool("up"), Bool(
-      "waterlogged",
-    ), Bool("west"),
+    Bool("down"),
+    Bool("east"),
+    Bool("north"),
+    Bool("south"),
+    Bool("up"),
+    Bool("waterlogged"),
+    Bool("west"),
   ],
 )
 
@@ -6409,13 +6740,13 @@ pub const oxidized_cut_copper_stairs = Block(
   "minecraft:oxidized_cut_copper_stairs",
   "minecraft:weathering_copper_stair",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Enum(
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Enum(
       "shape",
       ["straight", "inner_left", "inner_right", "outer_left", "outer_right"],
-    ), Bool("waterlogged"),
+    ),
+    Bool("waterlogged"),
   ],
 )
 
@@ -6423,13 +6754,13 @@ pub const weathered_cut_copper_stairs = Block(
   "minecraft:weathered_cut_copper_stairs",
   "minecraft:weathering_copper_stair",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Enum(
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Enum(
       "shape",
       ["straight", "inner_left", "inner_right", "outer_left", "outer_right"],
-    ), Bool("waterlogged"),
+    ),
+    Bool("waterlogged"),
   ],
 )
 
@@ -6437,13 +6768,13 @@ pub const exposed_cut_copper_stairs = Block(
   "minecraft:exposed_cut_copper_stairs",
   "minecraft:weathering_copper_stair",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Enum(
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Enum(
       "shape",
       ["straight", "inner_left", "inner_right", "outer_left", "outer_right"],
-    ), Bool("waterlogged"),
+    ),
+    Bool("waterlogged"),
   ],
 )
 
@@ -6451,13 +6782,13 @@ pub const cut_copper_stairs = Block(
   "minecraft:cut_copper_stairs",
   "minecraft:weathering_copper_stair",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Enum(
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Enum(
       "shape",
       ["straight", "inner_left", "inner_right", "outer_left", "outer_right"],
-    ), Bool("waterlogged"),
+    ),
+    Bool("waterlogged"),
   ],
 )
 
@@ -6537,13 +6868,13 @@ pub const waxed_oxidized_cut_copper_stairs = Block(
   "minecraft:waxed_oxidized_cut_copper_stairs",
   "minecraft:stair",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Enum(
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Enum(
       "shape",
       ["straight", "inner_left", "inner_right", "outer_left", "outer_right"],
-    ), Bool("waterlogged"),
+    ),
+    Bool("waterlogged"),
   ],
 )
 
@@ -6551,13 +6882,13 @@ pub const waxed_weathered_cut_copper_stairs = Block(
   "minecraft:waxed_weathered_cut_copper_stairs",
   "minecraft:stair",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Enum(
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Enum(
       "shape",
       ["straight", "inner_left", "inner_right", "outer_left", "outer_right"],
-    ), Bool("waterlogged"),
+    ),
+    Bool("waterlogged"),
   ],
 )
 
@@ -6565,13 +6896,13 @@ pub const waxed_exposed_cut_copper_stairs = Block(
   "minecraft:waxed_exposed_cut_copper_stairs",
   "minecraft:stair",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Enum(
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Enum(
       "shape",
       ["straight", "inner_left", "inner_right", "outer_left", "outer_right"],
-    ), Bool("waterlogged"),
+    ),
+    Bool("waterlogged"),
   ],
 )
 
@@ -6579,13 +6910,13 @@ pub const waxed_cut_copper_stairs = Block(
   "minecraft:waxed_cut_copper_stairs",
   "minecraft:stair",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Enum(
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Enum(
       "shape",
       ["straight", "inner_left", "inner_right", "outer_left", "outer_right"],
-    ), Bool("waterlogged"),
+    ),
+    Bool("waterlogged"),
   ],
 )
 
@@ -6617,10 +6948,11 @@ pub const copper_door = Block(
   "minecraft:copper_door",
   "minecraft:weathering_copper_door",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["upper", "lower"],
-    ), Enum("hinge", ["left", "right"]), Bool("open"), Bool("powered"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["upper", "lower"]),
+    Enum("hinge", ["left", "right"]),
+    Bool("open"),
+    Bool("powered"),
   ],
 )
 
@@ -6628,10 +6960,11 @@ pub const exposed_copper_door = Block(
   "minecraft:exposed_copper_door",
   "minecraft:weathering_copper_door",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["upper", "lower"],
-    ), Enum("hinge", ["left", "right"]), Bool("open"), Bool("powered"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["upper", "lower"]),
+    Enum("hinge", ["left", "right"]),
+    Bool("open"),
+    Bool("powered"),
   ],
 )
 
@@ -6639,10 +6972,11 @@ pub const oxidized_copper_door = Block(
   "minecraft:oxidized_copper_door",
   "minecraft:weathering_copper_door",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["upper", "lower"],
-    ), Enum("hinge", ["left", "right"]), Bool("open"), Bool("powered"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["upper", "lower"]),
+    Enum("hinge", ["left", "right"]),
+    Bool("open"),
+    Bool("powered"),
   ],
 )
 
@@ -6650,10 +6984,11 @@ pub const weathered_copper_door = Block(
   "minecraft:weathered_copper_door",
   "minecraft:weathering_copper_door",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["upper", "lower"],
-    ), Enum("hinge", ["left", "right"]), Bool("open"), Bool("powered"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["upper", "lower"]),
+    Enum("hinge", ["left", "right"]),
+    Bool("open"),
+    Bool("powered"),
   ],
 )
 
@@ -6661,10 +6996,11 @@ pub const waxed_copper_door = Block(
   "minecraft:waxed_copper_door",
   "minecraft:door",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["upper", "lower"],
-    ), Enum("hinge", ["left", "right"]), Bool("open"), Bool("powered"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["upper", "lower"]),
+    Enum("hinge", ["left", "right"]),
+    Bool("open"),
+    Bool("powered"),
   ],
 )
 
@@ -6672,10 +7008,11 @@ pub const waxed_exposed_copper_door = Block(
   "minecraft:waxed_exposed_copper_door",
   "minecraft:door",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["upper", "lower"],
-    ), Enum("hinge", ["left", "right"]), Bool("open"), Bool("powered"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["upper", "lower"]),
+    Enum("hinge", ["left", "right"]),
+    Bool("open"),
+    Bool("powered"),
   ],
 )
 
@@ -6683,10 +7020,11 @@ pub const waxed_oxidized_copper_door = Block(
   "minecraft:waxed_oxidized_copper_door",
   "minecraft:door",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["upper", "lower"],
-    ), Enum("hinge", ["left", "right"]), Bool("open"), Bool("powered"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["upper", "lower"]),
+    Enum("hinge", ["left", "right"]),
+    Bool("open"),
+    Bool("powered"),
   ],
 )
 
@@ -6694,10 +7032,11 @@ pub const waxed_weathered_copper_door = Block(
   "minecraft:waxed_weathered_copper_door",
   "minecraft:door",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["upper", "lower"],
-    ), Enum("hinge", ["left", "right"]), Bool("open"), Bool("powered"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["upper", "lower"]),
+    Enum("hinge", ["left", "right"]),
+    Bool("open"),
+    Bool("powered"),
   ],
 )
 
@@ -6705,10 +7044,11 @@ pub const copper_trapdoor = Block(
   "minecraft:copper_trapdoor",
   "minecraft:weathering_copper_trap_door",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Bool("open"), Bool("powered"), Bool("waterlogged"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Bool("open"),
+    Bool("powered"),
+    Bool("waterlogged"),
   ],
 )
 
@@ -6716,10 +7056,11 @@ pub const exposed_copper_trapdoor = Block(
   "minecraft:exposed_copper_trapdoor",
   "minecraft:weathering_copper_trap_door",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Bool("open"), Bool("powered"), Bool("waterlogged"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Bool("open"),
+    Bool("powered"),
+    Bool("waterlogged"),
   ],
 )
 
@@ -6727,10 +7068,11 @@ pub const oxidized_copper_trapdoor = Block(
   "minecraft:oxidized_copper_trapdoor",
   "minecraft:weathering_copper_trap_door",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Bool("open"), Bool("powered"), Bool("waterlogged"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Bool("open"),
+    Bool("powered"),
+    Bool("waterlogged"),
   ],
 )
 
@@ -6738,10 +7080,11 @@ pub const weathered_copper_trapdoor = Block(
   "minecraft:weathered_copper_trapdoor",
   "minecraft:weathering_copper_trap_door",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Bool("open"), Bool("powered"), Bool("waterlogged"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Bool("open"),
+    Bool("powered"),
+    Bool("waterlogged"),
   ],
 )
 
@@ -6749,10 +7092,11 @@ pub const waxed_copper_trapdoor = Block(
   "minecraft:waxed_copper_trapdoor",
   "minecraft:trapdoor",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Bool("open"), Bool("powered"), Bool("waterlogged"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Bool("open"),
+    Bool("powered"),
+    Bool("waterlogged"),
   ],
 )
 
@@ -6760,10 +7104,11 @@ pub const waxed_exposed_copper_trapdoor = Block(
   "minecraft:waxed_exposed_copper_trapdoor",
   "minecraft:trapdoor",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Bool("open"), Bool("powered"), Bool("waterlogged"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Bool("open"),
+    Bool("powered"),
+    Bool("waterlogged"),
   ],
 )
 
@@ -6771,10 +7116,11 @@ pub const waxed_oxidized_copper_trapdoor = Block(
   "minecraft:waxed_oxidized_copper_trapdoor",
   "minecraft:trapdoor",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Bool("open"), Bool("powered"), Bool("waterlogged"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Bool("open"),
+    Bool("powered"),
+    Bool("waterlogged"),
   ],
 )
 
@@ -6782,10 +7128,11 @@ pub const waxed_weathered_copper_trapdoor = Block(
   "minecraft:waxed_weathered_copper_trapdoor",
   "minecraft:trapdoor",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Bool("open"), Bool("powered"), Bool("waterlogged"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Bool("open"),
+    Bool("powered"),
+    Bool("waterlogged"),
   ],
 )
 
@@ -6889,9 +7236,9 @@ pub const lightning_rod = Block(
   "minecraft:lightning_rod",
   "minecraft:lightning_rod",
   [
-    Enum("facing", ["north", "east", "south", "west", "up", "down"]), Bool(
-      "powered",
-    ), Bool("waterlogged"),
+    Enum("facing", ["north", "east", "south", "west", "up", "down"]),
+    Bool("powered"),
+    Bool("waterlogged"),
   ],
 )
 
@@ -6899,10 +7246,9 @@ pub const pointed_dripstone = Block(
   "minecraft:pointed_dripstone",
   "minecraft:pointed_dripstone",
   [
-    Enum("thickness", ["tip_merge", "tip", "frustum", "middle", "base"]), Enum(
-      "vertical_direction",
-      ["up", "down"],
-    ), Bool("waterlogged"),
+    Enum("thickness", ["tip_merge", "tip", "frustum", "middle", "base"]),
+    Enum("vertical_direction", ["up", "down"]),
+    Bool("waterlogged"),
   ],
 )
 
@@ -6944,11 +7290,8 @@ pub const pink_petals = Block(
   "minecraft:pink_petals",
   "minecraft:pink_petals",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Int(
-      "flower_amount",
-      1,
-      4,
-    ),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Int("flower_amount", 1, 4),
   ],
 )
 
@@ -6962,10 +7305,9 @@ pub const big_dripleaf = Block(
   "minecraft:big_dripleaf",
   "minecraft:big_dripleaf",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "tilt",
-      ["none", "unstable", "partial", "full"],
-    ), Bool("waterlogged"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("tilt", ["none", "unstable", "partial", "full"]),
+    Bool("waterlogged"),
   ],
 )
 
@@ -6979,10 +7321,9 @@ pub const small_dripleaf = Block(
   "minecraft:small_dripleaf",
   "minecraft:small_dripleaf",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["upper", "lower"],
-    ), Bool("waterlogged"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["upper", "lower"]),
+    Bool("waterlogged"),
   ],
 )
 
@@ -7016,13 +7357,13 @@ pub const cobbled_deepslate_stairs = Block(
   "minecraft:cobbled_deepslate_stairs",
   "minecraft:stair",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Enum(
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Enum(
       "shape",
       ["straight", "inner_left", "inner_right", "outer_left", "outer_right"],
-    ), Bool("waterlogged"),
+    ),
+    Bool("waterlogged"),
   ],
 )
 
@@ -7036,8 +7377,11 @@ pub const cobbled_deepslate_wall = Block(
   "minecraft:cobbled_deepslate_wall",
   "minecraft:wall",
   [
-    Enum("east", ["none", "low", "tall"]), Enum("north", ["none", "low", "tall"],
-    ), Enum("south", ["none", "low", "tall"]), Bool("up"), Bool("waterlogged"),
+    Enum("east", ["none", "low", "tall"]),
+    Enum("north", ["none", "low", "tall"]),
+    Enum("south", ["none", "low", "tall"]),
+    Bool("up"),
+    Bool("waterlogged"),
     Enum("west", ["none", "low", "tall"]),
   ],
 )
@@ -7052,13 +7396,13 @@ pub const polished_deepslate_stairs = Block(
   "minecraft:polished_deepslate_stairs",
   "minecraft:stair",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Enum(
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Enum(
       "shape",
       ["straight", "inner_left", "inner_right", "outer_left", "outer_right"],
-    ), Bool("waterlogged"),
+    ),
+    Bool("waterlogged"),
   ],
 )
 
@@ -7072,8 +7416,11 @@ pub const polished_deepslate_wall = Block(
   "minecraft:polished_deepslate_wall",
   "minecraft:wall",
   [
-    Enum("east", ["none", "low", "tall"]), Enum("north", ["none", "low", "tall"],
-    ), Enum("south", ["none", "low", "tall"]), Bool("up"), Bool("waterlogged"),
+    Enum("east", ["none", "low", "tall"]),
+    Enum("north", ["none", "low", "tall"]),
+    Enum("south", ["none", "low", "tall"]),
+    Bool("up"),
+    Bool("waterlogged"),
     Enum("west", ["none", "low", "tall"]),
   ],
 )
@@ -7088,13 +7435,13 @@ pub const deepslate_tile_stairs = Block(
   "minecraft:deepslate_tile_stairs",
   "minecraft:stair",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Enum(
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Enum(
       "shape",
       ["straight", "inner_left", "inner_right", "outer_left", "outer_right"],
-    ), Bool("waterlogged"),
+    ),
+    Bool("waterlogged"),
   ],
 )
 
@@ -7108,8 +7455,11 @@ pub const deepslate_tile_wall = Block(
   "minecraft:deepslate_tile_wall",
   "minecraft:wall",
   [
-    Enum("east", ["none", "low", "tall"]), Enum("north", ["none", "low", "tall"],
-    ), Enum("south", ["none", "low", "tall"]), Bool("up"), Bool("waterlogged"),
+    Enum("east", ["none", "low", "tall"]),
+    Enum("north", ["none", "low", "tall"]),
+    Enum("south", ["none", "low", "tall"]),
+    Bool("up"),
+    Bool("waterlogged"),
     Enum("west", ["none", "low", "tall"]),
   ],
 )
@@ -7124,13 +7474,13 @@ pub const deepslate_brick_stairs = Block(
   "minecraft:deepslate_brick_stairs",
   "minecraft:stair",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Enum(
-      "half",
-      ["top", "bottom"],
-    ), Enum(
+    Enum("facing", ["north", "south", "west", "east"]),
+    Enum("half", ["top", "bottom"]),
+    Enum(
       "shape",
       ["straight", "inner_left", "inner_right", "outer_left", "outer_right"],
-    ), Bool("waterlogged"),
+    ),
+    Bool("waterlogged"),
   ],
 )
 
@@ -7144,8 +7494,11 @@ pub const deepslate_brick_wall = Block(
   "minecraft:deepslate_brick_wall",
   "minecraft:wall",
   [
-    Enum("east", ["none", "low", "tall"]), Enum("north", ["none", "low", "tall"],
-    ), Enum("south", ["none", "low", "tall"]), Bool("up"), Bool("waterlogged"),
+    Enum("east", ["none", "low", "tall"]),
+    Enum("north", ["none", "low", "tall"]),
+    Enum("south", ["none", "low", "tall"]),
+    Bool("up"),
+    Bool("waterlogged"),
     Enum("west", ["none", "low", "tall"]),
   ],
 )
@@ -7174,7 +7527,10 @@ pub const infested_deepslate = Block(
   [Enum("axis", ["x", "y", "z"])],
 )
 
-pub const smooth_basalt = Block("minecraft:smooth_basalt", "minecraft:block", [],
+pub const smooth_basalt = Block(
+  "minecraft:smooth_basalt",
+  "minecraft:block",
+  [],
 )
 
 pub const raw_iron_block = Block(
@@ -7237,9 +7593,9 @@ pub const decorated_pot = Block(
   "minecraft:decorated_pot",
   "minecraft:decorated_pot",
   [
-    Bool("cracked"), Enum("facing", ["north", "south", "west", "east"]), Bool(
-      "waterlogged",
-    ),
+    Bool("cracked"),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Bool("waterlogged"),
   ],
 )
 
@@ -7247,14 +7603,16 @@ pub const crafter = Block(
   "minecraft:crafter",
   "minecraft:crafter",
   [
-    Bool("crafting"), Enum(
+    Bool("crafting"),
+    Enum(
       "orientation",
       [
         "down_east", "down_north", "down_south", "down_west", "up_east",
         "up_north", "up_south", "up_west", "west_up", "east_up", "north_up",
         "south_up",
       ],
-    ), Bool("triggered"),
+    ),
+    Bool("triggered"),
   ],
 )
 
@@ -7262,7 +7620,8 @@ pub const trial_spawner = Block(
   "minecraft:trial_spawner",
   "minecraft:trial_spawner",
   [
-    Bool("ominous"), Enum(
+    Bool("ominous"),
+    Enum(
       "trial_spawner_state",
       [
         "inactive", "waiting_for_players", "active",
@@ -7276,10 +7635,9 @@ pub const vault = Block(
   "minecraft:vault",
   "minecraft:vault",
   [
-    Enum("facing", ["north", "south", "west", "east"]), Bool("ominous"), Enum(
-      "vault_state",
-      ["inactive", "active", "unlocking", "ejecting"],
-    ),
+    Enum("facing", ["north", "south", "west", "east"]),
+    Bool("ominous"),
+    Enum("vault_state", ["inactive", "active", "unlocking", "ejecting"]),
   ],
 )
 
@@ -7299,13 +7657,11 @@ pub const pale_moss_carpet = Block(
   "minecraft:pale_moss_carpet",
   "minecraft:mossy_carpet",
   [
-    Bool("bottom"), Enum("east", ["none", "low", "tall"]), Enum(
-      "north",
-      ["none", "low", "tall"],
-    ), Enum("south", ["none", "low", "tall"]), Enum(
-      "west",
-      ["none", "low", "tall"],
-    ),
+    Bool("bottom"),
+    Enum("east", ["none", "low", "tall"]),
+    Enum("north", ["none", "low", "tall"]),
+    Enum("south", ["none", "low", "tall"]),
+    Enum("west", ["none", "low", "tall"]),
   ],
 )
 
