@@ -34,11 +34,12 @@ pub fn generate(version: version_number.VersionNumber) {
   let _ = echo generate_packets(packets, module_path)
 
   let _ = echo generate_version(version, registries, blocks, module_path)
+  Nil
 }
 
 fn decode_registries() {
   let assert Ok(json_string) =
-    simplifile.read("./dev/assets/v1_21_5/registries.json")
+    simplifile.read("./tmp/generated/reports/registries.json")
   let assert Ok(registries) = json.parse(json_string, registries.decoder())
   registries |> registries.map
 }
@@ -51,7 +52,7 @@ fn generate_registries(registries: List(registry.Registry), module_path: String)
 
 fn decode_blocks(block_registry: registry.Registry) {
   let assert Ok(json_string) =
-    simplifile.read("./dev/assets/v1_21_5/blocks.json")
+    simplifile.read("./tmp/generated/reports/blocks.json")
   let assert Ok(blocks) = json.parse(json_string, blocks.decoder())
   blocks |> blocks.map(block_registry)
 }
@@ -64,7 +65,7 @@ fn generate_blocks(blocks: List(block.Block), module_path: String) {
 
 fn decode_packets() {
   let assert Ok(json_string) =
-    simplifile.read("./dev/assets/v1_21_5/packets.json")
+    simplifile.read("./tmp/generated/reports/packets.json")
   let assert Ok(packets) = json.parse(json_string, packets.decoder())
   packets |> packets.map
 }
