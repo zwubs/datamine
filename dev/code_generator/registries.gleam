@@ -1,6 +1,6 @@
+import code_generator/internal/code
 import datamine/common/identifier
 import datamine/common/registry.{type Registry, Registry}
-import generator/internal/code
 import glam/doc
 import gleam/dict
 import gleam/dynamic/decode

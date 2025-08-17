@@ -1,8 +1,8 @@
+import code_generator/internal/code
 import datamine/common/block
 import datamine/common/block/block_property
 import datamine/common/identifier
 import datamine/common/registry
-import generator/internal/code
 import glam/doc
 import gleam/dict
 import gleam/dynamic/decode

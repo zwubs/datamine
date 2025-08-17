@@ -1,8 +1,8 @@
+import code_generator/internal/code
 import datamine/common/block
 import datamine/common/identifier
 import datamine/common/registry
 import datamine/common/version_number
-import generator/internal/code
 import glam/doc
 import gleam/list
 import gleam/string

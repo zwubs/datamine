@@ -1,7 +1,7 @@
+import code_generator/internal/code
 import datamine/common/identifier
 import datamine/common/protocol
 import datamine/common/protocol/phase_id
-import generator/internal/code
 import glam/doc
 import gleam/dict
 import gleam/dynamic/decode

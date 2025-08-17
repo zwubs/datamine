@@ -1,4 +1,5 @@
 import gleam/int
+import gleam/order
 import gleam/string
 
 pub type VersionNumber {
@@ -47,4 +48,16 @@ pub fn to_module_name(version_number: VersionNumber) {
   "v"
   <> to_string(version_number)
   |> string.replace(".", "_")
+}
+
+pub fn compare(a: VersionNumber, b: VersionNumber) {
+  case int.compare(a.major, b.major) {
+    order.Eq -> {
+      case int.compare(a.minor, b.minor) {
+        order.Eq -> int.compare(a.patch, b.patch)
+        order -> order
+      }
+    }
+    order -> order
+  }
 }
