@@ -41,4 +41,11 @@ pub type DataType {
 
 pub type Field {
   Field(name: String, data_type: DataType)
+  Fields(name: String, fields: List(Field))
+  // EnumField(name: String, values: Enum)
+}
+
+pub type EnumType {
+  StringEnum(values: List(String))
+  IntEnum(values: List(Int))
 }

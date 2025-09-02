@@ -1,117 +1,39 @@
 import datamine/common/protocol.{Packet}
 import datamine/common/protocol/data_type.{Field}
 
-pub const intention = Packet(
-  "intention",
-  [
-    Field("protocol_version", data_type.VarInt),
-    Field("server_host", data_type.String(255)),
-    Field("server_port", data_type.UnsignedShort),
-    Field("next_state", data_type.VarInt),
-  ],
-)
+pub const intention = Packet("minecraft:intention", [])
 
-pub const status_request = Packet("status_request", [])
+pub const status_request = Packet("minecraft:status_request", [])
 
-pub const ping_request = Packet(
-  "ping_request",
-  [Field("timestamp", data_type.Long)],
-)
+pub const ping_request = Packet("minecraft:ping_request", [])
 
-pub const hello = Packet(
-  "hello",
-  [Field("name", data_type.String(16)), Field("uuid", data_type.UUID)],
-)
+pub const hello = Packet("minecraft:hello", [])
 
-pub const key = Packet(
-  "key",
-  [
-    Field("shared_secret", data_type.PrefixedArray(data_type.Byte)),
-    Field("verify_token", data_type.PrefixedArray(data_type.Byte)),
-  ],
-)
+pub const key = Packet("minecraft:key", [])
 
-pub const custom_query_answer = Packet(
-  "custom_query_answer",
-  [
-    Field("message_id", data_type.VarInt),
-    Field("data", data_type.PrefixedOptional(data_type.ByteArray(1_048_576))),
-  ],
-)
+pub const custom_query_answer = Packet("minecraft:custom_query_answer", [])
 
-pub const login_acknowledged = Packet("login_acknowledged", [])
+pub const login_acknowledged = Packet("minecraft:login_acknowledged", [])
 
-pub const cookie_response = Packet(
-  "cookie_response",
-  [
-    Field("key", data_type.Identifier),
-    Field(
-      "payload",
-      data_type.PrefixedOptional(data_type.PrefixedArray(data_type.Byte)),
-    ),
-  ],
-)
+pub const cookie_response = Packet("minecraft:cookie_response", [])
 
-pub const client_information = Packet(
-  "client_information",
-  [
-    Field("locale", data_type.String(16)),
-    Field("view_distance", data_type.Byte),
-    Field("chat_mode", data_type.Enum(data_type.VarInt)),
-    Field("chat_colors", data_type.Boolean),
-    Field("model_customizations", data_type.UnsignedByte),
-    Field("main_hand", data_type.Enum(data_type.VarInt)),
-    Field("text_filtering", data_type.Boolean),
-    Field("allow_listing", data_type.Boolean),
-    Field("particle_status", data_type.Enum(data_type.VarInt)),
-  ],
-)
+pub const client_information = Packet("minecraft:client_information", [])
 
-pub const custom_payload = Packet(
-  "custom_payload",
-  [
-    Field("channel", data_type.Identifier),
-    Field("data", data_type.ByteArray(32_767)),
-  ],
-)
+pub const custom_payload = Packet("minecraft:custom_payload", [])
 
-pub const finish_configuration = Packet("finish_configuration", [])
+pub const finish_configuration = Packet("minecraft:finish_configuration", [])
 
-pub const keep_alive = Packet("keep_alive", [Field("id", data_type.Long)])
+pub const keep_alive = Packet("minecraft:keep_alive", [])
 
-pub const pong = Packet("pong", [Field("id", data_type.Int)])
+pub const pong = Packet("minecraft:pong", [])
 
-pub const resource_pack = Packet(
-  "resource_pack",
-  [
-    Field("uuid", data_type.UUID),
-    Field("action", data_type.Enum(data_type.VarInt)),
-  ],
-)
+pub const resource_pack = Packet("minecraft:resource_pack", [])
 
-pub const select_known_packs = Packet(
-  "select_known_packs",
-  [
-    Field(
-      "known_packs",
-      data_type.PrefixedArray(
-        data_type.Record(
-          [
-            Field("namespace", data_type.String(32_767)),
-            Field("id", data_type.String(32_767)),
-            Field("version", data_type.String(32_767)),
-          ],
-        ),
-      ),
-    ),
-  ],
-)
+pub const select_known_packs = Packet("minecraft:select_known_packs", [])
 
 pub const accept_teleportation = Packet("minecraft:accept_teleportation", [])
 
-pub const block_entity_tag_query = Packet(
-  "minecraft:block_entity_tag_query",
-  [],
+pub const block_entity_tag_query = Packet("minecraft:block_entity_tag_query", [],
 )
 
 pub const bundle_item_selected = Packet("minecraft:bundle_item_selected", [])
@@ -141,9 +63,7 @@ pub const configuration_acknowledged = Packet(
   [],
 )
 
-pub const container_button_click = Packet(
-  "minecraft:container_button_click",
-  [],
+pub const container_button_click = Packet("minecraft:container_button_click", [],
 )
 
 pub const container_click = Packet("minecraft:container_click", [])
@@ -225,9 +145,7 @@ pub const set_command_block = Packet("minecraft:set_command_block", [])
 
 pub const set_command_minecart = Packet("minecraft:set_command_minecart", [])
 
-pub const set_creative_mode_slot = Packet(
-  "minecraft:set_creative_mode_slot",
-  [],
+pub const set_creative_mode_slot = Packet("minecraft:set_creative_mode_slot", [],
 )
 
 pub const set_jigsaw_block = Packet("minecraft:set_jigsaw_block", [])

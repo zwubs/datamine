@@ -88,7 +88,7 @@ pub fn fun_doc(
   let args = list.map(args, doc.from_string)
 
   [
-    doc.from_string("pub pub fn " <> name),
+    doc.from_string("pub fn " <> name),
     comma_list("(", args, ") "),
     block([body |> doc.join(with: doc.lines(2))]),
   ]

@@ -1,226 +1,56 @@
 import datamine/common/protocol.{Packet}
 import datamine/common/protocol/data_type.{Field}
 
-pub const status_response = Packet(
-  "status_response",
-  [Field("json", data_type.String(32_767))],
-)
+pub const status_response = Packet("minecraft:status_response", [])
 
-pub const pong_response = Packet(
-  "pong_response",
-  [Field("timestamp", data_type.Long)],
-)
+pub const pong_response = Packet("minecraft:pong_response", [])
 
-pub const login_disconnect = Packet(
-  "login_disconnect",
-  [Field("reason", data_type.JSONTextComponent)],
-)
+pub const login_disconnect = Packet("minecraft:login_disconnect", [])
 
-pub const hello = Packet(
-  "hello",
-  [
-    Field("server_id", data_type.String(20)),
-    Field("public_key", data_type.PrefixedArray(data_type.Byte)),
-    Field("verify_token", data_type.PrefixedArray(data_type.Byte)),
-    Field("should_authenticate", data_type.Boolean),
-  ],
-)
+pub const hello = Packet("minecraft:hello", [])
 
-pub const login_finished = Packet(
-  "login_finished",
-  [
-    Field("uuid", data_type.UUID),
-    Field("username", data_type.String(16)),
-    Field(
-      "properties",
-      data_type.PrefixedArray(
-        data_type.Record(
-          [
-            Field("name", data_type.String(64)),
-            Field("value", data_type.String(32_767)),
-            Field(
-              "signature",
-              data_type.PrefixedOptional(data_type.String(1024)),
-            ),
-          ],
-        ),
-      ),
-    ),
-  ],
-)
+pub const login_finished = Packet("minecraft:login_finished", [])
 
-pub const login_compression = Packet(
-  "login_compression",
-  [Field("threshold", data_type.VarInt)],
-)
+pub const login_compression = Packet("minecraft:login_compression", [])
 
-pub const custom_query = Packet(
-  "custom_query",
-  [
-    Field("message_id", data_type.VarInt),
-    Field("channel", data_type.Identifier),
-    Field("data", data_type.ByteArray(1_048_576)),
-  ],
-)
+pub const custom_query = Packet("minecraft:custom_query", [])
 
-pub const cookie_request = Packet(
-  "cookie_request",
-  [Field("key", data_type.Identifier)],
-)
+pub const cookie_request = Packet("minecraft:cookie_request", [])
 
-pub const custom_payload = Packet(
-  "custom_payload",
-  [
-    Field("channel", data_type.Identifier),
-    Field("data", data_type.ByteArray(1_048_576)),
-  ],
-)
+pub const custom_payload = Packet("minecraft:custom_payload", [])
 
-pub const disconnect = Packet(
-  "disconnect",
-  [Field("reason", data_type.TextComponent)],
-)
+pub const disconnect = Packet("minecraft:disconnect", [])
 
-pub const finish_configuration = Packet("finish_configuration", [])
+pub const finish_configuration = Packet("minecraft:finish_configuration", [])
 
-pub const keep_alive = Packet("keep_alive", [Field("id", data_type.Long)])
+pub const keep_alive = Packet("minecraft:keep_alive", [])
 
-pub const ping = Packet("ping", [Field("id", data_type.Int)])
+pub const ping = Packet("minecraft:ping", [])
 
-pub const reset_chat = Packet("reset_chat", [])
+pub const reset_chat = Packet("minecraft:reset_chat", [])
 
-pub const registry_data = Packet(
-  "registry_data",
-  [
-    Field("id", data_type.Identifier),
-    Field(
-      "entries",
-      data_type.PrefixedArray(
-        data_type.Record(
-          [
-            Field("id", data_type.Identifier),
-            Field("data", data_type.PrefixedOptional(data_type.NBT)),
-          ],
-        ),
-      ),
-    ),
-  ],
-)
+pub const registry_data = Packet("minecraft:registry_data", [])
 
-pub const resource_pack_pop = Packet(
-  "resource_pack_pop",
-  [Field("id", data_type.PrefixedOptional(data_type.UUID))],
-)
+pub const resource_pack_pop = Packet("minecraft:resource_pack_pop", [])
 
-pub const resource_pack_push = Packet(
-  "resource_pack_push",
-  [
-    Field("id", data_type.UUID),
-    Field("url", data_type.String(32_767)),
-    Field("hash", data_type.String(40)),
-    Field("required", data_type.Boolean),
-    Field("prompt", data_type.PrefixedOptional(data_type.TextComponent)),
-  ],
-)
+pub const resource_pack_push = Packet("minecraft:resource_pack_push", [])
 
-pub const store_cookie = Packet(
-  "store_cookie",
-  [
-    Field("key", data_type.Identifier),
-    Field("payload", data_type.PrefixedArray(data_type.Byte)),
-  ],
-)
+pub const store_cookie = Packet("minecraft:store_cookie", [])
 
-pub const transfer = Packet(
-  "transfer",
-  [Field("host", data_type.String(32_767)), Field("port", data_type.VarInt)],
-)
+pub const transfer = Packet("minecraft:transfer", [])
 
 pub const update_enabled_features = Packet(
-  "update_enabled_features",
-  [Field("feature_flags", data_type.PrefixedArray(data_type.Identifier))],
+  "minecraft:update_enabled_features",
+  [],
 )
 
-pub const update_tags = Packet(
-  "update_tags",
-  [
-    Field(
-      "tags",
-      data_type.PrefixedArray(
-        data_type.Record(
-          [
-            Field("registry", data_type.Identifier),
-            Field(
-              "tags",
-              data_type.PrefixedArray(
-                data_type.Record(
-                  [
-                    Field("name", data_type.Identifier),
-                    Field("entries", data_type.PrefixedArray(data_type.VarInt)),
-                  ],
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
-    ),
-  ],
-)
+pub const update_tags = Packet("minecraft:update_tags", [])
 
-pub const select_known_packs = Packet(
-  "select_known_packs",
-  [
-    Field(
-      "known_packs",
-      data_type.PrefixedArray(
-        data_type.Record(
-          [
-            Field("namespace", data_type.String(32_767)),
-            Field("id", data_type.String(32_767)),
-            Field("version", data_type.String(32_767)),
-          ],
-        ),
-      ),
-    ),
-  ],
-)
+pub const select_known_packs = Packet("minecraft:select_known_packs", [])
 
-pub const custom_report_details = Packet(
-  "custom_report_details",
-  [
-    Field(
-      "details",
-      data_type.PrefixedArray(
-        data_type.Record(
-          [
-            Field("title", data_type.String(128)),
-            Field("description", data_type.String(4096)),
-          ],
-        ),
-      ),
-    ),
-  ],
-)
+pub const custom_report_details = Packet("minecraft:custom_report_details", [])
 
-pub const server_links = Packet(
-  "server_links",
-  [
-    Field(
-      "links",
-      data_type.PrefixedArray(
-        data_type.Record(
-          [
-            Field("is_enum", data_type.Boolean),
-            // TODO: Add support for this being an enum
-            Field("label", data_type.TextComponent),
-            Field("url", data_type.String(32_767)),
-          ],
-        ),
-      ),
-    ),
-  ],
-)
+pub const server_links = Packet("minecraft:server_links", [])
 
 pub const bundle_delimiter = Packet("minecraft:bundle_delimiter", [])
 
@@ -297,9 +127,7 @@ pub const hurt_animation = Packet("minecraft:hurt_animation", [])
 
 pub const initialize_border = Packet("minecraft:initialize_border", [])
 
-pub const level_chunk_with_light = Packet(
-  "minecraft:level_chunk_with_light",
-  [],
+pub const level_chunk_with_light = Packet("minecraft:level_chunk_with_light", [],
 )
 
 pub const level_event = Packet("minecraft:level_event", [])
@@ -400,14 +228,10 @@ pub const set_border_warning_distance = Packet(
 
 pub const set_camera = Packet("minecraft:set_camera", [])
 
-pub const set_chunk_cache_center = Packet(
-  "minecraft:set_chunk_cache_center",
-  [],
+pub const set_chunk_cache_center = Packet("minecraft:set_chunk_cache_center", [],
 )
 
-pub const set_chunk_cache_radius = Packet(
-  "minecraft:set_chunk_cache_radius",
-  [],
+pub const set_chunk_cache_radius = Packet("minecraft:set_chunk_cache_radius", [],
 )
 
 pub const set_cursor_item = Packet("minecraft:set_cursor_item", [])

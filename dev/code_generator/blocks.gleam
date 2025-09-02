@@ -4,6 +4,7 @@ import datamine/common/block/block_property
 import datamine/common/identifier
 import datamine/common/registry
 import glam/doc
+import gleam/bool
 import gleam/dict
 import gleam/dynamic/decode
 import gleam/int
@@ -19,11 +20,23 @@ pub type DecodedBlock {
   DecodedBlock(
     type_identifier: identifier.Identifier,
     properties: DecodedBlockProperties,
+    default_property_values: DecodedBlockPropertyValues,
   )
 }
 
 pub type DecodedBlockProperties =
   dict.Dict(String, List(String))
+
+pub type DecodedBlockPropertyValues =
+  dict.Dict(String, String)
+
+pub type DecodedBlockState {
+  DecodedBlockState(
+    default: Bool,
+    id: Int,
+    properties: DecodedBlockPropertyValues,
+  )
+}
 
 pub fn decoder() -> decode.Decoder(DecodedBlocks) {
   decode.dict(decode.string, {
@@ -36,7 +49,30 @@ pub fn decoder() -> decode.Decoder(DecodedBlocks) {
       dict.new(),
       decode.dict(decode.string, decode.list(decode.string)),
     )
-    decode.success(DecodedBlock(type_identifier:, properties:))
+    use states <- decode.optional_field(
+      "states",
+      [],
+      decode.list({
+        use default <- decode.optional_field("default", False, decode.bool)
+        use id <- decode.field("id", decode.int)
+        use properties <- decode.optional_field(
+          "properties",
+          dict.new(),
+          decode.dict(decode.string, decode.string),
+        )
+        decode.success(DecodedBlockState(default:, id:, properties:))
+      }),
+    )
+    let default_state = list.find(states, fn(state) { state.default })
+    let default_property_values = case default_state {
+      Ok(default_state) -> default_state.properties
+      _ -> dict.new()
+    }
+    decode.success(DecodedBlock(
+      type_identifier:,
+      properties:,
+      default_property_values:,
+    ))
   })
 }
 
@@ -51,28 +87,35 @@ pub fn map(decoded_blocks: DecodedBlocks, block_registry: registry.Registry) {
     int.compare(a_index, b_index)
   })
   |> list.map(fn(key_value) {
-    let #(identifier, DecodedBlock(type_identifier, decoded_properties)) =
-      key_value
-    let properties = map_properties(decoded_properties)
+    let #(
+      identifier,
+      DecodedBlock(type_identifier, decoded_properties, default_property_values),
+    ) = key_value
+    let properties = map_properties(decoded_properties, default_property_values)
     block.Block(identifier:, type_identifier:, properties:)
   })
 }
 
-fn map_properties(decoded_properties: DecodedBlockProperties) {
+fn map_properties(
+  decoded_properties: DecodedBlockProperties,
+  default_property_values: DecodedBlockPropertyValues,
+) {
   dict.to_list(decoded_properties)
   |> list.sort(fn(a, b) { string.compare(a.0, b.0) })
   |> list.map(fn(key_value) {
     let #(name, values) = key_value
+    let assert Ok(default_value) = dict.get(default_property_values, name)
     case values {
-      ["true", "false"] -> block_property.Bool(name)
+      ["true", "false"] -> block_property.Bool(name, default_value == "true")
       values -> {
         case result.all(list.map(values, int.parse)) {
           Ok(values) -> {
             let assert Ok(min) = list.first(values)
             let assert Ok(max) = list.last(values)
-            block_property.Int(name, min, max)
+            let assert Ok(default) = int.parse(default_value)
+            block_property.Int(name, min, max, default)
           }
-          Error(_) -> block_property.Enum(name, values)
+          Error(_) -> block_property.Enum(name, values, default_value)
         }
       }
     }
@@ -98,18 +141,23 @@ pub fn generate(blocks: List(block.Block)) {
           code.list_doc(
             list.map(block.properties, fn(property) {
               case property {
-                block_property.Bool(name) ->
-                  code.call_doc("Bool", [code.string_doc(name)])
-                block_property.Enum(name, values) ->
+                block_property.Bool(name, default) ->
+                  code.call_doc("Bool", [
+                    code.string_doc(name),
+                    doc.from_string(bool.to_string(default)),
+                  ])
+                block_property.Enum(name, values, default) ->
                   code.call_doc("Enum", [
                     code.string_doc(name),
                     code.packed_list_doc(list.map(values, code.string_doc)),
+                    code.string_doc(default),
                   ])
-                block_property.Int(name, min, max) ->
+                block_property.Int(name, min, max, default) ->
                   code.call_doc("Int", [
                     code.string_doc(name),
                     doc.from_string(int.to_string(min)),
                     doc.from_string(int.to_string(max)),
+                    doc.from_string(int.to_string(default)),
                   ])
               }
             }),
