@@ -17,13 +17,13 @@ pub fn generate(version_number: version_number.VersionNumber) {
     Ok(False) | Error(_) ->
       download_server_jar(version_number, server_relative_path)
   }
-  io.println("Running data generators on server jar file")
+  io.println("Running data generators on server.jar")
   let data_generator_command = case
     version_number.compare(version_number, version_number.Release(1, 18, 0))
   {
-    order.Lt -> "java -cp server.jar net.minecraft.data.Main --reports"
+    order.Lt -> "java -cp server.jar net.minecraft.data.Main --all"
     _ ->
-      "java -DbundlerMainClass=\"net.minecraft.data.Main\" -jar server.jar --reports"
+      "java -DbundlerMainClass=\"net.minecraft.data.Main\" -jar server.jar --all"
   }
   cmd(
     "cd " <> relative_path <> " && " <> data_generator_command <> " && cd ../..",
