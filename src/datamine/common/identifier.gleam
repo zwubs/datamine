@@ -7,7 +7,7 @@ pub type Identifier {
 }
 
 pub fn from_string(string: String) -> Result(Identifier, Nil) {
-  use #(namespace, path) <- result.then(string.split_once(string, ":"))
+  use #(namespace, path) <- result.try(string.split_once(string, ":"))
   Ok(Identifier(namespace, path))
 }
 

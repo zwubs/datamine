@@ -14,13 +14,13 @@ pub fn from_string_test() {
 }
 
 pub fn decoder_test() {
-  decode.run(dynamic.from("minecraft:test"), identifier.decoder())
+  decode.run(dynamic.string("minecraft:test"), identifier.decoder())
   |> should.equal(Ok(identifier.Identifier("minecraft", "test")))
 
-  decode.run(dynamic.from("minecraft:worldgen/feature"), identifier.decoder())
+  decode.run(dynamic.string("minecraft:worldgen/feature"), identifier.decoder())
   |> should.equal(Ok(identifier.Identifier("minecraft", "worldgen/feature")))
 
-  decode.run(dynamic.from("invalid"), identifier.decoder())
+  decode.run(dynamic.string("invalid"), identifier.decoder())
   |> should.equal(Error([decode.DecodeError("Identifier", "String", [])]))
 }
 
