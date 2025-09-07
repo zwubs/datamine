@@ -1,3 +1,4 @@
+import datamine/common/identifier
 import datamine/common/protocol/data_type
 import datamine/common/protocol/phase_id
 
@@ -10,5 +11,5 @@ pub type Phase {
 }
 
 pub type Packet {
-  Packet(id: String, fields: List(data_type.Field))
+  Packet(identifier: identifier.Identifier, fields: List(data_type.Field))
 }

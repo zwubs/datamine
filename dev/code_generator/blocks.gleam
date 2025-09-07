@@ -39,10 +39,10 @@ pub type DecodedBlockState {
 }
 
 pub fn decoder() -> decode.Decoder(DecodedBlocks) {
-  decode.dict(decode.string, {
+  decode.dict(identifier.decoder(), {
     use type_identifier <- decode.subfield(
       ["definition", "type"],
-      decode.string,
+      identifier.decoder(),
     )
     use properties <- decode.optional_field(
       "properties",
@@ -123,21 +123,25 @@ fn map_properties(
 }
 
 pub fn generate(blocks: List(block.Block)) {
-  [
-    "import datamine/common/block.{Block}",
-    "import datamine/common/block/block_property.{Bool, Enum, Int}",
-  ]
-  |> list.map(doc.from_string)
-  |> doc.join(doc.lines(1))
+  doc.join(
+    [
+      doc.from_string("import datamine/common/block.{Block}"),
+      doc.from_string(
+        "import datamine/common/block/block_property.{Bool, Enum, Int}",
+      ),
+      doc.from_string("import datamine/common/identifier.{Identifier}"),
+    ],
+    doc.line,
+  )
   |> doc.append(doc.lines(2))
   |> doc.append(
     list.map(blocks, fn(block) {
-      let assert Ok(variable_name) = identifier.path(block.identifier)
-      doc.from_string("pub const " <> variable_name <> " = ")
+      let const_name = identifier.path_as_module(block.identifier)
+      doc.from_string("pub const " <> const_name <> " = ")
       |> doc.append(
         code.call_doc("Block", [
-          code.string_doc(block.identifier),
-          code.string_doc(block.type_identifier),
+          code.identifier_doc(block.identifier),
+          code.identifier_doc(block.type_identifier),
           code.list_doc(
             list.map(block.properties, fn(property) {
               case property {
@@ -149,7 +153,7 @@ pub fn generate(blocks: List(block.Block)) {
                 block_property.Enum(name, values, default) ->
                   code.call_doc("Enum", [
                     code.string_doc(name),
-                    code.packed_list_doc(list.map(values, code.string_doc)),
+                    code.list_doc(list.map(values, code.string_doc)),
                     code.string_doc(default),
                   ])
                 block_property.Int(name, min, max, default) ->

@@ -37,7 +37,7 @@ pub fn generate(
           |> doc.append(
             code.list_doc(
               list.map(registries, fn(registry) {
-                let assert Ok(registry_name) =
+                let registry_name =
                   identifier.path_as_module(registry.identifier)
                 doc.from_string("registry." <> registry_name)
               }),
@@ -47,7 +47,7 @@ pub fn generate(
           |> doc.append(
             code.list_doc(
               list.map(blocks, fn(block) {
-                let assert Ok(block_name) = identifier.path(block.identifier)
+                let block_name = identifier.path_as_module(block.identifier)
                 doc.from_string("block." <> block_name)
               }),
             ),

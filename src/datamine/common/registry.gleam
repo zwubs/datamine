@@ -1,5 +1,8 @@
 import datamine/common/identifier
 
 pub type Registry {
-  Registry(identifier: String, entries: List(identifier.Identifier))
+  Registry(
+    identifier: identifier.Identifier,
+    entries: List(identifier.Identifier),
+  )
 }

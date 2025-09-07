@@ -1,3 +1,4 @@
+import datamine/common/identifier
 import glam/doc
 import gleam/list
 import gleam/string
@@ -7,22 +8,7 @@ pub const indent = 2
 pub const max_width = 80
 
 pub fn list_doc(content: List(doc.Document)) {
-  [
-    doc.from_string("["),
-    [
-      // We want the first break to be nested
-      // in case the group is broken.
-      doc.soft_break,
-      doc.join(content, doc.break(", ", ",")),
-    ]
-      |> doc.concat
-      |> doc.group
-      |> doc.nest(by: indent),
-    doc.break("", ","),
-    doc.from_string("]"),
-  ]
-  |> doc.concat
-  |> doc.group
+  comma_list("[", content, "]")
 }
 
 pub fn packed_list_doc(content: List(doc.Document)) {
@@ -144,6 +130,13 @@ pub fn string_doc(content: String) -> doc.Document {
 
   [doc.from_string("\""), escaped_string, doc.from_string("\"")]
   |> doc.concat
+}
+
+pub fn identifier_doc(identifier: identifier.Identifier) {
+  call_doc("Identifier", [
+    string_doc(identifier.namespace),
+    string_doc(identifier.path),
+  ])
 }
 
 /// A comma separated list of items with some given open and closed delimiters.
