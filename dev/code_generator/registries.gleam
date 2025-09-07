@@ -6,7 +6,6 @@ import gleam/dict
 import gleam/dynamic/decode
 import gleam/int
 import gleam/list
-import gleam/string
 
 pub type DecodedRegistries =
   dict.Dict(identifier.Identifier, DecodedRegistry)
@@ -18,17 +17,12 @@ pub type DecodedRegistry {
   )
 }
 
-fn get_path(identifier: identifier.Identifier) {
-  let assert Ok(identifier) = string.split_once(identifier, ":")
-  string.replace(identifier.1, ".", "_") |> string.replace("/", "_")
-}
-
 pub fn decoder() -> decode.Decoder(DecodedRegistries) {
-  decode.dict(decode.string, {
+  decode.dict(identifier.decoder(), {
     use protocol_id <- decode.field("protocol_id", decode.int)
     use entries <- decode.field(
       "entries",
-      decode.dict(decode.string, {
+      decode.dict(identifier.decoder(), {
         use protocol_id <- decode.field("protocol_id", decode.int)
         decode.success(protocol_id)
       }),
@@ -53,15 +47,22 @@ pub fn map(decoded_registries: DecodedRegistries) {
 }
 
 pub fn generate(registries: List(Registry)) {
-  doc.from_string("import datamine/common/registry.{Registry}")
+  doc.join(
+    [
+      doc.from_string("import datamine/common/identifier.{Identifier}"),
+      doc.from_string("import datamine/common/registry.{Registry}"),
+    ],
+    doc.line,
+  )
   |> doc.append(doc.lines(2))
   |> doc.append(
     list.map(registries, fn(registry) {
-      doc.from_string("pub const " <> get_path(registry.identifier) <> " = ")
+      let const_name = identifier.path_as_module(registry.identifier)
+      doc.from_string("pub const " <> const_name <> " = ")
       |> doc.append(
         code.call_doc("Registry", [
-          code.string_doc(registry.identifier),
-          code.packed_list_doc(list.map(registry.entries, code.string_doc)),
+          code.identifier_doc(registry.identifier),
+          code.list_doc(list.map(registry.entries, code.identifier_doc)),
         ]),
       )
     })

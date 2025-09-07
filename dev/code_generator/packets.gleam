@@ -38,7 +38,7 @@ fn phase_decoder() {
 }
 
 fn packets_decoder() {
-  decode.dict(decode.string, {
+  decode.dict(identifier.decoder(), {
     use protocol_id <- decode.field("protocol_id", decode.int)
     decode.success(protocol_id)
   })
@@ -56,26 +56,31 @@ pub fn map(packets: DecodedPackets) -> List(protocol.Phase) {
   |> list.sort(fn(a, b) { phase_id.compare(a.id, b.id) })
 }
 
-fn map_packet_list(packet_list: dict.Dict(String, Int)) {
+fn map_packet_list(packet_list: dict.Dict(identifier.Identifier, Int)) {
   dict.to_list(packet_list)
   |> list.sort(fn(a, b) { int.compare(a.1, b.1) })
   |> list.map(fn(packet) { protocol.Packet(packet.0, []) })
 }
 
 pub fn generate_packets_file(packets: List(protocol.Packet)) {
-  [
-    "import datamine/common/protocol.{Packet}",
-    "import datamine/common/protocol/data_type.{Field}",
-  ]
-  |> list.map(doc.from_string)
-  |> doc.join(doc.lines(1))
+  doc.join(
+    [
+      doc.from_string("import datamine/common/identifier.{Identifier}"),
+      doc.from_string("import datamine/common/protocol.{Packet}"),
+      doc.from_string("import datamine/common/protocol/data_type.{Field}"),
+    ],
+    doc.line,
+  )
   |> doc.append(doc.lines(2))
   |> doc.append(
     list.map(packets, fn(packet) {
-      let assert Ok(variable_name) = identifier.path(packet.id)
-      doc.from_string("pub const " <> variable_name <> " = ")
+      let const_name = identifier.path_as_module(packet.identifier)
+      doc.from_string("pub const " <> const_name <> " = ")
       |> doc.append(
-        code.call_doc("Packet", [code.string_doc(packet.id), code.list_doc([])]),
+        code.call_doc("Packet", [
+          code.identifier_doc(packet.identifier),
+          code.list_doc([]),
+        ]),
       )
     })
     |> doc.join(doc.lines(2)),
@@ -101,14 +106,14 @@ pub fn generate_phases_file(phases: List(protocol.Phase), module_path: String) {
           doc.from_string("phase_id." <> string.inspect(phase.id)),
           code.list_doc(
             list.map(phase.clientbound_packets, fn(packet) {
-              let assert Ok(variable_name) = identifier.path(packet.id)
-              doc.from_string("clientbound." <> variable_name)
+              let const_name = identifier.path_as_module(packet.identifier)
+              doc.from_string("clientbound." <> const_name)
             }),
           ),
           code.list_doc(
             list.map(phase.serverbound_packets, fn(packet) {
-              let assert Ok(variable_name) = identifier.path(packet.id)
-              doc.from_string("serverbound." <> variable_name)
+              let const_name = identifier.path_as_module(packet.identifier)
+              doc.from_string("serverbound." <> const_name)
             }),
           ),
         ]),

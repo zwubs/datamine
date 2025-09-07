@@ -1,149 +1,208 @@
 import datamine/common/block.{Block}
 import datamine/common/block/block_property.{Bool, Enum, Int}
+import datamine/common/identifier.{Identifier}
 
-pub const air = Block("minecraft:air", "minecraft:air", [])
+pub const air = Block(
+  Identifier("minecraft", "air"),
+  Identifier("minecraft", "air"),
+  [],
+)
 
-pub const stone = Block("minecraft:stone", "minecraft:block", [])
+pub const stone = Block(
+  Identifier("minecraft", "stone"),
+  Identifier("minecraft", "block"),
+  [],
+)
 
-pub const granite = Block("minecraft:granite", "minecraft:block", [])
+pub const granite = Block(
+  Identifier("minecraft", "granite"),
+  Identifier("minecraft", "block"),
+  [],
+)
 
 pub const polished_granite = Block(
-  "minecraft:polished_granite",
-  "minecraft:block",
+  Identifier("minecraft", "polished_granite"),
+  Identifier("minecraft", "block"),
   [],
 )
 
-pub const diorite = Block("minecraft:diorite", "minecraft:block", [])
+pub const diorite = Block(
+  Identifier("minecraft", "diorite"),
+  Identifier("minecraft", "block"),
+  [],
+)
 
 pub const polished_diorite = Block(
-  "minecraft:polished_diorite",
-  "minecraft:block",
+  Identifier("minecraft", "polished_diorite"),
+  Identifier("minecraft", "block"),
   [],
 )
 
-pub const andesite = Block("minecraft:andesite", "minecraft:block", [])
+pub const andesite = Block(
+  Identifier("minecraft", "andesite"),
+  Identifier("minecraft", "block"),
+  [],
+)
 
 pub const polished_andesite = Block(
-  "minecraft:polished_andesite",
-  "minecraft:block",
+  Identifier("minecraft", "polished_andesite"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const grass_block = Block(
-  "minecraft:grass_block",
-  "minecraft:grass",
+  Identifier("minecraft", "grass_block"),
+  Identifier("minecraft", "grass"),
   [Bool("snowy", False)],
 )
 
-pub const dirt = Block("minecraft:dirt", "minecraft:block", [])
+pub const dirt = Block(
+  Identifier("minecraft", "dirt"),
+  Identifier("minecraft", "block"),
+  [],
+)
 
-pub const coarse_dirt = Block("minecraft:coarse_dirt", "minecraft:block", [])
+pub const coarse_dirt = Block(
+  Identifier("minecraft", "coarse_dirt"),
+  Identifier("minecraft", "block"),
+  [],
+)
 
 pub const podzol = Block(
-  "minecraft:podzol",
-  "minecraft:snowy_dirt",
+  Identifier("minecraft", "podzol"),
+  Identifier("minecraft", "snowy_dirt"),
   [Bool("snowy", False)],
 )
 
-pub const cobblestone = Block("minecraft:cobblestone", "minecraft:block", [])
-
-pub const oak_planks = Block("minecraft:oak_planks", "minecraft:block", [])
-
-pub const spruce_planks = Block("minecraft:spruce_planks", "minecraft:block", [],
+pub const cobblestone = Block(
+  Identifier("minecraft", "cobblestone"),
+  Identifier("minecraft", "block"),
+  [],
 )
 
-pub const birch_planks = Block("minecraft:birch_planks", "minecraft:block", [])
-
-pub const jungle_planks = Block("minecraft:jungle_planks", "minecraft:block", [],
+pub const oak_planks = Block(
+  Identifier("minecraft", "oak_planks"),
+  Identifier("minecraft", "block"),
+  [],
 )
 
-pub const acacia_planks = Block("minecraft:acacia_planks", "minecraft:block", [],
+pub const spruce_planks = Block(
+  Identifier("minecraft", "spruce_planks"),
+  Identifier("minecraft", "block"),
+  [],
 )
 
-pub const cherry_planks = Block("minecraft:cherry_planks", "minecraft:block", [],
+pub const birch_planks = Block(
+  Identifier("minecraft", "birch_planks"),
+  Identifier("minecraft", "block"),
+  [],
+)
+
+pub const jungle_planks = Block(
+  Identifier("minecraft", "jungle_planks"),
+  Identifier("minecraft", "block"),
+  [],
+)
+
+pub const acacia_planks = Block(
+  Identifier("minecraft", "acacia_planks"),
+  Identifier("minecraft", "block"),
+  [],
+)
+
+pub const cherry_planks = Block(
+  Identifier("minecraft", "cherry_planks"),
+  Identifier("minecraft", "block"),
+  [],
 )
 
 pub const dark_oak_planks = Block(
-  "minecraft:dark_oak_planks",
-  "minecraft:block",
+  Identifier("minecraft", "dark_oak_planks"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const pale_oak_wood = Block(
-  "minecraft:pale_oak_wood",
-  "minecraft:rotated_pillar",
+  Identifier("minecraft", "pale_oak_wood"),
+  Identifier("minecraft", "rotated_pillar"),
   [Enum("axis", ["x", "y", "z"], "y")],
 )
 
 pub const pale_oak_planks = Block(
-  "minecraft:pale_oak_planks",
-  "minecraft:block",
+  Identifier("minecraft", "pale_oak_planks"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const mangrove_planks = Block(
-  "minecraft:mangrove_planks",
-  "minecraft:block",
+  Identifier("minecraft", "mangrove_planks"),
+  Identifier("minecraft", "block"),
   [],
 )
 
-pub const bamboo_planks = Block("minecraft:bamboo_planks", "minecraft:block", [],
+pub const bamboo_planks = Block(
+  Identifier("minecraft", "bamboo_planks"),
+  Identifier("minecraft", "block"),
+  [],
 )
 
-pub const bamboo_mosaic = Block("minecraft:bamboo_mosaic", "minecraft:block", [],
+pub const bamboo_mosaic = Block(
+  Identifier("minecraft", "bamboo_mosaic"),
+  Identifier("minecraft", "block"),
+  [],
 )
 
 pub const oak_sapling = Block(
-  "minecraft:oak_sapling",
-  "minecraft:sapling",
+  Identifier("minecraft", "oak_sapling"),
+  Identifier("minecraft", "sapling"),
   [Int("stage", 0, 1, 0)],
 )
 
 pub const spruce_sapling = Block(
-  "minecraft:spruce_sapling",
-  "minecraft:sapling",
+  Identifier("minecraft", "spruce_sapling"),
+  Identifier("minecraft", "sapling"),
   [Int("stage", 0, 1, 0)],
 )
 
 pub const birch_sapling = Block(
-  "minecraft:birch_sapling",
-  "minecraft:sapling",
+  Identifier("minecraft", "birch_sapling"),
+  Identifier("minecraft", "sapling"),
   [Int("stage", 0, 1, 0)],
 )
 
 pub const jungle_sapling = Block(
-  "minecraft:jungle_sapling",
-  "minecraft:sapling",
+  Identifier("minecraft", "jungle_sapling"),
+  Identifier("minecraft", "sapling"),
   [Int("stage", 0, 1, 0)],
 )
 
 pub const acacia_sapling = Block(
-  "minecraft:acacia_sapling",
-  "minecraft:sapling",
+  Identifier("minecraft", "acacia_sapling"),
+  Identifier("minecraft", "sapling"),
   [Int("stage", 0, 1, 0)],
 )
 
 pub const cherry_sapling = Block(
-  "minecraft:cherry_sapling",
-  "minecraft:sapling",
+  Identifier("minecraft", "cherry_sapling"),
+  Identifier("minecraft", "sapling"),
   [Int("stage", 0, 1, 0)],
 )
 
 pub const dark_oak_sapling = Block(
-  "minecraft:dark_oak_sapling",
-  "minecraft:sapling",
+  Identifier("minecraft", "dark_oak_sapling"),
+  Identifier("minecraft", "sapling"),
   [Int("stage", 0, 1, 0)],
 )
 
 pub const pale_oak_sapling = Block(
-  "minecraft:pale_oak_sapling",
-  "minecraft:sapling",
+  Identifier("minecraft", "pale_oak_sapling"),
+  Identifier("minecraft", "sapling"),
   [Int("stage", 0, 1, 0)],
 )
 
 pub const mangrove_propagule = Block(
-  "minecraft:mangrove_propagule",
-  "minecraft:mangrove_propagule",
+  Identifier("minecraft", "mangrove_propagule"),
+  Identifier("minecraft", "mangrove_propagule"),
   [
     Int("age", 0, 4, 0),
     Bool("hanging", False),
@@ -152,309 +211,333 @@ pub const mangrove_propagule = Block(
   ],
 )
 
-pub const bedrock = Block("minecraft:bedrock", "minecraft:block", [])
+pub const bedrock = Block(
+  Identifier("minecraft", "bedrock"),
+  Identifier("minecraft", "block"),
+  [],
+)
 
 pub const water = Block(
-  "minecraft:water",
-  "minecraft:liquid",
+  Identifier("minecraft", "water"),
+  Identifier("minecraft", "liquid"),
   [Int("level", 0, 15, 0)],
 )
 
 pub const lava = Block(
-  "minecraft:lava",
-  "minecraft:liquid",
+  Identifier("minecraft", "lava"),
+  Identifier("minecraft", "liquid"),
   [Int("level", 0, 15, 0)],
 )
 
-pub const sand = Block("minecraft:sand", "minecraft:colored_falling", [])
+pub const sand = Block(
+  Identifier("minecraft", "sand"),
+  Identifier("minecraft", "colored_falling"),
+  [],
+)
 
 pub const suspicious_sand = Block(
-  "minecraft:suspicious_sand",
-  "minecraft:brushable",
+  Identifier("minecraft", "suspicious_sand"),
+  Identifier("minecraft", "brushable"),
   [Int("dusted", 0, 3, 0)],
 )
 
-pub const red_sand = Block("minecraft:red_sand", "minecraft:colored_falling", [],
+pub const red_sand = Block(
+  Identifier("minecraft", "red_sand"),
+  Identifier("minecraft", "colored_falling"),
+  [],
 )
 
-pub const gravel = Block("minecraft:gravel", "minecraft:colored_falling", [])
+pub const gravel = Block(
+  Identifier("minecraft", "gravel"),
+  Identifier("minecraft", "colored_falling"),
+  [],
+)
 
 pub const suspicious_gravel = Block(
-  "minecraft:suspicious_gravel",
-  "minecraft:brushable",
+  Identifier("minecraft", "suspicious_gravel"),
+  Identifier("minecraft", "brushable"),
   [Int("dusted", 0, 3, 0)],
 )
 
-pub const gold_ore = Block("minecraft:gold_ore", "minecraft:drop_experience", [],
+pub const gold_ore = Block(
+  Identifier("minecraft", "gold_ore"),
+  Identifier("minecraft", "drop_experience"),
+  [],
 )
 
 pub const deepslate_gold_ore = Block(
-  "minecraft:deepslate_gold_ore",
-  "minecraft:drop_experience",
+  Identifier("minecraft", "deepslate_gold_ore"),
+  Identifier("minecraft", "drop_experience"),
   [],
 )
 
-pub const iron_ore = Block("minecraft:iron_ore", "minecraft:drop_experience", [],
+pub const iron_ore = Block(
+  Identifier("minecraft", "iron_ore"),
+  Identifier("minecraft", "drop_experience"),
+  [],
 )
 
 pub const deepslate_iron_ore = Block(
-  "minecraft:deepslate_iron_ore",
-  "minecraft:drop_experience",
+  Identifier("minecraft", "deepslate_iron_ore"),
+  Identifier("minecraft", "drop_experience"),
   [],
 )
 
-pub const coal_ore = Block("minecraft:coal_ore", "minecraft:drop_experience", [],
+pub const coal_ore = Block(
+  Identifier("minecraft", "coal_ore"),
+  Identifier("minecraft", "drop_experience"),
+  [],
 )
 
 pub const deepslate_coal_ore = Block(
-  "minecraft:deepslate_coal_ore",
-  "minecraft:drop_experience",
+  Identifier("minecraft", "deepslate_coal_ore"),
+  Identifier("minecraft", "drop_experience"),
   [],
 )
 
 pub const nether_gold_ore = Block(
-  "minecraft:nether_gold_ore",
-  "minecraft:drop_experience",
+  Identifier("minecraft", "nether_gold_ore"),
+  Identifier("minecraft", "drop_experience"),
   [],
 )
 
 pub const oak_log = Block(
-  "minecraft:oak_log",
-  "minecraft:rotated_pillar",
+  Identifier("minecraft", "oak_log"),
+  Identifier("minecraft", "rotated_pillar"),
   [Enum("axis", ["x", "y", "z"], "y")],
 )
 
 pub const spruce_log = Block(
-  "minecraft:spruce_log",
-  "minecraft:rotated_pillar",
+  Identifier("minecraft", "spruce_log"),
+  Identifier("minecraft", "rotated_pillar"),
   [Enum("axis", ["x", "y", "z"], "y")],
 )
 
 pub const birch_log = Block(
-  "minecraft:birch_log",
-  "minecraft:rotated_pillar",
+  Identifier("minecraft", "birch_log"),
+  Identifier("minecraft", "rotated_pillar"),
   [Enum("axis", ["x", "y", "z"], "y")],
 )
 
 pub const jungle_log = Block(
-  "minecraft:jungle_log",
-  "minecraft:rotated_pillar",
+  Identifier("minecraft", "jungle_log"),
+  Identifier("minecraft", "rotated_pillar"),
   [Enum("axis", ["x", "y", "z"], "y")],
 )
 
 pub const acacia_log = Block(
-  "minecraft:acacia_log",
-  "minecraft:rotated_pillar",
+  Identifier("minecraft", "acacia_log"),
+  Identifier("minecraft", "rotated_pillar"),
   [Enum("axis", ["x", "y", "z"], "y")],
 )
 
 pub const cherry_log = Block(
-  "minecraft:cherry_log",
-  "minecraft:rotated_pillar",
+  Identifier("minecraft", "cherry_log"),
+  Identifier("minecraft", "rotated_pillar"),
   [Enum("axis", ["x", "y", "z"], "y")],
 )
 
 pub const dark_oak_log = Block(
-  "minecraft:dark_oak_log",
-  "minecraft:rotated_pillar",
+  Identifier("minecraft", "dark_oak_log"),
+  Identifier("minecraft", "rotated_pillar"),
   [Enum("axis", ["x", "y", "z"], "y")],
 )
 
 pub const pale_oak_log = Block(
-  "minecraft:pale_oak_log",
-  "minecraft:rotated_pillar",
+  Identifier("minecraft", "pale_oak_log"),
+  Identifier("minecraft", "rotated_pillar"),
   [Enum("axis", ["x", "y", "z"], "y")],
 )
 
 pub const mangrove_log = Block(
-  "minecraft:mangrove_log",
-  "minecraft:rotated_pillar",
+  Identifier("minecraft", "mangrove_log"),
+  Identifier("minecraft", "rotated_pillar"),
   [Enum("axis", ["x", "y", "z"], "y")],
 )
 
 pub const mangrove_roots = Block(
-  "minecraft:mangrove_roots",
-  "minecraft:mangrove_roots",
+  Identifier("minecraft", "mangrove_roots"),
+  Identifier("minecraft", "mangrove_roots"),
   [Bool("waterlogged", False)],
 )
 
 pub const muddy_mangrove_roots = Block(
-  "minecraft:muddy_mangrove_roots",
-  "minecraft:rotated_pillar",
+  Identifier("minecraft", "muddy_mangrove_roots"),
+  Identifier("minecraft", "rotated_pillar"),
   [Enum("axis", ["x", "y", "z"], "y")],
 )
 
 pub const bamboo_block = Block(
-  "minecraft:bamboo_block",
-  "minecraft:rotated_pillar",
+  Identifier("minecraft", "bamboo_block"),
+  Identifier("minecraft", "rotated_pillar"),
   [Enum("axis", ["x", "y", "z"], "y")],
 )
 
 pub const stripped_spruce_log = Block(
-  "minecraft:stripped_spruce_log",
-  "minecraft:rotated_pillar",
+  Identifier("minecraft", "stripped_spruce_log"),
+  Identifier("minecraft", "rotated_pillar"),
   [Enum("axis", ["x", "y", "z"], "y")],
 )
 
 pub const stripped_birch_log = Block(
-  "minecraft:stripped_birch_log",
-  "minecraft:rotated_pillar",
+  Identifier("minecraft", "stripped_birch_log"),
+  Identifier("minecraft", "rotated_pillar"),
   [Enum("axis", ["x", "y", "z"], "y")],
 )
 
 pub const stripped_jungle_log = Block(
-  "minecraft:stripped_jungle_log",
-  "minecraft:rotated_pillar",
+  Identifier("minecraft", "stripped_jungle_log"),
+  Identifier("minecraft", "rotated_pillar"),
   [Enum("axis", ["x", "y", "z"], "y")],
 )
 
 pub const stripped_acacia_log = Block(
-  "minecraft:stripped_acacia_log",
-  "minecraft:rotated_pillar",
+  Identifier("minecraft", "stripped_acacia_log"),
+  Identifier("minecraft", "rotated_pillar"),
   [Enum("axis", ["x", "y", "z"], "y")],
 )
 
 pub const stripped_cherry_log = Block(
-  "minecraft:stripped_cherry_log",
-  "minecraft:rotated_pillar",
+  Identifier("minecraft", "stripped_cherry_log"),
+  Identifier("minecraft", "rotated_pillar"),
   [Enum("axis", ["x", "y", "z"], "y")],
 )
 
 pub const stripped_dark_oak_log = Block(
-  "minecraft:stripped_dark_oak_log",
-  "minecraft:rotated_pillar",
+  Identifier("minecraft", "stripped_dark_oak_log"),
+  Identifier("minecraft", "rotated_pillar"),
   [Enum("axis", ["x", "y", "z"], "y")],
 )
 
 pub const stripped_pale_oak_log = Block(
-  "minecraft:stripped_pale_oak_log",
-  "minecraft:rotated_pillar",
+  Identifier("minecraft", "stripped_pale_oak_log"),
+  Identifier("minecraft", "rotated_pillar"),
   [Enum("axis", ["x", "y", "z"], "y")],
 )
 
 pub const stripped_oak_log = Block(
-  "minecraft:stripped_oak_log",
-  "minecraft:rotated_pillar",
+  Identifier("minecraft", "stripped_oak_log"),
+  Identifier("minecraft", "rotated_pillar"),
   [Enum("axis", ["x", "y", "z"], "y")],
 )
 
 pub const stripped_mangrove_log = Block(
-  "minecraft:stripped_mangrove_log",
-  "minecraft:rotated_pillar",
+  Identifier("minecraft", "stripped_mangrove_log"),
+  Identifier("minecraft", "rotated_pillar"),
   [Enum("axis", ["x", "y", "z"], "y")],
 )
 
 pub const stripped_bamboo_block = Block(
-  "minecraft:stripped_bamboo_block",
-  "minecraft:rotated_pillar",
+  Identifier("minecraft", "stripped_bamboo_block"),
+  Identifier("minecraft", "rotated_pillar"),
   [Enum("axis", ["x", "y", "z"], "y")],
 )
 
 pub const oak_wood = Block(
-  "minecraft:oak_wood",
-  "minecraft:rotated_pillar",
+  Identifier("minecraft", "oak_wood"),
+  Identifier("minecraft", "rotated_pillar"),
   [Enum("axis", ["x", "y", "z"], "y")],
 )
 
 pub const spruce_wood = Block(
-  "minecraft:spruce_wood",
-  "minecraft:rotated_pillar",
+  Identifier("minecraft", "spruce_wood"),
+  Identifier("minecraft", "rotated_pillar"),
   [Enum("axis", ["x", "y", "z"], "y")],
 )
 
 pub const birch_wood = Block(
-  "minecraft:birch_wood",
-  "minecraft:rotated_pillar",
+  Identifier("minecraft", "birch_wood"),
+  Identifier("minecraft", "rotated_pillar"),
   [Enum("axis", ["x", "y", "z"], "y")],
 )
 
 pub const jungle_wood = Block(
-  "minecraft:jungle_wood",
-  "minecraft:rotated_pillar",
+  Identifier("minecraft", "jungle_wood"),
+  Identifier("minecraft", "rotated_pillar"),
   [Enum("axis", ["x", "y", "z"], "y")],
 )
 
 pub const acacia_wood = Block(
-  "minecraft:acacia_wood",
-  "minecraft:rotated_pillar",
+  Identifier("minecraft", "acacia_wood"),
+  Identifier("minecraft", "rotated_pillar"),
   [Enum("axis", ["x", "y", "z"], "y")],
 )
 
 pub const cherry_wood = Block(
-  "minecraft:cherry_wood",
-  "minecraft:rotated_pillar",
+  Identifier("minecraft", "cherry_wood"),
+  Identifier("minecraft", "rotated_pillar"),
   [Enum("axis", ["x", "y", "z"], "y")],
 )
 
 pub const dark_oak_wood = Block(
-  "minecraft:dark_oak_wood",
-  "minecraft:rotated_pillar",
+  Identifier("minecraft", "dark_oak_wood"),
+  Identifier("minecraft", "rotated_pillar"),
   [Enum("axis", ["x", "y", "z"], "y")],
 )
 
 pub const mangrove_wood = Block(
-  "minecraft:mangrove_wood",
-  "minecraft:rotated_pillar",
+  Identifier("minecraft", "mangrove_wood"),
+  Identifier("minecraft", "rotated_pillar"),
   [Enum("axis", ["x", "y", "z"], "y")],
 )
 
 pub const stripped_oak_wood = Block(
-  "minecraft:stripped_oak_wood",
-  "minecraft:rotated_pillar",
+  Identifier("minecraft", "stripped_oak_wood"),
+  Identifier("minecraft", "rotated_pillar"),
   [Enum("axis", ["x", "y", "z"], "y")],
 )
 
 pub const stripped_spruce_wood = Block(
-  "minecraft:stripped_spruce_wood",
-  "minecraft:rotated_pillar",
+  Identifier("minecraft", "stripped_spruce_wood"),
+  Identifier("minecraft", "rotated_pillar"),
   [Enum("axis", ["x", "y", "z"], "y")],
 )
 
 pub const stripped_birch_wood = Block(
-  "minecraft:stripped_birch_wood",
-  "minecraft:rotated_pillar",
+  Identifier("minecraft", "stripped_birch_wood"),
+  Identifier("minecraft", "rotated_pillar"),
   [Enum("axis", ["x", "y", "z"], "y")],
 )
 
 pub const stripped_jungle_wood = Block(
-  "minecraft:stripped_jungle_wood",
-  "minecraft:rotated_pillar",
+  Identifier("minecraft", "stripped_jungle_wood"),
+  Identifier("minecraft", "rotated_pillar"),
   [Enum("axis", ["x", "y", "z"], "y")],
 )
 
 pub const stripped_acacia_wood = Block(
-  "minecraft:stripped_acacia_wood",
-  "minecraft:rotated_pillar",
+  Identifier("minecraft", "stripped_acacia_wood"),
+  Identifier("minecraft", "rotated_pillar"),
   [Enum("axis", ["x", "y", "z"], "y")],
 )
 
 pub const stripped_cherry_wood = Block(
-  "minecraft:stripped_cherry_wood",
-  "minecraft:rotated_pillar",
+  Identifier("minecraft", "stripped_cherry_wood"),
+  Identifier("minecraft", "rotated_pillar"),
   [Enum("axis", ["x", "y", "z"], "y")],
 )
 
 pub const stripped_dark_oak_wood = Block(
-  "minecraft:stripped_dark_oak_wood",
-  "minecraft:rotated_pillar",
+  Identifier("minecraft", "stripped_dark_oak_wood"),
+  Identifier("minecraft", "rotated_pillar"),
   [Enum("axis", ["x", "y", "z"], "y")],
 )
 
 pub const stripped_pale_oak_wood = Block(
-  "minecraft:stripped_pale_oak_wood",
-  "minecraft:rotated_pillar",
+  Identifier("minecraft", "stripped_pale_oak_wood"),
+  Identifier("minecraft", "rotated_pillar"),
   [Enum("axis", ["x", "y", "z"], "y")],
 )
 
 pub const stripped_mangrove_wood = Block(
-  "minecraft:stripped_mangrove_wood",
-  "minecraft:rotated_pillar",
+  Identifier("minecraft", "stripped_mangrove_wood"),
+  Identifier("minecraft", "rotated_pillar"),
   [Enum("axis", ["x", "y", "z"], "y")],
 )
 
 pub const oak_leaves = Block(
-  "minecraft:oak_leaves",
-  "minecraft:leaves",
+  Identifier("minecraft", "oak_leaves"),
+  Identifier("minecraft", "leaves"),
   [
     Int("distance", 1, 7, 7),
     Bool("persistent", False),
@@ -463,8 +546,8 @@ pub const oak_leaves = Block(
 )
 
 pub const spruce_leaves = Block(
-  "minecraft:spruce_leaves",
-  "minecraft:leaves",
+  Identifier("minecraft", "spruce_leaves"),
+  Identifier("minecraft", "leaves"),
   [
     Int("distance", 1, 7, 7),
     Bool("persistent", False),
@@ -473,8 +556,8 @@ pub const spruce_leaves = Block(
 )
 
 pub const birch_leaves = Block(
-  "minecraft:birch_leaves",
-  "minecraft:leaves",
+  Identifier("minecraft", "birch_leaves"),
+  Identifier("minecraft", "leaves"),
   [
     Int("distance", 1, 7, 7),
     Bool("persistent", False),
@@ -483,8 +566,8 @@ pub const birch_leaves = Block(
 )
 
 pub const jungle_leaves = Block(
-  "minecraft:jungle_leaves",
-  "minecraft:leaves",
+  Identifier("minecraft", "jungle_leaves"),
+  Identifier("minecraft", "leaves"),
   [
     Int("distance", 1, 7, 7),
     Bool("persistent", False),
@@ -493,8 +576,8 @@ pub const jungle_leaves = Block(
 )
 
 pub const acacia_leaves = Block(
-  "minecraft:acacia_leaves",
-  "minecraft:leaves",
+  Identifier("minecraft", "acacia_leaves"),
+  Identifier("minecraft", "leaves"),
   [
     Int("distance", 1, 7, 7),
     Bool("persistent", False),
@@ -503,8 +586,8 @@ pub const acacia_leaves = Block(
 )
 
 pub const cherry_leaves = Block(
-  "minecraft:cherry_leaves",
-  "minecraft:particle_leaves",
+  Identifier("minecraft", "cherry_leaves"),
+  Identifier("minecraft", "particle_leaves"),
   [
     Int("distance", 1, 7, 7),
     Bool("persistent", False),
@@ -513,8 +596,8 @@ pub const cherry_leaves = Block(
 )
 
 pub const dark_oak_leaves = Block(
-  "minecraft:dark_oak_leaves",
-  "minecraft:leaves",
+  Identifier("minecraft", "dark_oak_leaves"),
+  Identifier("minecraft", "leaves"),
   [
     Int("distance", 1, 7, 7),
     Bool("persistent", False),
@@ -523,8 +606,8 @@ pub const dark_oak_leaves = Block(
 )
 
 pub const pale_oak_leaves = Block(
-  "minecraft:pale_oak_leaves",
-  "minecraft:particle_leaves",
+  Identifier("minecraft", "pale_oak_leaves"),
+  Identifier("minecraft", "particle_leaves"),
   [
     Int("distance", 1, 7, 7),
     Bool("persistent", False),
@@ -533,8 +616,8 @@ pub const pale_oak_leaves = Block(
 )
 
 pub const mangrove_leaves = Block(
-  "minecraft:mangrove_leaves",
-  "minecraft:mangrove_leaves",
+  Identifier("minecraft", "mangrove_leaves"),
+  Identifier("minecraft", "mangrove_leaves"),
   [
     Int("distance", 1, 7, 7),
     Bool("persistent", False),
@@ -543,8 +626,8 @@ pub const mangrove_leaves = Block(
 )
 
 pub const azalea_leaves = Block(
-  "minecraft:azalea_leaves",
-  "minecraft:leaves",
+  Identifier("minecraft", "azalea_leaves"),
+  Identifier("minecraft", "leaves"),
   [
     Int("distance", 1, 7, 7),
     Bool("persistent", False),
@@ -553,8 +636,8 @@ pub const azalea_leaves = Block(
 )
 
 pub const flowering_azalea_leaves = Block(
-  "minecraft:flowering_azalea_leaves",
-  "minecraft:leaves",
+  Identifier("minecraft", "flowering_azalea_leaves"),
+  Identifier("minecraft", "leaves"),
   [
     Int("distance", 1, 7, 7),
     Bool("persistent", False),
@@ -562,57 +645,99 @@ pub const flowering_azalea_leaves = Block(
   ],
 )
 
-pub const sponge = Block("minecraft:sponge", "minecraft:sponge", [])
+pub const sponge = Block(
+  Identifier("minecraft", "sponge"),
+  Identifier("minecraft", "sponge"),
+  [],
+)
 
-pub const wet_sponge = Block("minecraft:wet_sponge", "minecraft:wet_sponge", [])
+pub const wet_sponge = Block(
+  Identifier("minecraft", "wet_sponge"),
+  Identifier("minecraft", "wet_sponge"),
+  [],
+)
 
-pub const glass = Block("minecraft:glass", "minecraft:transparent", [])
+pub const glass = Block(
+  Identifier("minecraft", "glass"),
+  Identifier("minecraft", "transparent"),
+  [],
+)
 
 pub const lapis_ore = Block(
-  "minecraft:lapis_ore",
-  "minecraft:drop_experience",
+  Identifier("minecraft", "lapis_ore"),
+  Identifier("minecraft", "drop_experience"),
   [],
 )
 
 pub const deepslate_lapis_ore = Block(
-  "minecraft:deepslate_lapis_ore",
-  "minecraft:drop_experience",
+  Identifier("minecraft", "deepslate_lapis_ore"),
+  Identifier("minecraft", "drop_experience"),
   [],
 )
 
-pub const lapis_block = Block("minecraft:lapis_block", "minecraft:block", [])
+pub const lapis_block = Block(
+  Identifier("minecraft", "lapis_block"),
+  Identifier("minecraft", "block"),
+  [],
+)
 
 pub const dispenser = Block(
-  "minecraft:dispenser",
-  "minecraft:dispenser",
+  Identifier("minecraft", "dispenser"),
+  Identifier("minecraft", "dispenser"),
   [
     Enum("facing", ["north", "east", "south", "west", "up", "down"], "north"),
     Bool("triggered", False),
   ],
 )
 
-pub const sandstone = Block("minecraft:sandstone", "minecraft:block", [])
-
-pub const chiseled_sandstone = Block(
-  "minecraft:chiseled_sandstone",
-  "minecraft:block",
+pub const sandstone = Block(
+  Identifier("minecraft", "sandstone"),
+  Identifier("minecraft", "block"),
   [],
 )
 
-pub const cut_sandstone = Block("minecraft:cut_sandstone", "minecraft:block", [],
+pub const chiseled_sandstone = Block(
+  Identifier("minecraft", "chiseled_sandstone"),
+  Identifier("minecraft", "block"),
+  [],
+)
+
+pub const cut_sandstone = Block(
+  Identifier("minecraft", "cut_sandstone"),
+  Identifier("minecraft", "block"),
+  [],
 )
 
 pub const note_block = Block(
-  "minecraft:note_block",
-  "minecraft:note",
+  Identifier("minecraft", "note_block"),
+  Identifier("minecraft", "note"),
   [
     Enum(
       "instrument",
       [
-        "harp", "basedrum", "snare", "hat", "bass", "flute", "bell", "guitar",
-        "chime", "xylophone", "iron_xylophone", "cow_bell", "didgeridoo", "bit",
-        "banjo", "pling", "zombie", "skeleton", "creeper", "dragon",
-        "wither_skeleton", "piglin", "custom_head",
+        "harp",
+        "basedrum",
+        "snare",
+        "hat",
+        "bass",
+        "flute",
+        "bell",
+        "guitar",
+        "chime",
+        "xylophone",
+        "iron_xylophone",
+        "cow_bell",
+        "didgeridoo",
+        "bit",
+        "banjo",
+        "pling",
+        "zombie",
+        "skeleton",
+        "creeper",
+        "dragon",
+        "wither_skeleton",
+        "piglin",
+        "custom_head",
       ],
       "harp",
     ),
@@ -622,8 +747,8 @@ pub const note_block = Block(
 )
 
 pub const white_bed = Block(
-  "minecraft:white_bed",
-  "minecraft:bed",
+  Identifier("minecraft", "white_bed"),
+  Identifier("minecraft", "bed"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("occupied", False),
@@ -632,8 +757,8 @@ pub const white_bed = Block(
 )
 
 pub const orange_bed = Block(
-  "minecraft:orange_bed",
-  "minecraft:bed",
+  Identifier("minecraft", "orange_bed"),
+  Identifier("minecraft", "bed"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("occupied", False),
@@ -642,8 +767,8 @@ pub const orange_bed = Block(
 )
 
 pub const magenta_bed = Block(
-  "minecraft:magenta_bed",
-  "minecraft:bed",
+  Identifier("minecraft", "magenta_bed"),
+  Identifier("minecraft", "bed"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("occupied", False),
@@ -652,8 +777,8 @@ pub const magenta_bed = Block(
 )
 
 pub const light_blue_bed = Block(
-  "minecraft:light_blue_bed",
-  "minecraft:bed",
+  Identifier("minecraft", "light_blue_bed"),
+  Identifier("minecraft", "bed"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("occupied", False),
@@ -662,8 +787,8 @@ pub const light_blue_bed = Block(
 )
 
 pub const yellow_bed = Block(
-  "minecraft:yellow_bed",
-  "minecraft:bed",
+  Identifier("minecraft", "yellow_bed"),
+  Identifier("minecraft", "bed"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("occupied", False),
@@ -672,8 +797,8 @@ pub const yellow_bed = Block(
 )
 
 pub const lime_bed = Block(
-  "minecraft:lime_bed",
-  "minecraft:bed",
+  Identifier("minecraft", "lime_bed"),
+  Identifier("minecraft", "bed"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("occupied", False),
@@ -682,8 +807,8 @@ pub const lime_bed = Block(
 )
 
 pub const pink_bed = Block(
-  "minecraft:pink_bed",
-  "minecraft:bed",
+  Identifier("minecraft", "pink_bed"),
+  Identifier("minecraft", "bed"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("occupied", False),
@@ -692,8 +817,8 @@ pub const pink_bed = Block(
 )
 
 pub const gray_bed = Block(
-  "minecraft:gray_bed",
-  "minecraft:bed",
+  Identifier("minecraft", "gray_bed"),
+  Identifier("minecraft", "bed"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("occupied", False),
@@ -702,8 +827,8 @@ pub const gray_bed = Block(
 )
 
 pub const light_gray_bed = Block(
-  "minecraft:light_gray_bed",
-  "minecraft:bed",
+  Identifier("minecraft", "light_gray_bed"),
+  Identifier("minecraft", "bed"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("occupied", False),
@@ -712,8 +837,8 @@ pub const light_gray_bed = Block(
 )
 
 pub const cyan_bed = Block(
-  "minecraft:cyan_bed",
-  "minecraft:bed",
+  Identifier("minecraft", "cyan_bed"),
+  Identifier("minecraft", "bed"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("occupied", False),
@@ -722,8 +847,8 @@ pub const cyan_bed = Block(
 )
 
 pub const purple_bed = Block(
-  "minecraft:purple_bed",
-  "minecraft:bed",
+  Identifier("minecraft", "purple_bed"),
+  Identifier("minecraft", "bed"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("occupied", False),
@@ -732,8 +857,8 @@ pub const purple_bed = Block(
 )
 
 pub const blue_bed = Block(
-  "minecraft:blue_bed",
-  "minecraft:bed",
+  Identifier("minecraft", "blue_bed"),
+  Identifier("minecraft", "bed"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("occupied", False),
@@ -742,8 +867,8 @@ pub const blue_bed = Block(
 )
 
 pub const brown_bed = Block(
-  "minecraft:brown_bed",
-  "minecraft:bed",
+  Identifier("minecraft", "brown_bed"),
+  Identifier("minecraft", "bed"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("occupied", False),
@@ -752,8 +877,8 @@ pub const brown_bed = Block(
 )
 
 pub const green_bed = Block(
-  "minecraft:green_bed",
-  "minecraft:bed",
+  Identifier("minecraft", "green_bed"),
+  Identifier("minecraft", "bed"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("occupied", False),
@@ -762,8 +887,8 @@ pub const green_bed = Block(
 )
 
 pub const red_bed = Block(
-  "minecraft:red_bed",
-  "minecraft:bed",
+  Identifier("minecraft", "red_bed"),
+  Identifier("minecraft", "bed"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("occupied", False),
@@ -772,8 +897,8 @@ pub const red_bed = Block(
 )
 
 pub const black_bed = Block(
-  "minecraft:black_bed",
-  "minecraft:bed",
+  Identifier("minecraft", "black_bed"),
+  Identifier("minecraft", "bed"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("occupied", False),
@@ -782,15 +907,19 @@ pub const black_bed = Block(
 )
 
 pub const powered_rail = Block(
-  "minecraft:powered_rail",
-  "minecraft:powered_rail",
+  Identifier("minecraft", "powered_rail"),
+  Identifier("minecraft", "powered_rail"),
   [
     Bool("powered", False),
     Enum(
       "shape",
       [
-        "north_south", "east_west", "ascending_east", "ascending_west",
-        "ascending_north", "ascending_south",
+        "north_south",
+        "east_west",
+        "ascending_east",
+        "ascending_west",
+        "ascending_north",
+        "ascending_south",
       ],
       "north_south",
     ),
@@ -799,15 +928,19 @@ pub const powered_rail = Block(
 )
 
 pub const detector_rail = Block(
-  "minecraft:detector_rail",
-  "minecraft:detector_rail",
+  Identifier("minecraft", "detector_rail"),
+  Identifier("minecraft", "detector_rail"),
   [
     Bool("powered", False),
     Enum(
       "shape",
       [
-        "north_south", "east_west", "ascending_east", "ascending_west",
-        "ascending_north", "ascending_south",
+        "north_south",
+        "east_west",
+        "ascending_east",
+        "ascending_west",
+        "ascending_north",
+        "ascending_south",
       ],
       "north_south",
     ),
@@ -816,37 +949,53 @@ pub const detector_rail = Block(
 )
 
 pub const sticky_piston = Block(
-  "minecraft:sticky_piston",
-  "minecraft:piston_base",
+  Identifier("minecraft", "sticky_piston"),
+  Identifier("minecraft", "piston_base"),
   [
     Bool("extended", False),
     Enum("facing", ["north", "east", "south", "west", "up", "down"], "north"),
   ],
 )
 
-pub const cobweb = Block("minecraft:cobweb", "minecraft:web", [])
-
-pub const short_grass = Block(
-  "minecraft:short_grass",
-  "minecraft:tall_grass",
+pub const cobweb = Block(
+  Identifier("minecraft", "cobweb"),
+  Identifier("minecraft", "web"),
   [],
 )
 
-pub const fern = Block("minecraft:fern", "minecraft:tall_grass", [])
+pub const short_grass = Block(
+  Identifier("minecraft", "short_grass"),
+  Identifier("minecraft", "tall_grass"),
+  [],
+)
 
-pub const dead_bush = Block("minecraft:dead_bush", "minecraft:dead_bush", [])
+pub const fern = Block(
+  Identifier("minecraft", "fern"),
+  Identifier("minecraft", "tall_grass"),
+  [],
+)
 
-pub const seagrass = Block("minecraft:seagrass", "minecraft:seagrass", [])
+pub const dead_bush = Block(
+  Identifier("minecraft", "dead_bush"),
+  Identifier("minecraft", "dead_bush"),
+  [],
+)
+
+pub const seagrass = Block(
+  Identifier("minecraft", "seagrass"),
+  Identifier("minecraft", "seagrass"),
+  [],
+)
 
 pub const tall_seagrass = Block(
-  "minecraft:tall_seagrass",
-  "minecraft:tall_seagrass",
+  Identifier("minecraft", "tall_seagrass"),
+  Identifier("minecraft", "tall_seagrass"),
   [Enum("half", ["upper", "lower"], "lower")],
 )
 
 pub const piston = Block(
-  "minecraft:piston",
-  "minecraft:piston_base",
+  Identifier("minecraft", "piston"),
+  Identifier("minecraft", "piston_base"),
   [
     Bool("extended", False),
     Enum("facing", ["north", "east", "south", "west", "up", "down"], "north"),
@@ -854,8 +1003,8 @@ pub const piston = Block(
 )
 
 pub const piston_head = Block(
-  "minecraft:piston_head",
-  "minecraft:piston_head",
+  Identifier("minecraft", "piston_head"),
+  Identifier("minecraft", "piston_head"),
   [
     Enum("facing", ["north", "east", "south", "west", "up", "down"], "north"),
     Bool("short", False),
@@ -863,120 +1012,240 @@ pub const piston_head = Block(
   ],
 )
 
-pub const white_wool = Block("minecraft:white_wool", "minecraft:block", [])
+pub const white_wool = Block(
+  Identifier("minecraft", "white_wool"),
+  Identifier("minecraft", "block"),
+  [],
+)
 
-pub const orange_wool = Block("minecraft:orange_wool", "minecraft:block", [])
+pub const orange_wool = Block(
+  Identifier("minecraft", "orange_wool"),
+  Identifier("minecraft", "block"),
+  [],
+)
 
-pub const magenta_wool = Block("minecraft:magenta_wool", "minecraft:block", [])
+pub const magenta_wool = Block(
+  Identifier("minecraft", "magenta_wool"),
+  Identifier("minecraft", "block"),
+  [],
+)
 
 pub const light_blue_wool = Block(
-  "minecraft:light_blue_wool",
-  "minecraft:block",
+  Identifier("minecraft", "light_blue_wool"),
+  Identifier("minecraft", "block"),
   [],
 )
 
-pub const yellow_wool = Block("minecraft:yellow_wool", "minecraft:block", [])
+pub const yellow_wool = Block(
+  Identifier("minecraft", "yellow_wool"),
+  Identifier("minecraft", "block"),
+  [],
+)
 
-pub const lime_wool = Block("minecraft:lime_wool", "minecraft:block", [])
+pub const lime_wool = Block(
+  Identifier("minecraft", "lime_wool"),
+  Identifier("minecraft", "block"),
+  [],
+)
 
-pub const pink_wool = Block("minecraft:pink_wool", "minecraft:block", [])
+pub const pink_wool = Block(
+  Identifier("minecraft", "pink_wool"),
+  Identifier("minecraft", "block"),
+  [],
+)
 
-pub const gray_wool = Block("minecraft:gray_wool", "minecraft:block", [])
+pub const gray_wool = Block(
+  Identifier("minecraft", "gray_wool"),
+  Identifier("minecraft", "block"),
+  [],
+)
 
 pub const light_gray_wool = Block(
-  "minecraft:light_gray_wool",
-  "minecraft:block",
+  Identifier("minecraft", "light_gray_wool"),
+  Identifier("minecraft", "block"),
   [],
 )
 
-pub const cyan_wool = Block("minecraft:cyan_wool", "minecraft:block", [])
+pub const cyan_wool = Block(
+  Identifier("minecraft", "cyan_wool"),
+  Identifier("minecraft", "block"),
+  [],
+)
 
-pub const purple_wool = Block("minecraft:purple_wool", "minecraft:block", [])
+pub const purple_wool = Block(
+  Identifier("minecraft", "purple_wool"),
+  Identifier("minecraft", "block"),
+  [],
+)
 
-pub const blue_wool = Block("minecraft:blue_wool", "minecraft:block", [])
+pub const blue_wool = Block(
+  Identifier("minecraft", "blue_wool"),
+  Identifier("minecraft", "block"),
+  [],
+)
 
-pub const brown_wool = Block("minecraft:brown_wool", "minecraft:block", [])
+pub const brown_wool = Block(
+  Identifier("minecraft", "brown_wool"),
+  Identifier("minecraft", "block"),
+  [],
+)
 
-pub const green_wool = Block("minecraft:green_wool", "minecraft:block", [])
+pub const green_wool = Block(
+  Identifier("minecraft", "green_wool"),
+  Identifier("minecraft", "block"),
+  [],
+)
 
-pub const red_wool = Block("minecraft:red_wool", "minecraft:block", [])
+pub const red_wool = Block(
+  Identifier("minecraft", "red_wool"),
+  Identifier("minecraft", "block"),
+  [],
+)
 
-pub const black_wool = Block("minecraft:black_wool", "minecraft:block", [])
+pub const black_wool = Block(
+  Identifier("minecraft", "black_wool"),
+  Identifier("minecraft", "block"),
+  [],
+)
 
 pub const moving_piston = Block(
-  "minecraft:moving_piston",
-  "minecraft:moving_piston",
+  Identifier("minecraft", "moving_piston"),
+  Identifier("minecraft", "moving_piston"),
   [
     Enum("facing", ["north", "east", "south", "west", "up", "down"], "north"),
     Enum("type", ["normal", "sticky"], "normal"),
   ],
 )
 
-pub const dandelion = Block("minecraft:dandelion", "minecraft:flower", [])
+pub const dandelion = Block(
+  Identifier("minecraft", "dandelion"),
+  Identifier("minecraft", "flower"),
+  [],
+)
 
-pub const torchflower = Block("minecraft:torchflower", "minecraft:flower", [])
+pub const torchflower = Block(
+  Identifier("minecraft", "torchflower"),
+  Identifier("minecraft", "flower"),
+  [],
+)
 
-pub const poppy = Block("minecraft:poppy", "minecraft:flower", [])
+pub const poppy = Block(
+  Identifier("minecraft", "poppy"),
+  Identifier("minecraft", "flower"),
+  [],
+)
 
-pub const blue_orchid = Block("minecraft:blue_orchid", "minecraft:flower", [])
+pub const blue_orchid = Block(
+  Identifier("minecraft", "blue_orchid"),
+  Identifier("minecraft", "flower"),
+  [],
+)
 
-pub const allium = Block("minecraft:allium", "minecraft:flower", [])
+pub const allium = Block(
+  Identifier("minecraft", "allium"),
+  Identifier("minecraft", "flower"),
+  [],
+)
 
-pub const azure_bluet = Block("minecraft:azure_bluet", "minecraft:flower", [])
+pub const azure_bluet = Block(
+  Identifier("minecraft", "azure_bluet"),
+  Identifier("minecraft", "flower"),
+  [],
+)
 
-pub const red_tulip = Block("minecraft:red_tulip", "minecraft:flower", [])
+pub const red_tulip = Block(
+  Identifier("minecraft", "red_tulip"),
+  Identifier("minecraft", "flower"),
+  [],
+)
 
-pub const orange_tulip = Block("minecraft:orange_tulip", "minecraft:flower", [])
+pub const orange_tulip = Block(
+  Identifier("minecraft", "orange_tulip"),
+  Identifier("minecraft", "flower"),
+  [],
+)
 
-pub const white_tulip = Block("minecraft:white_tulip", "minecraft:flower", [])
+pub const white_tulip = Block(
+  Identifier("minecraft", "white_tulip"),
+  Identifier("minecraft", "flower"),
+  [],
+)
 
-pub const pink_tulip = Block("minecraft:pink_tulip", "minecraft:flower", [])
+pub const pink_tulip = Block(
+  Identifier("minecraft", "pink_tulip"),
+  Identifier("minecraft", "flower"),
+  [],
+)
 
-pub const oxeye_daisy = Block("minecraft:oxeye_daisy", "minecraft:flower", [])
+pub const oxeye_daisy = Block(
+  Identifier("minecraft", "oxeye_daisy"),
+  Identifier("minecraft", "flower"),
+  [],
+)
 
-pub const cornflower = Block("minecraft:cornflower", "minecraft:flower", [])
+pub const cornflower = Block(
+  Identifier("minecraft", "cornflower"),
+  Identifier("minecraft", "flower"),
+  [],
+)
 
 pub const wither_rose = Block(
-  "minecraft:wither_rose",
-  "minecraft:wither_rose",
+  Identifier("minecraft", "wither_rose"),
+  Identifier("minecraft", "wither_rose"),
   [],
 )
 
 pub const lily_of_the_valley = Block(
-  "minecraft:lily_of_the_valley",
-  "minecraft:flower",
+  Identifier("minecraft", "lily_of_the_valley"),
+  Identifier("minecraft", "flower"),
   [],
 )
 
 pub const brown_mushroom = Block(
-  "minecraft:brown_mushroom",
-  "minecraft:mushroom",
+  Identifier("minecraft", "brown_mushroom"),
+  Identifier("minecraft", "mushroom"),
   [],
 )
 
 pub const red_mushroom = Block(
-  "minecraft:red_mushroom",
-  "minecraft:mushroom",
+  Identifier("minecraft", "red_mushroom"),
+  Identifier("minecraft", "mushroom"),
   [],
 )
 
-pub const gold_block = Block("minecraft:gold_block", "minecraft:block", [])
+pub const gold_block = Block(
+  Identifier("minecraft", "gold_block"),
+  Identifier("minecraft", "block"),
+  [],
+)
 
-pub const iron_block = Block("minecraft:iron_block", "minecraft:block", [])
+pub const iron_block = Block(
+  Identifier("minecraft", "iron_block"),
+  Identifier("minecraft", "block"),
+  [],
+)
 
-pub const bricks = Block("minecraft:bricks", "minecraft:block", [])
+pub const bricks = Block(
+  Identifier("minecraft", "bricks"),
+  Identifier("minecraft", "block"),
+  [],
+)
 
 pub const tnt = Block(
-  "minecraft:tnt",
-  "minecraft:tnt",
+  Identifier("minecraft", "tnt"),
+  Identifier("minecraft", "tnt"),
   [Bool("unstable", False)],
 )
 
-pub const bookshelf = Block("minecraft:bookshelf", "minecraft:block", [])
+pub const bookshelf = Block(
+  Identifier("minecraft", "bookshelf"),
+  Identifier("minecraft", "block"),
+  [],
+)
 
 pub const chiseled_bookshelf = Block(
-  "minecraft:chiseled_bookshelf",
-  "minecraft:chiseled_book_shelf",
+  Identifier("minecraft", "chiseled_bookshelf"),
+  Identifier("minecraft", "chiseled_book_shelf"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("slot_0_occupied", False),
@@ -989,24 +1258,32 @@ pub const chiseled_bookshelf = Block(
 )
 
 pub const mossy_cobblestone = Block(
-  "minecraft:mossy_cobblestone",
-  "minecraft:block",
+  Identifier("minecraft", "mossy_cobblestone"),
+  Identifier("minecraft", "block"),
   [],
 )
 
-pub const obsidian = Block("minecraft:obsidian", "minecraft:block", [])
+pub const obsidian = Block(
+  Identifier("minecraft", "obsidian"),
+  Identifier("minecraft", "block"),
+  [],
+)
 
-pub const torch = Block("minecraft:torch", "minecraft:torch", [])
+pub const torch = Block(
+  Identifier("minecraft", "torch"),
+  Identifier("minecraft", "torch"),
+  [],
+)
 
 pub const wall_torch = Block(
-  "minecraft:wall_torch",
-  "minecraft:wall_torch",
+  Identifier("minecraft", "wall_torch"),
+  Identifier("minecraft", "wall_torch"),
   [Enum("facing", ["north", "south", "west", "east"], "north")],
 )
 
 pub const fire = Block(
-  "minecraft:fire",
-  "minecraft:fire",
+  Identifier("minecraft", "fire"),
+  Identifier("minecraft", "fire"),
   [
     Int("age", 0, 15, 0),
     Bool("east", False),
@@ -1017,13 +1294,21 @@ pub const fire = Block(
   ],
 )
 
-pub const soul_fire = Block("minecraft:soul_fire", "minecraft:soul_fire", [])
+pub const soul_fire = Block(
+  Identifier("minecraft", "soul_fire"),
+  Identifier("minecraft", "soul_fire"),
+  [],
+)
 
-pub const spawner = Block("minecraft:spawner", "minecraft:spawner", [])
+pub const spawner = Block(
+  Identifier("minecraft", "spawner"),
+  Identifier("minecraft", "spawner"),
+  [],
+)
 
 pub const creaking_heart = Block(
-  "minecraft:creaking_heart",
-  "minecraft:creaking_heart",
+  Identifier("minecraft", "creaking_heart"),
+  Identifier("minecraft", "creaking_heart"),
   [
     Bool("active", False),
     Enum("axis", ["x", "y", "z"], "y"),
@@ -1032,8 +1317,8 @@ pub const creaking_heart = Block(
 )
 
 pub const oak_stairs = Block(
-  "minecraft:oak_stairs",
-  "minecraft:stair",
+  Identifier("minecraft", "oak_stairs"),
+  Identifier("minecraft", "stair"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -1047,8 +1332,8 @@ pub const oak_stairs = Block(
 )
 
 pub const chest = Block(
-  "minecraft:chest",
-  "minecraft:chest",
+  Identifier("minecraft", "chest"),
+  Identifier("minecraft", "chest"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("type", ["single", "left", "right"], "single"),
@@ -1057,8 +1342,8 @@ pub const chest = Block(
 )
 
 pub const redstone_wire = Block(
-  "minecraft:redstone_wire",
-  "minecraft:redstone_wire",
+  Identifier("minecraft", "redstone_wire"),
+  Identifier("minecraft", "redstone_wire"),
   [
     Enum("east", ["up", "side", "none"], "none"),
     Enum("north", ["up", "side", "none"], "none"),
@@ -1069,41 +1354,44 @@ pub const redstone_wire = Block(
 )
 
 pub const diamond_ore = Block(
-  "minecraft:diamond_ore",
-  "minecraft:drop_experience",
+  Identifier("minecraft", "diamond_ore"),
+  Identifier("minecraft", "drop_experience"),
   [],
 )
 
 pub const deepslate_diamond_ore = Block(
-  "minecraft:deepslate_diamond_ore",
-  "minecraft:drop_experience",
+  Identifier("minecraft", "deepslate_diamond_ore"),
+  Identifier("minecraft", "drop_experience"),
   [],
 )
 
-pub const diamond_block = Block("minecraft:diamond_block", "minecraft:block", [],
+pub const diamond_block = Block(
+  Identifier("minecraft", "diamond_block"),
+  Identifier("minecraft", "block"),
+  [],
 )
 
 pub const crafting_table = Block(
-  "minecraft:crafting_table",
-  "minecraft:crafting_table",
+  Identifier("minecraft", "crafting_table"),
+  Identifier("minecraft", "crafting_table"),
   [],
 )
 
 pub const wheat = Block(
-  "minecraft:wheat",
-  "minecraft:crop",
+  Identifier("minecraft", "wheat"),
+  Identifier("minecraft", "crop"),
   [Int("age", 0, 7, 0)],
 )
 
 pub const farmland = Block(
-  "minecraft:farmland",
-  "minecraft:farm",
+  Identifier("minecraft", "farmland"),
+  Identifier("minecraft", "farm"),
   [Int("moisture", 0, 7, 0)],
 )
 
 pub const furnace = Block(
-  "minecraft:furnace",
-  "minecraft:furnace",
+  Identifier("minecraft", "furnace"),
+  Identifier("minecraft", "furnace"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("lit", False),
@@ -1111,68 +1399,68 @@ pub const furnace = Block(
 )
 
 pub const oak_sign = Block(
-  "minecraft:oak_sign",
-  "minecraft:standing_sign",
+  Identifier("minecraft", "oak_sign"),
+  Identifier("minecraft", "standing_sign"),
   [Int("rotation", 0, 15, 0), Bool("waterlogged", False)],
 )
 
 pub const spruce_sign = Block(
-  "minecraft:spruce_sign",
-  "minecraft:standing_sign",
+  Identifier("minecraft", "spruce_sign"),
+  Identifier("minecraft", "standing_sign"),
   [Int("rotation", 0, 15, 0), Bool("waterlogged", False)],
 )
 
 pub const birch_sign = Block(
-  "minecraft:birch_sign",
-  "minecraft:standing_sign",
+  Identifier("minecraft", "birch_sign"),
+  Identifier("minecraft", "standing_sign"),
   [Int("rotation", 0, 15, 0), Bool("waterlogged", False)],
 )
 
 pub const acacia_sign = Block(
-  "minecraft:acacia_sign",
-  "minecraft:standing_sign",
+  Identifier("minecraft", "acacia_sign"),
+  Identifier("minecraft", "standing_sign"),
   [Int("rotation", 0, 15, 0), Bool("waterlogged", False)],
 )
 
 pub const cherry_sign = Block(
-  "minecraft:cherry_sign",
-  "minecraft:standing_sign",
+  Identifier("minecraft", "cherry_sign"),
+  Identifier("minecraft", "standing_sign"),
   [Int("rotation", 0, 15, 0), Bool("waterlogged", False)],
 )
 
 pub const jungle_sign = Block(
-  "minecraft:jungle_sign",
-  "minecraft:standing_sign",
+  Identifier("minecraft", "jungle_sign"),
+  Identifier("minecraft", "standing_sign"),
   [Int("rotation", 0, 15, 0), Bool("waterlogged", False)],
 )
 
 pub const dark_oak_sign = Block(
-  "minecraft:dark_oak_sign",
-  "minecraft:standing_sign",
+  Identifier("minecraft", "dark_oak_sign"),
+  Identifier("minecraft", "standing_sign"),
   [Int("rotation", 0, 15, 0), Bool("waterlogged", False)],
 )
 
 pub const pale_oak_sign = Block(
-  "minecraft:pale_oak_sign",
-  "minecraft:standing_sign",
+  Identifier("minecraft", "pale_oak_sign"),
+  Identifier("minecraft", "standing_sign"),
   [Int("rotation", 0, 15, 0), Bool("waterlogged", False)],
 )
 
 pub const mangrove_sign = Block(
-  "minecraft:mangrove_sign",
-  "minecraft:standing_sign",
+  Identifier("minecraft", "mangrove_sign"),
+  Identifier("minecraft", "standing_sign"),
   [Int("rotation", 0, 15, 0), Bool("waterlogged", False)],
 )
 
 pub const bamboo_sign = Block(
-  "minecraft:bamboo_sign",
-  "minecraft:standing_sign",
+  Identifier("minecraft", "bamboo_sign"),
+  Identifier("minecraft", "standing_sign"),
   [Int("rotation", 0, 15, 0), Bool("waterlogged", False)],
 )
 
 pub const oak_door = Block(
-  "minecraft:oak_door",
-  "minecraft:door",
+  Identifier("minecraft", "oak_door"),
+  Identifier("minecraft", "door"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["upper", "lower"], "lower"),
@@ -1183,8 +1471,8 @@ pub const oak_door = Block(
 )
 
 pub const ladder = Block(
-  "minecraft:ladder",
-  "minecraft:ladder",
+  Identifier("minecraft", "ladder"),
+  Identifier("minecraft", "ladder"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("waterlogged", False),
@@ -1192,15 +1480,22 @@ pub const ladder = Block(
 )
 
 pub const rail = Block(
-  "minecraft:rail",
-  "minecraft:rail",
+  Identifier("minecraft", "rail"),
+  Identifier("minecraft", "rail"),
   [
     Enum(
       "shape",
       [
-        "north_south", "east_west", "ascending_east", "ascending_west",
-        "ascending_north", "ascending_south", "south_east", "south_west",
-        "north_west", "north_east",
+        "north_south",
+        "east_west",
+        "ascending_east",
+        "ascending_west",
+        "ascending_north",
+        "ascending_south",
+        "south_east",
+        "south_west",
+        "north_west",
+        "north_east",
       ],
       "north_south",
     ),
@@ -1209,8 +1504,8 @@ pub const rail = Block(
 )
 
 pub const cobblestone_stairs = Block(
-  "minecraft:cobblestone_stairs",
-  "minecraft:stair",
+  Identifier("minecraft", "cobblestone_stairs"),
+  Identifier("minecraft", "stair"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -1224,8 +1519,8 @@ pub const cobblestone_stairs = Block(
 )
 
 pub const oak_wall_sign = Block(
-  "minecraft:oak_wall_sign",
-  "minecraft:wall_sign",
+  Identifier("minecraft", "oak_wall_sign"),
+  Identifier("minecraft", "wall_sign"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("waterlogged", False),
@@ -1233,8 +1528,8 @@ pub const oak_wall_sign = Block(
 )
 
 pub const spruce_wall_sign = Block(
-  "minecraft:spruce_wall_sign",
-  "minecraft:wall_sign",
+  Identifier("minecraft", "spruce_wall_sign"),
+  Identifier("minecraft", "wall_sign"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("waterlogged", False),
@@ -1242,8 +1537,8 @@ pub const spruce_wall_sign = Block(
 )
 
 pub const birch_wall_sign = Block(
-  "minecraft:birch_wall_sign",
-  "minecraft:wall_sign",
+  Identifier("minecraft", "birch_wall_sign"),
+  Identifier("minecraft", "wall_sign"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("waterlogged", False),
@@ -1251,8 +1546,8 @@ pub const birch_wall_sign = Block(
 )
 
 pub const acacia_wall_sign = Block(
-  "minecraft:acacia_wall_sign",
-  "minecraft:wall_sign",
+  Identifier("minecraft", "acacia_wall_sign"),
+  Identifier("minecraft", "wall_sign"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("waterlogged", False),
@@ -1260,8 +1555,8 @@ pub const acacia_wall_sign = Block(
 )
 
 pub const cherry_wall_sign = Block(
-  "minecraft:cherry_wall_sign",
-  "minecraft:wall_sign",
+  Identifier("minecraft", "cherry_wall_sign"),
+  Identifier("minecraft", "wall_sign"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("waterlogged", False),
@@ -1269,8 +1564,8 @@ pub const cherry_wall_sign = Block(
 )
 
 pub const jungle_wall_sign = Block(
-  "minecraft:jungle_wall_sign",
-  "minecraft:wall_sign",
+  Identifier("minecraft", "jungle_wall_sign"),
+  Identifier("minecraft", "wall_sign"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("waterlogged", False),
@@ -1278,8 +1573,8 @@ pub const jungle_wall_sign = Block(
 )
 
 pub const dark_oak_wall_sign = Block(
-  "minecraft:dark_oak_wall_sign",
-  "minecraft:wall_sign",
+  Identifier("minecraft", "dark_oak_wall_sign"),
+  Identifier("minecraft", "wall_sign"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("waterlogged", False),
@@ -1287,8 +1582,8 @@ pub const dark_oak_wall_sign = Block(
 )
 
 pub const pale_oak_wall_sign = Block(
-  "minecraft:pale_oak_wall_sign",
-  "minecraft:wall_sign",
+  Identifier("minecraft", "pale_oak_wall_sign"),
+  Identifier("minecraft", "wall_sign"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("waterlogged", False),
@@ -1296,8 +1591,8 @@ pub const pale_oak_wall_sign = Block(
 )
 
 pub const mangrove_wall_sign = Block(
-  "minecraft:mangrove_wall_sign",
-  "minecraft:wall_sign",
+  Identifier("minecraft", "mangrove_wall_sign"),
+  Identifier("minecraft", "wall_sign"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("waterlogged", False),
@@ -1305,8 +1600,8 @@ pub const mangrove_wall_sign = Block(
 )
 
 pub const bamboo_wall_sign = Block(
-  "minecraft:bamboo_wall_sign",
-  "minecraft:wall_sign",
+  Identifier("minecraft", "bamboo_wall_sign"),
+  Identifier("minecraft", "wall_sign"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("waterlogged", False),
@@ -1314,8 +1609,8 @@ pub const bamboo_wall_sign = Block(
 )
 
 pub const oak_hanging_sign = Block(
-  "minecraft:oak_hanging_sign",
-  "minecraft:ceiling_hanging_sign",
+  Identifier("minecraft", "oak_hanging_sign"),
+  Identifier("minecraft", "ceiling_hanging_sign"),
   [
     Bool("attached", False),
     Int("rotation", 0, 15, 0),
@@ -1324,8 +1619,8 @@ pub const oak_hanging_sign = Block(
 )
 
 pub const spruce_hanging_sign = Block(
-  "minecraft:spruce_hanging_sign",
-  "minecraft:ceiling_hanging_sign",
+  Identifier("minecraft", "spruce_hanging_sign"),
+  Identifier("minecraft", "ceiling_hanging_sign"),
   [
     Bool("attached", False),
     Int("rotation", 0, 15, 0),
@@ -1334,8 +1629,8 @@ pub const spruce_hanging_sign = Block(
 )
 
 pub const birch_hanging_sign = Block(
-  "minecraft:birch_hanging_sign",
-  "minecraft:ceiling_hanging_sign",
+  Identifier("minecraft", "birch_hanging_sign"),
+  Identifier("minecraft", "ceiling_hanging_sign"),
   [
     Bool("attached", False),
     Int("rotation", 0, 15, 0),
@@ -1344,8 +1639,8 @@ pub const birch_hanging_sign = Block(
 )
 
 pub const acacia_hanging_sign = Block(
-  "minecraft:acacia_hanging_sign",
-  "minecraft:ceiling_hanging_sign",
+  Identifier("minecraft", "acacia_hanging_sign"),
+  Identifier("minecraft", "ceiling_hanging_sign"),
   [
     Bool("attached", False),
     Int("rotation", 0, 15, 0),
@@ -1354,8 +1649,8 @@ pub const acacia_hanging_sign = Block(
 )
 
 pub const cherry_hanging_sign = Block(
-  "minecraft:cherry_hanging_sign",
-  "minecraft:ceiling_hanging_sign",
+  Identifier("minecraft", "cherry_hanging_sign"),
+  Identifier("minecraft", "ceiling_hanging_sign"),
   [
     Bool("attached", False),
     Int("rotation", 0, 15, 0),
@@ -1364,8 +1659,8 @@ pub const cherry_hanging_sign = Block(
 )
 
 pub const jungle_hanging_sign = Block(
-  "minecraft:jungle_hanging_sign",
-  "minecraft:ceiling_hanging_sign",
+  Identifier("minecraft", "jungle_hanging_sign"),
+  Identifier("minecraft", "ceiling_hanging_sign"),
   [
     Bool("attached", False),
     Int("rotation", 0, 15, 0),
@@ -1374,8 +1669,8 @@ pub const jungle_hanging_sign = Block(
 )
 
 pub const dark_oak_hanging_sign = Block(
-  "minecraft:dark_oak_hanging_sign",
-  "minecraft:ceiling_hanging_sign",
+  Identifier("minecraft", "dark_oak_hanging_sign"),
+  Identifier("minecraft", "ceiling_hanging_sign"),
   [
     Bool("attached", False),
     Int("rotation", 0, 15, 0),
@@ -1384,8 +1679,8 @@ pub const dark_oak_hanging_sign = Block(
 )
 
 pub const pale_oak_hanging_sign = Block(
-  "minecraft:pale_oak_hanging_sign",
-  "minecraft:ceiling_hanging_sign",
+  Identifier("minecraft", "pale_oak_hanging_sign"),
+  Identifier("minecraft", "ceiling_hanging_sign"),
   [
     Bool("attached", False),
     Int("rotation", 0, 15, 0),
@@ -1394,8 +1689,8 @@ pub const pale_oak_hanging_sign = Block(
 )
 
 pub const crimson_hanging_sign = Block(
-  "minecraft:crimson_hanging_sign",
-  "minecraft:ceiling_hanging_sign",
+  Identifier("minecraft", "crimson_hanging_sign"),
+  Identifier("minecraft", "ceiling_hanging_sign"),
   [
     Bool("attached", False),
     Int("rotation", 0, 15, 0),
@@ -1404,8 +1699,8 @@ pub const crimson_hanging_sign = Block(
 )
 
 pub const warped_hanging_sign = Block(
-  "minecraft:warped_hanging_sign",
-  "minecraft:ceiling_hanging_sign",
+  Identifier("minecraft", "warped_hanging_sign"),
+  Identifier("minecraft", "ceiling_hanging_sign"),
   [
     Bool("attached", False),
     Int("rotation", 0, 15, 0),
@@ -1414,8 +1709,8 @@ pub const warped_hanging_sign = Block(
 )
 
 pub const mangrove_hanging_sign = Block(
-  "minecraft:mangrove_hanging_sign",
-  "minecraft:ceiling_hanging_sign",
+  Identifier("minecraft", "mangrove_hanging_sign"),
+  Identifier("minecraft", "ceiling_hanging_sign"),
   [
     Bool("attached", False),
     Int("rotation", 0, 15, 0),
@@ -1424,8 +1719,8 @@ pub const mangrove_hanging_sign = Block(
 )
 
 pub const bamboo_hanging_sign = Block(
-  "minecraft:bamboo_hanging_sign",
-  "minecraft:ceiling_hanging_sign",
+  Identifier("minecraft", "bamboo_hanging_sign"),
+  Identifier("minecraft", "ceiling_hanging_sign"),
   [
     Bool("attached", False),
     Int("rotation", 0, 15, 0),
@@ -1434,8 +1729,8 @@ pub const bamboo_hanging_sign = Block(
 )
 
 pub const oak_wall_hanging_sign = Block(
-  "minecraft:oak_wall_hanging_sign",
-  "minecraft:wall_hanging_sign",
+  Identifier("minecraft", "oak_wall_hanging_sign"),
+  Identifier("minecraft", "wall_hanging_sign"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("waterlogged", False),
@@ -1443,8 +1738,8 @@ pub const oak_wall_hanging_sign = Block(
 )
 
 pub const spruce_wall_hanging_sign = Block(
-  "minecraft:spruce_wall_hanging_sign",
-  "minecraft:wall_hanging_sign",
+  Identifier("minecraft", "spruce_wall_hanging_sign"),
+  Identifier("minecraft", "wall_hanging_sign"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("waterlogged", False),
@@ -1452,8 +1747,8 @@ pub const spruce_wall_hanging_sign = Block(
 )
 
 pub const birch_wall_hanging_sign = Block(
-  "minecraft:birch_wall_hanging_sign",
-  "minecraft:wall_hanging_sign",
+  Identifier("minecraft", "birch_wall_hanging_sign"),
+  Identifier("minecraft", "wall_hanging_sign"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("waterlogged", False),
@@ -1461,8 +1756,8 @@ pub const birch_wall_hanging_sign = Block(
 )
 
 pub const acacia_wall_hanging_sign = Block(
-  "minecraft:acacia_wall_hanging_sign",
-  "minecraft:wall_hanging_sign",
+  Identifier("minecraft", "acacia_wall_hanging_sign"),
+  Identifier("minecraft", "wall_hanging_sign"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("waterlogged", False),
@@ -1470,8 +1765,8 @@ pub const acacia_wall_hanging_sign = Block(
 )
 
 pub const cherry_wall_hanging_sign = Block(
-  "minecraft:cherry_wall_hanging_sign",
-  "minecraft:wall_hanging_sign",
+  Identifier("minecraft", "cherry_wall_hanging_sign"),
+  Identifier("minecraft", "wall_hanging_sign"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("waterlogged", False),
@@ -1479,8 +1774,8 @@ pub const cherry_wall_hanging_sign = Block(
 )
 
 pub const jungle_wall_hanging_sign = Block(
-  "minecraft:jungle_wall_hanging_sign",
-  "minecraft:wall_hanging_sign",
+  Identifier("minecraft", "jungle_wall_hanging_sign"),
+  Identifier("minecraft", "wall_hanging_sign"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("waterlogged", False),
@@ -1488,8 +1783,8 @@ pub const jungle_wall_hanging_sign = Block(
 )
 
 pub const dark_oak_wall_hanging_sign = Block(
-  "minecraft:dark_oak_wall_hanging_sign",
-  "minecraft:wall_hanging_sign",
+  Identifier("minecraft", "dark_oak_wall_hanging_sign"),
+  Identifier("minecraft", "wall_hanging_sign"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("waterlogged", False),
@@ -1497,8 +1792,8 @@ pub const dark_oak_wall_hanging_sign = Block(
 )
 
 pub const pale_oak_wall_hanging_sign = Block(
-  "minecraft:pale_oak_wall_hanging_sign",
-  "minecraft:wall_hanging_sign",
+  Identifier("minecraft", "pale_oak_wall_hanging_sign"),
+  Identifier("minecraft", "wall_hanging_sign"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("waterlogged", False),
@@ -1506,8 +1801,8 @@ pub const pale_oak_wall_hanging_sign = Block(
 )
 
 pub const mangrove_wall_hanging_sign = Block(
-  "minecraft:mangrove_wall_hanging_sign",
-  "minecraft:wall_hanging_sign",
+  Identifier("minecraft", "mangrove_wall_hanging_sign"),
+  Identifier("minecraft", "wall_hanging_sign"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("waterlogged", False),
@@ -1515,8 +1810,8 @@ pub const mangrove_wall_hanging_sign = Block(
 )
 
 pub const crimson_wall_hanging_sign = Block(
-  "minecraft:crimson_wall_hanging_sign",
-  "minecraft:wall_hanging_sign",
+  Identifier("minecraft", "crimson_wall_hanging_sign"),
+  Identifier("minecraft", "wall_hanging_sign"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("waterlogged", False),
@@ -1524,8 +1819,8 @@ pub const crimson_wall_hanging_sign = Block(
 )
 
 pub const warped_wall_hanging_sign = Block(
-  "minecraft:warped_wall_hanging_sign",
-  "minecraft:wall_hanging_sign",
+  Identifier("minecraft", "warped_wall_hanging_sign"),
+  Identifier("minecraft", "wall_hanging_sign"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("waterlogged", False),
@@ -1533,8 +1828,8 @@ pub const warped_wall_hanging_sign = Block(
 )
 
 pub const bamboo_wall_hanging_sign = Block(
-  "minecraft:bamboo_wall_hanging_sign",
-  "minecraft:wall_hanging_sign",
+  Identifier("minecraft", "bamboo_wall_hanging_sign"),
+  Identifier("minecraft", "wall_hanging_sign"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("waterlogged", False),
@@ -1542,8 +1837,8 @@ pub const bamboo_wall_hanging_sign = Block(
 )
 
 pub const lever = Block(
-  "minecraft:lever",
-  "minecraft:lever",
+  Identifier("minecraft", "lever"),
+  Identifier("minecraft", "lever"),
   [
     Enum("face", ["floor", "wall", "ceiling"], "wall"),
     Enum("facing", ["north", "south", "west", "east"], "north"),
@@ -1552,14 +1847,14 @@ pub const lever = Block(
 )
 
 pub const stone_pressure_plate = Block(
-  "minecraft:stone_pressure_plate",
-  "minecraft:pressure_plate",
+  Identifier("minecraft", "stone_pressure_plate"),
+  Identifier("minecraft", "pressure_plate"),
   [Bool("powered", False)],
 )
 
 pub const iron_door = Block(
-  "minecraft:iron_door",
-  "minecraft:door",
+  Identifier("minecraft", "iron_door"),
+  Identifier("minecraft", "door"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["upper", "lower"], "lower"),
@@ -1570,86 +1865,86 @@ pub const iron_door = Block(
 )
 
 pub const oak_pressure_plate = Block(
-  "minecraft:oak_pressure_plate",
-  "minecraft:pressure_plate",
+  Identifier("minecraft", "oak_pressure_plate"),
+  Identifier("minecraft", "pressure_plate"),
   [Bool("powered", False)],
 )
 
 pub const spruce_pressure_plate = Block(
-  "minecraft:spruce_pressure_plate",
-  "minecraft:pressure_plate",
+  Identifier("minecraft", "spruce_pressure_plate"),
+  Identifier("minecraft", "pressure_plate"),
   [Bool("powered", False)],
 )
 
 pub const birch_pressure_plate = Block(
-  "minecraft:birch_pressure_plate",
-  "minecraft:pressure_plate",
+  Identifier("minecraft", "birch_pressure_plate"),
+  Identifier("minecraft", "pressure_plate"),
   [Bool("powered", False)],
 )
 
 pub const jungle_pressure_plate = Block(
-  "minecraft:jungle_pressure_plate",
-  "minecraft:pressure_plate",
+  Identifier("minecraft", "jungle_pressure_plate"),
+  Identifier("minecraft", "pressure_plate"),
   [Bool("powered", False)],
 )
 
 pub const acacia_pressure_plate = Block(
-  "minecraft:acacia_pressure_plate",
-  "minecraft:pressure_plate",
+  Identifier("minecraft", "acacia_pressure_plate"),
+  Identifier("minecraft", "pressure_plate"),
   [Bool("powered", False)],
 )
 
 pub const cherry_pressure_plate = Block(
-  "minecraft:cherry_pressure_plate",
-  "minecraft:pressure_plate",
+  Identifier("minecraft", "cherry_pressure_plate"),
+  Identifier("minecraft", "pressure_plate"),
   [Bool("powered", False)],
 )
 
 pub const dark_oak_pressure_plate = Block(
-  "minecraft:dark_oak_pressure_plate",
-  "minecraft:pressure_plate",
+  Identifier("minecraft", "dark_oak_pressure_plate"),
+  Identifier("minecraft", "pressure_plate"),
   [Bool("powered", False)],
 )
 
 pub const pale_oak_pressure_plate = Block(
-  "minecraft:pale_oak_pressure_plate",
-  "minecraft:pressure_plate",
+  Identifier("minecraft", "pale_oak_pressure_plate"),
+  Identifier("minecraft", "pressure_plate"),
   [Bool("powered", False)],
 )
 
 pub const mangrove_pressure_plate = Block(
-  "minecraft:mangrove_pressure_plate",
-  "minecraft:pressure_plate",
+  Identifier("minecraft", "mangrove_pressure_plate"),
+  Identifier("minecraft", "pressure_plate"),
   [Bool("powered", False)],
 )
 
 pub const bamboo_pressure_plate = Block(
-  "minecraft:bamboo_pressure_plate",
-  "minecraft:pressure_plate",
+  Identifier("minecraft", "bamboo_pressure_plate"),
+  Identifier("minecraft", "pressure_plate"),
   [Bool("powered", False)],
 )
 
 pub const redstone_ore = Block(
-  "minecraft:redstone_ore",
-  "minecraft:redstone_ore",
+  Identifier("minecraft", "redstone_ore"),
+  Identifier("minecraft", "redstone_ore"),
   [Bool("lit", False)],
 )
 
 pub const deepslate_redstone_ore = Block(
-  "minecraft:deepslate_redstone_ore",
-  "minecraft:redstone_ore",
+  Identifier("minecraft", "deepslate_redstone_ore"),
+  Identifier("minecraft", "redstone_ore"),
   [Bool("lit", False)],
 )
 
 pub const redstone_torch = Block(
-  "minecraft:redstone_torch",
-  "minecraft:redstone_torch",
+  Identifier("minecraft", "redstone_torch"),
+  Identifier("minecraft", "redstone_torch"),
   [Bool("lit", True)],
 )
 
 pub const redstone_wall_torch = Block(
-  "minecraft:redstone_wall_torch",
-  "minecraft:redstone_wall_torch",
+  Identifier("minecraft", "redstone_wall_torch"),
+  Identifier("minecraft", "redstone_wall_torch"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("lit", True),
@@ -1657,8 +1952,8 @@ pub const redstone_wall_torch = Block(
 )
 
 pub const stone_button = Block(
-  "minecraft:stone_button",
-  "minecraft:button",
+  Identifier("minecraft", "stone_button"),
+  Identifier("minecraft", "button"),
   [
     Enum("face", ["floor", "wall", "ceiling"], "wall"),
     Enum("facing", ["north", "south", "west", "east"], "north"),
@@ -1667,38 +1962,50 @@ pub const stone_button = Block(
 )
 
 pub const snow = Block(
-  "minecraft:snow",
-  "minecraft:snow_layer",
+  Identifier("minecraft", "snow"),
+  Identifier("minecraft", "snow_layer"),
   [Int("layers", 1, 8, 1)],
 )
 
-pub const ice = Block("minecraft:ice", "minecraft:ice", [])
+pub const ice = Block(
+  Identifier("minecraft", "ice"),
+  Identifier("minecraft", "ice"),
+  [],
+)
 
-pub const snow_block = Block("minecraft:snow_block", "minecraft:block", [])
+pub const snow_block = Block(
+  Identifier("minecraft", "snow_block"),
+  Identifier("minecraft", "block"),
+  [],
+)
 
 pub const cactus = Block(
-  "minecraft:cactus",
-  "minecraft:cactus",
+  Identifier("minecraft", "cactus"),
+  Identifier("minecraft", "cactus"),
   [Int("age", 0, 15, 0)],
 )
 
-pub const clay = Block("minecraft:clay", "minecraft:block", [])
+pub const clay = Block(
+  Identifier("minecraft", "clay"),
+  Identifier("minecraft", "block"),
+  [],
+)
 
 pub const sugar_cane = Block(
-  "minecraft:sugar_cane",
-  "minecraft:sugar_cane",
+  Identifier("minecraft", "sugar_cane"),
+  Identifier("minecraft", "sugar_cane"),
   [Int("age", 0, 15, 0)],
 )
 
 pub const jukebox = Block(
-  "minecraft:jukebox",
-  "minecraft:jukebox",
+  Identifier("minecraft", "jukebox"),
+  Identifier("minecraft", "jukebox"),
   [Bool("has_record", False)],
 )
 
 pub const oak_fence = Block(
-  "minecraft:oak_fence",
-  "minecraft:fence",
+  Identifier("minecraft", "oak_fence"),
+  Identifier("minecraft", "fence"),
   [
     Bool("east", False),
     Bool("north", False),
@@ -1708,61 +2015,81 @@ pub const oak_fence = Block(
   ],
 )
 
-pub const netherrack = Block("minecraft:netherrack", "minecraft:netherrack", [])
+pub const netherrack = Block(
+  Identifier("minecraft", "netherrack"),
+  Identifier("minecraft", "netherrack"),
+  [],
+)
 
-pub const soul_sand = Block("minecraft:soul_sand", "minecraft:soul_sand", [])
+pub const soul_sand = Block(
+  Identifier("minecraft", "soul_sand"),
+  Identifier("minecraft", "soul_sand"),
+  [],
+)
 
-pub const soul_soil = Block("minecraft:soul_soil", "minecraft:block", [])
+pub const soul_soil = Block(
+  Identifier("minecraft", "soul_soil"),
+  Identifier("minecraft", "block"),
+  [],
+)
 
 pub const basalt = Block(
-  "minecraft:basalt",
-  "minecraft:rotated_pillar",
+  Identifier("minecraft", "basalt"),
+  Identifier("minecraft", "rotated_pillar"),
   [Enum("axis", ["x", "y", "z"], "y")],
 )
 
 pub const polished_basalt = Block(
-  "minecraft:polished_basalt",
-  "minecraft:rotated_pillar",
+  Identifier("minecraft", "polished_basalt"),
+  Identifier("minecraft", "rotated_pillar"),
   [Enum("axis", ["x", "y", "z"], "y")],
 )
 
-pub const soul_torch = Block("minecraft:soul_torch", "minecraft:torch", [])
+pub const soul_torch = Block(
+  Identifier("minecraft", "soul_torch"),
+  Identifier("minecraft", "torch"),
+  [],
+)
 
 pub const soul_wall_torch = Block(
-  "minecraft:soul_wall_torch",
-  "minecraft:wall_torch",
+  Identifier("minecraft", "soul_wall_torch"),
+  Identifier("minecraft", "wall_torch"),
   [Enum("facing", ["north", "south", "west", "east"], "north")],
 )
 
-pub const glowstone = Block("minecraft:glowstone", "minecraft:block", [])
+pub const glowstone = Block(
+  Identifier("minecraft", "glowstone"),
+  Identifier("minecraft", "block"),
+  [],
+)
 
 pub const nether_portal = Block(
-  "minecraft:nether_portal",
-  "minecraft:nether_portal",
+  Identifier("minecraft", "nether_portal"),
+  Identifier("minecraft", "nether_portal"),
   [Enum("axis", ["x", "z"], "x")],
 )
 
 pub const carved_pumpkin = Block(
-  "minecraft:carved_pumpkin",
-  "minecraft:jack_o_lantern",
+  Identifier("minecraft", "carved_pumpkin"),
+  Identifier("minecraft", "jack_o_lantern"),
   [Enum("facing", ["north", "south", "west", "east"], "north")],
 )
 
 pub const jack_o_lantern = Block(
-  "minecraft:jack_o_lantern",
-  "minecraft:jack_o_lantern",
+  Identifier("minecraft", "jack_o_lantern"),
+  Identifier("minecraft", "jack_o_lantern"),
   [Enum("facing", ["north", "south", "west", "east"], "north")],
 )
 
 pub const cake = Block(
-  "minecraft:cake",
-  "minecraft:cake",
+  Identifier("minecraft", "cake"),
+  Identifier("minecraft", "cake"),
   [Int("bites", 0, 6, 0)],
 )
 
 pub const repeater = Block(
-  "minecraft:repeater",
-  "minecraft:repeater",
+  Identifier("minecraft", "repeater"),
+  Identifier("minecraft", "repeater"),
   [
     Int("delay", 1, 4, 1),
     Enum("facing", ["north", "south", "west", "east"], "north"),
@@ -1772,104 +2099,104 @@ pub const repeater = Block(
 )
 
 pub const white_stained_glass = Block(
-  "minecraft:white_stained_glass",
-  "minecraft:stained_glass",
+  Identifier("minecraft", "white_stained_glass"),
+  Identifier("minecraft", "stained_glass"),
   [],
 )
 
 pub const orange_stained_glass = Block(
-  "minecraft:orange_stained_glass",
-  "minecraft:stained_glass",
+  Identifier("minecraft", "orange_stained_glass"),
+  Identifier("minecraft", "stained_glass"),
   [],
 )
 
 pub const magenta_stained_glass = Block(
-  "minecraft:magenta_stained_glass",
-  "minecraft:stained_glass",
+  Identifier("minecraft", "magenta_stained_glass"),
+  Identifier("minecraft", "stained_glass"),
   [],
 )
 
 pub const light_blue_stained_glass = Block(
-  "minecraft:light_blue_stained_glass",
-  "minecraft:stained_glass",
+  Identifier("minecraft", "light_blue_stained_glass"),
+  Identifier("minecraft", "stained_glass"),
   [],
 )
 
 pub const yellow_stained_glass = Block(
-  "minecraft:yellow_stained_glass",
-  "minecraft:stained_glass",
+  Identifier("minecraft", "yellow_stained_glass"),
+  Identifier("minecraft", "stained_glass"),
   [],
 )
 
 pub const lime_stained_glass = Block(
-  "minecraft:lime_stained_glass",
-  "minecraft:stained_glass",
+  Identifier("minecraft", "lime_stained_glass"),
+  Identifier("minecraft", "stained_glass"),
   [],
 )
 
 pub const pink_stained_glass = Block(
-  "minecraft:pink_stained_glass",
-  "minecraft:stained_glass",
+  Identifier("minecraft", "pink_stained_glass"),
+  Identifier("minecraft", "stained_glass"),
   [],
 )
 
 pub const gray_stained_glass = Block(
-  "minecraft:gray_stained_glass",
-  "minecraft:stained_glass",
+  Identifier("minecraft", "gray_stained_glass"),
+  Identifier("minecraft", "stained_glass"),
   [],
 )
 
 pub const light_gray_stained_glass = Block(
-  "minecraft:light_gray_stained_glass",
-  "minecraft:stained_glass",
+  Identifier("minecraft", "light_gray_stained_glass"),
+  Identifier("minecraft", "stained_glass"),
   [],
 )
 
 pub const cyan_stained_glass = Block(
-  "minecraft:cyan_stained_glass",
-  "minecraft:stained_glass",
+  Identifier("minecraft", "cyan_stained_glass"),
+  Identifier("minecraft", "stained_glass"),
   [],
 )
 
 pub const purple_stained_glass = Block(
-  "minecraft:purple_stained_glass",
-  "minecraft:stained_glass",
+  Identifier("minecraft", "purple_stained_glass"),
+  Identifier("minecraft", "stained_glass"),
   [],
 )
 
 pub const blue_stained_glass = Block(
-  "minecraft:blue_stained_glass",
-  "minecraft:stained_glass",
+  Identifier("minecraft", "blue_stained_glass"),
+  Identifier("minecraft", "stained_glass"),
   [],
 )
 
 pub const brown_stained_glass = Block(
-  "minecraft:brown_stained_glass",
-  "minecraft:stained_glass",
+  Identifier("minecraft", "brown_stained_glass"),
+  Identifier("minecraft", "stained_glass"),
   [],
 )
 
 pub const green_stained_glass = Block(
-  "minecraft:green_stained_glass",
-  "minecraft:stained_glass",
+  Identifier("minecraft", "green_stained_glass"),
+  Identifier("minecraft", "stained_glass"),
   [],
 )
 
 pub const red_stained_glass = Block(
-  "minecraft:red_stained_glass",
-  "minecraft:stained_glass",
+  Identifier("minecraft", "red_stained_glass"),
+  Identifier("minecraft", "stained_glass"),
   [],
 )
 
 pub const black_stained_glass = Block(
-  "minecraft:black_stained_glass",
-  "minecraft:stained_glass",
+  Identifier("minecraft", "black_stained_glass"),
+  Identifier("minecraft", "stained_glass"),
   [],
 )
 
 pub const oak_trapdoor = Block(
-  "minecraft:oak_trapdoor",
-  "minecraft:trapdoor",
+  Identifier("minecraft", "oak_trapdoor"),
+  Identifier("minecraft", "trapdoor"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -1880,8 +2207,8 @@ pub const oak_trapdoor = Block(
 )
 
 pub const spruce_trapdoor = Block(
-  "minecraft:spruce_trapdoor",
-  "minecraft:trapdoor",
+  Identifier("minecraft", "spruce_trapdoor"),
+  Identifier("minecraft", "trapdoor"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -1892,8 +2219,8 @@ pub const spruce_trapdoor = Block(
 )
 
 pub const birch_trapdoor = Block(
-  "minecraft:birch_trapdoor",
-  "minecraft:trapdoor",
+  Identifier("minecraft", "birch_trapdoor"),
+  Identifier("minecraft", "trapdoor"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -1904,8 +2231,8 @@ pub const birch_trapdoor = Block(
 )
 
 pub const jungle_trapdoor = Block(
-  "minecraft:jungle_trapdoor",
-  "minecraft:trapdoor",
+  Identifier("minecraft", "jungle_trapdoor"),
+  Identifier("minecraft", "trapdoor"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -1916,8 +2243,8 @@ pub const jungle_trapdoor = Block(
 )
 
 pub const acacia_trapdoor = Block(
-  "minecraft:acacia_trapdoor",
-  "minecraft:trapdoor",
+  Identifier("minecraft", "acacia_trapdoor"),
+  Identifier("minecraft", "trapdoor"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -1928,8 +2255,8 @@ pub const acacia_trapdoor = Block(
 )
 
 pub const cherry_trapdoor = Block(
-  "minecraft:cherry_trapdoor",
-  "minecraft:trapdoor",
+  Identifier("minecraft", "cherry_trapdoor"),
+  Identifier("minecraft", "trapdoor"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -1940,8 +2267,8 @@ pub const cherry_trapdoor = Block(
 )
 
 pub const dark_oak_trapdoor = Block(
-  "minecraft:dark_oak_trapdoor",
-  "minecraft:trapdoor",
+  Identifier("minecraft", "dark_oak_trapdoor"),
+  Identifier("minecraft", "trapdoor"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -1952,8 +2279,8 @@ pub const dark_oak_trapdoor = Block(
 )
 
 pub const pale_oak_trapdoor = Block(
-  "minecraft:pale_oak_trapdoor",
-  "minecraft:trapdoor",
+  Identifier("minecraft", "pale_oak_trapdoor"),
+  Identifier("minecraft", "trapdoor"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -1964,8 +2291,8 @@ pub const pale_oak_trapdoor = Block(
 )
 
 pub const mangrove_trapdoor = Block(
-  "minecraft:mangrove_trapdoor",
-  "minecraft:trapdoor",
+  Identifier("minecraft", "mangrove_trapdoor"),
+  Identifier("minecraft", "trapdoor"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -1976,8 +2303,8 @@ pub const mangrove_trapdoor = Block(
 )
 
 pub const bamboo_trapdoor = Block(
-  "minecraft:bamboo_trapdoor",
-  "minecraft:trapdoor",
+  Identifier("minecraft", "bamboo_trapdoor"),
+  Identifier("minecraft", "trapdoor"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -1987,69 +2314,81 @@ pub const bamboo_trapdoor = Block(
   ],
 )
 
-pub const stone_bricks = Block("minecraft:stone_bricks", "minecraft:block", [])
+pub const stone_bricks = Block(
+  Identifier("minecraft", "stone_bricks"),
+  Identifier("minecraft", "block"),
+  [],
+)
 
 pub const mossy_stone_bricks = Block(
-  "minecraft:mossy_stone_bricks",
-  "minecraft:block",
+  Identifier("minecraft", "mossy_stone_bricks"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const cracked_stone_bricks = Block(
-  "minecraft:cracked_stone_bricks",
-  "minecraft:block",
+  Identifier("minecraft", "cracked_stone_bricks"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const chiseled_stone_bricks = Block(
-  "minecraft:chiseled_stone_bricks",
-  "minecraft:block",
+  Identifier("minecraft", "chiseled_stone_bricks"),
+  Identifier("minecraft", "block"),
   [],
 )
 
-pub const packed_mud = Block("minecraft:packed_mud", "minecraft:block", [])
+pub const packed_mud = Block(
+  Identifier("minecraft", "packed_mud"),
+  Identifier("minecraft", "block"),
+  [],
+)
 
-pub const mud_bricks = Block("minecraft:mud_bricks", "minecraft:block", [])
+pub const mud_bricks = Block(
+  Identifier("minecraft", "mud_bricks"),
+  Identifier("minecraft", "block"),
+  [],
+)
 
 pub const infested_stone = Block(
-  "minecraft:infested_stone",
-  "minecraft:infested",
+  Identifier("minecraft", "infested_stone"),
+  Identifier("minecraft", "infested"),
   [],
 )
 
 pub const infested_cobblestone = Block(
-  "minecraft:infested_cobblestone",
-  "minecraft:infested",
+  Identifier("minecraft", "infested_cobblestone"),
+  Identifier("minecraft", "infested"),
   [],
 )
 
 pub const infested_stone_bricks = Block(
-  "minecraft:infested_stone_bricks",
-  "minecraft:infested",
+  Identifier("minecraft", "infested_stone_bricks"),
+  Identifier("minecraft", "infested"),
   [],
 )
 
 pub const infested_mossy_stone_bricks = Block(
-  "minecraft:infested_mossy_stone_bricks",
-  "minecraft:infested",
+  Identifier("minecraft", "infested_mossy_stone_bricks"),
+  Identifier("minecraft", "infested"),
   [],
 )
 
 pub const infested_cracked_stone_bricks = Block(
-  "minecraft:infested_cracked_stone_bricks",
-  "minecraft:infested",
+  Identifier("minecraft", "infested_cracked_stone_bricks"),
+  Identifier("minecraft", "infested"),
   [],
 )
 
 pub const infested_chiseled_stone_bricks = Block(
-  "minecraft:infested_chiseled_stone_bricks",
-  "minecraft:infested",
+  Identifier("minecraft", "infested_chiseled_stone_bricks"),
+  Identifier("minecraft", "infested"),
   [],
 )
 
 pub const brown_mushroom_block = Block(
-  "minecraft:brown_mushroom_block",
-  "minecraft:huge_mushroom",
+  Identifier("minecraft", "brown_mushroom_block"),
+  Identifier("minecraft", "huge_mushroom"),
   [
     Bool("down", True),
     Bool("east", True),
@@ -2061,8 +2400,8 @@ pub const brown_mushroom_block = Block(
 )
 
 pub const red_mushroom_block = Block(
-  "minecraft:red_mushroom_block",
-  "minecraft:huge_mushroom",
+  Identifier("minecraft", "red_mushroom_block"),
+  Identifier("minecraft", "huge_mushroom"),
   [
     Bool("down", True),
     Bool("east", True),
@@ -2074,8 +2413,8 @@ pub const red_mushroom_block = Block(
 )
 
 pub const mushroom_stem = Block(
-  "minecraft:mushroom_stem",
-  "minecraft:huge_mushroom",
+  Identifier("minecraft", "mushroom_stem"),
+  Identifier("minecraft", "huge_mushroom"),
   [
     Bool("down", True),
     Bool("east", True),
@@ -2087,8 +2426,8 @@ pub const mushroom_stem = Block(
 )
 
 pub const iron_bars = Block(
-  "minecraft:iron_bars",
-  "minecraft:iron_bars",
+  Identifier("minecraft", "iron_bars"),
+  Identifier("minecraft", "iron_bars"),
   [
     Bool("east", False),
     Bool("north", False),
@@ -2099,14 +2438,14 @@ pub const iron_bars = Block(
 )
 
 pub const chain = Block(
-  "minecraft:chain",
-  "minecraft:chain",
+  Identifier("minecraft", "chain"),
+  Identifier("minecraft", "chain"),
   [Enum("axis", ["x", "y", "z"], "y"), Bool("waterlogged", False)],
 )
 
 pub const glass_pane = Block(
-  "minecraft:glass_pane",
-  "minecraft:iron_bars",
+  Identifier("minecraft", "glass_pane"),
+  Identifier("minecraft", "iron_bars"),
   [
     Bool("east", False),
     Bool("north", False),
@@ -2116,37 +2455,45 @@ pub const glass_pane = Block(
   ],
 )
 
-pub const pumpkin = Block("minecraft:pumpkin", "minecraft:pumpkin", [])
+pub const pumpkin = Block(
+  Identifier("minecraft", "pumpkin"),
+  Identifier("minecraft", "pumpkin"),
+  [],
+)
 
-pub const melon = Block("minecraft:melon", "minecraft:block", [])
+pub const melon = Block(
+  Identifier("minecraft", "melon"),
+  Identifier("minecraft", "block"),
+  [],
+)
 
 pub const attached_pumpkin_stem = Block(
-  "minecraft:attached_pumpkin_stem",
-  "minecraft:attached_stem",
+  Identifier("minecraft", "attached_pumpkin_stem"),
+  Identifier("minecraft", "attached_stem"),
   [Enum("facing", ["north", "south", "west", "east"], "north")],
 )
 
 pub const attached_melon_stem = Block(
-  "minecraft:attached_melon_stem",
-  "minecraft:attached_stem",
+  Identifier("minecraft", "attached_melon_stem"),
+  Identifier("minecraft", "attached_stem"),
   [Enum("facing", ["north", "south", "west", "east"], "north")],
 )
 
 pub const pumpkin_stem = Block(
-  "minecraft:pumpkin_stem",
-  "minecraft:stem",
+  Identifier("minecraft", "pumpkin_stem"),
+  Identifier("minecraft", "stem"),
   [Int("age", 0, 7, 0)],
 )
 
 pub const melon_stem = Block(
-  "minecraft:melon_stem",
-  "minecraft:stem",
+  Identifier("minecraft", "melon_stem"),
+  Identifier("minecraft", "stem"),
   [Int("age", 0, 7, 0)],
 )
 
 pub const vine = Block(
-  "minecraft:vine",
-  "minecraft:vine",
+  Identifier("minecraft", "vine"),
+  Identifier("minecraft", "vine"),
   [
     Bool("east", False),
     Bool("north", False),
@@ -2157,8 +2504,8 @@ pub const vine = Block(
 )
 
 pub const glow_lichen = Block(
-  "minecraft:glow_lichen",
-  "minecraft:glow_lichen",
+  Identifier("minecraft", "glow_lichen"),
+  Identifier("minecraft", "glow_lichen"),
   [
     Bool("down", False),
     Bool("east", False),
@@ -2171,8 +2518,8 @@ pub const glow_lichen = Block(
 )
 
 pub const resin_clump = Block(
-  "minecraft:resin_clump",
-  "minecraft:multiface",
+  Identifier("minecraft", "resin_clump"),
+  Identifier("minecraft", "multiface"),
   [
     Bool("down", False),
     Bool("east", False),
@@ -2185,8 +2532,8 @@ pub const resin_clump = Block(
 )
 
 pub const oak_fence_gate = Block(
-  "minecraft:oak_fence_gate",
-  "minecraft:fence_gate",
+  Identifier("minecraft", "oak_fence_gate"),
+  Identifier("minecraft", "fence_gate"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("in_wall", False),
@@ -2196,8 +2543,8 @@ pub const oak_fence_gate = Block(
 )
 
 pub const brick_stairs = Block(
-  "minecraft:brick_stairs",
-  "minecraft:stair",
+  Identifier("minecraft", "brick_stairs"),
+  Identifier("minecraft", "stair"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -2211,8 +2558,8 @@ pub const brick_stairs = Block(
 )
 
 pub const stone_brick_stairs = Block(
-  "minecraft:stone_brick_stairs",
-  "minecraft:stair",
+  Identifier("minecraft", "stone_brick_stairs"),
+  Identifier("minecraft", "stair"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -2226,8 +2573,8 @@ pub const stone_brick_stairs = Block(
 )
 
 pub const mud_brick_stairs = Block(
-  "minecraft:mud_brick_stairs",
-  "minecraft:stair",
+  Identifier("minecraft", "mud_brick_stairs"),
+  Identifier("minecraft", "stair"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -2241,20 +2588,32 @@ pub const mud_brick_stairs = Block(
 )
 
 pub const mycelium = Block(
-  "minecraft:mycelium",
-  "minecraft:mycelium",
+  Identifier("minecraft", "mycelium"),
+  Identifier("minecraft", "mycelium"),
   [Bool("snowy", False)],
 )
 
-pub const lily_pad = Block("minecraft:lily_pad", "minecraft:waterlily", [])
+pub const lily_pad = Block(
+  Identifier("minecraft", "lily_pad"),
+  Identifier("minecraft", "waterlily"),
+  [],
+)
 
-pub const resin_block = Block("minecraft:resin_block", "minecraft:block", [])
+pub const resin_block = Block(
+  Identifier("minecraft", "resin_block"),
+  Identifier("minecraft", "block"),
+  [],
+)
 
-pub const resin_bricks = Block("minecraft:resin_bricks", "minecraft:block", [])
+pub const resin_bricks = Block(
+  Identifier("minecraft", "resin_bricks"),
+  Identifier("minecraft", "block"),
+  [],
+)
 
 pub const resin_brick_stairs = Block(
-  "minecraft:resin_brick_stairs",
-  "minecraft:stair",
+  Identifier("minecraft", "resin_brick_stairs"),
+  Identifier("minecraft", "stair"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -2268,8 +2627,8 @@ pub const resin_brick_stairs = Block(
 )
 
 pub const resin_brick_slab = Block(
-  "minecraft:resin_brick_slab",
-  "minecraft:slab",
+  Identifier("minecraft", "resin_brick_slab"),
+  Identifier("minecraft", "slab"),
   [
     Enum("type", ["top", "bottom", "double"], "bottom"),
     Bool("waterlogged", False),
@@ -2277,8 +2636,8 @@ pub const resin_brick_slab = Block(
 )
 
 pub const resin_brick_wall = Block(
-  "minecraft:resin_brick_wall",
-  "minecraft:wall",
+  Identifier("minecraft", "resin_brick_wall"),
+  Identifier("minecraft", "wall"),
   [
     Enum("east", ["none", "low", "tall"], "none"),
     Enum("north", ["none", "low", "tall"], "none"),
@@ -2290,17 +2649,20 @@ pub const resin_brick_wall = Block(
 )
 
 pub const chiseled_resin_bricks = Block(
-  "minecraft:chiseled_resin_bricks",
-  "minecraft:block",
+  Identifier("minecraft", "chiseled_resin_bricks"),
+  Identifier("minecraft", "block"),
   [],
 )
 
-pub const nether_bricks = Block("minecraft:nether_bricks", "minecraft:block", [],
+pub const nether_bricks = Block(
+  Identifier("minecraft", "nether_bricks"),
+  Identifier("minecraft", "block"),
+  [],
 )
 
 pub const nether_brick_fence = Block(
-  "minecraft:nether_brick_fence",
-  "minecraft:fence",
+  Identifier("minecraft", "nether_brick_fence"),
+  Identifier("minecraft", "fence"),
   [
     Bool("east", False),
     Bool("north", False),
@@ -2311,8 +2673,8 @@ pub const nether_brick_fence = Block(
 )
 
 pub const nether_brick_stairs = Block(
-  "minecraft:nether_brick_stairs",
-  "minecraft:stair",
+  Identifier("minecraft", "nether_brick_stairs"),
+  Identifier("minecraft", "stair"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -2326,20 +2688,20 @@ pub const nether_brick_stairs = Block(
 )
 
 pub const nether_wart = Block(
-  "minecraft:nether_wart",
-  "minecraft:nether_wart",
+  Identifier("minecraft", "nether_wart"),
+  Identifier("minecraft", "nether_wart"),
   [Int("age", 0, 3, 0)],
 )
 
 pub const enchanting_table = Block(
-  "minecraft:enchanting_table",
-  "minecraft:enchantment_table",
+  Identifier("minecraft", "enchanting_table"),
+  Identifier("minecraft", "enchantment_table"),
   [],
 )
 
 pub const brewing_stand = Block(
-  "minecraft:brewing_stand",
-  "minecraft:brewing_stand",
+  Identifier("minecraft", "brewing_stand"),
+  Identifier("minecraft", "brewing_stand"),
   [
     Bool("has_bottle_0", False),
     Bool("has_bottle_1", False),
@@ -2347,50 +2709,66 @@ pub const brewing_stand = Block(
   ],
 )
 
-pub const cauldron = Block("minecraft:cauldron", "minecraft:cauldron", [])
+pub const cauldron = Block(
+  Identifier("minecraft", "cauldron"),
+  Identifier("minecraft", "cauldron"),
+  [],
+)
 
 pub const water_cauldron = Block(
-  "minecraft:water_cauldron",
-  "minecraft:layered_cauldron",
+  Identifier("minecraft", "water_cauldron"),
+  Identifier("minecraft", "layered_cauldron"),
   [Int("level", 1, 3, 1)],
 )
 
 pub const lava_cauldron = Block(
-  "minecraft:lava_cauldron",
-  "minecraft:lava_cauldron",
+  Identifier("minecraft", "lava_cauldron"),
+  Identifier("minecraft", "lava_cauldron"),
   [],
 )
 
 pub const powder_snow_cauldron = Block(
-  "minecraft:powder_snow_cauldron",
-  "minecraft:layered_cauldron",
+  Identifier("minecraft", "powder_snow_cauldron"),
+  Identifier("minecraft", "layered_cauldron"),
   [Int("level", 1, 3, 1)],
 )
 
-pub const end_portal = Block("minecraft:end_portal", "minecraft:end_portal", [])
+pub const end_portal = Block(
+  Identifier("minecraft", "end_portal"),
+  Identifier("minecraft", "end_portal"),
+  [],
+)
 
 pub const end_portal_frame = Block(
-  "minecraft:end_portal_frame",
-  "minecraft:end_portal_frame",
+  Identifier("minecraft", "end_portal_frame"),
+  Identifier("minecraft", "end_portal_frame"),
   [
     Bool("eye", False),
     Enum("facing", ["north", "south", "west", "east"], "north"),
   ],
 )
 
-pub const end_stone = Block("minecraft:end_stone", "minecraft:block", [])
+pub const end_stone = Block(
+  Identifier("minecraft", "end_stone"),
+  Identifier("minecraft", "block"),
+  [],
+)
 
-pub const dragon_egg = Block("minecraft:dragon_egg", "minecraft:dragon_egg", [])
+pub const dragon_egg = Block(
+  Identifier("minecraft", "dragon_egg"),
+  Identifier("minecraft", "dragon_egg"),
+  [],
+)
 
 pub const redstone_lamp = Block(
-  "minecraft:redstone_lamp",
-  "minecraft:redstone_lamp",
+  Identifier("minecraft", "redstone_lamp"),
+  Identifier("minecraft", "redstone_lamp"),
   [Bool("lit", False)],
 )
 
 pub const cocoa = Block(
-  "minecraft:cocoa",
-  "minecraft:cocoa",
+  Identifier("minecraft", "cocoa"),
+  Identifier("minecraft", "cocoa"),
   [
     Int("age", 0, 2, 0),
     Enum("facing", ["north", "south", "west", "east"], "north"),
@@ -2398,8 +2776,8 @@ pub const cocoa = Block(
 )
 
 pub const sandstone_stairs = Block(
-  "minecraft:sandstone_stairs",
-  "minecraft:stair",
+  Identifier("minecraft", "sandstone_stairs"),
+  Identifier("minecraft", "stair"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -2413,20 +2791,20 @@ pub const sandstone_stairs = Block(
 )
 
 pub const emerald_ore = Block(
-  "minecraft:emerald_ore",
-  "minecraft:drop_experience",
+  Identifier("minecraft", "emerald_ore"),
+  Identifier("minecraft", "drop_experience"),
   [],
 )
 
 pub const deepslate_emerald_ore = Block(
-  "minecraft:deepslate_emerald_ore",
-  "minecraft:drop_experience",
+  Identifier("minecraft", "deepslate_emerald_ore"),
+  Identifier("minecraft", "drop_experience"),
   [],
 )
 
 pub const ender_chest = Block(
-  "minecraft:ender_chest",
-  "minecraft:ender_chest",
+  Identifier("minecraft", "ender_chest"),
+  Identifier("minecraft", "ender_chest"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("waterlogged", False),
@@ -2434,8 +2812,8 @@ pub const ender_chest = Block(
 )
 
 pub const tripwire_hook = Block(
-  "minecraft:tripwire_hook",
-  "minecraft:trip_wire_hook",
+  Identifier("minecraft", "tripwire_hook"),
+  Identifier("minecraft", "trip_wire_hook"),
   [
     Bool("attached", False),
     Enum("facing", ["north", "south", "west", "east"], "north"),
@@ -2444,8 +2822,8 @@ pub const tripwire_hook = Block(
 )
 
 pub const tripwire = Block(
-  "minecraft:tripwire",
-  "minecraft:tripwire",
+  Identifier("minecraft", "tripwire"),
+  Identifier("minecraft", "tripwire"),
   [
     Bool("attached", False),
     Bool("disarmed", False),
@@ -2457,12 +2835,15 @@ pub const tripwire = Block(
   ],
 )
 
-pub const emerald_block = Block("minecraft:emerald_block", "minecraft:block", [],
+pub const emerald_block = Block(
+  Identifier("minecraft", "emerald_block"),
+  Identifier("minecraft", "block"),
+  [],
 )
 
 pub const spruce_stairs = Block(
-  "minecraft:spruce_stairs",
-  "minecraft:stair",
+  Identifier("minecraft", "spruce_stairs"),
+  Identifier("minecraft", "stair"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -2476,8 +2857,8 @@ pub const spruce_stairs = Block(
 )
 
 pub const birch_stairs = Block(
-  "minecraft:birch_stairs",
-  "minecraft:stair",
+  Identifier("minecraft", "birch_stairs"),
+  Identifier("minecraft", "stair"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -2491,8 +2872,8 @@ pub const birch_stairs = Block(
 )
 
 pub const jungle_stairs = Block(
-  "minecraft:jungle_stairs",
-  "minecraft:stair",
+  Identifier("minecraft", "jungle_stairs"),
+  Identifier("minecraft", "stair"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -2506,19 +2887,23 @@ pub const jungle_stairs = Block(
 )
 
 pub const command_block = Block(
-  "minecraft:command_block",
-  "minecraft:command",
+  Identifier("minecraft", "command_block"),
+  Identifier("minecraft", "command"),
   [
     Bool("conditional", False),
     Enum("facing", ["north", "east", "south", "west", "up", "down"], "north"),
   ],
 )
 
-pub const beacon = Block("minecraft:beacon", "minecraft:beacon", [])
+pub const beacon = Block(
+  Identifier("minecraft", "beacon"),
+  Identifier("minecraft", "beacon"),
+  [],
+)
 
 pub const cobblestone_wall = Block(
-  "minecraft:cobblestone_wall",
-  "minecraft:wall",
+  Identifier("minecraft", "cobblestone_wall"),
+  Identifier("minecraft", "wall"),
   [
     Enum("east", ["none", "low", "tall"], "none"),
     Enum("north", ["none", "low", "tall"], "none"),
@@ -2530,8 +2915,8 @@ pub const cobblestone_wall = Block(
 )
 
 pub const mossy_cobblestone_wall = Block(
-  "minecraft:mossy_cobblestone_wall",
-  "minecraft:wall",
+  Identifier("minecraft", "mossy_cobblestone_wall"),
+  Identifier("minecraft", "wall"),
   [
     Enum("east", ["none", "low", "tall"], "none"),
     Enum("north", ["none", "low", "tall"], "none"),
@@ -2542,191 +2927,195 @@ pub const mossy_cobblestone_wall = Block(
   ],
 )
 
-pub const flower_pot = Block("minecraft:flower_pot", "minecraft:flower_pot", [])
+pub const flower_pot = Block(
+  Identifier("minecraft", "flower_pot"),
+  Identifier("minecraft", "flower_pot"),
+  [],
+)
 
 pub const potted_torchflower = Block(
-  "minecraft:potted_torchflower",
-  "minecraft:flower_pot",
+  Identifier("minecraft", "potted_torchflower"),
+  Identifier("minecraft", "flower_pot"),
   [],
 )
 
 pub const potted_oak_sapling = Block(
-  "minecraft:potted_oak_sapling",
-  "minecraft:flower_pot",
+  Identifier("minecraft", "potted_oak_sapling"),
+  Identifier("minecraft", "flower_pot"),
   [],
 )
 
 pub const potted_spruce_sapling = Block(
-  "minecraft:potted_spruce_sapling",
-  "minecraft:flower_pot",
+  Identifier("minecraft", "potted_spruce_sapling"),
+  Identifier("minecraft", "flower_pot"),
   [],
 )
 
 pub const potted_birch_sapling = Block(
-  "minecraft:potted_birch_sapling",
-  "minecraft:flower_pot",
+  Identifier("minecraft", "potted_birch_sapling"),
+  Identifier("minecraft", "flower_pot"),
   [],
 )
 
 pub const potted_jungle_sapling = Block(
-  "minecraft:potted_jungle_sapling",
-  "minecraft:flower_pot",
+  Identifier("minecraft", "potted_jungle_sapling"),
+  Identifier("minecraft", "flower_pot"),
   [],
 )
 
 pub const potted_acacia_sapling = Block(
-  "minecraft:potted_acacia_sapling",
-  "minecraft:flower_pot",
+  Identifier("minecraft", "potted_acacia_sapling"),
+  Identifier("minecraft", "flower_pot"),
   [],
 )
 
 pub const potted_cherry_sapling = Block(
-  "minecraft:potted_cherry_sapling",
-  "minecraft:flower_pot",
+  Identifier("minecraft", "potted_cherry_sapling"),
+  Identifier("minecraft", "flower_pot"),
   [],
 )
 
 pub const potted_dark_oak_sapling = Block(
-  "minecraft:potted_dark_oak_sapling",
-  "minecraft:flower_pot",
+  Identifier("minecraft", "potted_dark_oak_sapling"),
+  Identifier("minecraft", "flower_pot"),
   [],
 )
 
 pub const potted_pale_oak_sapling = Block(
-  "minecraft:potted_pale_oak_sapling",
-  "minecraft:flower_pot",
+  Identifier("minecraft", "potted_pale_oak_sapling"),
+  Identifier("minecraft", "flower_pot"),
   [],
 )
 
 pub const potted_mangrove_propagule = Block(
-  "minecraft:potted_mangrove_propagule",
-  "minecraft:flower_pot",
+  Identifier("minecraft", "potted_mangrove_propagule"),
+  Identifier("minecraft", "flower_pot"),
   [],
 )
 
 pub const potted_fern = Block(
-  "minecraft:potted_fern",
-  "minecraft:flower_pot",
+  Identifier("minecraft", "potted_fern"),
+  Identifier("minecraft", "flower_pot"),
   [],
 )
 
 pub const potted_dandelion = Block(
-  "minecraft:potted_dandelion",
-  "minecraft:flower_pot",
+  Identifier("minecraft", "potted_dandelion"),
+  Identifier("minecraft", "flower_pot"),
   [],
 )
 
 pub const potted_poppy = Block(
-  "minecraft:potted_poppy",
-  "minecraft:flower_pot",
+  Identifier("minecraft", "potted_poppy"),
+  Identifier("minecraft", "flower_pot"),
   [],
 )
 
 pub const potted_blue_orchid = Block(
-  "minecraft:potted_blue_orchid",
-  "minecraft:flower_pot",
+  Identifier("minecraft", "potted_blue_orchid"),
+  Identifier("minecraft", "flower_pot"),
   [],
 )
 
 pub const potted_allium = Block(
-  "minecraft:potted_allium",
-  "minecraft:flower_pot",
+  Identifier("minecraft", "potted_allium"),
+  Identifier("minecraft", "flower_pot"),
   [],
 )
 
 pub const potted_azure_bluet = Block(
-  "minecraft:potted_azure_bluet",
-  "minecraft:flower_pot",
+  Identifier("minecraft", "potted_azure_bluet"),
+  Identifier("minecraft", "flower_pot"),
   [],
 )
 
 pub const potted_red_tulip = Block(
-  "minecraft:potted_red_tulip",
-  "minecraft:flower_pot",
+  Identifier("minecraft", "potted_red_tulip"),
+  Identifier("minecraft", "flower_pot"),
   [],
 )
 
 pub const potted_orange_tulip = Block(
-  "minecraft:potted_orange_tulip",
-  "minecraft:flower_pot",
+  Identifier("minecraft", "potted_orange_tulip"),
+  Identifier("minecraft", "flower_pot"),
   [],
 )
 
 pub const potted_white_tulip = Block(
-  "minecraft:potted_white_tulip",
-  "minecraft:flower_pot",
+  Identifier("minecraft", "potted_white_tulip"),
+  Identifier("minecraft", "flower_pot"),
   [],
 )
 
 pub const potted_pink_tulip = Block(
-  "minecraft:potted_pink_tulip",
-  "minecraft:flower_pot",
+  Identifier("minecraft", "potted_pink_tulip"),
+  Identifier("minecraft", "flower_pot"),
   [],
 )
 
 pub const potted_oxeye_daisy = Block(
-  "minecraft:potted_oxeye_daisy",
-  "minecraft:flower_pot",
+  Identifier("minecraft", "potted_oxeye_daisy"),
+  Identifier("minecraft", "flower_pot"),
   [],
 )
 
 pub const potted_cornflower = Block(
-  "minecraft:potted_cornflower",
-  "minecraft:flower_pot",
+  Identifier("minecraft", "potted_cornflower"),
+  Identifier("minecraft", "flower_pot"),
   [],
 )
 
 pub const potted_lily_of_the_valley = Block(
-  "minecraft:potted_lily_of_the_valley",
-  "minecraft:flower_pot",
+  Identifier("minecraft", "potted_lily_of_the_valley"),
+  Identifier("minecraft", "flower_pot"),
   [],
 )
 
 pub const potted_wither_rose = Block(
-  "minecraft:potted_wither_rose",
-  "minecraft:flower_pot",
+  Identifier("minecraft", "potted_wither_rose"),
+  Identifier("minecraft", "flower_pot"),
   [],
 )
 
 pub const potted_red_mushroom = Block(
-  "minecraft:potted_red_mushroom",
-  "minecraft:flower_pot",
+  Identifier("minecraft", "potted_red_mushroom"),
+  Identifier("minecraft", "flower_pot"),
   [],
 )
 
 pub const potted_brown_mushroom = Block(
-  "minecraft:potted_brown_mushroom",
-  "minecraft:flower_pot",
+  Identifier("minecraft", "potted_brown_mushroom"),
+  Identifier("minecraft", "flower_pot"),
   [],
 )
 
 pub const potted_dead_bush = Block(
-  "minecraft:potted_dead_bush",
-  "minecraft:flower_pot",
+  Identifier("minecraft", "potted_dead_bush"),
+  Identifier("minecraft", "flower_pot"),
   [],
 )
 
 pub const potted_cactus = Block(
-  "minecraft:potted_cactus",
-  "minecraft:flower_pot",
+  Identifier("minecraft", "potted_cactus"),
+  Identifier("minecraft", "flower_pot"),
   [],
 )
 
 pub const carrots = Block(
-  "minecraft:carrots",
-  "minecraft:carrot",
+  Identifier("minecraft", "carrots"),
+  Identifier("minecraft", "carrot"),
   [Int("age", 0, 7, 0)],
 )
 
 pub const potatoes = Block(
-  "minecraft:potatoes",
-  "minecraft:potato",
+  Identifier("minecraft", "potatoes"),
+  Identifier("minecraft", "potato"),
   [Int("age", 0, 7, 0)],
 )
 
 pub const oak_button = Block(
-  "minecraft:oak_button",
-  "minecraft:button",
+  Identifier("minecraft", "oak_button"),
+  Identifier("minecraft", "button"),
   [
     Enum("face", ["floor", "wall", "ceiling"], "wall"),
     Enum("facing", ["north", "south", "west", "east"], "north"),
@@ -2735,8 +3124,8 @@ pub const oak_button = Block(
 )
 
 pub const spruce_button = Block(
-  "minecraft:spruce_button",
-  "minecraft:button",
+  Identifier("minecraft", "spruce_button"),
+  Identifier("minecraft", "button"),
   [
     Enum("face", ["floor", "wall", "ceiling"], "wall"),
     Enum("facing", ["north", "south", "west", "east"], "north"),
@@ -2745,8 +3134,8 @@ pub const spruce_button = Block(
 )
 
 pub const birch_button = Block(
-  "minecraft:birch_button",
-  "minecraft:button",
+  Identifier("minecraft", "birch_button"),
+  Identifier("minecraft", "button"),
   [
     Enum("face", ["floor", "wall", "ceiling"], "wall"),
     Enum("facing", ["north", "south", "west", "east"], "north"),
@@ -2755,8 +3144,8 @@ pub const birch_button = Block(
 )
 
 pub const jungle_button = Block(
-  "minecraft:jungle_button",
-  "minecraft:button",
+  Identifier("minecraft", "jungle_button"),
+  Identifier("minecraft", "button"),
   [
     Enum("face", ["floor", "wall", "ceiling"], "wall"),
     Enum("facing", ["north", "south", "west", "east"], "north"),
@@ -2765,8 +3154,8 @@ pub const jungle_button = Block(
 )
 
 pub const acacia_button = Block(
-  "minecraft:acacia_button",
-  "minecraft:button",
+  Identifier("minecraft", "acacia_button"),
+  Identifier("minecraft", "button"),
   [
     Enum("face", ["floor", "wall", "ceiling"], "wall"),
     Enum("facing", ["north", "south", "west", "east"], "north"),
@@ -2775,8 +3164,8 @@ pub const acacia_button = Block(
 )
 
 pub const cherry_button = Block(
-  "minecraft:cherry_button",
-  "minecraft:button",
+  Identifier("minecraft", "cherry_button"),
+  Identifier("minecraft", "button"),
   [
     Enum("face", ["floor", "wall", "ceiling"], "wall"),
     Enum("facing", ["north", "south", "west", "east"], "north"),
@@ -2785,8 +3174,8 @@ pub const cherry_button = Block(
 )
 
 pub const dark_oak_button = Block(
-  "minecraft:dark_oak_button",
-  "minecraft:button",
+  Identifier("minecraft", "dark_oak_button"),
+  Identifier("minecraft", "button"),
   [
     Enum("face", ["floor", "wall", "ceiling"], "wall"),
     Enum("facing", ["north", "south", "west", "east"], "north"),
@@ -2795,8 +3184,8 @@ pub const dark_oak_button = Block(
 )
 
 pub const pale_oak_button = Block(
-  "minecraft:pale_oak_button",
-  "minecraft:button",
+  Identifier("minecraft", "pale_oak_button"),
+  Identifier("minecraft", "button"),
   [
     Enum("face", ["floor", "wall", "ceiling"], "wall"),
     Enum("facing", ["north", "south", "west", "east"], "north"),
@@ -2805,8 +3194,8 @@ pub const pale_oak_button = Block(
 )
 
 pub const mangrove_button = Block(
-  "minecraft:mangrove_button",
-  "minecraft:button",
+  Identifier("minecraft", "mangrove_button"),
+  Identifier("minecraft", "button"),
   [
     Enum("face", ["floor", "wall", "ceiling"], "wall"),
     Enum("facing", ["north", "south", "west", "east"], "north"),
@@ -2815,8 +3204,8 @@ pub const mangrove_button = Block(
 )
 
 pub const bamboo_button = Block(
-  "minecraft:bamboo_button",
-  "minecraft:button",
+  Identifier("minecraft", "bamboo_button"),
+  Identifier("minecraft", "button"),
   [
     Enum("face", ["floor", "wall", "ceiling"], "wall"),
     Enum("facing", ["north", "south", "west", "east"], "north"),
@@ -2825,14 +3214,14 @@ pub const bamboo_button = Block(
 )
 
 pub const skeleton_skull = Block(
-  "minecraft:skeleton_skull",
-  "minecraft:skull",
+  Identifier("minecraft", "skeleton_skull"),
+  Identifier("minecraft", "skull"),
   [Bool("powered", False), Int("rotation", 0, 15, 0)],
 )
 
 pub const skeleton_wall_skull = Block(
-  "minecraft:skeleton_wall_skull",
-  "minecraft:wall_skull",
+  Identifier("minecraft", "skeleton_wall_skull"),
+  Identifier("minecraft", "wall_skull"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("powered", False),
@@ -2840,14 +3229,14 @@ pub const skeleton_wall_skull = Block(
 )
 
 pub const wither_skeleton_skull = Block(
-  "minecraft:wither_skeleton_skull",
-  "minecraft:wither_skull",
+  Identifier("minecraft", "wither_skeleton_skull"),
+  Identifier("minecraft", "wither_skull"),
   [Bool("powered", False), Int("rotation", 0, 15, 0)],
 )
 
 pub const wither_skeleton_wall_skull = Block(
-  "minecraft:wither_skeleton_wall_skull",
-  "minecraft:wither_wall_skull",
+  Identifier("minecraft", "wither_skeleton_wall_skull"),
+  Identifier("minecraft", "wither_wall_skull"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("powered", False),
@@ -2855,14 +3244,14 @@ pub const wither_skeleton_wall_skull = Block(
 )
 
 pub const zombie_head = Block(
-  "minecraft:zombie_head",
-  "minecraft:skull",
+  Identifier("minecraft", "zombie_head"),
+  Identifier("minecraft", "skull"),
   [Bool("powered", False), Int("rotation", 0, 15, 0)],
 )
 
 pub const zombie_wall_head = Block(
-  "minecraft:zombie_wall_head",
-  "minecraft:wall_skull",
+  Identifier("minecraft", "zombie_wall_head"),
+  Identifier("minecraft", "wall_skull"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("powered", False),
@@ -2870,14 +3259,14 @@ pub const zombie_wall_head = Block(
 )
 
 pub const player_head = Block(
-  "minecraft:player_head",
-  "minecraft:player_head",
+  Identifier("minecraft", "player_head"),
+  Identifier("minecraft", "player_head"),
   [Bool("powered", False), Int("rotation", 0, 15, 0)],
 )
 
 pub const player_wall_head = Block(
-  "minecraft:player_wall_head",
-  "minecraft:player_wall_head",
+  Identifier("minecraft", "player_wall_head"),
+  Identifier("minecraft", "player_wall_head"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("powered", False),
@@ -2885,14 +3274,14 @@ pub const player_wall_head = Block(
 )
 
 pub const creeper_head = Block(
-  "minecraft:creeper_head",
-  "minecraft:skull",
+  Identifier("minecraft", "creeper_head"),
+  Identifier("minecraft", "skull"),
   [Bool("powered", False), Int("rotation", 0, 15, 0)],
 )
 
 pub const creeper_wall_head = Block(
-  "minecraft:creeper_wall_head",
-  "minecraft:wall_skull",
+  Identifier("minecraft", "creeper_wall_head"),
+  Identifier("minecraft", "wall_skull"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("powered", False),
@@ -2900,14 +3289,14 @@ pub const creeper_wall_head = Block(
 )
 
 pub const dragon_head = Block(
-  "minecraft:dragon_head",
-  "minecraft:skull",
+  Identifier("minecraft", "dragon_head"),
+  Identifier("minecraft", "skull"),
   [Bool("powered", False), Int("rotation", 0, 15, 0)],
 )
 
 pub const dragon_wall_head = Block(
-  "minecraft:dragon_wall_head",
-  "minecraft:wall_skull",
+  Identifier("minecraft", "dragon_wall_head"),
+  Identifier("minecraft", "wall_skull"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("powered", False),
@@ -2915,14 +3304,14 @@ pub const dragon_wall_head = Block(
 )
 
 pub const piglin_head = Block(
-  "minecraft:piglin_head",
-  "minecraft:skull",
+  Identifier("minecraft", "piglin_head"),
+  Identifier("minecraft", "skull"),
   [Bool("powered", False), Int("rotation", 0, 15, 0)],
 )
 
 pub const piglin_wall_head = Block(
-  "minecraft:piglin_wall_head",
-  "minecraft:piglinwallskull",
+  Identifier("minecraft", "piglin_wall_head"),
+  Identifier("minecraft", "piglinwallskull"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("powered", False),
@@ -2930,26 +3319,26 @@ pub const piglin_wall_head = Block(
 )
 
 pub const anvil = Block(
-  "minecraft:anvil",
-  "minecraft:anvil",
+  Identifier("minecraft", "anvil"),
+  Identifier("minecraft", "anvil"),
   [Enum("facing", ["north", "south", "west", "east"], "north")],
 )
 
 pub const chipped_anvil = Block(
-  "minecraft:chipped_anvil",
-  "minecraft:anvil",
+  Identifier("minecraft", "chipped_anvil"),
+  Identifier("minecraft", "anvil"),
   [Enum("facing", ["north", "south", "west", "east"], "north")],
 )
 
 pub const damaged_anvil = Block(
-  "minecraft:damaged_anvil",
-  "minecraft:anvil",
+  Identifier("minecraft", "damaged_anvil"),
+  Identifier("minecraft", "anvil"),
   [Enum("facing", ["north", "south", "west", "east"], "north")],
 )
 
 pub const trapped_chest = Block(
-  "minecraft:trapped_chest",
-  "minecraft:trapped_chest",
+  Identifier("minecraft", "trapped_chest"),
+  Identifier("minecraft", "trapped_chest"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("type", ["single", "left", "right"], "single"),
@@ -2958,20 +3347,20 @@ pub const trapped_chest = Block(
 )
 
 pub const light_weighted_pressure_plate = Block(
-  "minecraft:light_weighted_pressure_plate",
-  "minecraft:weighted_pressure_plate",
+  Identifier("minecraft", "light_weighted_pressure_plate"),
+  Identifier("minecraft", "weighted_pressure_plate"),
   [Int("power", 0, 15, 0)],
 )
 
 pub const heavy_weighted_pressure_plate = Block(
-  "minecraft:heavy_weighted_pressure_plate",
-  "minecraft:weighted_pressure_plate",
+  Identifier("minecraft", "heavy_weighted_pressure_plate"),
+  Identifier("minecraft", "weighted_pressure_plate"),
   [Int("power", 0, 15, 0)],
 )
 
 pub const comparator = Block(
-  "minecraft:comparator",
-  "minecraft:comparator",
+  Identifier("minecraft", "comparator"),
+  Identifier("minecraft", "comparator"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("mode", ["compare", "subtract"], "compare"),
@@ -2980,49 +3369,53 @@ pub const comparator = Block(
 )
 
 pub const daylight_detector = Block(
-  "minecraft:daylight_detector",
-  "minecraft:daylight_detector",
+  Identifier("minecraft", "daylight_detector"),
+  Identifier("minecraft", "daylight_detector"),
   [Bool("inverted", False), Int("power", 0, 15, 0)],
 )
 
 pub const redstone_block = Block(
-  "minecraft:redstone_block",
-  "minecraft:powered",
+  Identifier("minecraft", "redstone_block"),
+  Identifier("minecraft", "powered"),
   [],
 )
 
 pub const nether_quartz_ore = Block(
-  "minecraft:nether_quartz_ore",
-  "minecraft:drop_experience",
+  Identifier("minecraft", "nether_quartz_ore"),
+  Identifier("minecraft", "drop_experience"),
   [],
 )
 
 pub const hopper = Block(
-  "minecraft:hopper",
-  "minecraft:hopper",
+  Identifier("minecraft", "hopper"),
+  Identifier("minecraft", "hopper"),
   [
     Bool("enabled", True),
     Enum("facing", ["down", "north", "south", "west", "east"], "down"),
   ],
 )
 
-pub const quartz_block = Block("minecraft:quartz_block", "minecraft:block", [])
+pub const quartz_block = Block(
+  Identifier("minecraft", "quartz_block"),
+  Identifier("minecraft", "block"),
+  [],
+)
 
 pub const chiseled_quartz_block = Block(
-  "minecraft:chiseled_quartz_block",
-  "minecraft:block",
+  Identifier("minecraft", "chiseled_quartz_block"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const quartz_pillar = Block(
-  "minecraft:quartz_pillar",
-  "minecraft:rotated_pillar",
+  Identifier("minecraft", "quartz_pillar"),
+  Identifier("minecraft", "rotated_pillar"),
   [Enum("axis", ["x", "y", "z"], "y")],
 )
 
 pub const quartz_stairs = Block(
-  "minecraft:quartz_stairs",
-  "minecraft:stair",
+  Identifier("minecraft", "quartz_stairs"),
+  Identifier("minecraft", "stair"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -3036,15 +3429,19 @@ pub const quartz_stairs = Block(
 )
 
 pub const activator_rail = Block(
-  "minecraft:activator_rail",
-  "minecraft:powered_rail",
+  Identifier("minecraft", "activator_rail"),
+  Identifier("minecraft", "powered_rail"),
   [
     Bool("powered", False),
     Enum(
       "shape",
       [
-        "north_south", "east_west", "ascending_east", "ascending_west",
-        "ascending_north", "ascending_south",
+        "north_south",
+        "east_west",
+        "ascending_east",
+        "ascending_west",
+        "ascending_north",
+        "ascending_south",
       ],
       "north_south",
     ),
@@ -3053,8 +3450,8 @@ pub const activator_rail = Block(
 )
 
 pub const dropper = Block(
-  "minecraft:dropper",
-  "minecraft:dropper",
+  Identifier("minecraft", "dropper"),
+  Identifier("minecraft", "dropper"),
   [
     Enum("facing", ["north", "east", "south", "west", "up", "down"], "north"),
     Bool("triggered", False),
@@ -3062,104 +3459,104 @@ pub const dropper = Block(
 )
 
 pub const white_terracotta = Block(
-  "minecraft:white_terracotta",
-  "minecraft:block",
+  Identifier("minecraft", "white_terracotta"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const orange_terracotta = Block(
-  "minecraft:orange_terracotta",
-  "minecraft:block",
+  Identifier("minecraft", "orange_terracotta"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const magenta_terracotta = Block(
-  "minecraft:magenta_terracotta",
-  "minecraft:block",
+  Identifier("minecraft", "magenta_terracotta"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const light_blue_terracotta = Block(
-  "minecraft:light_blue_terracotta",
-  "minecraft:block",
+  Identifier("minecraft", "light_blue_terracotta"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const yellow_terracotta = Block(
-  "minecraft:yellow_terracotta",
-  "minecraft:block",
+  Identifier("minecraft", "yellow_terracotta"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const lime_terracotta = Block(
-  "minecraft:lime_terracotta",
-  "minecraft:block",
+  Identifier("minecraft", "lime_terracotta"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const pink_terracotta = Block(
-  "minecraft:pink_terracotta",
-  "minecraft:block",
+  Identifier("minecraft", "pink_terracotta"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const gray_terracotta = Block(
-  "minecraft:gray_terracotta",
-  "minecraft:block",
+  Identifier("minecraft", "gray_terracotta"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const light_gray_terracotta = Block(
-  "minecraft:light_gray_terracotta",
-  "minecraft:block",
+  Identifier("minecraft", "light_gray_terracotta"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const cyan_terracotta = Block(
-  "minecraft:cyan_terracotta",
-  "minecraft:block",
+  Identifier("minecraft", "cyan_terracotta"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const purple_terracotta = Block(
-  "minecraft:purple_terracotta",
-  "minecraft:block",
+  Identifier("minecraft", "purple_terracotta"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const blue_terracotta = Block(
-  "minecraft:blue_terracotta",
-  "minecraft:block",
+  Identifier("minecraft", "blue_terracotta"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const brown_terracotta = Block(
-  "minecraft:brown_terracotta",
-  "minecraft:block",
+  Identifier("minecraft", "brown_terracotta"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const green_terracotta = Block(
-  "minecraft:green_terracotta",
-  "minecraft:block",
+  Identifier("minecraft", "green_terracotta"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const red_terracotta = Block(
-  "minecraft:red_terracotta",
-  "minecraft:block",
+  Identifier("minecraft", "red_terracotta"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const black_terracotta = Block(
-  "minecraft:black_terracotta",
-  "minecraft:block",
+  Identifier("minecraft", "black_terracotta"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const white_stained_glass_pane = Block(
-  "minecraft:white_stained_glass_pane",
-  "minecraft:stained_glass_pane",
+  Identifier("minecraft", "white_stained_glass_pane"),
+  Identifier("minecraft", "stained_glass_pane"),
   [
     Bool("east", False),
     Bool("north", False),
@@ -3170,8 +3567,8 @@ pub const white_stained_glass_pane = Block(
 )
 
 pub const orange_stained_glass_pane = Block(
-  "minecraft:orange_stained_glass_pane",
-  "minecraft:stained_glass_pane",
+  Identifier("minecraft", "orange_stained_glass_pane"),
+  Identifier("minecraft", "stained_glass_pane"),
   [
     Bool("east", False),
     Bool("north", False),
@@ -3182,8 +3579,8 @@ pub const orange_stained_glass_pane = Block(
 )
 
 pub const magenta_stained_glass_pane = Block(
-  "minecraft:magenta_stained_glass_pane",
-  "minecraft:stained_glass_pane",
+  Identifier("minecraft", "magenta_stained_glass_pane"),
+  Identifier("minecraft", "stained_glass_pane"),
   [
     Bool("east", False),
     Bool("north", False),
@@ -3194,8 +3591,8 @@ pub const magenta_stained_glass_pane = Block(
 )
 
 pub const light_blue_stained_glass_pane = Block(
-  "minecraft:light_blue_stained_glass_pane",
-  "minecraft:stained_glass_pane",
+  Identifier("minecraft", "light_blue_stained_glass_pane"),
+  Identifier("minecraft", "stained_glass_pane"),
   [
     Bool("east", False),
     Bool("north", False),
@@ -3206,8 +3603,8 @@ pub const light_blue_stained_glass_pane = Block(
 )
 
 pub const yellow_stained_glass_pane = Block(
-  "minecraft:yellow_stained_glass_pane",
-  "minecraft:stained_glass_pane",
+  Identifier("minecraft", "yellow_stained_glass_pane"),
+  Identifier("minecraft", "stained_glass_pane"),
   [
     Bool("east", False),
     Bool("north", False),
@@ -3218,8 +3615,8 @@ pub const yellow_stained_glass_pane = Block(
 )
 
 pub const lime_stained_glass_pane = Block(
-  "minecraft:lime_stained_glass_pane",
-  "minecraft:stained_glass_pane",
+  Identifier("minecraft", "lime_stained_glass_pane"),
+  Identifier("minecraft", "stained_glass_pane"),
   [
     Bool("east", False),
     Bool("north", False),
@@ -3230,8 +3627,8 @@ pub const lime_stained_glass_pane = Block(
 )
 
 pub const pink_stained_glass_pane = Block(
-  "minecraft:pink_stained_glass_pane",
-  "minecraft:stained_glass_pane",
+  Identifier("minecraft", "pink_stained_glass_pane"),
+  Identifier("minecraft", "stained_glass_pane"),
   [
     Bool("east", False),
     Bool("north", False),
@@ -3242,8 +3639,8 @@ pub const pink_stained_glass_pane = Block(
 )
 
 pub const gray_stained_glass_pane = Block(
-  "minecraft:gray_stained_glass_pane",
-  "minecraft:stained_glass_pane",
+  Identifier("minecraft", "gray_stained_glass_pane"),
+  Identifier("minecraft", "stained_glass_pane"),
   [
     Bool("east", False),
     Bool("north", False),
@@ -3254,8 +3651,8 @@ pub const gray_stained_glass_pane = Block(
 )
 
 pub const light_gray_stained_glass_pane = Block(
-  "minecraft:light_gray_stained_glass_pane",
-  "minecraft:stained_glass_pane",
+  Identifier("minecraft", "light_gray_stained_glass_pane"),
+  Identifier("minecraft", "stained_glass_pane"),
   [
     Bool("east", False),
     Bool("north", False),
@@ -3266,8 +3663,8 @@ pub const light_gray_stained_glass_pane = Block(
 )
 
 pub const cyan_stained_glass_pane = Block(
-  "minecraft:cyan_stained_glass_pane",
-  "minecraft:stained_glass_pane",
+  Identifier("minecraft", "cyan_stained_glass_pane"),
+  Identifier("minecraft", "stained_glass_pane"),
   [
     Bool("east", False),
     Bool("north", False),
@@ -3278,8 +3675,8 @@ pub const cyan_stained_glass_pane = Block(
 )
 
 pub const purple_stained_glass_pane = Block(
-  "minecraft:purple_stained_glass_pane",
-  "minecraft:stained_glass_pane",
+  Identifier("minecraft", "purple_stained_glass_pane"),
+  Identifier("minecraft", "stained_glass_pane"),
   [
     Bool("east", False),
     Bool("north", False),
@@ -3290,8 +3687,8 @@ pub const purple_stained_glass_pane = Block(
 )
 
 pub const blue_stained_glass_pane = Block(
-  "minecraft:blue_stained_glass_pane",
-  "minecraft:stained_glass_pane",
+  Identifier("minecraft", "blue_stained_glass_pane"),
+  Identifier("minecraft", "stained_glass_pane"),
   [
     Bool("east", False),
     Bool("north", False),
@@ -3302,8 +3699,8 @@ pub const blue_stained_glass_pane = Block(
 )
 
 pub const brown_stained_glass_pane = Block(
-  "minecraft:brown_stained_glass_pane",
-  "minecraft:stained_glass_pane",
+  Identifier("minecraft", "brown_stained_glass_pane"),
+  Identifier("minecraft", "stained_glass_pane"),
   [
     Bool("east", False),
     Bool("north", False),
@@ -3314,8 +3711,8 @@ pub const brown_stained_glass_pane = Block(
 )
 
 pub const green_stained_glass_pane = Block(
-  "minecraft:green_stained_glass_pane",
-  "minecraft:stained_glass_pane",
+  Identifier("minecraft", "green_stained_glass_pane"),
+  Identifier("minecraft", "stained_glass_pane"),
   [
     Bool("east", False),
     Bool("north", False),
@@ -3326,8 +3723,8 @@ pub const green_stained_glass_pane = Block(
 )
 
 pub const red_stained_glass_pane = Block(
-  "minecraft:red_stained_glass_pane",
-  "minecraft:stained_glass_pane",
+  Identifier("minecraft", "red_stained_glass_pane"),
+  Identifier("minecraft", "stained_glass_pane"),
   [
     Bool("east", False),
     Bool("north", False),
@@ -3338,8 +3735,8 @@ pub const red_stained_glass_pane = Block(
 )
 
 pub const black_stained_glass_pane = Block(
-  "minecraft:black_stained_glass_pane",
-  "minecraft:stained_glass_pane",
+  Identifier("minecraft", "black_stained_glass_pane"),
+  Identifier("minecraft", "stained_glass_pane"),
   [
     Bool("east", False),
     Bool("north", False),
@@ -3350,8 +3747,8 @@ pub const black_stained_glass_pane = Block(
 )
 
 pub const acacia_stairs = Block(
-  "minecraft:acacia_stairs",
-  "minecraft:stair",
+  Identifier("minecraft", "acacia_stairs"),
+  Identifier("minecraft", "stair"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -3365,8 +3762,8 @@ pub const acacia_stairs = Block(
 )
 
 pub const cherry_stairs = Block(
-  "minecraft:cherry_stairs",
-  "minecraft:stair",
+  Identifier("minecraft", "cherry_stairs"),
+  Identifier("minecraft", "stair"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -3380,8 +3777,8 @@ pub const cherry_stairs = Block(
 )
 
 pub const dark_oak_stairs = Block(
-  "minecraft:dark_oak_stairs",
-  "minecraft:stair",
+  Identifier("minecraft", "dark_oak_stairs"),
+  Identifier("minecraft", "stair"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -3395,8 +3792,8 @@ pub const dark_oak_stairs = Block(
 )
 
 pub const pale_oak_stairs = Block(
-  "minecraft:pale_oak_stairs",
-  "minecraft:stair",
+  Identifier("minecraft", "pale_oak_stairs"),
+  Identifier("minecraft", "stair"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -3410,8 +3807,8 @@ pub const pale_oak_stairs = Block(
 )
 
 pub const mangrove_stairs = Block(
-  "minecraft:mangrove_stairs",
-  "minecraft:stair",
+  Identifier("minecraft", "mangrove_stairs"),
+  Identifier("minecraft", "stair"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -3425,8 +3822,8 @@ pub const mangrove_stairs = Block(
 )
 
 pub const bamboo_stairs = Block(
-  "minecraft:bamboo_stairs",
-  "minecraft:stair",
+  Identifier("minecraft", "bamboo_stairs"),
+  Identifier("minecraft", "stair"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -3440,8 +3837,8 @@ pub const bamboo_stairs = Block(
 )
 
 pub const bamboo_mosaic_stairs = Block(
-  "minecraft:bamboo_mosaic_stairs",
-  "minecraft:stair",
+  Identifier("minecraft", "bamboo_mosaic_stairs"),
+  Identifier("minecraft", "stair"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -3454,23 +3851,27 @@ pub const bamboo_mosaic_stairs = Block(
   ],
 )
 
-pub const slime_block = Block("minecraft:slime_block", "minecraft:slime", [])
+pub const slime_block = Block(
+  Identifier("minecraft", "slime_block"),
+  Identifier("minecraft", "slime"),
+  [],
+)
 
 pub const barrier = Block(
-  "minecraft:barrier",
-  "minecraft:barrier",
+  Identifier("minecraft", "barrier"),
+  Identifier("minecraft", "barrier"),
   [Bool("waterlogged", False)],
 )
 
 pub const light = Block(
-  "minecraft:light",
-  "minecraft:light",
+  Identifier("minecraft", "light"),
+  Identifier("minecraft", "light"),
   [Int("level", 0, 15, 15), Bool("waterlogged", False)],
 )
 
 pub const iron_trapdoor = Block(
-  "minecraft:iron_trapdoor",
-  "minecraft:trapdoor",
+  Identifier("minecraft", "iron_trapdoor"),
+  Identifier("minecraft", "trapdoor"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -3480,23 +3881,27 @@ pub const iron_trapdoor = Block(
   ],
 )
 
-pub const prismarine = Block("minecraft:prismarine", "minecraft:block", [])
+pub const prismarine = Block(
+  Identifier("minecraft", "prismarine"),
+  Identifier("minecraft", "block"),
+  [],
+)
 
 pub const prismarine_bricks = Block(
-  "minecraft:prismarine_bricks",
-  "minecraft:block",
+  Identifier("minecraft", "prismarine_bricks"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const dark_prismarine = Block(
-  "minecraft:dark_prismarine",
-  "minecraft:block",
+  Identifier("minecraft", "dark_prismarine"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const prismarine_stairs = Block(
-  "minecraft:prismarine_stairs",
-  "minecraft:stair",
+  Identifier("minecraft", "prismarine_stairs"),
+  Identifier("minecraft", "stair"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -3510,8 +3915,8 @@ pub const prismarine_stairs = Block(
 )
 
 pub const prismarine_brick_stairs = Block(
-  "minecraft:prismarine_brick_stairs",
-  "minecraft:stair",
+  Identifier("minecraft", "prismarine_brick_stairs"),
+  Identifier("minecraft", "stair"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -3525,8 +3930,8 @@ pub const prismarine_brick_stairs = Block(
 )
 
 pub const dark_prismarine_stairs = Block(
-  "minecraft:dark_prismarine_stairs",
-  "minecraft:stair",
+  Identifier("minecraft", "dark_prismarine_stairs"),
+  Identifier("minecraft", "stair"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -3540,8 +3945,8 @@ pub const dark_prismarine_stairs = Block(
 )
 
 pub const prismarine_slab = Block(
-  "minecraft:prismarine_slab",
-  "minecraft:slab",
+  Identifier("minecraft", "prismarine_slab"),
+  Identifier("minecraft", "slab"),
   [
     Enum("type", ["top", "bottom", "double"], "bottom"),
     Bool("waterlogged", False),
@@ -3549,8 +3954,8 @@ pub const prismarine_slab = Block(
 )
 
 pub const prismarine_brick_slab = Block(
-  "minecraft:prismarine_brick_slab",
-  "minecraft:slab",
+  Identifier("minecraft", "prismarine_brick_slab"),
+  Identifier("minecraft", "slab"),
   [
     Enum("type", ["top", "bottom", "double"], "bottom"),
     Bool("waterlogged", False),
@@ -3558,367 +3963,389 @@ pub const prismarine_brick_slab = Block(
 )
 
 pub const dark_prismarine_slab = Block(
-  "minecraft:dark_prismarine_slab",
-  "minecraft:slab",
+  Identifier("minecraft", "dark_prismarine_slab"),
+  Identifier("minecraft", "slab"),
   [
     Enum("type", ["top", "bottom", "double"], "bottom"),
     Bool("waterlogged", False),
   ],
 )
 
-pub const sea_lantern = Block("minecraft:sea_lantern", "minecraft:block", [])
+pub const sea_lantern = Block(
+  Identifier("minecraft", "sea_lantern"),
+  Identifier("minecraft", "block"),
+  [],
+)
 
 pub const hay_block = Block(
-  "minecraft:hay_block",
-  "minecraft:hay",
+  Identifier("minecraft", "hay_block"),
+  Identifier("minecraft", "hay"),
   [Enum("axis", ["x", "y", "z"], "y")],
 )
 
 pub const white_carpet = Block(
-  "minecraft:white_carpet",
-  "minecraft:wool_carpet",
+  Identifier("minecraft", "white_carpet"),
+  Identifier("minecraft", "wool_carpet"),
   [],
 )
 
 pub const orange_carpet = Block(
-  "minecraft:orange_carpet",
-  "minecraft:wool_carpet",
+  Identifier("minecraft", "orange_carpet"),
+  Identifier("minecraft", "wool_carpet"),
   [],
 )
 
 pub const magenta_carpet = Block(
-  "minecraft:magenta_carpet",
-  "minecraft:wool_carpet",
+  Identifier("minecraft", "magenta_carpet"),
+  Identifier("minecraft", "wool_carpet"),
   [],
 )
 
 pub const light_blue_carpet = Block(
-  "minecraft:light_blue_carpet",
-  "minecraft:wool_carpet",
+  Identifier("minecraft", "light_blue_carpet"),
+  Identifier("minecraft", "wool_carpet"),
   [],
 )
 
 pub const yellow_carpet = Block(
-  "minecraft:yellow_carpet",
-  "minecraft:wool_carpet",
+  Identifier("minecraft", "yellow_carpet"),
+  Identifier("minecraft", "wool_carpet"),
   [],
 )
 
 pub const lime_carpet = Block(
-  "minecraft:lime_carpet",
-  "minecraft:wool_carpet",
+  Identifier("minecraft", "lime_carpet"),
+  Identifier("minecraft", "wool_carpet"),
   [],
 )
 
 pub const pink_carpet = Block(
-  "minecraft:pink_carpet",
-  "minecraft:wool_carpet",
+  Identifier("minecraft", "pink_carpet"),
+  Identifier("minecraft", "wool_carpet"),
   [],
 )
 
 pub const gray_carpet = Block(
-  "minecraft:gray_carpet",
-  "minecraft:wool_carpet",
+  Identifier("minecraft", "gray_carpet"),
+  Identifier("minecraft", "wool_carpet"),
   [],
 )
 
 pub const light_gray_carpet = Block(
-  "minecraft:light_gray_carpet",
-  "minecraft:wool_carpet",
+  Identifier("minecraft", "light_gray_carpet"),
+  Identifier("minecraft", "wool_carpet"),
   [],
 )
 
 pub const cyan_carpet = Block(
-  "minecraft:cyan_carpet",
-  "minecraft:wool_carpet",
+  Identifier("minecraft", "cyan_carpet"),
+  Identifier("minecraft", "wool_carpet"),
   [],
 )
 
 pub const purple_carpet = Block(
-  "minecraft:purple_carpet",
-  "minecraft:wool_carpet",
+  Identifier("minecraft", "purple_carpet"),
+  Identifier("minecraft", "wool_carpet"),
   [],
 )
 
 pub const blue_carpet = Block(
-  "minecraft:blue_carpet",
-  "minecraft:wool_carpet",
+  Identifier("minecraft", "blue_carpet"),
+  Identifier("minecraft", "wool_carpet"),
   [],
 )
 
 pub const brown_carpet = Block(
-  "minecraft:brown_carpet",
-  "minecraft:wool_carpet",
+  Identifier("minecraft", "brown_carpet"),
+  Identifier("minecraft", "wool_carpet"),
   [],
 )
 
 pub const green_carpet = Block(
-  "minecraft:green_carpet",
-  "minecraft:wool_carpet",
+  Identifier("minecraft", "green_carpet"),
+  Identifier("minecraft", "wool_carpet"),
   [],
 )
 
-pub const red_carpet = Block("minecraft:red_carpet", "minecraft:wool_carpet", [],
+pub const red_carpet = Block(
+  Identifier("minecraft", "red_carpet"),
+  Identifier("minecraft", "wool_carpet"),
+  [],
 )
 
 pub const black_carpet = Block(
-  "minecraft:black_carpet",
-  "minecraft:wool_carpet",
+  Identifier("minecraft", "black_carpet"),
+  Identifier("minecraft", "wool_carpet"),
   [],
 )
 
-pub const terracotta = Block("minecraft:terracotta", "minecraft:block", [])
+pub const terracotta = Block(
+  Identifier("minecraft", "terracotta"),
+  Identifier("minecraft", "block"),
+  [],
+)
 
-pub const coal_block = Block("minecraft:coal_block", "minecraft:block", [])
+pub const coal_block = Block(
+  Identifier("minecraft", "coal_block"),
+  Identifier("minecraft", "block"),
+  [],
+)
 
-pub const packed_ice = Block("minecraft:packed_ice", "minecraft:block", [])
+pub const packed_ice = Block(
+  Identifier("minecraft", "packed_ice"),
+  Identifier("minecraft", "block"),
+  [],
+)
 
 pub const sunflower = Block(
-  "minecraft:sunflower",
-  "minecraft:tall_flower",
+  Identifier("minecraft", "sunflower"),
+  Identifier("minecraft", "tall_flower"),
   [Enum("half", ["upper", "lower"], "lower")],
 )
 
 pub const lilac = Block(
-  "minecraft:lilac",
-  "minecraft:tall_flower",
+  Identifier("minecraft", "lilac"),
+  Identifier("minecraft", "tall_flower"),
   [Enum("half", ["upper", "lower"], "lower")],
 )
 
 pub const rose_bush = Block(
-  "minecraft:rose_bush",
-  "minecraft:tall_flower",
+  Identifier("minecraft", "rose_bush"),
+  Identifier("minecraft", "tall_flower"),
   [Enum("half", ["upper", "lower"], "lower")],
 )
 
 pub const peony = Block(
-  "minecraft:peony",
-  "minecraft:tall_flower",
+  Identifier("minecraft", "peony"),
+  Identifier("minecraft", "tall_flower"),
   [Enum("half", ["upper", "lower"], "lower")],
 )
 
 pub const tall_grass = Block(
-  "minecraft:tall_grass",
-  "minecraft:double_plant",
+  Identifier("minecraft", "tall_grass"),
+  Identifier("minecraft", "double_plant"),
   [Enum("half", ["upper", "lower"], "lower")],
 )
 
 pub const large_fern = Block(
-  "minecraft:large_fern",
-  "minecraft:double_plant",
+  Identifier("minecraft", "large_fern"),
+  Identifier("minecraft", "double_plant"),
   [Enum("half", ["upper", "lower"], "lower")],
 )
 
 pub const white_banner = Block(
-  "minecraft:white_banner",
-  "minecraft:banner",
+  Identifier("minecraft", "white_banner"),
+  Identifier("minecraft", "banner"),
   [Int("rotation", 0, 15, 0)],
 )
 
 pub const orange_banner = Block(
-  "minecraft:orange_banner",
-  "minecraft:banner",
+  Identifier("minecraft", "orange_banner"),
+  Identifier("minecraft", "banner"),
   [Int("rotation", 0, 15, 0)],
 )
 
 pub const magenta_banner = Block(
-  "minecraft:magenta_banner",
-  "minecraft:banner",
+  Identifier("minecraft", "magenta_banner"),
+  Identifier("minecraft", "banner"),
   [Int("rotation", 0, 15, 0)],
 )
 
 pub const light_blue_banner = Block(
-  "minecraft:light_blue_banner",
-  "minecraft:banner",
+  Identifier("minecraft", "light_blue_banner"),
+  Identifier("minecraft", "banner"),
   [Int("rotation", 0, 15, 0)],
 )
 
 pub const yellow_banner = Block(
-  "minecraft:yellow_banner",
-  "minecraft:banner",
+  Identifier("minecraft", "yellow_banner"),
+  Identifier("minecraft", "banner"),
   [Int("rotation", 0, 15, 0)],
 )
 
 pub const lime_banner = Block(
-  "minecraft:lime_banner",
-  "minecraft:banner",
+  Identifier("minecraft", "lime_banner"),
+  Identifier("minecraft", "banner"),
   [Int("rotation", 0, 15, 0)],
 )
 
 pub const pink_banner = Block(
-  "minecraft:pink_banner",
-  "minecraft:banner",
+  Identifier("minecraft", "pink_banner"),
+  Identifier("minecraft", "banner"),
   [Int("rotation", 0, 15, 0)],
 )
 
 pub const gray_banner = Block(
-  "minecraft:gray_banner",
-  "minecraft:banner",
+  Identifier("minecraft", "gray_banner"),
+  Identifier("minecraft", "banner"),
   [Int("rotation", 0, 15, 0)],
 )
 
 pub const light_gray_banner = Block(
-  "minecraft:light_gray_banner",
-  "minecraft:banner",
+  Identifier("minecraft", "light_gray_banner"),
+  Identifier("minecraft", "banner"),
   [Int("rotation", 0, 15, 0)],
 )
 
 pub const cyan_banner = Block(
-  "minecraft:cyan_banner",
-  "minecraft:banner",
+  Identifier("minecraft", "cyan_banner"),
+  Identifier("minecraft", "banner"),
   [Int("rotation", 0, 15, 0)],
 )
 
 pub const purple_banner = Block(
-  "minecraft:purple_banner",
-  "minecraft:banner",
+  Identifier("minecraft", "purple_banner"),
+  Identifier("minecraft", "banner"),
   [Int("rotation", 0, 15, 0)],
 )
 
 pub const blue_banner = Block(
-  "minecraft:blue_banner",
-  "minecraft:banner",
+  Identifier("minecraft", "blue_banner"),
+  Identifier("minecraft", "banner"),
   [Int("rotation", 0, 15, 0)],
 )
 
 pub const brown_banner = Block(
-  "minecraft:brown_banner",
-  "minecraft:banner",
+  Identifier("minecraft", "brown_banner"),
+  Identifier("minecraft", "banner"),
   [Int("rotation", 0, 15, 0)],
 )
 
 pub const green_banner = Block(
-  "minecraft:green_banner",
-  "minecraft:banner",
+  Identifier("minecraft", "green_banner"),
+  Identifier("minecraft", "banner"),
   [Int("rotation", 0, 15, 0)],
 )
 
 pub const red_banner = Block(
-  "minecraft:red_banner",
-  "minecraft:banner",
+  Identifier("minecraft", "red_banner"),
+  Identifier("minecraft", "banner"),
   [Int("rotation", 0, 15, 0)],
 )
 
 pub const black_banner = Block(
-  "minecraft:black_banner",
-  "minecraft:banner",
+  Identifier("minecraft", "black_banner"),
+  Identifier("minecraft", "banner"),
   [Int("rotation", 0, 15, 0)],
 )
 
 pub const white_wall_banner = Block(
-  "minecraft:white_wall_banner",
-  "minecraft:wall_banner",
+  Identifier("minecraft", "white_wall_banner"),
+  Identifier("minecraft", "wall_banner"),
   [Enum("facing", ["north", "south", "west", "east"], "north")],
 )
 
 pub const orange_wall_banner = Block(
-  "minecraft:orange_wall_banner",
-  "minecraft:wall_banner",
+  Identifier("minecraft", "orange_wall_banner"),
+  Identifier("minecraft", "wall_banner"),
   [Enum("facing", ["north", "south", "west", "east"], "north")],
 )
 
 pub const magenta_wall_banner = Block(
-  "minecraft:magenta_wall_banner",
-  "minecraft:wall_banner",
+  Identifier("minecraft", "magenta_wall_banner"),
+  Identifier("minecraft", "wall_banner"),
   [Enum("facing", ["north", "south", "west", "east"], "north")],
 )
 
 pub const light_blue_wall_banner = Block(
-  "minecraft:light_blue_wall_banner",
-  "minecraft:wall_banner",
+  Identifier("minecraft", "light_blue_wall_banner"),
+  Identifier("minecraft", "wall_banner"),
   [Enum("facing", ["north", "south", "west", "east"], "north")],
 )
 
 pub const yellow_wall_banner = Block(
-  "minecraft:yellow_wall_banner",
-  "minecraft:wall_banner",
+  Identifier("minecraft", "yellow_wall_banner"),
+  Identifier("minecraft", "wall_banner"),
   [Enum("facing", ["north", "south", "west", "east"], "north")],
 )
 
 pub const lime_wall_banner = Block(
-  "minecraft:lime_wall_banner",
-  "minecraft:wall_banner",
+  Identifier("minecraft", "lime_wall_banner"),
+  Identifier("minecraft", "wall_banner"),
   [Enum("facing", ["north", "south", "west", "east"], "north")],
 )
 
 pub const pink_wall_banner = Block(
-  "minecraft:pink_wall_banner",
-  "minecraft:wall_banner",
+  Identifier("minecraft", "pink_wall_banner"),
+  Identifier("minecraft", "wall_banner"),
   [Enum("facing", ["north", "south", "west", "east"], "north")],
 )
 
 pub const gray_wall_banner = Block(
-  "minecraft:gray_wall_banner",
-  "minecraft:wall_banner",
+  Identifier("minecraft", "gray_wall_banner"),
+  Identifier("minecraft", "wall_banner"),
   [Enum("facing", ["north", "south", "west", "east"], "north")],
 )
 
 pub const light_gray_wall_banner = Block(
-  "minecraft:light_gray_wall_banner",
-  "minecraft:wall_banner",
+  Identifier("minecraft", "light_gray_wall_banner"),
+  Identifier("minecraft", "wall_banner"),
   [Enum("facing", ["north", "south", "west", "east"], "north")],
 )
 
 pub const cyan_wall_banner = Block(
-  "minecraft:cyan_wall_banner",
-  "minecraft:wall_banner",
+  Identifier("minecraft", "cyan_wall_banner"),
+  Identifier("minecraft", "wall_banner"),
   [Enum("facing", ["north", "south", "west", "east"], "north")],
 )
 
 pub const purple_wall_banner = Block(
-  "minecraft:purple_wall_banner",
-  "minecraft:wall_banner",
+  Identifier("minecraft", "purple_wall_banner"),
+  Identifier("minecraft", "wall_banner"),
   [Enum("facing", ["north", "south", "west", "east"], "north")],
 )
 
 pub const blue_wall_banner = Block(
-  "minecraft:blue_wall_banner",
-  "minecraft:wall_banner",
+  Identifier("minecraft", "blue_wall_banner"),
+  Identifier("minecraft", "wall_banner"),
   [Enum("facing", ["north", "south", "west", "east"], "north")],
 )
 
 pub const brown_wall_banner = Block(
-  "minecraft:brown_wall_banner",
-  "minecraft:wall_banner",
+  Identifier("minecraft", "brown_wall_banner"),
+  Identifier("minecraft", "wall_banner"),
   [Enum("facing", ["north", "south", "west", "east"], "north")],
 )
 
 pub const green_wall_banner = Block(
-  "minecraft:green_wall_banner",
-  "minecraft:wall_banner",
+  Identifier("minecraft", "green_wall_banner"),
+  Identifier("minecraft", "wall_banner"),
   [Enum("facing", ["north", "south", "west", "east"], "north")],
 )
 
 pub const red_wall_banner = Block(
-  "minecraft:red_wall_banner",
-  "minecraft:wall_banner",
+  Identifier("minecraft", "red_wall_banner"),
+  Identifier("minecraft", "wall_banner"),
   [Enum("facing", ["north", "south", "west", "east"], "north")],
 )
 
 pub const black_wall_banner = Block(
-  "minecraft:black_wall_banner",
-  "minecraft:wall_banner",
+  Identifier("minecraft", "black_wall_banner"),
+  Identifier("minecraft", "wall_banner"),
   [Enum("facing", ["north", "south", "west", "east"], "north")],
 )
 
-pub const red_sandstone = Block("minecraft:red_sandstone", "minecraft:block", [],
+pub const red_sandstone = Block(
+  Identifier("minecraft", "red_sandstone"),
+  Identifier("minecraft", "block"),
+  [],
 )
 
 pub const chiseled_red_sandstone = Block(
-  "minecraft:chiseled_red_sandstone",
-  "minecraft:block",
+  Identifier("minecraft", "chiseled_red_sandstone"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const cut_red_sandstone = Block(
-  "minecraft:cut_red_sandstone",
-  "minecraft:block",
+  Identifier("minecraft", "cut_red_sandstone"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const red_sandstone_stairs = Block(
-  "minecraft:red_sandstone_stairs",
-  "minecraft:stair",
+  Identifier("minecraft", "red_sandstone_stairs"),
+  Identifier("minecraft", "stair"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -3932,8 +4359,8 @@ pub const red_sandstone_stairs = Block(
 )
 
 pub const oak_slab = Block(
-  "minecraft:oak_slab",
-  "minecraft:slab",
+  Identifier("minecraft", "oak_slab"),
+  Identifier("minecraft", "slab"),
   [
     Enum("type", ["top", "bottom", "double"], "bottom"),
     Bool("waterlogged", False),
@@ -3941,8 +4368,8 @@ pub const oak_slab = Block(
 )
 
 pub const spruce_slab = Block(
-  "minecraft:spruce_slab",
-  "minecraft:slab",
+  Identifier("minecraft", "spruce_slab"),
+  Identifier("minecraft", "slab"),
   [
     Enum("type", ["top", "bottom", "double"], "bottom"),
     Bool("waterlogged", False),
@@ -3950,8 +4377,8 @@ pub const spruce_slab = Block(
 )
 
 pub const birch_slab = Block(
-  "minecraft:birch_slab",
-  "minecraft:slab",
+  Identifier("minecraft", "birch_slab"),
+  Identifier("minecraft", "slab"),
   [
     Enum("type", ["top", "bottom", "double"], "bottom"),
     Bool("waterlogged", False),
@@ -3959,8 +4386,8 @@ pub const birch_slab = Block(
 )
 
 pub const jungle_slab = Block(
-  "minecraft:jungle_slab",
-  "minecraft:slab",
+  Identifier("minecraft", "jungle_slab"),
+  Identifier("minecraft", "slab"),
   [
     Enum("type", ["top", "bottom", "double"], "bottom"),
     Bool("waterlogged", False),
@@ -3968,8 +4395,8 @@ pub const jungle_slab = Block(
 )
 
 pub const acacia_slab = Block(
-  "minecraft:acacia_slab",
-  "minecraft:slab",
+  Identifier("minecraft", "acacia_slab"),
+  Identifier("minecraft", "slab"),
   [
     Enum("type", ["top", "bottom", "double"], "bottom"),
     Bool("waterlogged", False),
@@ -3977,8 +4404,8 @@ pub const acacia_slab = Block(
 )
 
 pub const cherry_slab = Block(
-  "minecraft:cherry_slab",
-  "minecraft:slab",
+  Identifier("minecraft", "cherry_slab"),
+  Identifier("minecraft", "slab"),
   [
     Enum("type", ["top", "bottom", "double"], "bottom"),
     Bool("waterlogged", False),
@@ -3986,8 +4413,8 @@ pub const cherry_slab = Block(
 )
 
 pub const dark_oak_slab = Block(
-  "minecraft:dark_oak_slab",
-  "minecraft:slab",
+  Identifier("minecraft", "dark_oak_slab"),
+  Identifier("minecraft", "slab"),
   [
     Enum("type", ["top", "bottom", "double"], "bottom"),
     Bool("waterlogged", False),
@@ -3995,8 +4422,8 @@ pub const dark_oak_slab = Block(
 )
 
 pub const pale_oak_slab = Block(
-  "minecraft:pale_oak_slab",
-  "minecraft:slab",
+  Identifier("minecraft", "pale_oak_slab"),
+  Identifier("minecraft", "slab"),
   [
     Enum("type", ["top", "bottom", "double"], "bottom"),
     Bool("waterlogged", False),
@@ -4004,8 +4431,8 @@ pub const pale_oak_slab = Block(
 )
 
 pub const mangrove_slab = Block(
-  "minecraft:mangrove_slab",
-  "minecraft:slab",
+  Identifier("minecraft", "mangrove_slab"),
+  Identifier("minecraft", "slab"),
   [
     Enum("type", ["top", "bottom", "double"], "bottom"),
     Bool("waterlogged", False),
@@ -4013,8 +4440,8 @@ pub const mangrove_slab = Block(
 )
 
 pub const bamboo_slab = Block(
-  "minecraft:bamboo_slab",
-  "minecraft:slab",
+  Identifier("minecraft", "bamboo_slab"),
+  Identifier("minecraft", "slab"),
   [
     Enum("type", ["top", "bottom", "double"], "bottom"),
     Bool("waterlogged", False),
@@ -4022,8 +4449,8 @@ pub const bamboo_slab = Block(
 )
 
 pub const bamboo_mosaic_slab = Block(
-  "minecraft:bamboo_mosaic_slab",
-  "minecraft:slab",
+  Identifier("minecraft", "bamboo_mosaic_slab"),
+  Identifier("minecraft", "slab"),
   [
     Enum("type", ["top", "bottom", "double"], "bottom"),
     Bool("waterlogged", False),
@@ -4031,8 +4458,8 @@ pub const bamboo_mosaic_slab = Block(
 )
 
 pub const stone_slab = Block(
-  "minecraft:stone_slab",
-  "minecraft:slab",
+  Identifier("minecraft", "stone_slab"),
+  Identifier("minecraft", "slab"),
   [
     Enum("type", ["top", "bottom", "double"], "bottom"),
     Bool("waterlogged", False),
@@ -4040,8 +4467,8 @@ pub const stone_slab = Block(
 )
 
 pub const smooth_stone_slab = Block(
-  "minecraft:smooth_stone_slab",
-  "minecraft:slab",
+  Identifier("minecraft", "smooth_stone_slab"),
+  Identifier("minecraft", "slab"),
   [
     Enum("type", ["top", "bottom", "double"], "bottom"),
     Bool("waterlogged", False),
@@ -4049,8 +4476,8 @@ pub const smooth_stone_slab = Block(
 )
 
 pub const sandstone_slab = Block(
-  "minecraft:sandstone_slab",
-  "minecraft:slab",
+  Identifier("minecraft", "sandstone_slab"),
+  Identifier("minecraft", "slab"),
   [
     Enum("type", ["top", "bottom", "double"], "bottom"),
     Bool("waterlogged", False),
@@ -4058,8 +4485,8 @@ pub const sandstone_slab = Block(
 )
 
 pub const cut_sandstone_slab = Block(
-  "minecraft:cut_sandstone_slab",
-  "minecraft:slab",
+  Identifier("minecraft", "cut_sandstone_slab"),
+  Identifier("minecraft", "slab"),
   [
     Enum("type", ["top", "bottom", "double"], "bottom"),
     Bool("waterlogged", False),
@@ -4067,8 +4494,8 @@ pub const cut_sandstone_slab = Block(
 )
 
 pub const petrified_oak_slab = Block(
-  "minecraft:petrified_oak_slab",
-  "minecraft:slab",
+  Identifier("minecraft", "petrified_oak_slab"),
+  Identifier("minecraft", "slab"),
   [
     Enum("type", ["top", "bottom", "double"], "bottom"),
     Bool("waterlogged", False),
@@ -4076,8 +4503,8 @@ pub const petrified_oak_slab = Block(
 )
 
 pub const cobblestone_slab = Block(
-  "minecraft:cobblestone_slab",
-  "minecraft:slab",
+  Identifier("minecraft", "cobblestone_slab"),
+  Identifier("minecraft", "slab"),
   [
     Enum("type", ["top", "bottom", "double"], "bottom"),
     Bool("waterlogged", False),
@@ -4085,8 +4512,8 @@ pub const cobblestone_slab = Block(
 )
 
 pub const brick_slab = Block(
-  "minecraft:brick_slab",
-  "minecraft:slab",
+  Identifier("minecraft", "brick_slab"),
+  Identifier("minecraft", "slab"),
   [
     Enum("type", ["top", "bottom", "double"], "bottom"),
     Bool("waterlogged", False),
@@ -4094,8 +4521,8 @@ pub const brick_slab = Block(
 )
 
 pub const stone_brick_slab = Block(
-  "minecraft:stone_brick_slab",
-  "minecraft:slab",
+  Identifier("minecraft", "stone_brick_slab"),
+  Identifier("minecraft", "slab"),
   [
     Enum("type", ["top", "bottom", "double"], "bottom"),
     Bool("waterlogged", False),
@@ -4103,8 +4530,8 @@ pub const stone_brick_slab = Block(
 )
 
 pub const mud_brick_slab = Block(
-  "minecraft:mud_brick_slab",
-  "minecraft:slab",
+  Identifier("minecraft", "mud_brick_slab"),
+  Identifier("minecraft", "slab"),
   [
     Enum("type", ["top", "bottom", "double"], "bottom"),
     Bool("waterlogged", False),
@@ -4112,8 +4539,8 @@ pub const mud_brick_slab = Block(
 )
 
 pub const nether_brick_slab = Block(
-  "minecraft:nether_brick_slab",
-  "minecraft:slab",
+  Identifier("minecraft", "nether_brick_slab"),
+  Identifier("minecraft", "slab"),
   [
     Enum("type", ["top", "bottom", "double"], "bottom"),
     Bool("waterlogged", False),
@@ -4121,8 +4548,8 @@ pub const nether_brick_slab = Block(
 )
 
 pub const quartz_slab = Block(
-  "minecraft:quartz_slab",
-  "minecraft:slab",
+  Identifier("minecraft", "quartz_slab"),
+  Identifier("minecraft", "slab"),
   [
     Enum("type", ["top", "bottom", "double"], "bottom"),
     Bool("waterlogged", False),
@@ -4130,8 +4557,8 @@ pub const quartz_slab = Block(
 )
 
 pub const red_sandstone_slab = Block(
-  "minecraft:red_sandstone_slab",
-  "minecraft:slab",
+  Identifier("minecraft", "red_sandstone_slab"),
+  Identifier("minecraft", "slab"),
   [
     Enum("type", ["top", "bottom", "double"], "bottom"),
     Bool("waterlogged", False),
@@ -4139,8 +4566,8 @@ pub const red_sandstone_slab = Block(
 )
 
 pub const cut_red_sandstone_slab = Block(
-  "minecraft:cut_red_sandstone_slab",
-  "minecraft:slab",
+  Identifier("minecraft", "cut_red_sandstone_slab"),
+  Identifier("minecraft", "slab"),
   [
     Enum("type", ["top", "bottom", "double"], "bottom"),
     Bool("waterlogged", False),
@@ -4148,34 +4575,41 @@ pub const cut_red_sandstone_slab = Block(
 )
 
 pub const purpur_slab = Block(
-  "minecraft:purpur_slab",
-  "minecraft:slab",
+  Identifier("minecraft", "purpur_slab"),
+  Identifier("minecraft", "slab"),
   [
     Enum("type", ["top", "bottom", "double"], "bottom"),
     Bool("waterlogged", False),
   ],
 )
 
-pub const smooth_stone = Block("minecraft:smooth_stone", "minecraft:block", [])
-
-pub const smooth_sandstone = Block(
-  "minecraft:smooth_sandstone",
-  "minecraft:block",
+pub const smooth_stone = Block(
+  Identifier("minecraft", "smooth_stone"),
+  Identifier("minecraft", "block"),
   [],
 )
 
-pub const smooth_quartz = Block("minecraft:smooth_quartz", "minecraft:block", [],
+pub const smooth_sandstone = Block(
+  Identifier("minecraft", "smooth_sandstone"),
+  Identifier("minecraft", "block"),
+  [],
+)
+
+pub const smooth_quartz = Block(
+  Identifier("minecraft", "smooth_quartz"),
+  Identifier("minecraft", "block"),
+  [],
 )
 
 pub const smooth_red_sandstone = Block(
-  "minecraft:smooth_red_sandstone",
-  "minecraft:block",
+  Identifier("minecraft", "smooth_red_sandstone"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const spruce_fence_gate = Block(
-  "minecraft:spruce_fence_gate",
-  "minecraft:fence_gate",
+  Identifier("minecraft", "spruce_fence_gate"),
+  Identifier("minecraft", "fence_gate"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("in_wall", False),
@@ -4185,8 +4619,8 @@ pub const spruce_fence_gate = Block(
 )
 
 pub const birch_fence_gate = Block(
-  "minecraft:birch_fence_gate",
-  "minecraft:fence_gate",
+  Identifier("minecraft", "birch_fence_gate"),
+  Identifier("minecraft", "fence_gate"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("in_wall", False),
@@ -4196,8 +4630,8 @@ pub const birch_fence_gate = Block(
 )
 
 pub const jungle_fence_gate = Block(
-  "minecraft:jungle_fence_gate",
-  "minecraft:fence_gate",
+  Identifier("minecraft", "jungle_fence_gate"),
+  Identifier("minecraft", "fence_gate"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("in_wall", False),
@@ -4207,8 +4641,8 @@ pub const jungle_fence_gate = Block(
 )
 
 pub const acacia_fence_gate = Block(
-  "minecraft:acacia_fence_gate",
-  "minecraft:fence_gate",
+  Identifier("minecraft", "acacia_fence_gate"),
+  Identifier("minecraft", "fence_gate"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("in_wall", False),
@@ -4218,8 +4652,8 @@ pub const acacia_fence_gate = Block(
 )
 
 pub const cherry_fence_gate = Block(
-  "minecraft:cherry_fence_gate",
-  "minecraft:fence_gate",
+  Identifier("minecraft", "cherry_fence_gate"),
+  Identifier("minecraft", "fence_gate"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("in_wall", False),
@@ -4229,8 +4663,8 @@ pub const cherry_fence_gate = Block(
 )
 
 pub const dark_oak_fence_gate = Block(
-  "minecraft:dark_oak_fence_gate",
-  "minecraft:fence_gate",
+  Identifier("minecraft", "dark_oak_fence_gate"),
+  Identifier("minecraft", "fence_gate"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("in_wall", False),
@@ -4240,8 +4674,8 @@ pub const dark_oak_fence_gate = Block(
 )
 
 pub const pale_oak_fence_gate = Block(
-  "minecraft:pale_oak_fence_gate",
-  "minecraft:fence_gate",
+  Identifier("minecraft", "pale_oak_fence_gate"),
+  Identifier("minecraft", "fence_gate"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("in_wall", False),
@@ -4251,8 +4685,8 @@ pub const pale_oak_fence_gate = Block(
 )
 
 pub const mangrove_fence_gate = Block(
-  "minecraft:mangrove_fence_gate",
-  "minecraft:fence_gate",
+  Identifier("minecraft", "mangrove_fence_gate"),
+  Identifier("minecraft", "fence_gate"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("in_wall", False),
@@ -4262,8 +4696,8 @@ pub const mangrove_fence_gate = Block(
 )
 
 pub const bamboo_fence_gate = Block(
-  "minecraft:bamboo_fence_gate",
-  "minecraft:fence_gate",
+  Identifier("minecraft", "bamboo_fence_gate"),
+  Identifier("minecraft", "fence_gate"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("in_wall", False),
@@ -4273,8 +4707,8 @@ pub const bamboo_fence_gate = Block(
 )
 
 pub const spruce_fence = Block(
-  "minecraft:spruce_fence",
-  "minecraft:fence",
+  Identifier("minecraft", "spruce_fence"),
+  Identifier("minecraft", "fence"),
   [
     Bool("east", False),
     Bool("north", False),
@@ -4285,8 +4719,8 @@ pub const spruce_fence = Block(
 )
 
 pub const birch_fence = Block(
-  "minecraft:birch_fence",
-  "minecraft:fence",
+  Identifier("minecraft", "birch_fence"),
+  Identifier("minecraft", "fence"),
   [
     Bool("east", False),
     Bool("north", False),
@@ -4297,8 +4731,8 @@ pub const birch_fence = Block(
 )
 
 pub const jungle_fence = Block(
-  "minecraft:jungle_fence",
-  "minecraft:fence",
+  Identifier("minecraft", "jungle_fence"),
+  Identifier("minecraft", "fence"),
   [
     Bool("east", False),
     Bool("north", False),
@@ -4309,8 +4743,8 @@ pub const jungle_fence = Block(
 )
 
 pub const acacia_fence = Block(
-  "minecraft:acacia_fence",
-  "minecraft:fence",
+  Identifier("minecraft", "acacia_fence"),
+  Identifier("minecraft", "fence"),
   [
     Bool("east", False),
     Bool("north", False),
@@ -4321,8 +4755,8 @@ pub const acacia_fence = Block(
 )
 
 pub const cherry_fence = Block(
-  "minecraft:cherry_fence",
-  "minecraft:fence",
+  Identifier("minecraft", "cherry_fence"),
+  Identifier("minecraft", "fence"),
   [
     Bool("east", False),
     Bool("north", False),
@@ -4333,8 +4767,8 @@ pub const cherry_fence = Block(
 )
 
 pub const dark_oak_fence = Block(
-  "minecraft:dark_oak_fence",
-  "minecraft:fence",
+  Identifier("minecraft", "dark_oak_fence"),
+  Identifier("minecraft", "fence"),
   [
     Bool("east", False),
     Bool("north", False),
@@ -4345,8 +4779,8 @@ pub const dark_oak_fence = Block(
 )
 
 pub const pale_oak_fence = Block(
-  "minecraft:pale_oak_fence",
-  "minecraft:fence",
+  Identifier("minecraft", "pale_oak_fence"),
+  Identifier("minecraft", "fence"),
   [
     Bool("east", False),
     Bool("north", False),
@@ -4357,8 +4791,8 @@ pub const pale_oak_fence = Block(
 )
 
 pub const mangrove_fence = Block(
-  "minecraft:mangrove_fence",
-  "minecraft:fence",
+  Identifier("minecraft", "mangrove_fence"),
+  Identifier("minecraft", "fence"),
   [
     Bool("east", False),
     Bool("north", False),
@@ -4369,8 +4803,8 @@ pub const mangrove_fence = Block(
 )
 
 pub const bamboo_fence = Block(
-  "minecraft:bamboo_fence",
-  "minecraft:fence",
+  Identifier("minecraft", "bamboo_fence"),
+  Identifier("minecraft", "fence"),
   [
     Bool("east", False),
     Bool("north", False),
@@ -4381,8 +4815,8 @@ pub const bamboo_fence = Block(
 )
 
 pub const spruce_door = Block(
-  "minecraft:spruce_door",
-  "minecraft:door",
+  Identifier("minecraft", "spruce_door"),
+  Identifier("minecraft", "door"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["upper", "lower"], "lower"),
@@ -4393,8 +4827,8 @@ pub const spruce_door = Block(
 )
 
 pub const birch_door = Block(
-  "minecraft:birch_door",
-  "minecraft:door",
+  Identifier("minecraft", "birch_door"),
+  Identifier("minecraft", "door"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["upper", "lower"], "lower"),
@@ -4405,8 +4839,8 @@ pub const birch_door = Block(
 )
 
 pub const jungle_door = Block(
-  "minecraft:jungle_door",
-  "minecraft:door",
+  Identifier("minecraft", "jungle_door"),
+  Identifier("minecraft", "door"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["upper", "lower"], "lower"),
@@ -4417,8 +4851,8 @@ pub const jungle_door = Block(
 )
 
 pub const acacia_door = Block(
-  "minecraft:acacia_door",
-  "minecraft:door",
+  Identifier("minecraft", "acacia_door"),
+  Identifier("minecraft", "door"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["upper", "lower"], "lower"),
@@ -4429,8 +4863,8 @@ pub const acacia_door = Block(
 )
 
 pub const cherry_door = Block(
-  "minecraft:cherry_door",
-  "minecraft:door",
+  Identifier("minecraft", "cherry_door"),
+  Identifier("minecraft", "door"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["upper", "lower"], "lower"),
@@ -4441,8 +4875,8 @@ pub const cherry_door = Block(
 )
 
 pub const dark_oak_door = Block(
-  "minecraft:dark_oak_door",
-  "minecraft:door",
+  Identifier("minecraft", "dark_oak_door"),
+  Identifier("minecraft", "door"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["upper", "lower"], "lower"),
@@ -4453,8 +4887,8 @@ pub const dark_oak_door = Block(
 )
 
 pub const pale_oak_door = Block(
-  "minecraft:pale_oak_door",
-  "minecraft:door",
+  Identifier("minecraft", "pale_oak_door"),
+  Identifier("minecraft", "door"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["upper", "lower"], "lower"),
@@ -4465,8 +4899,8 @@ pub const pale_oak_door = Block(
 )
 
 pub const mangrove_door = Block(
-  "minecraft:mangrove_door",
-  "minecraft:door",
+  Identifier("minecraft", "mangrove_door"),
+  Identifier("minecraft", "door"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["upper", "lower"], "lower"),
@@ -4477,8 +4911,8 @@ pub const mangrove_door = Block(
 )
 
 pub const bamboo_door = Block(
-  "minecraft:bamboo_door",
-  "minecraft:door",
+  Identifier("minecraft", "bamboo_door"),
+  Identifier("minecraft", "door"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["upper", "lower"], "lower"),
@@ -4489,14 +4923,14 @@ pub const bamboo_door = Block(
 )
 
 pub const end_rod = Block(
-  "minecraft:end_rod",
-  "minecraft:end_rod",
+  Identifier("minecraft", "end_rod"),
+  Identifier("minecraft", "end_rod"),
   [Enum("facing", ["north", "east", "south", "west", "up", "down"], "up")],
 )
 
 pub const chorus_plant = Block(
-  "minecraft:chorus_plant",
-  "minecraft:chorus_plant",
+  Identifier("minecraft", "chorus_plant"),
+  Identifier("minecraft", "chorus_plant"),
   [
     Bool("down", False),
     Bool("east", False),
@@ -4508,22 +4942,26 @@ pub const chorus_plant = Block(
 )
 
 pub const chorus_flower = Block(
-  "minecraft:chorus_flower",
-  "minecraft:chorus_flower",
+  Identifier("minecraft", "chorus_flower"),
+  Identifier("minecraft", "chorus_flower"),
   [Int("age", 0, 5, 0)],
 )
 
-pub const purpur_block = Block("minecraft:purpur_block", "minecraft:block", [])
+pub const purpur_block = Block(
+  Identifier("minecraft", "purpur_block"),
+  Identifier("minecraft", "block"),
+  [],
+)
 
 pub const purpur_pillar = Block(
-  "minecraft:purpur_pillar",
-  "minecraft:rotated_pillar",
+  Identifier("minecraft", "purpur_pillar"),
+  Identifier("minecraft", "rotated_pillar"),
   [Enum("axis", ["x", "y", "z"], "y")],
 )
 
 pub const purpur_stairs = Block(
-  "minecraft:purpur_stairs",
-  "minecraft:stair",
+  Identifier("minecraft", "purpur_stairs"),
+  Identifier("minecraft", "stair"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -4537,46 +4975,50 @@ pub const purpur_stairs = Block(
 )
 
 pub const end_stone_bricks = Block(
-  "minecraft:end_stone_bricks",
-  "minecraft:block",
+  Identifier("minecraft", "end_stone_bricks"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const torchflower_crop = Block(
-  "minecraft:torchflower_crop",
-  "minecraft:torchflower_crop",
+  Identifier("minecraft", "torchflower_crop"),
+  Identifier("minecraft", "torchflower_crop"),
   [Int("age", 0, 1, 0)],
 )
 
 pub const pitcher_crop = Block(
-  "minecraft:pitcher_crop",
-  "minecraft:pitcher_crop",
+  Identifier("minecraft", "pitcher_crop"),
+  Identifier("minecraft", "pitcher_crop"),
   [Int("age", 0, 4, 0), Enum("half", ["upper", "lower"], "lower")],
 )
 
 pub const pitcher_plant = Block(
-  "minecraft:pitcher_plant",
-  "minecraft:double_plant",
+  Identifier("minecraft", "pitcher_plant"),
+  Identifier("minecraft", "double_plant"),
   [Enum("half", ["upper", "lower"], "lower")],
 )
 
 pub const beetroots = Block(
-  "minecraft:beetroots",
-  "minecraft:beetroot",
+  Identifier("minecraft", "beetroots"),
+  Identifier("minecraft", "beetroot"),
   [Int("age", 0, 3, 0)],
 )
 
-pub const dirt_path = Block("minecraft:dirt_path", "minecraft:dirt_path", [])
+pub const dirt_path = Block(
+  Identifier("minecraft", "dirt_path"),
+  Identifier("minecraft", "dirt_path"),
+  [],
+)
 
 pub const end_gateway = Block(
-  "minecraft:end_gateway",
-  "minecraft:end_gateway",
+  Identifier("minecraft", "end_gateway"),
+  Identifier("minecraft", "end_gateway"),
   [],
 )
 
 pub const repeating_command_block = Block(
-  "minecraft:repeating_command_block",
-  "minecraft:command",
+  Identifier("minecraft", "repeating_command_block"),
+  Identifier("minecraft", "command"),
   [
     Bool("conditional", False),
     Enum("facing", ["north", "east", "south", "west", "up", "down"], "north"),
@@ -4584,8 +5026,8 @@ pub const repeating_command_block = Block(
 )
 
 pub const chain_command_block = Block(
-  "minecraft:chain_command_block",
-  "minecraft:command",
+  Identifier("minecraft", "chain_command_block"),
+  Identifier("minecraft", "command"),
   [
     Bool("conditional", False),
     Enum("facing", ["north", "east", "south", "west", "up", "down"], "north"),
@@ -4593,40 +5035,44 @@ pub const chain_command_block = Block(
 )
 
 pub const frosted_ice = Block(
-  "minecraft:frosted_ice",
-  "minecraft:frosted_ice",
+  Identifier("minecraft", "frosted_ice"),
+  Identifier("minecraft", "frosted_ice"),
   [Int("age", 0, 3, 0)],
 )
 
-pub const magma_block = Block("minecraft:magma_block", "minecraft:magma", [])
+pub const magma_block = Block(
+  Identifier("minecraft", "magma_block"),
+  Identifier("minecraft", "magma"),
+  [],
+)
 
 pub const nether_wart_block = Block(
-  "minecraft:nether_wart_block",
-  "minecraft:block",
+  Identifier("minecraft", "nether_wart_block"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const red_nether_bricks = Block(
-  "minecraft:red_nether_bricks",
-  "minecraft:block",
+  Identifier("minecraft", "red_nether_bricks"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const bone_block = Block(
-  "minecraft:bone_block",
-  "minecraft:rotated_pillar",
+  Identifier("minecraft", "bone_block"),
+  Identifier("minecraft", "rotated_pillar"),
   [Enum("axis", ["x", "y", "z"], "y")],
 )
 
 pub const structure_void = Block(
-  "minecraft:structure_void",
-  "minecraft:structure_void",
+  Identifier("minecraft", "structure_void"),
+  Identifier("minecraft", "structure_void"),
   [],
 )
 
 pub const observer = Block(
-  "minecraft:observer",
-  "minecraft:observer",
+  Identifier("minecraft", "observer"),
+  Identifier("minecraft", "observer"),
   [
     Enum("facing", ["north", "east", "south", "west", "up", "down"], "south"),
     Bool("powered", False),
@@ -4634,585 +5080,608 @@ pub const observer = Block(
 )
 
 pub const shulker_box = Block(
-  "minecraft:shulker_box",
-  "minecraft:shulker_box",
+  Identifier("minecraft", "shulker_box"),
+  Identifier("minecraft", "shulker_box"),
   [Enum("facing", ["north", "east", "south", "west", "up", "down"], "up")],
 )
 
 pub const white_shulker_box = Block(
-  "minecraft:white_shulker_box",
-  "minecraft:shulker_box",
+  Identifier("minecraft", "white_shulker_box"),
+  Identifier("minecraft", "shulker_box"),
   [Enum("facing", ["north", "east", "south", "west", "up", "down"], "up")],
 )
 
 pub const orange_shulker_box = Block(
-  "minecraft:orange_shulker_box",
-  "minecraft:shulker_box",
+  Identifier("minecraft", "orange_shulker_box"),
+  Identifier("minecraft", "shulker_box"),
   [Enum("facing", ["north", "east", "south", "west", "up", "down"], "up")],
 )
 
 pub const magenta_shulker_box = Block(
-  "minecraft:magenta_shulker_box",
-  "minecraft:shulker_box",
+  Identifier("minecraft", "magenta_shulker_box"),
+  Identifier("minecraft", "shulker_box"),
   [Enum("facing", ["north", "east", "south", "west", "up", "down"], "up")],
 )
 
 pub const light_blue_shulker_box = Block(
-  "minecraft:light_blue_shulker_box",
-  "minecraft:shulker_box",
+  Identifier("minecraft", "light_blue_shulker_box"),
+  Identifier("minecraft", "shulker_box"),
   [Enum("facing", ["north", "east", "south", "west", "up", "down"], "up")],
 )
 
 pub const yellow_shulker_box = Block(
-  "minecraft:yellow_shulker_box",
-  "minecraft:shulker_box",
+  Identifier("minecraft", "yellow_shulker_box"),
+  Identifier("minecraft", "shulker_box"),
   [Enum("facing", ["north", "east", "south", "west", "up", "down"], "up")],
 )
 
 pub const lime_shulker_box = Block(
-  "minecraft:lime_shulker_box",
-  "minecraft:shulker_box",
+  Identifier("minecraft", "lime_shulker_box"),
+  Identifier("minecraft", "shulker_box"),
   [Enum("facing", ["north", "east", "south", "west", "up", "down"], "up")],
 )
 
 pub const pink_shulker_box = Block(
-  "minecraft:pink_shulker_box",
-  "minecraft:shulker_box",
+  Identifier("minecraft", "pink_shulker_box"),
+  Identifier("minecraft", "shulker_box"),
   [Enum("facing", ["north", "east", "south", "west", "up", "down"], "up")],
 )
 
 pub const gray_shulker_box = Block(
-  "minecraft:gray_shulker_box",
-  "minecraft:shulker_box",
+  Identifier("minecraft", "gray_shulker_box"),
+  Identifier("minecraft", "shulker_box"),
   [Enum("facing", ["north", "east", "south", "west", "up", "down"], "up")],
 )
 
 pub const light_gray_shulker_box = Block(
-  "minecraft:light_gray_shulker_box",
-  "minecraft:shulker_box",
+  Identifier("minecraft", "light_gray_shulker_box"),
+  Identifier("minecraft", "shulker_box"),
   [Enum("facing", ["north", "east", "south", "west", "up", "down"], "up")],
 )
 
 pub const cyan_shulker_box = Block(
-  "minecraft:cyan_shulker_box",
-  "minecraft:shulker_box",
+  Identifier("minecraft", "cyan_shulker_box"),
+  Identifier("minecraft", "shulker_box"),
   [Enum("facing", ["north", "east", "south", "west", "up", "down"], "up")],
 )
 
 pub const purple_shulker_box = Block(
-  "minecraft:purple_shulker_box",
-  "minecraft:shulker_box",
+  Identifier("minecraft", "purple_shulker_box"),
+  Identifier("minecraft", "shulker_box"),
   [Enum("facing", ["north", "east", "south", "west", "up", "down"], "up")],
 )
 
 pub const blue_shulker_box = Block(
-  "minecraft:blue_shulker_box",
-  "minecraft:shulker_box",
+  Identifier("minecraft", "blue_shulker_box"),
+  Identifier("minecraft", "shulker_box"),
   [Enum("facing", ["north", "east", "south", "west", "up", "down"], "up")],
 )
 
 pub const brown_shulker_box = Block(
-  "minecraft:brown_shulker_box",
-  "minecraft:shulker_box",
+  Identifier("minecraft", "brown_shulker_box"),
+  Identifier("minecraft", "shulker_box"),
   [Enum("facing", ["north", "east", "south", "west", "up", "down"], "up")],
 )
 
 pub const green_shulker_box = Block(
-  "minecraft:green_shulker_box",
-  "minecraft:shulker_box",
+  Identifier("minecraft", "green_shulker_box"),
+  Identifier("minecraft", "shulker_box"),
   [Enum("facing", ["north", "east", "south", "west", "up", "down"], "up")],
 )
 
 pub const red_shulker_box = Block(
-  "minecraft:red_shulker_box",
-  "minecraft:shulker_box",
+  Identifier("minecraft", "red_shulker_box"),
+  Identifier("minecraft", "shulker_box"),
   [Enum("facing", ["north", "east", "south", "west", "up", "down"], "up")],
 )
 
 pub const black_shulker_box = Block(
-  "minecraft:black_shulker_box",
-  "minecraft:shulker_box",
+  Identifier("minecraft", "black_shulker_box"),
+  Identifier("minecraft", "shulker_box"),
   [Enum("facing", ["north", "east", "south", "west", "up", "down"], "up")],
 )
 
 pub const white_glazed_terracotta = Block(
-  "minecraft:white_glazed_terracotta",
-  "minecraft:glazed_terracotta",
+  Identifier("minecraft", "white_glazed_terracotta"),
+  Identifier("minecraft", "glazed_terracotta"),
   [Enum("facing", ["north", "south", "west", "east"], "north")],
 )
 
 pub const orange_glazed_terracotta = Block(
-  "minecraft:orange_glazed_terracotta",
-  "minecraft:glazed_terracotta",
+  Identifier("minecraft", "orange_glazed_terracotta"),
+  Identifier("minecraft", "glazed_terracotta"),
   [Enum("facing", ["north", "south", "west", "east"], "north")],
 )
 
 pub const magenta_glazed_terracotta = Block(
-  "minecraft:magenta_glazed_terracotta",
-  "minecraft:glazed_terracotta",
+  Identifier("minecraft", "magenta_glazed_terracotta"),
+  Identifier("minecraft", "glazed_terracotta"),
   [Enum("facing", ["north", "south", "west", "east"], "north")],
 )
 
 pub const light_blue_glazed_terracotta = Block(
-  "minecraft:light_blue_glazed_terracotta",
-  "minecraft:glazed_terracotta",
+  Identifier("minecraft", "light_blue_glazed_terracotta"),
+  Identifier("minecraft", "glazed_terracotta"),
   [Enum("facing", ["north", "south", "west", "east"], "north")],
 )
 
 pub const yellow_glazed_terracotta = Block(
-  "minecraft:yellow_glazed_terracotta",
-  "minecraft:glazed_terracotta",
+  Identifier("minecraft", "yellow_glazed_terracotta"),
+  Identifier("minecraft", "glazed_terracotta"),
   [Enum("facing", ["north", "south", "west", "east"], "north")],
 )
 
 pub const lime_glazed_terracotta = Block(
-  "minecraft:lime_glazed_terracotta",
-  "minecraft:glazed_terracotta",
+  Identifier("minecraft", "lime_glazed_terracotta"),
+  Identifier("minecraft", "glazed_terracotta"),
   [Enum("facing", ["north", "south", "west", "east"], "north")],
 )
 
 pub const pink_glazed_terracotta = Block(
-  "minecraft:pink_glazed_terracotta",
-  "minecraft:glazed_terracotta",
+  Identifier("minecraft", "pink_glazed_terracotta"),
+  Identifier("minecraft", "glazed_terracotta"),
   [Enum("facing", ["north", "south", "west", "east"], "north")],
 )
 
 pub const gray_glazed_terracotta = Block(
-  "minecraft:gray_glazed_terracotta",
-  "minecraft:glazed_terracotta",
+  Identifier("minecraft", "gray_glazed_terracotta"),
+  Identifier("minecraft", "glazed_terracotta"),
   [Enum("facing", ["north", "south", "west", "east"], "north")],
 )
 
 pub const light_gray_glazed_terracotta = Block(
-  "minecraft:light_gray_glazed_terracotta",
-  "minecraft:glazed_terracotta",
+  Identifier("minecraft", "light_gray_glazed_terracotta"),
+  Identifier("minecraft", "glazed_terracotta"),
   [Enum("facing", ["north", "south", "west", "east"], "north")],
 )
 
 pub const cyan_glazed_terracotta = Block(
-  "minecraft:cyan_glazed_terracotta",
-  "minecraft:glazed_terracotta",
+  Identifier("minecraft", "cyan_glazed_terracotta"),
+  Identifier("minecraft", "glazed_terracotta"),
   [Enum("facing", ["north", "south", "west", "east"], "north")],
 )
 
 pub const purple_glazed_terracotta = Block(
-  "minecraft:purple_glazed_terracotta",
-  "minecraft:glazed_terracotta",
+  Identifier("minecraft", "purple_glazed_terracotta"),
+  Identifier("minecraft", "glazed_terracotta"),
   [Enum("facing", ["north", "south", "west", "east"], "north")],
 )
 
 pub const blue_glazed_terracotta = Block(
-  "minecraft:blue_glazed_terracotta",
-  "minecraft:glazed_terracotta",
+  Identifier("minecraft", "blue_glazed_terracotta"),
+  Identifier("minecraft", "glazed_terracotta"),
   [Enum("facing", ["north", "south", "west", "east"], "north")],
 )
 
 pub const brown_glazed_terracotta = Block(
-  "minecraft:brown_glazed_terracotta",
-  "minecraft:glazed_terracotta",
+  Identifier("minecraft", "brown_glazed_terracotta"),
+  Identifier("minecraft", "glazed_terracotta"),
   [Enum("facing", ["north", "south", "west", "east"], "north")],
 )
 
 pub const green_glazed_terracotta = Block(
-  "minecraft:green_glazed_terracotta",
-  "minecraft:glazed_terracotta",
+  Identifier("minecraft", "green_glazed_terracotta"),
+  Identifier("minecraft", "glazed_terracotta"),
   [Enum("facing", ["north", "south", "west", "east"], "north")],
 )
 
 pub const red_glazed_terracotta = Block(
-  "minecraft:red_glazed_terracotta",
-  "minecraft:glazed_terracotta",
+  Identifier("minecraft", "red_glazed_terracotta"),
+  Identifier("minecraft", "glazed_terracotta"),
   [Enum("facing", ["north", "south", "west", "east"], "north")],
 )
 
 pub const black_glazed_terracotta = Block(
-  "minecraft:black_glazed_terracotta",
-  "minecraft:glazed_terracotta",
+  Identifier("minecraft", "black_glazed_terracotta"),
+  Identifier("minecraft", "glazed_terracotta"),
   [Enum("facing", ["north", "south", "west", "east"], "north")],
 )
 
 pub const white_concrete = Block(
-  "minecraft:white_concrete",
-  "minecraft:block",
+  Identifier("minecraft", "white_concrete"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const orange_concrete = Block(
-  "minecraft:orange_concrete",
-  "minecraft:block",
+  Identifier("minecraft", "orange_concrete"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const magenta_concrete = Block(
-  "minecraft:magenta_concrete",
-  "minecraft:block",
+  Identifier("minecraft", "magenta_concrete"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const light_blue_concrete = Block(
-  "minecraft:light_blue_concrete",
-  "minecraft:block",
+  Identifier("minecraft", "light_blue_concrete"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const yellow_concrete = Block(
-  "minecraft:yellow_concrete",
-  "minecraft:block",
+  Identifier("minecraft", "yellow_concrete"),
+  Identifier("minecraft", "block"),
   [],
 )
 
-pub const lime_concrete = Block("minecraft:lime_concrete", "minecraft:block", [],
+pub const lime_concrete = Block(
+  Identifier("minecraft", "lime_concrete"),
+  Identifier("minecraft", "block"),
+  [],
 )
 
-pub const pink_concrete = Block("minecraft:pink_concrete", "minecraft:block", [],
+pub const pink_concrete = Block(
+  Identifier("minecraft", "pink_concrete"),
+  Identifier("minecraft", "block"),
+  [],
 )
 
-pub const gray_concrete = Block("minecraft:gray_concrete", "minecraft:block", [],
+pub const gray_concrete = Block(
+  Identifier("minecraft", "gray_concrete"),
+  Identifier("minecraft", "block"),
+  [],
 )
 
 pub const light_gray_concrete = Block(
-  "minecraft:light_gray_concrete",
-  "minecraft:block",
+  Identifier("minecraft", "light_gray_concrete"),
+  Identifier("minecraft", "block"),
   [],
 )
 
-pub const cyan_concrete = Block("minecraft:cyan_concrete", "minecraft:block", [],
+pub const cyan_concrete = Block(
+  Identifier("minecraft", "cyan_concrete"),
+  Identifier("minecraft", "block"),
+  [],
 )
 
 pub const purple_concrete = Block(
-  "minecraft:purple_concrete",
-  "minecraft:block",
+  Identifier("minecraft", "purple_concrete"),
+  Identifier("minecraft", "block"),
   [],
 )
 
-pub const blue_concrete = Block("minecraft:blue_concrete", "minecraft:block", [],
+pub const blue_concrete = Block(
+  Identifier("minecraft", "blue_concrete"),
+  Identifier("minecraft", "block"),
+  [],
 )
 
 pub const brown_concrete = Block(
-  "minecraft:brown_concrete",
-  "minecraft:block",
+  Identifier("minecraft", "brown_concrete"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const green_concrete = Block(
-  "minecraft:green_concrete",
-  "minecraft:block",
+  Identifier("minecraft", "green_concrete"),
+  Identifier("minecraft", "block"),
   [],
 )
 
-pub const red_concrete = Block("minecraft:red_concrete", "minecraft:block", [])
+pub const red_concrete = Block(
+  Identifier("minecraft", "red_concrete"),
+  Identifier("minecraft", "block"),
+  [],
+)
 
 pub const black_concrete = Block(
-  "minecraft:black_concrete",
-  "minecraft:block",
+  Identifier("minecraft", "black_concrete"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const white_concrete_powder = Block(
-  "minecraft:white_concrete_powder",
-  "minecraft:concrete_powder",
+  Identifier("minecraft", "white_concrete_powder"),
+  Identifier("minecraft", "concrete_powder"),
   [],
 )
 
 pub const orange_concrete_powder = Block(
-  "minecraft:orange_concrete_powder",
-  "minecraft:concrete_powder",
+  Identifier("minecraft", "orange_concrete_powder"),
+  Identifier("minecraft", "concrete_powder"),
   [],
 )
 
 pub const magenta_concrete_powder = Block(
-  "minecraft:magenta_concrete_powder",
-  "minecraft:concrete_powder",
+  Identifier("minecraft", "magenta_concrete_powder"),
+  Identifier("minecraft", "concrete_powder"),
   [],
 )
 
 pub const light_blue_concrete_powder = Block(
-  "minecraft:light_blue_concrete_powder",
-  "minecraft:concrete_powder",
+  Identifier("minecraft", "light_blue_concrete_powder"),
+  Identifier("minecraft", "concrete_powder"),
   [],
 )
 
 pub const yellow_concrete_powder = Block(
-  "minecraft:yellow_concrete_powder",
-  "minecraft:concrete_powder",
+  Identifier("minecraft", "yellow_concrete_powder"),
+  Identifier("minecraft", "concrete_powder"),
   [],
 )
 
 pub const lime_concrete_powder = Block(
-  "minecraft:lime_concrete_powder",
-  "minecraft:concrete_powder",
+  Identifier("minecraft", "lime_concrete_powder"),
+  Identifier("minecraft", "concrete_powder"),
   [],
 )
 
 pub const pink_concrete_powder = Block(
-  "minecraft:pink_concrete_powder",
-  "minecraft:concrete_powder",
+  Identifier("minecraft", "pink_concrete_powder"),
+  Identifier("minecraft", "concrete_powder"),
   [],
 )
 
 pub const gray_concrete_powder = Block(
-  "minecraft:gray_concrete_powder",
-  "minecraft:concrete_powder",
+  Identifier("minecraft", "gray_concrete_powder"),
+  Identifier("minecraft", "concrete_powder"),
   [],
 )
 
 pub const light_gray_concrete_powder = Block(
-  "minecraft:light_gray_concrete_powder",
-  "minecraft:concrete_powder",
+  Identifier("minecraft", "light_gray_concrete_powder"),
+  Identifier("minecraft", "concrete_powder"),
   [],
 )
 
 pub const cyan_concrete_powder = Block(
-  "minecraft:cyan_concrete_powder",
-  "minecraft:concrete_powder",
+  Identifier("minecraft", "cyan_concrete_powder"),
+  Identifier("minecraft", "concrete_powder"),
   [],
 )
 
 pub const purple_concrete_powder = Block(
-  "minecraft:purple_concrete_powder",
-  "minecraft:concrete_powder",
+  Identifier("minecraft", "purple_concrete_powder"),
+  Identifier("minecraft", "concrete_powder"),
   [],
 )
 
 pub const blue_concrete_powder = Block(
-  "minecraft:blue_concrete_powder",
-  "minecraft:concrete_powder",
+  Identifier("minecraft", "blue_concrete_powder"),
+  Identifier("minecraft", "concrete_powder"),
   [],
 )
 
 pub const brown_concrete_powder = Block(
-  "minecraft:brown_concrete_powder",
-  "minecraft:concrete_powder",
+  Identifier("minecraft", "brown_concrete_powder"),
+  Identifier("minecraft", "concrete_powder"),
   [],
 )
 
 pub const green_concrete_powder = Block(
-  "minecraft:green_concrete_powder",
-  "minecraft:concrete_powder",
+  Identifier("minecraft", "green_concrete_powder"),
+  Identifier("minecraft", "concrete_powder"),
   [],
 )
 
 pub const red_concrete_powder = Block(
-  "minecraft:red_concrete_powder",
-  "minecraft:concrete_powder",
+  Identifier("minecraft", "red_concrete_powder"),
+  Identifier("minecraft", "concrete_powder"),
   [],
 )
 
 pub const black_concrete_powder = Block(
-  "minecraft:black_concrete_powder",
-  "minecraft:concrete_powder",
+  Identifier("minecraft", "black_concrete_powder"),
+  Identifier("minecraft", "concrete_powder"),
   [],
 )
 
 pub const kelp = Block(
-  "minecraft:kelp",
-  "minecraft:kelp",
+  Identifier("minecraft", "kelp"),
+  Identifier("minecraft", "kelp"),
   [Int("age", 0, 25, 0)],
 )
 
-pub const kelp_plant = Block("minecraft:kelp_plant", "minecraft:kelp_plant", [])
+pub const kelp_plant = Block(
+  Identifier("minecraft", "kelp_plant"),
+  Identifier("minecraft", "kelp_plant"),
+  [],
+)
 
 pub const dried_kelp_block = Block(
-  "minecraft:dried_kelp_block",
-  "minecraft:block",
+  Identifier("minecraft", "dried_kelp_block"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const turtle_egg = Block(
-  "minecraft:turtle_egg",
-  "minecraft:turtle_egg",
+  Identifier("minecraft", "turtle_egg"),
+  Identifier("minecraft", "turtle_egg"),
   [Int("eggs", 1, 4, 1), Int("hatch", 0, 2, 0)],
 )
 
 pub const sniffer_egg = Block(
-  "minecraft:sniffer_egg",
-  "minecraft:sniffer_egg",
+  Identifier("minecraft", "sniffer_egg"),
+  Identifier("minecraft", "sniffer_egg"),
   [Int("hatch", 0, 2, 0)],
 )
 
 pub const dead_tube_coral_block = Block(
-  "minecraft:dead_tube_coral_block",
-  "minecraft:block",
+  Identifier("minecraft", "dead_tube_coral_block"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const dead_brain_coral_block = Block(
-  "minecraft:dead_brain_coral_block",
-  "minecraft:block",
+  Identifier("minecraft", "dead_brain_coral_block"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const dead_bubble_coral_block = Block(
-  "minecraft:dead_bubble_coral_block",
-  "minecraft:block",
+  Identifier("minecraft", "dead_bubble_coral_block"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const dead_fire_coral_block = Block(
-  "minecraft:dead_fire_coral_block",
-  "minecraft:block",
+  Identifier("minecraft", "dead_fire_coral_block"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const dead_horn_coral_block = Block(
-  "minecraft:dead_horn_coral_block",
-  "minecraft:block",
+  Identifier("minecraft", "dead_horn_coral_block"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const tube_coral_block = Block(
-  "minecraft:tube_coral_block",
-  "minecraft:coral",
+  Identifier("minecraft", "tube_coral_block"),
+  Identifier("minecraft", "coral"),
   [],
 )
 
 pub const brain_coral_block = Block(
-  "minecraft:brain_coral_block",
-  "minecraft:coral",
+  Identifier("minecraft", "brain_coral_block"),
+  Identifier("minecraft", "coral"),
   [],
 )
 
 pub const bubble_coral_block = Block(
-  "minecraft:bubble_coral_block",
-  "minecraft:coral",
+  Identifier("minecraft", "bubble_coral_block"),
+  Identifier("minecraft", "coral"),
   [],
 )
 
 pub const fire_coral_block = Block(
-  "minecraft:fire_coral_block",
-  "minecraft:coral",
+  Identifier("minecraft", "fire_coral_block"),
+  Identifier("minecraft", "coral"),
   [],
 )
 
 pub const horn_coral_block = Block(
-  "minecraft:horn_coral_block",
-  "minecraft:coral",
+  Identifier("minecraft", "horn_coral_block"),
+  Identifier("minecraft", "coral"),
   [],
 )
 
 pub const dead_tube_coral = Block(
-  "minecraft:dead_tube_coral",
-  "minecraft:base_coral_plant",
+  Identifier("minecraft", "dead_tube_coral"),
+  Identifier("minecraft", "base_coral_plant"),
   [Bool("waterlogged", True)],
 )
 
 pub const dead_brain_coral = Block(
-  "minecraft:dead_brain_coral",
-  "minecraft:base_coral_plant",
+  Identifier("minecraft", "dead_brain_coral"),
+  Identifier("minecraft", "base_coral_plant"),
   [Bool("waterlogged", True)],
 )
 
 pub const dead_bubble_coral = Block(
-  "minecraft:dead_bubble_coral",
-  "minecraft:base_coral_plant",
+  Identifier("minecraft", "dead_bubble_coral"),
+  Identifier("minecraft", "base_coral_plant"),
   [Bool("waterlogged", True)],
 )
 
 pub const dead_fire_coral = Block(
-  "minecraft:dead_fire_coral",
-  "minecraft:base_coral_plant",
+  Identifier("minecraft", "dead_fire_coral"),
+  Identifier("minecraft", "base_coral_plant"),
   [Bool("waterlogged", True)],
 )
 
 pub const dead_horn_coral = Block(
-  "minecraft:dead_horn_coral",
-  "minecraft:base_coral_plant",
+  Identifier("minecraft", "dead_horn_coral"),
+  Identifier("minecraft", "base_coral_plant"),
   [Bool("waterlogged", True)],
 )
 
 pub const tube_coral = Block(
-  "minecraft:tube_coral",
-  "minecraft:coral_plant",
+  Identifier("minecraft", "tube_coral"),
+  Identifier("minecraft", "coral_plant"),
   [Bool("waterlogged", True)],
 )
 
 pub const brain_coral = Block(
-  "minecraft:brain_coral",
-  "minecraft:coral_plant",
+  Identifier("minecraft", "brain_coral"),
+  Identifier("minecraft", "coral_plant"),
   [Bool("waterlogged", True)],
 )
 
 pub const bubble_coral = Block(
-  "minecraft:bubble_coral",
-  "minecraft:coral_plant",
+  Identifier("minecraft", "bubble_coral"),
+  Identifier("minecraft", "coral_plant"),
   [Bool("waterlogged", True)],
 )
 
 pub const fire_coral = Block(
-  "minecraft:fire_coral",
-  "minecraft:coral_plant",
+  Identifier("minecraft", "fire_coral"),
+  Identifier("minecraft", "coral_plant"),
   [Bool("waterlogged", True)],
 )
 
 pub const horn_coral = Block(
-  "minecraft:horn_coral",
-  "minecraft:coral_plant",
+  Identifier("minecraft", "horn_coral"),
+  Identifier("minecraft", "coral_plant"),
   [Bool("waterlogged", True)],
 )
 
 pub const dead_tube_coral_fan = Block(
-  "minecraft:dead_tube_coral_fan",
-  "minecraft:base_coral_fan",
+  Identifier("minecraft", "dead_tube_coral_fan"),
+  Identifier("minecraft", "base_coral_fan"),
   [Bool("waterlogged", True)],
 )
 
 pub const dead_brain_coral_fan = Block(
-  "minecraft:dead_brain_coral_fan",
-  "minecraft:base_coral_fan",
+  Identifier("minecraft", "dead_brain_coral_fan"),
+  Identifier("minecraft", "base_coral_fan"),
   [Bool("waterlogged", True)],
 )
 
 pub const dead_bubble_coral_fan = Block(
-  "minecraft:dead_bubble_coral_fan",
-  "minecraft:base_coral_fan",
+  Identifier("minecraft", "dead_bubble_coral_fan"),
+  Identifier("minecraft", "base_coral_fan"),
   [Bool("waterlogged", True)],
 )
 
 pub const dead_fire_coral_fan = Block(
-  "minecraft:dead_fire_coral_fan",
-  "minecraft:base_coral_fan",
+  Identifier("minecraft", "dead_fire_coral_fan"),
+  Identifier("minecraft", "base_coral_fan"),
   [Bool("waterlogged", True)],
 )
 
 pub const dead_horn_coral_fan = Block(
-  "minecraft:dead_horn_coral_fan",
-  "minecraft:base_coral_fan",
+  Identifier("minecraft", "dead_horn_coral_fan"),
+  Identifier("minecraft", "base_coral_fan"),
   [Bool("waterlogged", True)],
 )
 
 pub const tube_coral_fan = Block(
-  "minecraft:tube_coral_fan",
-  "minecraft:coral_fan",
+  Identifier("minecraft", "tube_coral_fan"),
+  Identifier("minecraft", "coral_fan"),
   [Bool("waterlogged", True)],
 )
 
 pub const brain_coral_fan = Block(
-  "minecraft:brain_coral_fan",
-  "minecraft:coral_fan",
+  Identifier("minecraft", "brain_coral_fan"),
+  Identifier("minecraft", "coral_fan"),
   [Bool("waterlogged", True)],
 )
 
 pub const bubble_coral_fan = Block(
-  "minecraft:bubble_coral_fan",
-  "minecraft:coral_fan",
+  Identifier("minecraft", "bubble_coral_fan"),
+  Identifier("minecraft", "coral_fan"),
   [Bool("waterlogged", True)],
 )
 
 pub const fire_coral_fan = Block(
-  "minecraft:fire_coral_fan",
-  "minecraft:coral_fan",
+  Identifier("minecraft", "fire_coral_fan"),
+  Identifier("minecraft", "coral_fan"),
   [Bool("waterlogged", True)],
 )
 
 pub const horn_coral_fan = Block(
-  "minecraft:horn_coral_fan",
-  "minecraft:coral_fan",
+  Identifier("minecraft", "horn_coral_fan"),
+  Identifier("minecraft", "coral_fan"),
   [Bool("waterlogged", True)],
 )
 
 pub const dead_tube_coral_wall_fan = Block(
-  "minecraft:dead_tube_coral_wall_fan",
-  "minecraft:base_coral_wall_fan",
+  Identifier("minecraft", "dead_tube_coral_wall_fan"),
+  Identifier("minecraft", "base_coral_wall_fan"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("waterlogged", True),
@@ -5220,8 +5689,8 @@ pub const dead_tube_coral_wall_fan = Block(
 )
 
 pub const dead_brain_coral_wall_fan = Block(
-  "minecraft:dead_brain_coral_wall_fan",
-  "minecraft:base_coral_wall_fan",
+  Identifier("minecraft", "dead_brain_coral_wall_fan"),
+  Identifier("minecraft", "base_coral_wall_fan"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("waterlogged", True),
@@ -5229,8 +5698,8 @@ pub const dead_brain_coral_wall_fan = Block(
 )
 
 pub const dead_bubble_coral_wall_fan = Block(
-  "minecraft:dead_bubble_coral_wall_fan",
-  "minecraft:base_coral_wall_fan",
+  Identifier("minecraft", "dead_bubble_coral_wall_fan"),
+  Identifier("minecraft", "base_coral_wall_fan"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("waterlogged", True),
@@ -5238,8 +5707,8 @@ pub const dead_bubble_coral_wall_fan = Block(
 )
 
 pub const dead_fire_coral_wall_fan = Block(
-  "minecraft:dead_fire_coral_wall_fan",
-  "minecraft:base_coral_wall_fan",
+  Identifier("minecraft", "dead_fire_coral_wall_fan"),
+  Identifier("minecraft", "base_coral_wall_fan"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("waterlogged", True),
@@ -5247,8 +5716,8 @@ pub const dead_fire_coral_wall_fan = Block(
 )
 
 pub const dead_horn_coral_wall_fan = Block(
-  "minecraft:dead_horn_coral_wall_fan",
-  "minecraft:base_coral_wall_fan",
+  Identifier("minecraft", "dead_horn_coral_wall_fan"),
+  Identifier("minecraft", "base_coral_wall_fan"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("waterlogged", True),
@@ -5256,8 +5725,8 @@ pub const dead_horn_coral_wall_fan = Block(
 )
 
 pub const tube_coral_wall_fan = Block(
-  "minecraft:tube_coral_wall_fan",
-  "minecraft:coral_wall_fan",
+  Identifier("minecraft", "tube_coral_wall_fan"),
+  Identifier("minecraft", "coral_wall_fan"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("waterlogged", True),
@@ -5265,8 +5734,8 @@ pub const tube_coral_wall_fan = Block(
 )
 
 pub const brain_coral_wall_fan = Block(
-  "minecraft:brain_coral_wall_fan",
-  "minecraft:coral_wall_fan",
+  Identifier("minecraft", "brain_coral_wall_fan"),
+  Identifier("minecraft", "coral_wall_fan"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("waterlogged", True),
@@ -5274,8 +5743,8 @@ pub const brain_coral_wall_fan = Block(
 )
 
 pub const bubble_coral_wall_fan = Block(
-  "minecraft:bubble_coral_wall_fan",
-  "minecraft:coral_wall_fan",
+  Identifier("minecraft", "bubble_coral_wall_fan"),
+  Identifier("minecraft", "coral_wall_fan"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("waterlogged", True),
@@ -5283,8 +5752,8 @@ pub const bubble_coral_wall_fan = Block(
 )
 
 pub const fire_coral_wall_fan = Block(
-  "minecraft:fire_coral_wall_fan",
-  "minecraft:coral_wall_fan",
+  Identifier("minecraft", "fire_coral_wall_fan"),
+  Identifier("minecraft", "coral_wall_fan"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("waterlogged", True),
@@ -5292,8 +5761,8 @@ pub const fire_coral_wall_fan = Block(
 )
 
 pub const horn_coral_wall_fan = Block(
-  "minecraft:horn_coral_wall_fan",
-  "minecraft:coral_wall_fan",
+  Identifier("minecraft", "horn_coral_wall_fan"),
+  Identifier("minecraft", "coral_wall_fan"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("waterlogged", True),
@@ -5301,32 +5770,32 @@ pub const horn_coral_wall_fan = Block(
 )
 
 pub const sea_pickle = Block(
-  "minecraft:sea_pickle",
-  "minecraft:sea_pickle",
+  Identifier("minecraft", "sea_pickle"),
+  Identifier("minecraft", "sea_pickle"),
   [Int("pickles", 1, 4, 1), Bool("waterlogged", True)],
 )
 
 pub const blue_ice = Block(
-  "minecraft:blue_ice",
-  "minecraft:half_transparent",
+  Identifier("minecraft", "blue_ice"),
+  Identifier("minecraft", "half_transparent"),
   [],
 )
 
 pub const conduit = Block(
-  "minecraft:conduit",
-  "minecraft:conduit",
+  Identifier("minecraft", "conduit"),
+  Identifier("minecraft", "conduit"),
   [Bool("waterlogged", True)],
 )
 
 pub const bamboo_sapling = Block(
-  "minecraft:bamboo_sapling",
-  "minecraft:bamboo_sapling",
+  Identifier("minecraft", "bamboo_sapling"),
+  Identifier("minecraft", "bamboo_sapling"),
   [],
 )
 
 pub const bamboo = Block(
-  "minecraft:bamboo",
-  "minecraft:bamboo_stalk",
+  Identifier("minecraft", "bamboo"),
+  Identifier("minecraft", "bamboo_stalk"),
   [
     Int("age", 0, 1, 0),
     Enum("leaves", ["none", "small", "large"], "none"),
@@ -5335,24 +5804,32 @@ pub const bamboo = Block(
 )
 
 pub const potted_bamboo = Block(
-  "minecraft:potted_bamboo",
-  "minecraft:flower_pot",
+  Identifier("minecraft", "potted_bamboo"),
+  Identifier("minecraft", "flower_pot"),
   [],
 )
 
-pub const void_air = Block("minecraft:void_air", "minecraft:air", [])
+pub const void_air = Block(
+  Identifier("minecraft", "void_air"),
+  Identifier("minecraft", "air"),
+  [],
+)
 
-pub const cave_air = Block("minecraft:cave_air", "minecraft:air", [])
+pub const cave_air = Block(
+  Identifier("minecraft", "cave_air"),
+  Identifier("minecraft", "air"),
+  [],
+)
 
 pub const bubble_column = Block(
-  "minecraft:bubble_column",
-  "minecraft:bubble_column",
+  Identifier("minecraft", "bubble_column"),
+  Identifier("minecraft", "bubble_column"),
   [Bool("drag", True)],
 )
 
 pub const polished_granite_stairs = Block(
-  "minecraft:polished_granite_stairs",
-  "minecraft:stair",
+  Identifier("minecraft", "polished_granite_stairs"),
+  Identifier("minecraft", "stair"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -5366,8 +5843,8 @@ pub const polished_granite_stairs = Block(
 )
 
 pub const smooth_red_sandstone_stairs = Block(
-  "minecraft:smooth_red_sandstone_stairs",
-  "minecraft:stair",
+  Identifier("minecraft", "smooth_red_sandstone_stairs"),
+  Identifier("minecraft", "stair"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -5381,8 +5858,8 @@ pub const smooth_red_sandstone_stairs = Block(
 )
 
 pub const mossy_stone_brick_stairs = Block(
-  "minecraft:mossy_stone_brick_stairs",
-  "minecraft:stair",
+  Identifier("minecraft", "mossy_stone_brick_stairs"),
+  Identifier("minecraft", "stair"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -5396,8 +5873,8 @@ pub const mossy_stone_brick_stairs = Block(
 )
 
 pub const polished_diorite_stairs = Block(
-  "minecraft:polished_diorite_stairs",
-  "minecraft:stair",
+  Identifier("minecraft", "polished_diorite_stairs"),
+  Identifier("minecraft", "stair"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -5411,8 +5888,8 @@ pub const polished_diorite_stairs = Block(
 )
 
 pub const mossy_cobblestone_stairs = Block(
-  "minecraft:mossy_cobblestone_stairs",
-  "minecraft:stair",
+  Identifier("minecraft", "mossy_cobblestone_stairs"),
+  Identifier("minecraft", "stair"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -5426,8 +5903,8 @@ pub const mossy_cobblestone_stairs = Block(
 )
 
 pub const end_stone_brick_stairs = Block(
-  "minecraft:end_stone_brick_stairs",
-  "minecraft:stair",
+  Identifier("minecraft", "end_stone_brick_stairs"),
+  Identifier("minecraft", "stair"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -5441,8 +5918,8 @@ pub const end_stone_brick_stairs = Block(
 )
 
 pub const stone_stairs = Block(
-  "minecraft:stone_stairs",
-  "minecraft:stair",
+  Identifier("minecraft", "stone_stairs"),
+  Identifier("minecraft", "stair"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -5456,8 +5933,8 @@ pub const stone_stairs = Block(
 )
 
 pub const smooth_sandstone_stairs = Block(
-  "minecraft:smooth_sandstone_stairs",
-  "minecraft:stair",
+  Identifier("minecraft", "smooth_sandstone_stairs"),
+  Identifier("minecraft", "stair"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -5471,8 +5948,8 @@ pub const smooth_sandstone_stairs = Block(
 )
 
 pub const smooth_quartz_stairs = Block(
-  "minecraft:smooth_quartz_stairs",
-  "minecraft:stair",
+  Identifier("minecraft", "smooth_quartz_stairs"),
+  Identifier("minecraft", "stair"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -5486,8 +5963,8 @@ pub const smooth_quartz_stairs = Block(
 )
 
 pub const granite_stairs = Block(
-  "minecraft:granite_stairs",
-  "minecraft:stair",
+  Identifier("minecraft", "granite_stairs"),
+  Identifier("minecraft", "stair"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -5501,8 +5978,8 @@ pub const granite_stairs = Block(
 )
 
 pub const andesite_stairs = Block(
-  "minecraft:andesite_stairs",
-  "minecraft:stair",
+  Identifier("minecraft", "andesite_stairs"),
+  Identifier("minecraft", "stair"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -5516,8 +5993,8 @@ pub const andesite_stairs = Block(
 )
 
 pub const red_nether_brick_stairs = Block(
-  "minecraft:red_nether_brick_stairs",
-  "minecraft:stair",
+  Identifier("minecraft", "red_nether_brick_stairs"),
+  Identifier("minecraft", "stair"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -5531,8 +6008,8 @@ pub const red_nether_brick_stairs = Block(
 )
 
 pub const polished_andesite_stairs = Block(
-  "minecraft:polished_andesite_stairs",
-  "minecraft:stair",
+  Identifier("minecraft", "polished_andesite_stairs"),
+  Identifier("minecraft", "stair"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -5546,8 +6023,8 @@ pub const polished_andesite_stairs = Block(
 )
 
 pub const diorite_stairs = Block(
-  "minecraft:diorite_stairs",
-  "minecraft:stair",
+  Identifier("minecraft", "diorite_stairs"),
+  Identifier("minecraft", "stair"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -5561,8 +6038,8 @@ pub const diorite_stairs = Block(
 )
 
 pub const polished_granite_slab = Block(
-  "minecraft:polished_granite_slab",
-  "minecraft:slab",
+  Identifier("minecraft", "polished_granite_slab"),
+  Identifier("minecraft", "slab"),
   [
     Enum("type", ["top", "bottom", "double"], "bottom"),
     Bool("waterlogged", False),
@@ -5570,8 +6047,8 @@ pub const polished_granite_slab = Block(
 )
 
 pub const smooth_red_sandstone_slab = Block(
-  "minecraft:smooth_red_sandstone_slab",
-  "minecraft:slab",
+  Identifier("minecraft", "smooth_red_sandstone_slab"),
+  Identifier("minecraft", "slab"),
   [
     Enum("type", ["top", "bottom", "double"], "bottom"),
     Bool("waterlogged", False),
@@ -5579,8 +6056,8 @@ pub const smooth_red_sandstone_slab = Block(
 )
 
 pub const mossy_stone_brick_slab = Block(
-  "minecraft:mossy_stone_brick_slab",
-  "minecraft:slab",
+  Identifier("minecraft", "mossy_stone_brick_slab"),
+  Identifier("minecraft", "slab"),
   [
     Enum("type", ["top", "bottom", "double"], "bottom"),
     Bool("waterlogged", False),
@@ -5588,8 +6065,8 @@ pub const mossy_stone_brick_slab = Block(
 )
 
 pub const polished_diorite_slab = Block(
-  "minecraft:polished_diorite_slab",
-  "minecraft:slab",
+  Identifier("minecraft", "polished_diorite_slab"),
+  Identifier("minecraft", "slab"),
   [
     Enum("type", ["top", "bottom", "double"], "bottom"),
     Bool("waterlogged", False),
@@ -5597,8 +6074,8 @@ pub const polished_diorite_slab = Block(
 )
 
 pub const mossy_cobblestone_slab = Block(
-  "minecraft:mossy_cobblestone_slab",
-  "minecraft:slab",
+  Identifier("minecraft", "mossy_cobblestone_slab"),
+  Identifier("minecraft", "slab"),
   [
     Enum("type", ["top", "bottom", "double"], "bottom"),
     Bool("waterlogged", False),
@@ -5606,8 +6083,8 @@ pub const mossy_cobblestone_slab = Block(
 )
 
 pub const end_stone_brick_slab = Block(
-  "minecraft:end_stone_brick_slab",
-  "minecraft:slab",
+  Identifier("minecraft", "end_stone_brick_slab"),
+  Identifier("minecraft", "slab"),
   [
     Enum("type", ["top", "bottom", "double"], "bottom"),
     Bool("waterlogged", False),
@@ -5615,8 +6092,8 @@ pub const end_stone_brick_slab = Block(
 )
 
 pub const smooth_sandstone_slab = Block(
-  "minecraft:smooth_sandstone_slab",
-  "minecraft:slab",
+  Identifier("minecraft", "smooth_sandstone_slab"),
+  Identifier("minecraft", "slab"),
   [
     Enum("type", ["top", "bottom", "double"], "bottom"),
     Bool("waterlogged", False),
@@ -5624,8 +6101,8 @@ pub const smooth_sandstone_slab = Block(
 )
 
 pub const smooth_quartz_slab = Block(
-  "minecraft:smooth_quartz_slab",
-  "minecraft:slab",
+  Identifier("minecraft", "smooth_quartz_slab"),
+  Identifier("minecraft", "slab"),
   [
     Enum("type", ["top", "bottom", "double"], "bottom"),
     Bool("waterlogged", False),
@@ -5633,8 +6110,8 @@ pub const smooth_quartz_slab = Block(
 )
 
 pub const granite_slab = Block(
-  "minecraft:granite_slab",
-  "minecraft:slab",
+  Identifier("minecraft", "granite_slab"),
+  Identifier("minecraft", "slab"),
   [
     Enum("type", ["top", "bottom", "double"], "bottom"),
     Bool("waterlogged", False),
@@ -5642,8 +6119,8 @@ pub const granite_slab = Block(
 )
 
 pub const andesite_slab = Block(
-  "minecraft:andesite_slab",
-  "minecraft:slab",
+  Identifier("minecraft", "andesite_slab"),
+  Identifier("minecraft", "slab"),
   [
     Enum("type", ["top", "bottom", "double"], "bottom"),
     Bool("waterlogged", False),
@@ -5651,8 +6128,8 @@ pub const andesite_slab = Block(
 )
 
 pub const red_nether_brick_slab = Block(
-  "minecraft:red_nether_brick_slab",
-  "minecraft:slab",
+  Identifier("minecraft", "red_nether_brick_slab"),
+  Identifier("minecraft", "slab"),
   [
     Enum("type", ["top", "bottom", "double"], "bottom"),
     Bool("waterlogged", False),
@@ -5660,8 +6137,8 @@ pub const red_nether_brick_slab = Block(
 )
 
 pub const polished_andesite_slab = Block(
-  "minecraft:polished_andesite_slab",
-  "minecraft:slab",
+  Identifier("minecraft", "polished_andesite_slab"),
+  Identifier("minecraft", "slab"),
   [
     Enum("type", ["top", "bottom", "double"], "bottom"),
     Bool("waterlogged", False),
@@ -5669,8 +6146,8 @@ pub const polished_andesite_slab = Block(
 )
 
 pub const diorite_slab = Block(
-  "minecraft:diorite_slab",
-  "minecraft:slab",
+  Identifier("minecraft", "diorite_slab"),
+  Identifier("minecraft", "slab"),
   [
     Enum("type", ["top", "bottom", "double"], "bottom"),
     Bool("waterlogged", False),
@@ -5678,8 +6155,8 @@ pub const diorite_slab = Block(
 )
 
 pub const brick_wall = Block(
-  "minecraft:brick_wall",
-  "minecraft:wall",
+  Identifier("minecraft", "brick_wall"),
+  Identifier("minecraft", "wall"),
   [
     Enum("east", ["none", "low", "tall"], "none"),
     Enum("north", ["none", "low", "tall"], "none"),
@@ -5691,8 +6168,8 @@ pub const brick_wall = Block(
 )
 
 pub const prismarine_wall = Block(
-  "minecraft:prismarine_wall",
-  "minecraft:wall",
+  Identifier("minecraft", "prismarine_wall"),
+  Identifier("minecraft", "wall"),
   [
     Enum("east", ["none", "low", "tall"], "none"),
     Enum("north", ["none", "low", "tall"], "none"),
@@ -5704,8 +6181,8 @@ pub const prismarine_wall = Block(
 )
 
 pub const red_sandstone_wall = Block(
-  "minecraft:red_sandstone_wall",
-  "minecraft:wall",
+  Identifier("minecraft", "red_sandstone_wall"),
+  Identifier("minecraft", "wall"),
   [
     Enum("east", ["none", "low", "tall"], "none"),
     Enum("north", ["none", "low", "tall"], "none"),
@@ -5717,8 +6194,8 @@ pub const red_sandstone_wall = Block(
 )
 
 pub const mossy_stone_brick_wall = Block(
-  "minecraft:mossy_stone_brick_wall",
-  "minecraft:wall",
+  Identifier("minecraft", "mossy_stone_brick_wall"),
+  Identifier("minecraft", "wall"),
   [
     Enum("east", ["none", "low", "tall"], "none"),
     Enum("north", ["none", "low", "tall"], "none"),
@@ -5730,8 +6207,8 @@ pub const mossy_stone_brick_wall = Block(
 )
 
 pub const granite_wall = Block(
-  "minecraft:granite_wall",
-  "minecraft:wall",
+  Identifier("minecraft", "granite_wall"),
+  Identifier("minecraft", "wall"),
   [
     Enum("east", ["none", "low", "tall"], "none"),
     Enum("north", ["none", "low", "tall"], "none"),
@@ -5743,8 +6220,8 @@ pub const granite_wall = Block(
 )
 
 pub const stone_brick_wall = Block(
-  "minecraft:stone_brick_wall",
-  "minecraft:wall",
+  Identifier("minecraft", "stone_brick_wall"),
+  Identifier("minecraft", "wall"),
   [
     Enum("east", ["none", "low", "tall"], "none"),
     Enum("north", ["none", "low", "tall"], "none"),
@@ -5756,8 +6233,8 @@ pub const stone_brick_wall = Block(
 )
 
 pub const mud_brick_wall = Block(
-  "minecraft:mud_brick_wall",
-  "minecraft:wall",
+  Identifier("minecraft", "mud_brick_wall"),
+  Identifier("minecraft", "wall"),
   [
     Enum("east", ["none", "low", "tall"], "none"),
     Enum("north", ["none", "low", "tall"], "none"),
@@ -5769,8 +6246,8 @@ pub const mud_brick_wall = Block(
 )
 
 pub const nether_brick_wall = Block(
-  "minecraft:nether_brick_wall",
-  "minecraft:wall",
+  Identifier("minecraft", "nether_brick_wall"),
+  Identifier("minecraft", "wall"),
   [
     Enum("east", ["none", "low", "tall"], "none"),
     Enum("north", ["none", "low", "tall"], "none"),
@@ -5782,8 +6259,8 @@ pub const nether_brick_wall = Block(
 )
 
 pub const andesite_wall = Block(
-  "minecraft:andesite_wall",
-  "minecraft:wall",
+  Identifier("minecraft", "andesite_wall"),
+  Identifier("minecraft", "wall"),
   [
     Enum("east", ["none", "low", "tall"], "none"),
     Enum("north", ["none", "low", "tall"], "none"),
@@ -5795,8 +6272,8 @@ pub const andesite_wall = Block(
 )
 
 pub const red_nether_brick_wall = Block(
-  "minecraft:red_nether_brick_wall",
-  "minecraft:wall",
+  Identifier("minecraft", "red_nether_brick_wall"),
+  Identifier("minecraft", "wall"),
   [
     Enum("east", ["none", "low", "tall"], "none"),
     Enum("north", ["none", "low", "tall"], "none"),
@@ -5808,8 +6285,8 @@ pub const red_nether_brick_wall = Block(
 )
 
 pub const sandstone_wall = Block(
-  "minecraft:sandstone_wall",
-  "minecraft:wall",
+  Identifier("minecraft", "sandstone_wall"),
+  Identifier("minecraft", "wall"),
   [
     Enum("east", ["none", "low", "tall"], "none"),
     Enum("north", ["none", "low", "tall"], "none"),
@@ -5821,8 +6298,8 @@ pub const sandstone_wall = Block(
 )
 
 pub const end_stone_brick_wall = Block(
-  "minecraft:end_stone_brick_wall",
-  "minecraft:wall",
+  Identifier("minecraft", "end_stone_brick_wall"),
+  Identifier("minecraft", "wall"),
   [
     Enum("east", ["none", "low", "tall"], "none"),
     Enum("north", ["none", "low", "tall"], "none"),
@@ -5834,8 +6311,8 @@ pub const end_stone_brick_wall = Block(
 )
 
 pub const diorite_wall = Block(
-  "minecraft:diorite_wall",
-  "minecraft:wall",
+  Identifier("minecraft", "diorite_wall"),
+  Identifier("minecraft", "wall"),
   [
     Enum("east", ["none", "low", "tall"], "none"),
     Enum("north", ["none", "low", "tall"], "none"),
@@ -5847,20 +6324,20 @@ pub const diorite_wall = Block(
 )
 
 pub const scaffolding = Block(
-  "minecraft:scaffolding",
-  "minecraft:scaffolding",
+  Identifier("minecraft", "scaffolding"),
+  Identifier("minecraft", "scaffolding"),
   [Bool("bottom", False), Int("distance", 0, 7, 7), Bool("waterlogged", False)],
 )
 
 pub const loom = Block(
-  "minecraft:loom",
-  "minecraft:loom",
+  Identifier("minecraft", "loom"),
+  Identifier("minecraft", "loom"),
   [Enum("facing", ["north", "south", "west", "east"], "north")],
 )
 
 pub const barrel = Block(
-  "minecraft:barrel",
-  "minecraft:barrel",
+  Identifier("minecraft", "barrel"),
+  Identifier("minecraft", "barrel"),
   [
     Enum("facing", ["north", "east", "south", "west", "up", "down"], "north"),
     Bool("open", False),
@@ -5868,8 +6345,8 @@ pub const barrel = Block(
 )
 
 pub const smoker = Block(
-  "minecraft:smoker",
-  "minecraft:smoker",
+  Identifier("minecraft", "smoker"),
+  Identifier("minecraft", "smoker"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("lit", False),
@@ -5877,8 +6354,8 @@ pub const smoker = Block(
 )
 
 pub const blast_furnace = Block(
-  "minecraft:blast_furnace",
-  "minecraft:blast_furnace",
+  Identifier("minecraft", "blast_furnace"),
+  Identifier("minecraft", "blast_furnace"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("lit", False),
@@ -5886,20 +6363,20 @@ pub const blast_furnace = Block(
 )
 
 pub const cartography_table = Block(
-  "minecraft:cartography_table",
-  "minecraft:cartography_table",
+  Identifier("minecraft", "cartography_table"),
+  Identifier("minecraft", "cartography_table"),
   [],
 )
 
 pub const fletching_table = Block(
-  "minecraft:fletching_table",
-  "minecraft:fletching_table",
+  Identifier("minecraft", "fletching_table"),
+  Identifier("minecraft", "fletching_table"),
   [],
 )
 
 pub const grindstone = Block(
-  "minecraft:grindstone",
-  "minecraft:grindstone",
+  Identifier("minecraft", "grindstone"),
+  Identifier("minecraft", "grindstone"),
   [
     Enum("face", ["floor", "wall", "ceiling"], "wall"),
     Enum("facing", ["north", "south", "west", "east"], "north"),
@@ -5907,8 +6384,8 @@ pub const grindstone = Block(
 )
 
 pub const lectern = Block(
-  "minecraft:lectern",
-  "minecraft:lectern",
+  Identifier("minecraft", "lectern"),
+  Identifier("minecraft", "lectern"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("has_book", False),
@@ -5917,20 +6394,20 @@ pub const lectern = Block(
 )
 
 pub const smithing_table = Block(
-  "minecraft:smithing_table",
-  "minecraft:smithing_table",
+  Identifier("minecraft", "smithing_table"),
+  Identifier("minecraft", "smithing_table"),
   [],
 )
 
 pub const stonecutter = Block(
-  "minecraft:stonecutter",
-  "minecraft:stonecutter",
+  Identifier("minecraft", "stonecutter"),
+  Identifier("minecraft", "stonecutter"),
   [Enum("facing", ["north", "south", "west", "east"], "north")],
 )
 
 pub const bell = Block(
-  "minecraft:bell",
-  "minecraft:bell",
+  Identifier("minecraft", "bell"),
+  Identifier("minecraft", "bell"),
   [
     Enum(
       "attachment",
@@ -5943,20 +6420,20 @@ pub const bell = Block(
 )
 
 pub const lantern = Block(
-  "minecraft:lantern",
-  "minecraft:lantern",
+  Identifier("minecraft", "lantern"),
+  Identifier("minecraft", "lantern"),
   [Bool("hanging", False), Bool("waterlogged", False)],
 )
 
 pub const soul_lantern = Block(
-  "minecraft:soul_lantern",
-  "minecraft:lantern",
+  Identifier("minecraft", "soul_lantern"),
+  Identifier("minecraft", "lantern"),
   [Bool("hanging", False), Bool("waterlogged", False)],
 )
 
 pub const campfire = Block(
-  "minecraft:campfire",
-  "minecraft:campfire",
+  Identifier("minecraft", "campfire"),
+  Identifier("minecraft", "campfire"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("lit", True),
@@ -5966,8 +6443,8 @@ pub const campfire = Block(
 )
 
 pub const soul_campfire = Block(
-  "minecraft:soul_campfire",
-  "minecraft:campfire",
+  Identifier("minecraft", "soul_campfire"),
+  Identifier("minecraft", "campfire"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("lit", True),
@@ -5977,138 +6454,152 @@ pub const soul_campfire = Block(
 )
 
 pub const sweet_berry_bush = Block(
-  "minecraft:sweet_berry_bush",
-  "minecraft:sweet_berry_bush",
+  Identifier("minecraft", "sweet_berry_bush"),
+  Identifier("minecraft", "sweet_berry_bush"),
   [Int("age", 0, 3, 0)],
 )
 
 pub const warped_stem = Block(
-  "minecraft:warped_stem",
-  "minecraft:rotated_pillar",
+  Identifier("minecraft", "warped_stem"),
+  Identifier("minecraft", "rotated_pillar"),
   [Enum("axis", ["x", "y", "z"], "y")],
 )
 
 pub const stripped_warped_stem = Block(
-  "minecraft:stripped_warped_stem",
-  "minecraft:rotated_pillar",
+  Identifier("minecraft", "stripped_warped_stem"),
+  Identifier("minecraft", "rotated_pillar"),
   [Enum("axis", ["x", "y", "z"], "y")],
 )
 
 pub const warped_hyphae = Block(
-  "minecraft:warped_hyphae",
-  "minecraft:rotated_pillar",
+  Identifier("minecraft", "warped_hyphae"),
+  Identifier("minecraft", "rotated_pillar"),
   [Enum("axis", ["x", "y", "z"], "y")],
 )
 
 pub const stripped_warped_hyphae = Block(
-  "minecraft:stripped_warped_hyphae",
-  "minecraft:rotated_pillar",
+  Identifier("minecraft", "stripped_warped_hyphae"),
+  Identifier("minecraft", "rotated_pillar"),
   [Enum("axis", ["x", "y", "z"], "y")],
 )
 
 pub const warped_nylium = Block(
-  "minecraft:warped_nylium",
-  "minecraft:nylium",
+  Identifier("minecraft", "warped_nylium"),
+  Identifier("minecraft", "nylium"),
   [],
 )
 
 pub const warped_fungus = Block(
-  "minecraft:warped_fungus",
-  "minecraft:fungus",
+  Identifier("minecraft", "warped_fungus"),
+  Identifier("minecraft", "fungus"),
   [],
 )
 
 pub const warped_wart_block = Block(
-  "minecraft:warped_wart_block",
-  "minecraft:block",
+  Identifier("minecraft", "warped_wart_block"),
+  Identifier("minecraft", "block"),
   [],
 )
 
-pub const warped_roots = Block("minecraft:warped_roots", "minecraft:roots", [])
+pub const warped_roots = Block(
+  Identifier("minecraft", "warped_roots"),
+  Identifier("minecraft", "roots"),
+  [],
+)
 
 pub const nether_sprouts = Block(
-  "minecraft:nether_sprouts",
-  "minecraft:nether_sprouts",
+  Identifier("minecraft", "nether_sprouts"),
+  Identifier("minecraft", "nether_sprouts"),
   [],
 )
 
 pub const crimson_stem = Block(
-  "minecraft:crimson_stem",
-  "minecraft:rotated_pillar",
+  Identifier("minecraft", "crimson_stem"),
+  Identifier("minecraft", "rotated_pillar"),
   [Enum("axis", ["x", "y", "z"], "y")],
 )
 
 pub const stripped_crimson_stem = Block(
-  "minecraft:stripped_crimson_stem",
-  "minecraft:rotated_pillar",
+  Identifier("minecraft", "stripped_crimson_stem"),
+  Identifier("minecraft", "rotated_pillar"),
   [Enum("axis", ["x", "y", "z"], "y")],
 )
 
 pub const crimson_hyphae = Block(
-  "minecraft:crimson_hyphae",
-  "minecraft:rotated_pillar",
+  Identifier("minecraft", "crimson_hyphae"),
+  Identifier("minecraft", "rotated_pillar"),
   [Enum("axis", ["x", "y", "z"], "y")],
 )
 
 pub const stripped_crimson_hyphae = Block(
-  "minecraft:stripped_crimson_hyphae",
-  "minecraft:rotated_pillar",
+  Identifier("minecraft", "stripped_crimson_hyphae"),
+  Identifier("minecraft", "rotated_pillar"),
   [Enum("axis", ["x", "y", "z"], "y")],
 )
 
 pub const crimson_nylium = Block(
-  "minecraft:crimson_nylium",
-  "minecraft:nylium",
+  Identifier("minecraft", "crimson_nylium"),
+  Identifier("minecraft", "nylium"),
   [],
 )
 
 pub const crimson_fungus = Block(
-  "minecraft:crimson_fungus",
-  "minecraft:fungus",
+  Identifier("minecraft", "crimson_fungus"),
+  Identifier("minecraft", "fungus"),
   [],
 )
 
-pub const shroomlight = Block("minecraft:shroomlight", "minecraft:block", [])
+pub const shroomlight = Block(
+  Identifier("minecraft", "shroomlight"),
+  Identifier("minecraft", "block"),
+  [],
+)
 
 pub const weeping_vines = Block(
-  "minecraft:weeping_vines",
-  "minecraft:weeping_vines",
+  Identifier("minecraft", "weeping_vines"),
+  Identifier("minecraft", "weeping_vines"),
   [Int("age", 0, 25, 0)],
 )
 
 pub const weeping_vines_plant = Block(
-  "minecraft:weeping_vines_plant",
-  "minecraft:weeping_vines_plant",
+  Identifier("minecraft", "weeping_vines_plant"),
+  Identifier("minecraft", "weeping_vines_plant"),
   [],
 )
 
 pub const twisting_vines = Block(
-  "minecraft:twisting_vines",
-  "minecraft:twisting_vines",
+  Identifier("minecraft", "twisting_vines"),
+  Identifier("minecraft", "twisting_vines"),
   [Int("age", 0, 25, 0)],
 )
 
 pub const twisting_vines_plant = Block(
-  "minecraft:twisting_vines_plant",
-  "minecraft:twisting_vines_plant",
+  Identifier("minecraft", "twisting_vines_plant"),
+  Identifier("minecraft", "twisting_vines_plant"),
   [],
 )
 
-pub const crimson_roots = Block("minecraft:crimson_roots", "minecraft:roots", [],
+pub const crimson_roots = Block(
+  Identifier("minecraft", "crimson_roots"),
+  Identifier("minecraft", "roots"),
+  [],
 )
 
 pub const crimson_planks = Block(
-  "minecraft:crimson_planks",
-  "minecraft:block",
+  Identifier("minecraft", "crimson_planks"),
+  Identifier("minecraft", "block"),
   [],
 )
 
-pub const warped_planks = Block("minecraft:warped_planks", "minecraft:block", [],
+pub const warped_planks = Block(
+  Identifier("minecraft", "warped_planks"),
+  Identifier("minecraft", "block"),
+  [],
 )
 
 pub const crimson_slab = Block(
-  "minecraft:crimson_slab",
-  "minecraft:slab",
+  Identifier("minecraft", "crimson_slab"),
+  Identifier("minecraft", "slab"),
   [
     Enum("type", ["top", "bottom", "double"], "bottom"),
     Bool("waterlogged", False),
@@ -6116,8 +6607,8 @@ pub const crimson_slab = Block(
 )
 
 pub const warped_slab = Block(
-  "minecraft:warped_slab",
-  "minecraft:slab",
+  Identifier("minecraft", "warped_slab"),
+  Identifier("minecraft", "slab"),
   [
     Enum("type", ["top", "bottom", "double"], "bottom"),
     Bool("waterlogged", False),
@@ -6125,20 +6616,20 @@ pub const warped_slab = Block(
 )
 
 pub const crimson_pressure_plate = Block(
-  "minecraft:crimson_pressure_plate",
-  "minecraft:pressure_plate",
+  Identifier("minecraft", "crimson_pressure_plate"),
+  Identifier("minecraft", "pressure_plate"),
   [Bool("powered", False)],
 )
 
 pub const warped_pressure_plate = Block(
-  "minecraft:warped_pressure_plate",
-  "minecraft:pressure_plate",
+  Identifier("minecraft", "warped_pressure_plate"),
+  Identifier("minecraft", "pressure_plate"),
   [Bool("powered", False)],
 )
 
 pub const crimson_fence = Block(
-  "minecraft:crimson_fence",
-  "minecraft:fence",
+  Identifier("minecraft", "crimson_fence"),
+  Identifier("minecraft", "fence"),
   [
     Bool("east", False),
     Bool("north", False),
@@ -6149,8 +6640,8 @@ pub const crimson_fence = Block(
 )
 
 pub const warped_fence = Block(
-  "minecraft:warped_fence",
-  "minecraft:fence",
+  Identifier("minecraft", "warped_fence"),
+  Identifier("minecraft", "fence"),
   [
     Bool("east", False),
     Bool("north", False),
@@ -6161,8 +6652,8 @@ pub const warped_fence = Block(
 )
 
 pub const crimson_trapdoor = Block(
-  "minecraft:crimson_trapdoor",
-  "minecraft:trapdoor",
+  Identifier("minecraft", "crimson_trapdoor"),
+  Identifier("minecraft", "trapdoor"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -6173,8 +6664,8 @@ pub const crimson_trapdoor = Block(
 )
 
 pub const warped_trapdoor = Block(
-  "minecraft:warped_trapdoor",
-  "minecraft:trapdoor",
+  Identifier("minecraft", "warped_trapdoor"),
+  Identifier("minecraft", "trapdoor"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -6185,8 +6676,8 @@ pub const warped_trapdoor = Block(
 )
 
 pub const crimson_fence_gate = Block(
-  "minecraft:crimson_fence_gate",
-  "minecraft:fence_gate",
+  Identifier("minecraft", "crimson_fence_gate"),
+  Identifier("minecraft", "fence_gate"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("in_wall", False),
@@ -6196,8 +6687,8 @@ pub const crimson_fence_gate = Block(
 )
 
 pub const warped_fence_gate = Block(
-  "minecraft:warped_fence_gate",
-  "minecraft:fence_gate",
+  Identifier("minecraft", "warped_fence_gate"),
+  Identifier("minecraft", "fence_gate"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("in_wall", False),
@@ -6207,8 +6698,8 @@ pub const warped_fence_gate = Block(
 )
 
 pub const crimson_stairs = Block(
-  "minecraft:crimson_stairs",
-  "minecraft:stair",
+  Identifier("minecraft", "crimson_stairs"),
+  Identifier("minecraft", "stair"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -6222,8 +6713,8 @@ pub const crimson_stairs = Block(
 )
 
 pub const warped_stairs = Block(
-  "minecraft:warped_stairs",
-  "minecraft:stair",
+  Identifier("minecraft", "warped_stairs"),
+  Identifier("minecraft", "stair"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -6237,8 +6728,8 @@ pub const warped_stairs = Block(
 )
 
 pub const crimson_button = Block(
-  "minecraft:crimson_button",
-  "minecraft:button",
+  Identifier("minecraft", "crimson_button"),
+  Identifier("minecraft", "button"),
   [
     Enum("face", ["floor", "wall", "ceiling"], "wall"),
     Enum("facing", ["north", "south", "west", "east"], "north"),
@@ -6247,8 +6738,8 @@ pub const crimson_button = Block(
 )
 
 pub const warped_button = Block(
-  "minecraft:warped_button",
-  "minecraft:button",
+  Identifier("minecraft", "warped_button"),
+  Identifier("minecraft", "button"),
   [
     Enum("face", ["floor", "wall", "ceiling"], "wall"),
     Enum("facing", ["north", "south", "west", "east"], "north"),
@@ -6257,8 +6748,8 @@ pub const warped_button = Block(
 )
 
 pub const crimson_door = Block(
-  "minecraft:crimson_door",
-  "minecraft:door",
+  Identifier("minecraft", "crimson_door"),
+  Identifier("minecraft", "door"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["upper", "lower"], "lower"),
@@ -6269,8 +6760,8 @@ pub const crimson_door = Block(
 )
 
 pub const warped_door = Block(
-  "minecraft:warped_door",
-  "minecraft:door",
+  Identifier("minecraft", "warped_door"),
+  Identifier("minecraft", "door"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["upper", "lower"], "lower"),
@@ -6281,20 +6772,20 @@ pub const warped_door = Block(
 )
 
 pub const crimson_sign = Block(
-  "minecraft:crimson_sign",
-  "minecraft:standing_sign",
+  Identifier("minecraft", "crimson_sign"),
+  Identifier("minecraft", "standing_sign"),
   [Int("rotation", 0, 15, 0), Bool("waterlogged", False)],
 )
 
 pub const warped_sign = Block(
-  "minecraft:warped_sign",
-  "minecraft:standing_sign",
+  Identifier("minecraft", "warped_sign"),
+  Identifier("minecraft", "standing_sign"),
   [Int("rotation", 0, 15, 0), Bool("waterlogged", False)],
 )
 
 pub const crimson_wall_sign = Block(
-  "minecraft:crimson_wall_sign",
-  "minecraft:wall_sign",
+  Identifier("minecraft", "crimson_wall_sign"),
+  Identifier("minecraft", "wall_sign"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("waterlogged", False),
@@ -6302,8 +6793,8 @@ pub const crimson_wall_sign = Block(
 )
 
 pub const warped_wall_sign = Block(
-  "minecraft:warped_wall_sign",
-  "minecraft:wall_sign",
+  Identifier("minecraft", "warped_wall_sign"),
+  Identifier("minecraft", "wall_sign"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("waterlogged", False),
@@ -6311,20 +6802,29 @@ pub const warped_wall_sign = Block(
 )
 
 pub const structure_block = Block(
-  "minecraft:structure_block",
-  "minecraft:structure",
+  Identifier("minecraft", "structure_block"),
+  Identifier("minecraft", "structure"),
   [Enum("mode", ["save", "load", "corner", "data"], "load")],
 )
 
 pub const jigsaw = Block(
-  "minecraft:jigsaw",
-  "minecraft:jigsaw",
+  Identifier("minecraft", "jigsaw"),
+  Identifier("minecraft", "jigsaw"),
   [
     Enum(
       "orientation",
       [
-        "down_east", "down_north", "down_south", "down_west", "up_east",
-        "up_north", "up_south", "up_west", "west_up", "east_up", "north_up",
+        "down_east",
+        "down_north",
+        "down_south",
+        "down_west",
+        "up_east",
+        "up_north",
+        "up_south",
+        "up_west",
+        "west_up",
+        "east_up",
+        "north_up",
         "south_up",
       ],
       "north_up",
@@ -6333,20 +6833,20 @@ pub const jigsaw = Block(
 )
 
 pub const composter = Block(
-  "minecraft:composter",
-  "minecraft:composter",
+  Identifier("minecraft", "composter"),
+  Identifier("minecraft", "composter"),
   [Int("level", 0, 8, 0)],
 )
 
 pub const target = Block(
-  "minecraft:target",
-  "minecraft:target",
+  Identifier("minecraft", "target"),
+  Identifier("minecraft", "target"),
   [Int("power", 0, 15, 0)],
 )
 
 pub const bee_nest = Block(
-  "minecraft:bee_nest",
-  "minecraft:beehive",
+  Identifier("minecraft", "bee_nest"),
+  Identifier("minecraft", "beehive"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Int("honey_level", 0, 5, 0),
@@ -6354,77 +6854,89 @@ pub const bee_nest = Block(
 )
 
 pub const beehive = Block(
-  "minecraft:beehive",
-  "minecraft:beehive",
+  Identifier("minecraft", "beehive"),
+  Identifier("minecraft", "beehive"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Int("honey_level", 0, 5, 0),
   ],
 )
 
-pub const honey_block = Block("minecraft:honey_block", "minecraft:honey", [])
+pub const honey_block = Block(
+  Identifier("minecraft", "honey_block"),
+  Identifier("minecraft", "honey"),
+  [],
+)
 
 pub const honeycomb_block = Block(
-  "minecraft:honeycomb_block",
-  "minecraft:block",
+  Identifier("minecraft", "honeycomb_block"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const netherite_block = Block(
-  "minecraft:netherite_block",
-  "minecraft:block",
+  Identifier("minecraft", "netherite_block"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const ancient_debris = Block(
-  "minecraft:ancient_debris",
-  "minecraft:block",
+  Identifier("minecraft", "ancient_debris"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const crying_obsidian = Block(
-  "minecraft:crying_obsidian",
-  "minecraft:crying_obsidian",
+  Identifier("minecraft", "crying_obsidian"),
+  Identifier("minecraft", "crying_obsidian"),
   [],
 )
 
 pub const respawn_anchor = Block(
-  "minecraft:respawn_anchor",
-  "minecraft:respawn_anchor",
+  Identifier("minecraft", "respawn_anchor"),
+  Identifier("minecraft", "respawn_anchor"),
   [Int("charges", 0, 4, 0)],
 )
 
 pub const potted_crimson_fungus = Block(
-  "minecraft:potted_crimson_fungus",
-  "minecraft:flower_pot",
+  Identifier("minecraft", "potted_crimson_fungus"),
+  Identifier("minecraft", "flower_pot"),
   [],
 )
 
 pub const potted_warped_fungus = Block(
-  "minecraft:potted_warped_fungus",
-  "minecraft:flower_pot",
+  Identifier("minecraft", "potted_warped_fungus"),
+  Identifier("minecraft", "flower_pot"),
   [],
 )
 
 pub const potted_crimson_roots = Block(
-  "minecraft:potted_crimson_roots",
-  "minecraft:flower_pot",
+  Identifier("minecraft", "potted_crimson_roots"),
+  Identifier("minecraft", "flower_pot"),
   [],
 )
 
 pub const potted_warped_roots = Block(
-  "minecraft:potted_warped_roots",
-  "minecraft:flower_pot",
+  Identifier("minecraft", "potted_warped_roots"),
+  Identifier("minecraft", "flower_pot"),
   [],
 )
 
-pub const lodestone = Block("minecraft:lodestone", "minecraft:block", [])
+pub const lodestone = Block(
+  Identifier("minecraft", "lodestone"),
+  Identifier("minecraft", "block"),
+  [],
+)
 
-pub const blackstone = Block("minecraft:blackstone", "minecraft:block", [])
+pub const blackstone = Block(
+  Identifier("minecraft", "blackstone"),
+  Identifier("minecraft", "block"),
+  [],
+)
 
 pub const blackstone_stairs = Block(
-  "minecraft:blackstone_stairs",
-  "minecraft:stair",
+  Identifier("minecraft", "blackstone_stairs"),
+  Identifier("minecraft", "stair"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -6438,8 +6950,8 @@ pub const blackstone_stairs = Block(
 )
 
 pub const blackstone_wall = Block(
-  "minecraft:blackstone_wall",
-  "minecraft:wall",
+  Identifier("minecraft", "blackstone_wall"),
+  Identifier("minecraft", "wall"),
   [
     Enum("east", ["none", "low", "tall"], "none"),
     Enum("north", ["none", "low", "tall"], "none"),
@@ -6451,8 +6963,8 @@ pub const blackstone_wall = Block(
 )
 
 pub const blackstone_slab = Block(
-  "minecraft:blackstone_slab",
-  "minecraft:slab",
+  Identifier("minecraft", "blackstone_slab"),
+  Identifier("minecraft", "slab"),
   [
     Enum("type", ["top", "bottom", "double"], "bottom"),
     Bool("waterlogged", False),
@@ -6460,32 +6972,32 @@ pub const blackstone_slab = Block(
 )
 
 pub const polished_blackstone = Block(
-  "minecraft:polished_blackstone",
-  "minecraft:block",
+  Identifier("minecraft", "polished_blackstone"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const polished_blackstone_bricks = Block(
-  "minecraft:polished_blackstone_bricks",
-  "minecraft:block",
+  Identifier("minecraft", "polished_blackstone_bricks"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const cracked_polished_blackstone_bricks = Block(
-  "minecraft:cracked_polished_blackstone_bricks",
-  "minecraft:block",
+  Identifier("minecraft", "cracked_polished_blackstone_bricks"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const chiseled_polished_blackstone = Block(
-  "minecraft:chiseled_polished_blackstone",
-  "minecraft:block",
+  Identifier("minecraft", "chiseled_polished_blackstone"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const polished_blackstone_brick_slab = Block(
-  "minecraft:polished_blackstone_brick_slab",
-  "minecraft:slab",
+  Identifier("minecraft", "polished_blackstone_brick_slab"),
+  Identifier("minecraft", "slab"),
   [
     Enum("type", ["top", "bottom", "double"], "bottom"),
     Bool("waterlogged", False),
@@ -6493,8 +7005,8 @@ pub const polished_blackstone_brick_slab = Block(
 )
 
 pub const polished_blackstone_brick_stairs = Block(
-  "minecraft:polished_blackstone_brick_stairs",
-  "minecraft:stair",
+  Identifier("minecraft", "polished_blackstone_brick_stairs"),
+  Identifier("minecraft", "stair"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -6508,8 +7020,8 @@ pub const polished_blackstone_brick_stairs = Block(
 )
 
 pub const polished_blackstone_brick_wall = Block(
-  "minecraft:polished_blackstone_brick_wall",
-  "minecraft:wall",
+  Identifier("minecraft", "polished_blackstone_brick_wall"),
+  Identifier("minecraft", "wall"),
   [
     Enum("east", ["none", "low", "tall"], "none"),
     Enum("north", ["none", "low", "tall"], "none"),
@@ -6521,14 +7033,14 @@ pub const polished_blackstone_brick_wall = Block(
 )
 
 pub const gilded_blackstone = Block(
-  "minecraft:gilded_blackstone",
-  "minecraft:block",
+  Identifier("minecraft", "gilded_blackstone"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const polished_blackstone_stairs = Block(
-  "minecraft:polished_blackstone_stairs",
-  "minecraft:stair",
+  Identifier("minecraft", "polished_blackstone_stairs"),
+  Identifier("minecraft", "stair"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -6542,8 +7054,8 @@ pub const polished_blackstone_stairs = Block(
 )
 
 pub const polished_blackstone_slab = Block(
-  "minecraft:polished_blackstone_slab",
-  "minecraft:slab",
+  Identifier("minecraft", "polished_blackstone_slab"),
+  Identifier("minecraft", "slab"),
   [
     Enum("type", ["top", "bottom", "double"], "bottom"),
     Bool("waterlogged", False),
@@ -6551,14 +7063,14 @@ pub const polished_blackstone_slab = Block(
 )
 
 pub const polished_blackstone_pressure_plate = Block(
-  "minecraft:polished_blackstone_pressure_plate",
-  "minecraft:pressure_plate",
+  Identifier("minecraft", "polished_blackstone_pressure_plate"),
+  Identifier("minecraft", "pressure_plate"),
   [Bool("powered", False)],
 )
 
 pub const polished_blackstone_button = Block(
-  "minecraft:polished_blackstone_button",
-  "minecraft:button",
+  Identifier("minecraft", "polished_blackstone_button"),
+  Identifier("minecraft", "button"),
   [
     Enum("face", ["floor", "wall", "ceiling"], "wall"),
     Enum("facing", ["north", "south", "west", "east"], "north"),
@@ -6567,8 +7079,8 @@ pub const polished_blackstone_button = Block(
 )
 
 pub const polished_blackstone_wall = Block(
-  "minecraft:polished_blackstone_wall",
-  "minecraft:wall",
+  Identifier("minecraft", "polished_blackstone_wall"),
+  Identifier("minecraft", "wall"),
   [
     Enum("east", ["none", "low", "tall"], "none"),
     Enum("north", ["none", "low", "tall"], "none"),
@@ -6580,239 +7092,242 @@ pub const polished_blackstone_wall = Block(
 )
 
 pub const chiseled_nether_bricks = Block(
-  "minecraft:chiseled_nether_bricks",
-  "minecraft:block",
+  Identifier("minecraft", "chiseled_nether_bricks"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const cracked_nether_bricks = Block(
-  "minecraft:cracked_nether_bricks",
-  "minecraft:block",
+  Identifier("minecraft", "cracked_nether_bricks"),
+  Identifier("minecraft", "block"),
   [],
 )
 
-pub const quartz_bricks = Block("minecraft:quartz_bricks", "minecraft:block", [],
+pub const quartz_bricks = Block(
+  Identifier("minecraft", "quartz_bricks"),
+  Identifier("minecraft", "block"),
+  [],
 )
 
 pub const candle = Block(
-  "minecraft:candle",
-  "minecraft:candle",
+  Identifier("minecraft", "candle"),
+  Identifier("minecraft", "candle"),
   [Int("candles", 1, 4, 1), Bool("lit", False), Bool("waterlogged", False)],
 )
 
 pub const white_candle = Block(
-  "minecraft:white_candle",
-  "minecraft:candle",
+  Identifier("minecraft", "white_candle"),
+  Identifier("minecraft", "candle"),
   [Int("candles", 1, 4, 1), Bool("lit", False), Bool("waterlogged", False)],
 )
 
 pub const orange_candle = Block(
-  "minecraft:orange_candle",
-  "minecraft:candle",
+  Identifier("minecraft", "orange_candle"),
+  Identifier("minecraft", "candle"),
   [Int("candles", 1, 4, 1), Bool("lit", False), Bool("waterlogged", False)],
 )
 
 pub const magenta_candle = Block(
-  "minecraft:magenta_candle",
-  "minecraft:candle",
+  Identifier("minecraft", "magenta_candle"),
+  Identifier("minecraft", "candle"),
   [Int("candles", 1, 4, 1), Bool("lit", False), Bool("waterlogged", False)],
 )
 
 pub const light_blue_candle = Block(
-  "minecraft:light_blue_candle",
-  "minecraft:candle",
+  Identifier("minecraft", "light_blue_candle"),
+  Identifier("minecraft", "candle"),
   [Int("candles", 1, 4, 1), Bool("lit", False), Bool("waterlogged", False)],
 )
 
 pub const yellow_candle = Block(
-  "minecraft:yellow_candle",
-  "minecraft:candle",
+  Identifier("minecraft", "yellow_candle"),
+  Identifier("minecraft", "candle"),
   [Int("candles", 1, 4, 1), Bool("lit", False), Bool("waterlogged", False)],
 )
 
 pub const lime_candle = Block(
-  "minecraft:lime_candle",
-  "minecraft:candle",
+  Identifier("minecraft", "lime_candle"),
+  Identifier("minecraft", "candle"),
   [Int("candles", 1, 4, 1), Bool("lit", False), Bool("waterlogged", False)],
 )
 
 pub const pink_candle = Block(
-  "minecraft:pink_candle",
-  "minecraft:candle",
+  Identifier("minecraft", "pink_candle"),
+  Identifier("minecraft", "candle"),
   [Int("candles", 1, 4, 1), Bool("lit", False), Bool("waterlogged", False)],
 )
 
 pub const gray_candle = Block(
-  "minecraft:gray_candle",
-  "minecraft:candle",
+  Identifier("minecraft", "gray_candle"),
+  Identifier("minecraft", "candle"),
   [Int("candles", 1, 4, 1), Bool("lit", False), Bool("waterlogged", False)],
 )
 
 pub const light_gray_candle = Block(
-  "minecraft:light_gray_candle",
-  "minecraft:candle",
+  Identifier("minecraft", "light_gray_candle"),
+  Identifier("minecraft", "candle"),
   [Int("candles", 1, 4, 1), Bool("lit", False), Bool("waterlogged", False)],
 )
 
 pub const cyan_candle = Block(
-  "minecraft:cyan_candle",
-  "minecraft:candle",
+  Identifier("minecraft", "cyan_candle"),
+  Identifier("minecraft", "candle"),
   [Int("candles", 1, 4, 1), Bool("lit", False), Bool("waterlogged", False)],
 )
 
 pub const purple_candle = Block(
-  "minecraft:purple_candle",
-  "minecraft:candle",
+  Identifier("minecraft", "purple_candle"),
+  Identifier("minecraft", "candle"),
   [Int("candles", 1, 4, 1), Bool("lit", False), Bool("waterlogged", False)],
 )
 
 pub const blue_candle = Block(
-  "minecraft:blue_candle",
-  "minecraft:candle",
+  Identifier("minecraft", "blue_candle"),
+  Identifier("minecraft", "candle"),
   [Int("candles", 1, 4, 1), Bool("lit", False), Bool("waterlogged", False)],
 )
 
 pub const brown_candle = Block(
-  "minecraft:brown_candle",
-  "minecraft:candle",
+  Identifier("minecraft", "brown_candle"),
+  Identifier("minecraft", "candle"),
   [Int("candles", 1, 4, 1), Bool("lit", False), Bool("waterlogged", False)],
 )
 
 pub const green_candle = Block(
-  "minecraft:green_candle",
-  "minecraft:candle",
+  Identifier("minecraft", "green_candle"),
+  Identifier("minecraft", "candle"),
   [Int("candles", 1, 4, 1), Bool("lit", False), Bool("waterlogged", False)],
 )
 
 pub const red_candle = Block(
-  "minecraft:red_candle",
-  "minecraft:candle",
+  Identifier("minecraft", "red_candle"),
+  Identifier("minecraft", "candle"),
   [Int("candles", 1, 4, 1), Bool("lit", False), Bool("waterlogged", False)],
 )
 
 pub const black_candle = Block(
-  "minecraft:black_candle",
-  "minecraft:candle",
+  Identifier("minecraft", "black_candle"),
+  Identifier("minecraft", "candle"),
   [Int("candles", 1, 4, 1), Bool("lit", False), Bool("waterlogged", False)],
 )
 
 pub const candle_cake = Block(
-  "minecraft:candle_cake",
-  "minecraft:candle_cake",
+  Identifier("minecraft", "candle_cake"),
+  Identifier("minecraft", "candle_cake"),
   [Bool("lit", False)],
 )
 
 pub const white_candle_cake = Block(
-  "minecraft:white_candle_cake",
-  "minecraft:candle_cake",
+  Identifier("minecraft", "white_candle_cake"),
+  Identifier("minecraft", "candle_cake"),
   [Bool("lit", False)],
 )
 
 pub const orange_candle_cake = Block(
-  "minecraft:orange_candle_cake",
-  "minecraft:candle_cake",
+  Identifier("minecraft", "orange_candle_cake"),
+  Identifier("minecraft", "candle_cake"),
   [Bool("lit", False)],
 )
 
 pub const magenta_candle_cake = Block(
-  "minecraft:magenta_candle_cake",
-  "minecraft:candle_cake",
+  Identifier("minecraft", "magenta_candle_cake"),
+  Identifier("minecraft", "candle_cake"),
   [Bool("lit", False)],
 )
 
 pub const light_blue_candle_cake = Block(
-  "minecraft:light_blue_candle_cake",
-  "minecraft:candle_cake",
+  Identifier("minecraft", "light_blue_candle_cake"),
+  Identifier("minecraft", "candle_cake"),
   [Bool("lit", False)],
 )
 
 pub const yellow_candle_cake = Block(
-  "minecraft:yellow_candle_cake",
-  "minecraft:candle_cake",
+  Identifier("minecraft", "yellow_candle_cake"),
+  Identifier("minecraft", "candle_cake"),
   [Bool("lit", False)],
 )
 
 pub const lime_candle_cake = Block(
-  "minecraft:lime_candle_cake",
-  "minecraft:candle_cake",
+  Identifier("minecraft", "lime_candle_cake"),
+  Identifier("minecraft", "candle_cake"),
   [Bool("lit", False)],
 )
 
 pub const pink_candle_cake = Block(
-  "minecraft:pink_candle_cake",
-  "minecraft:candle_cake",
+  Identifier("minecraft", "pink_candle_cake"),
+  Identifier("minecraft", "candle_cake"),
   [Bool("lit", False)],
 )
 
 pub const gray_candle_cake = Block(
-  "minecraft:gray_candle_cake",
-  "minecraft:candle_cake",
+  Identifier("minecraft", "gray_candle_cake"),
+  Identifier("minecraft", "candle_cake"),
   [Bool("lit", False)],
 )
 
 pub const light_gray_candle_cake = Block(
-  "minecraft:light_gray_candle_cake",
-  "minecraft:candle_cake",
+  Identifier("minecraft", "light_gray_candle_cake"),
+  Identifier("minecraft", "candle_cake"),
   [Bool("lit", False)],
 )
 
 pub const cyan_candle_cake = Block(
-  "minecraft:cyan_candle_cake",
-  "minecraft:candle_cake",
+  Identifier("minecraft", "cyan_candle_cake"),
+  Identifier("minecraft", "candle_cake"),
   [Bool("lit", False)],
 )
 
 pub const purple_candle_cake = Block(
-  "minecraft:purple_candle_cake",
-  "minecraft:candle_cake",
+  Identifier("minecraft", "purple_candle_cake"),
+  Identifier("minecraft", "candle_cake"),
   [Bool("lit", False)],
 )
 
 pub const blue_candle_cake = Block(
-  "minecraft:blue_candle_cake",
-  "minecraft:candle_cake",
+  Identifier("minecraft", "blue_candle_cake"),
+  Identifier("minecraft", "candle_cake"),
   [Bool("lit", False)],
 )
 
 pub const brown_candle_cake = Block(
-  "minecraft:brown_candle_cake",
-  "minecraft:candle_cake",
+  Identifier("minecraft", "brown_candle_cake"),
+  Identifier("minecraft", "candle_cake"),
   [Bool("lit", False)],
 )
 
 pub const green_candle_cake = Block(
-  "minecraft:green_candle_cake",
-  "minecraft:candle_cake",
+  Identifier("minecraft", "green_candle_cake"),
+  Identifier("minecraft", "candle_cake"),
   [Bool("lit", False)],
 )
 
 pub const red_candle_cake = Block(
-  "minecraft:red_candle_cake",
-  "minecraft:candle_cake",
+  Identifier("minecraft", "red_candle_cake"),
+  Identifier("minecraft", "candle_cake"),
   [Bool("lit", False)],
 )
 
 pub const black_candle_cake = Block(
-  "minecraft:black_candle_cake",
-  "minecraft:candle_cake",
+  Identifier("minecraft", "black_candle_cake"),
+  Identifier("minecraft", "candle_cake"),
   [Bool("lit", False)],
 )
 
 pub const amethyst_block = Block(
-  "minecraft:amethyst_block",
-  "minecraft:amethyst",
+  Identifier("minecraft", "amethyst_block"),
+  Identifier("minecraft", "amethyst"),
   [],
 )
 
 pub const budding_amethyst = Block(
-  "minecraft:budding_amethyst",
-  "minecraft:budding_amethyst",
+  Identifier("minecraft", "budding_amethyst"),
+  Identifier("minecraft", "budding_amethyst"),
   [],
 )
 
 pub const amethyst_cluster = Block(
-  "minecraft:amethyst_cluster",
-  "minecraft:amethyst_cluster",
+  Identifier("minecraft", "amethyst_cluster"),
+  Identifier("minecraft", "amethyst_cluster"),
   [
     Enum("facing", ["north", "east", "south", "west", "up", "down"], "up"),
     Bool("waterlogged", False),
@@ -6820,8 +7335,8 @@ pub const amethyst_cluster = Block(
 )
 
 pub const large_amethyst_bud = Block(
-  "minecraft:large_amethyst_bud",
-  "minecraft:amethyst_cluster",
+  Identifier("minecraft", "large_amethyst_bud"),
+  Identifier("minecraft", "amethyst_cluster"),
   [
     Enum("facing", ["north", "east", "south", "west", "up", "down"], "up"),
     Bool("waterlogged", False),
@@ -6829,8 +7344,8 @@ pub const large_amethyst_bud = Block(
 )
 
 pub const medium_amethyst_bud = Block(
-  "minecraft:medium_amethyst_bud",
-  "minecraft:amethyst_cluster",
+  Identifier("minecraft", "medium_amethyst_bud"),
+  Identifier("minecraft", "amethyst_cluster"),
   [
     Enum("facing", ["north", "east", "south", "west", "up", "down"], "up"),
     Bool("waterlogged", False),
@@ -6838,19 +7353,23 @@ pub const medium_amethyst_bud = Block(
 )
 
 pub const small_amethyst_bud = Block(
-  "minecraft:small_amethyst_bud",
-  "minecraft:amethyst_cluster",
+  Identifier("minecraft", "small_amethyst_bud"),
+  Identifier("minecraft", "amethyst_cluster"),
   [
     Enum("facing", ["north", "east", "south", "west", "up", "down"], "up"),
     Bool("waterlogged", False),
   ],
 )
 
-pub const tuff = Block("minecraft:tuff", "minecraft:block", [])
+pub const tuff = Block(
+  Identifier("minecraft", "tuff"),
+  Identifier("minecraft", "block"),
+  [],
+)
 
 pub const tuff_slab = Block(
-  "minecraft:tuff_slab",
-  "minecraft:slab",
+  Identifier("minecraft", "tuff_slab"),
+  Identifier("minecraft", "slab"),
   [
     Enum("type", ["top", "bottom", "double"], "bottom"),
     Bool("waterlogged", False),
@@ -6858,8 +7377,8 @@ pub const tuff_slab = Block(
 )
 
 pub const tuff_stairs = Block(
-  "minecraft:tuff_stairs",
-  "minecraft:stair",
+  Identifier("minecraft", "tuff_stairs"),
+  Identifier("minecraft", "stair"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -6873,8 +7392,8 @@ pub const tuff_stairs = Block(
 )
 
 pub const tuff_wall = Block(
-  "minecraft:tuff_wall",
-  "minecraft:wall",
+  Identifier("minecraft", "tuff_wall"),
+  Identifier("minecraft", "wall"),
   [
     Enum("east", ["none", "low", "tall"], "none"),
     Enum("north", ["none", "low", "tall"], "none"),
@@ -6885,12 +7404,15 @@ pub const tuff_wall = Block(
   ],
 )
 
-pub const polished_tuff = Block("minecraft:polished_tuff", "minecraft:block", [],
+pub const polished_tuff = Block(
+  Identifier("minecraft", "polished_tuff"),
+  Identifier("minecraft", "block"),
+  [],
 )
 
 pub const polished_tuff_slab = Block(
-  "minecraft:polished_tuff_slab",
-  "minecraft:slab",
+  Identifier("minecraft", "polished_tuff_slab"),
+  Identifier("minecraft", "slab"),
   [
     Enum("type", ["top", "bottom", "double"], "bottom"),
     Bool("waterlogged", False),
@@ -6898,8 +7420,8 @@ pub const polished_tuff_slab = Block(
 )
 
 pub const polished_tuff_stairs = Block(
-  "minecraft:polished_tuff_stairs",
-  "minecraft:stair",
+  Identifier("minecraft", "polished_tuff_stairs"),
+  Identifier("minecraft", "stair"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -6913,8 +7435,8 @@ pub const polished_tuff_stairs = Block(
 )
 
 pub const polished_tuff_wall = Block(
-  "minecraft:polished_tuff_wall",
-  "minecraft:wall",
+  Identifier("minecraft", "polished_tuff_wall"),
+  Identifier("minecraft", "wall"),
   [
     Enum("east", ["none", "low", "tall"], "none"),
     Enum("north", ["none", "low", "tall"], "none"),
@@ -6925,14 +7447,21 @@ pub const polished_tuff_wall = Block(
   ],
 )
 
-pub const chiseled_tuff = Block("minecraft:chiseled_tuff", "minecraft:block", [],
+pub const chiseled_tuff = Block(
+  Identifier("minecraft", "chiseled_tuff"),
+  Identifier("minecraft", "block"),
+  [],
 )
 
-pub const tuff_bricks = Block("minecraft:tuff_bricks", "minecraft:block", [])
+pub const tuff_bricks = Block(
+  Identifier("minecraft", "tuff_bricks"),
+  Identifier("minecraft", "block"),
+  [],
+)
 
 pub const tuff_brick_slab = Block(
-  "minecraft:tuff_brick_slab",
-  "minecraft:slab",
+  Identifier("minecraft", "tuff_brick_slab"),
+  Identifier("minecraft", "slab"),
   [
     Enum("type", ["top", "bottom", "double"], "bottom"),
     Bool("waterlogged", False),
@@ -6940,8 +7469,8 @@ pub const tuff_brick_slab = Block(
 )
 
 pub const tuff_brick_stairs = Block(
-  "minecraft:tuff_brick_stairs",
-  "minecraft:stair",
+  Identifier("minecraft", "tuff_brick_stairs"),
+  Identifier("minecraft", "stair"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -6955,8 +7484,8 @@ pub const tuff_brick_stairs = Block(
 )
 
 pub const tuff_brick_wall = Block(
-  "minecraft:tuff_brick_wall",
-  "minecraft:wall",
+  Identifier("minecraft", "tuff_brick_wall"),
+  Identifier("minecraft", "wall"),
   [
     Enum("east", ["none", "low", "tall"], "none"),
     Enum("north", ["none", "low", "tall"], "none"),
@@ -6968,28 +7497,32 @@ pub const tuff_brick_wall = Block(
 )
 
 pub const chiseled_tuff_bricks = Block(
-  "minecraft:chiseled_tuff_bricks",
-  "minecraft:block",
+  Identifier("minecraft", "chiseled_tuff_bricks"),
+  Identifier("minecraft", "block"),
   [],
 )
 
-pub const calcite = Block("minecraft:calcite", "minecraft:block", [])
+pub const calcite = Block(
+  Identifier("minecraft", "calcite"),
+  Identifier("minecraft", "block"),
+  [],
+)
 
 pub const tinted_glass = Block(
-  "minecraft:tinted_glass",
-  "minecraft:tinted_glass",
+  Identifier("minecraft", "tinted_glass"),
+  Identifier("minecraft", "tinted_glass"),
   [],
 )
 
 pub const powder_snow = Block(
-  "minecraft:powder_snow",
-  "minecraft:powder_snow",
+  Identifier("minecraft", "powder_snow"),
+  Identifier("minecraft", "powder_snow"),
   [],
 )
 
 pub const sculk_sensor = Block(
-  "minecraft:sculk_sensor",
-  "minecraft:sculk_sensor",
+  Identifier("minecraft", "sculk_sensor"),
+  Identifier("minecraft", "sculk_sensor"),
   [
     Int("power", 0, 15, 0),
     Enum("sculk_sensor_phase", ["inactive", "active", "cooldown"], "inactive"),
@@ -6998,8 +7531,8 @@ pub const sculk_sensor = Block(
 )
 
 pub const calibrated_sculk_sensor = Block(
-  "minecraft:calibrated_sculk_sensor",
-  "minecraft:calibrated_sculk_sensor",
+  Identifier("minecraft", "calibrated_sculk_sensor"),
+  Identifier("minecraft", "calibrated_sculk_sensor"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Int("power", 0, 15, 0),
@@ -7008,11 +7541,15 @@ pub const calibrated_sculk_sensor = Block(
   ],
 )
 
-pub const sculk = Block("minecraft:sculk", "minecraft:sculk", [])
+pub const sculk = Block(
+  Identifier("minecraft", "sculk"),
+  Identifier("minecraft", "sculk"),
+  [],
+)
 
 pub const sculk_vein = Block(
-  "minecraft:sculk_vein",
-  "minecraft:sculk_vein",
+  Identifier("minecraft", "sculk_vein"),
+  Identifier("minecraft", "sculk_vein"),
   [
     Bool("down", False),
     Bool("east", False),
@@ -7025,14 +7562,14 @@ pub const sculk_vein = Block(
 )
 
 pub const sculk_catalyst = Block(
-  "minecraft:sculk_catalyst",
-  "minecraft:sculk_catalyst",
+  Identifier("minecraft", "sculk_catalyst"),
+  Identifier("minecraft", "sculk_catalyst"),
   [Bool("bloom", False)],
 )
 
 pub const sculk_shrieker = Block(
-  "minecraft:sculk_shrieker",
-  "minecraft:sculk_shrieker",
+  Identifier("minecraft", "sculk_shrieker"),
+  Identifier("minecraft", "sculk_shrieker"),
   [
     Bool("can_summon", False),
     Bool("shrieking", False),
@@ -7041,116 +7578,116 @@ pub const sculk_shrieker = Block(
 )
 
 pub const copper_block = Block(
-  "minecraft:copper_block",
-  "minecraft:weathering_copper_full",
+  Identifier("minecraft", "copper_block"),
+  Identifier("minecraft", "weathering_copper_full"),
   [],
 )
 
 pub const exposed_copper = Block(
-  "minecraft:exposed_copper",
-  "minecraft:weathering_copper_full",
+  Identifier("minecraft", "exposed_copper"),
+  Identifier("minecraft", "weathering_copper_full"),
   [],
 )
 
 pub const weathered_copper = Block(
-  "minecraft:weathered_copper",
-  "minecraft:weathering_copper_full",
+  Identifier("minecraft", "weathered_copper"),
+  Identifier("minecraft", "weathering_copper_full"),
   [],
 )
 
 pub const oxidized_copper = Block(
-  "minecraft:oxidized_copper",
-  "minecraft:weathering_copper_full",
+  Identifier("minecraft", "oxidized_copper"),
+  Identifier("minecraft", "weathering_copper_full"),
   [],
 )
 
 pub const copper_ore = Block(
-  "minecraft:copper_ore",
-  "minecraft:drop_experience",
+  Identifier("minecraft", "copper_ore"),
+  Identifier("minecraft", "drop_experience"),
   [],
 )
 
 pub const deepslate_copper_ore = Block(
-  "minecraft:deepslate_copper_ore",
-  "minecraft:drop_experience",
+  Identifier("minecraft", "deepslate_copper_ore"),
+  Identifier("minecraft", "drop_experience"),
   [],
 )
 
 pub const oxidized_cut_copper = Block(
-  "minecraft:oxidized_cut_copper",
-  "minecraft:weathering_copper_full",
+  Identifier("minecraft", "oxidized_cut_copper"),
+  Identifier("minecraft", "weathering_copper_full"),
   [],
 )
 
 pub const weathered_cut_copper = Block(
-  "minecraft:weathered_cut_copper",
-  "minecraft:weathering_copper_full",
+  Identifier("minecraft", "weathered_cut_copper"),
+  Identifier("minecraft", "weathering_copper_full"),
   [],
 )
 
 pub const exposed_cut_copper = Block(
-  "minecraft:exposed_cut_copper",
-  "minecraft:weathering_copper_full",
+  Identifier("minecraft", "exposed_cut_copper"),
+  Identifier("minecraft", "weathering_copper_full"),
   [],
 )
 
 pub const cut_copper = Block(
-  "minecraft:cut_copper",
-  "minecraft:weathering_copper_full",
+  Identifier("minecraft", "cut_copper"),
+  Identifier("minecraft", "weathering_copper_full"),
   [],
 )
 
 pub const oxidized_chiseled_copper = Block(
-  "minecraft:oxidized_chiseled_copper",
-  "minecraft:weathering_copper_full",
+  Identifier("minecraft", "oxidized_chiseled_copper"),
+  Identifier("minecraft", "weathering_copper_full"),
   [],
 )
 
 pub const weathered_chiseled_copper = Block(
-  "minecraft:weathered_chiseled_copper",
-  "minecraft:weathering_copper_full",
+  Identifier("minecraft", "weathered_chiseled_copper"),
+  Identifier("minecraft", "weathering_copper_full"),
   [],
 )
 
 pub const exposed_chiseled_copper = Block(
-  "minecraft:exposed_chiseled_copper",
-  "minecraft:weathering_copper_full",
+  Identifier("minecraft", "exposed_chiseled_copper"),
+  Identifier("minecraft", "weathering_copper_full"),
   [],
 )
 
 pub const chiseled_copper = Block(
-  "minecraft:chiseled_copper",
-  "minecraft:weathering_copper_full",
+  Identifier("minecraft", "chiseled_copper"),
+  Identifier("minecraft", "weathering_copper_full"),
   [],
 )
 
 pub const waxed_oxidized_chiseled_copper = Block(
-  "minecraft:waxed_oxidized_chiseled_copper",
-  "minecraft:block",
+  Identifier("minecraft", "waxed_oxidized_chiseled_copper"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const waxed_weathered_chiseled_copper = Block(
-  "minecraft:waxed_weathered_chiseled_copper",
-  "minecraft:block",
+  Identifier("minecraft", "waxed_weathered_chiseled_copper"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const waxed_exposed_chiseled_copper = Block(
-  "minecraft:waxed_exposed_chiseled_copper",
-  "minecraft:block",
+  Identifier("minecraft", "waxed_exposed_chiseled_copper"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const waxed_chiseled_copper = Block(
-  "minecraft:waxed_chiseled_copper",
-  "minecraft:block",
+  Identifier("minecraft", "waxed_chiseled_copper"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const oxidized_cut_copper_stairs = Block(
-  "minecraft:oxidized_cut_copper_stairs",
-  "minecraft:weathering_copper_stair",
+  Identifier("minecraft", "oxidized_cut_copper_stairs"),
+  Identifier("minecraft", "weathering_copper_stair"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -7164,8 +7701,8 @@ pub const oxidized_cut_copper_stairs = Block(
 )
 
 pub const weathered_cut_copper_stairs = Block(
-  "minecraft:weathered_cut_copper_stairs",
-  "minecraft:weathering_copper_stair",
+  Identifier("minecraft", "weathered_cut_copper_stairs"),
+  Identifier("minecraft", "weathering_copper_stair"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -7179,8 +7716,8 @@ pub const weathered_cut_copper_stairs = Block(
 )
 
 pub const exposed_cut_copper_stairs = Block(
-  "minecraft:exposed_cut_copper_stairs",
-  "minecraft:weathering_copper_stair",
+  Identifier("minecraft", "exposed_cut_copper_stairs"),
+  Identifier("minecraft", "weathering_copper_stair"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -7194,8 +7731,8 @@ pub const exposed_cut_copper_stairs = Block(
 )
 
 pub const cut_copper_stairs = Block(
-  "minecraft:cut_copper_stairs",
-  "minecraft:weathering_copper_stair",
+  Identifier("minecraft", "cut_copper_stairs"),
+  Identifier("minecraft", "weathering_copper_stair"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -7209,8 +7746,8 @@ pub const cut_copper_stairs = Block(
 )
 
 pub const oxidized_cut_copper_slab = Block(
-  "minecraft:oxidized_cut_copper_slab",
-  "minecraft:weathering_copper_slab",
+  Identifier("minecraft", "oxidized_cut_copper_slab"),
+  Identifier("minecraft", "weathering_copper_slab"),
   [
     Enum("type", ["top", "bottom", "double"], "bottom"),
     Bool("waterlogged", False),
@@ -7218,8 +7755,8 @@ pub const oxidized_cut_copper_slab = Block(
 )
 
 pub const weathered_cut_copper_slab = Block(
-  "minecraft:weathered_cut_copper_slab",
-  "minecraft:weathering_copper_slab",
+  Identifier("minecraft", "weathered_cut_copper_slab"),
+  Identifier("minecraft", "weathering_copper_slab"),
   [
     Enum("type", ["top", "bottom", "double"], "bottom"),
     Bool("waterlogged", False),
@@ -7227,8 +7764,8 @@ pub const weathered_cut_copper_slab = Block(
 )
 
 pub const exposed_cut_copper_slab = Block(
-  "minecraft:exposed_cut_copper_slab",
-  "minecraft:weathering_copper_slab",
+  Identifier("minecraft", "exposed_cut_copper_slab"),
+  Identifier("minecraft", "weathering_copper_slab"),
   [
     Enum("type", ["top", "bottom", "double"], "bottom"),
     Bool("waterlogged", False),
@@ -7236,8 +7773,8 @@ pub const exposed_cut_copper_slab = Block(
 )
 
 pub const cut_copper_slab = Block(
-  "minecraft:cut_copper_slab",
-  "minecraft:weathering_copper_slab",
+  Identifier("minecraft", "cut_copper_slab"),
+  Identifier("minecraft", "weathering_copper_slab"),
   [
     Enum("type", ["top", "bottom", "double"], "bottom"),
     Bool("waterlogged", False),
@@ -7245,56 +7782,56 @@ pub const cut_copper_slab = Block(
 )
 
 pub const waxed_copper_block = Block(
-  "minecraft:waxed_copper_block",
-  "minecraft:block",
+  Identifier("minecraft", "waxed_copper_block"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const waxed_weathered_copper = Block(
-  "minecraft:waxed_weathered_copper",
-  "minecraft:block",
+  Identifier("minecraft", "waxed_weathered_copper"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const waxed_exposed_copper = Block(
-  "minecraft:waxed_exposed_copper",
-  "minecraft:block",
+  Identifier("minecraft", "waxed_exposed_copper"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const waxed_oxidized_copper = Block(
-  "minecraft:waxed_oxidized_copper",
-  "minecraft:block",
+  Identifier("minecraft", "waxed_oxidized_copper"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const waxed_oxidized_cut_copper = Block(
-  "minecraft:waxed_oxidized_cut_copper",
-  "minecraft:block",
+  Identifier("minecraft", "waxed_oxidized_cut_copper"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const waxed_weathered_cut_copper = Block(
-  "minecraft:waxed_weathered_cut_copper",
-  "minecraft:block",
+  Identifier("minecraft", "waxed_weathered_cut_copper"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const waxed_exposed_cut_copper = Block(
-  "minecraft:waxed_exposed_cut_copper",
-  "minecraft:block",
+  Identifier("minecraft", "waxed_exposed_cut_copper"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const waxed_cut_copper = Block(
-  "minecraft:waxed_cut_copper",
-  "minecraft:block",
+  Identifier("minecraft", "waxed_cut_copper"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const waxed_oxidized_cut_copper_stairs = Block(
-  "minecraft:waxed_oxidized_cut_copper_stairs",
-  "minecraft:stair",
+  Identifier("minecraft", "waxed_oxidized_cut_copper_stairs"),
+  Identifier("minecraft", "stair"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -7308,8 +7845,8 @@ pub const waxed_oxidized_cut_copper_stairs = Block(
 )
 
 pub const waxed_weathered_cut_copper_stairs = Block(
-  "minecraft:waxed_weathered_cut_copper_stairs",
-  "minecraft:stair",
+  Identifier("minecraft", "waxed_weathered_cut_copper_stairs"),
+  Identifier("minecraft", "stair"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -7323,8 +7860,8 @@ pub const waxed_weathered_cut_copper_stairs = Block(
 )
 
 pub const waxed_exposed_cut_copper_stairs = Block(
-  "minecraft:waxed_exposed_cut_copper_stairs",
-  "minecraft:stair",
+  Identifier("minecraft", "waxed_exposed_cut_copper_stairs"),
+  Identifier("minecraft", "stair"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -7338,8 +7875,8 @@ pub const waxed_exposed_cut_copper_stairs = Block(
 )
 
 pub const waxed_cut_copper_stairs = Block(
-  "minecraft:waxed_cut_copper_stairs",
-  "minecraft:stair",
+  Identifier("minecraft", "waxed_cut_copper_stairs"),
+  Identifier("minecraft", "stair"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -7353,8 +7890,8 @@ pub const waxed_cut_copper_stairs = Block(
 )
 
 pub const waxed_oxidized_cut_copper_slab = Block(
-  "minecraft:waxed_oxidized_cut_copper_slab",
-  "minecraft:slab",
+  Identifier("minecraft", "waxed_oxidized_cut_copper_slab"),
+  Identifier("minecraft", "slab"),
   [
     Enum("type", ["top", "bottom", "double"], "bottom"),
     Bool("waterlogged", False),
@@ -7362,8 +7899,8 @@ pub const waxed_oxidized_cut_copper_slab = Block(
 )
 
 pub const waxed_weathered_cut_copper_slab = Block(
-  "minecraft:waxed_weathered_cut_copper_slab",
-  "minecraft:slab",
+  Identifier("minecraft", "waxed_weathered_cut_copper_slab"),
+  Identifier("minecraft", "slab"),
   [
     Enum("type", ["top", "bottom", "double"], "bottom"),
     Bool("waterlogged", False),
@@ -7371,8 +7908,8 @@ pub const waxed_weathered_cut_copper_slab = Block(
 )
 
 pub const waxed_exposed_cut_copper_slab = Block(
-  "minecraft:waxed_exposed_cut_copper_slab",
-  "minecraft:slab",
+  Identifier("minecraft", "waxed_exposed_cut_copper_slab"),
+  Identifier("minecraft", "slab"),
   [
     Enum("type", ["top", "bottom", "double"], "bottom"),
     Bool("waterlogged", False),
@@ -7380,8 +7917,8 @@ pub const waxed_exposed_cut_copper_slab = Block(
 )
 
 pub const waxed_cut_copper_slab = Block(
-  "minecraft:waxed_cut_copper_slab",
-  "minecraft:slab",
+  Identifier("minecraft", "waxed_cut_copper_slab"),
+  Identifier("minecraft", "slab"),
   [
     Enum("type", ["top", "bottom", "double"], "bottom"),
     Bool("waterlogged", False),
@@ -7389,8 +7926,8 @@ pub const waxed_cut_copper_slab = Block(
 )
 
 pub const copper_door = Block(
-  "minecraft:copper_door",
-  "minecraft:weathering_copper_door",
+  Identifier("minecraft", "copper_door"),
+  Identifier("minecraft", "weathering_copper_door"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["upper", "lower"], "lower"),
@@ -7401,8 +7938,8 @@ pub const copper_door = Block(
 )
 
 pub const exposed_copper_door = Block(
-  "minecraft:exposed_copper_door",
-  "minecraft:weathering_copper_door",
+  Identifier("minecraft", "exposed_copper_door"),
+  Identifier("minecraft", "weathering_copper_door"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["upper", "lower"], "lower"),
@@ -7413,8 +7950,8 @@ pub const exposed_copper_door = Block(
 )
 
 pub const oxidized_copper_door = Block(
-  "minecraft:oxidized_copper_door",
-  "minecraft:weathering_copper_door",
+  Identifier("minecraft", "oxidized_copper_door"),
+  Identifier("minecraft", "weathering_copper_door"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["upper", "lower"], "lower"),
@@ -7425,8 +7962,8 @@ pub const oxidized_copper_door = Block(
 )
 
 pub const weathered_copper_door = Block(
-  "minecraft:weathered_copper_door",
-  "minecraft:weathering_copper_door",
+  Identifier("minecraft", "weathered_copper_door"),
+  Identifier("minecraft", "weathering_copper_door"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["upper", "lower"], "lower"),
@@ -7437,8 +7974,8 @@ pub const weathered_copper_door = Block(
 )
 
 pub const waxed_copper_door = Block(
-  "minecraft:waxed_copper_door",
-  "minecraft:door",
+  Identifier("minecraft", "waxed_copper_door"),
+  Identifier("minecraft", "door"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["upper", "lower"], "lower"),
@@ -7449,8 +7986,8 @@ pub const waxed_copper_door = Block(
 )
 
 pub const waxed_exposed_copper_door = Block(
-  "minecraft:waxed_exposed_copper_door",
-  "minecraft:door",
+  Identifier("minecraft", "waxed_exposed_copper_door"),
+  Identifier("minecraft", "door"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["upper", "lower"], "lower"),
@@ -7461,8 +7998,8 @@ pub const waxed_exposed_copper_door = Block(
 )
 
 pub const waxed_oxidized_copper_door = Block(
-  "minecraft:waxed_oxidized_copper_door",
-  "minecraft:door",
+  Identifier("minecraft", "waxed_oxidized_copper_door"),
+  Identifier("minecraft", "door"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["upper", "lower"], "lower"),
@@ -7473,8 +8010,8 @@ pub const waxed_oxidized_copper_door = Block(
 )
 
 pub const waxed_weathered_copper_door = Block(
-  "minecraft:waxed_weathered_copper_door",
-  "minecraft:door",
+  Identifier("minecraft", "waxed_weathered_copper_door"),
+  Identifier("minecraft", "door"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["upper", "lower"], "lower"),
@@ -7485,8 +8022,8 @@ pub const waxed_weathered_copper_door = Block(
 )
 
 pub const copper_trapdoor = Block(
-  "minecraft:copper_trapdoor",
-  "minecraft:weathering_copper_trap_door",
+  Identifier("minecraft", "copper_trapdoor"),
+  Identifier("minecraft", "weathering_copper_trap_door"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -7497,8 +8034,8 @@ pub const copper_trapdoor = Block(
 )
 
 pub const exposed_copper_trapdoor = Block(
-  "minecraft:exposed_copper_trapdoor",
-  "minecraft:weathering_copper_trap_door",
+  Identifier("minecraft", "exposed_copper_trapdoor"),
+  Identifier("minecraft", "weathering_copper_trap_door"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -7509,8 +8046,8 @@ pub const exposed_copper_trapdoor = Block(
 )
 
 pub const oxidized_copper_trapdoor = Block(
-  "minecraft:oxidized_copper_trapdoor",
-  "minecraft:weathering_copper_trap_door",
+  Identifier("minecraft", "oxidized_copper_trapdoor"),
+  Identifier("minecraft", "weathering_copper_trap_door"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -7521,8 +8058,8 @@ pub const oxidized_copper_trapdoor = Block(
 )
 
 pub const weathered_copper_trapdoor = Block(
-  "minecraft:weathered_copper_trapdoor",
-  "minecraft:weathering_copper_trap_door",
+  Identifier("minecraft", "weathered_copper_trapdoor"),
+  Identifier("minecraft", "weathering_copper_trap_door"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -7533,8 +8070,8 @@ pub const weathered_copper_trapdoor = Block(
 )
 
 pub const waxed_copper_trapdoor = Block(
-  "minecraft:waxed_copper_trapdoor",
-  "minecraft:trapdoor",
+  Identifier("minecraft", "waxed_copper_trapdoor"),
+  Identifier("minecraft", "trapdoor"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -7545,8 +8082,8 @@ pub const waxed_copper_trapdoor = Block(
 )
 
 pub const waxed_exposed_copper_trapdoor = Block(
-  "minecraft:waxed_exposed_copper_trapdoor",
-  "minecraft:trapdoor",
+  Identifier("minecraft", "waxed_exposed_copper_trapdoor"),
+  Identifier("minecraft", "trapdoor"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -7557,8 +8094,8 @@ pub const waxed_exposed_copper_trapdoor = Block(
 )
 
 pub const waxed_oxidized_copper_trapdoor = Block(
-  "minecraft:waxed_oxidized_copper_trapdoor",
-  "minecraft:trapdoor",
+  Identifier("minecraft", "waxed_oxidized_copper_trapdoor"),
+  Identifier("minecraft", "trapdoor"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -7569,8 +8106,8 @@ pub const waxed_oxidized_copper_trapdoor = Block(
 )
 
 pub const waxed_weathered_copper_trapdoor = Block(
-  "minecraft:waxed_weathered_copper_trapdoor",
-  "minecraft:trapdoor",
+  Identifier("minecraft", "waxed_weathered_copper_trapdoor"),
+  Identifier("minecraft", "trapdoor"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -7581,104 +8118,104 @@ pub const waxed_weathered_copper_trapdoor = Block(
 )
 
 pub const copper_grate = Block(
-  "minecraft:copper_grate",
-  "minecraft:weathering_copper_grate",
+  Identifier("minecraft", "copper_grate"),
+  Identifier("minecraft", "weathering_copper_grate"),
   [Bool("waterlogged", False)],
 )
 
 pub const exposed_copper_grate = Block(
-  "minecraft:exposed_copper_grate",
-  "minecraft:weathering_copper_grate",
+  Identifier("minecraft", "exposed_copper_grate"),
+  Identifier("minecraft", "weathering_copper_grate"),
   [Bool("waterlogged", False)],
 )
 
 pub const weathered_copper_grate = Block(
-  "minecraft:weathered_copper_grate",
-  "minecraft:weathering_copper_grate",
+  Identifier("minecraft", "weathered_copper_grate"),
+  Identifier("minecraft", "weathering_copper_grate"),
   [Bool("waterlogged", False)],
 )
 
 pub const oxidized_copper_grate = Block(
-  "minecraft:oxidized_copper_grate",
-  "minecraft:weathering_copper_grate",
+  Identifier("minecraft", "oxidized_copper_grate"),
+  Identifier("minecraft", "weathering_copper_grate"),
   [Bool("waterlogged", False)],
 )
 
 pub const waxed_copper_grate = Block(
-  "minecraft:waxed_copper_grate",
-  "minecraft:waterlogged_transparent",
+  Identifier("minecraft", "waxed_copper_grate"),
+  Identifier("minecraft", "waterlogged_transparent"),
   [Bool("waterlogged", False)],
 )
 
 pub const waxed_exposed_copper_grate = Block(
-  "minecraft:waxed_exposed_copper_grate",
-  "minecraft:waterlogged_transparent",
+  Identifier("minecraft", "waxed_exposed_copper_grate"),
+  Identifier("minecraft", "waterlogged_transparent"),
   [Bool("waterlogged", False)],
 )
 
 pub const waxed_weathered_copper_grate = Block(
-  "minecraft:waxed_weathered_copper_grate",
-  "minecraft:waterlogged_transparent",
+  Identifier("minecraft", "waxed_weathered_copper_grate"),
+  Identifier("minecraft", "waterlogged_transparent"),
   [Bool("waterlogged", False)],
 )
 
 pub const waxed_oxidized_copper_grate = Block(
-  "minecraft:waxed_oxidized_copper_grate",
-  "minecraft:waterlogged_transparent",
+  Identifier("minecraft", "waxed_oxidized_copper_grate"),
+  Identifier("minecraft", "waterlogged_transparent"),
   [Bool("waterlogged", False)],
 )
 
 pub const copper_bulb = Block(
-  "minecraft:copper_bulb",
-  "minecraft:weathering_copper_bulb",
+  Identifier("minecraft", "copper_bulb"),
+  Identifier("minecraft", "weathering_copper_bulb"),
   [Bool("lit", False), Bool("powered", False)],
 )
 
 pub const exposed_copper_bulb = Block(
-  "minecraft:exposed_copper_bulb",
-  "minecraft:weathering_copper_bulb",
+  Identifier("minecraft", "exposed_copper_bulb"),
+  Identifier("minecraft", "weathering_copper_bulb"),
   [Bool("lit", False), Bool("powered", False)],
 )
 
 pub const weathered_copper_bulb = Block(
-  "minecraft:weathered_copper_bulb",
-  "minecraft:weathering_copper_bulb",
+  Identifier("minecraft", "weathered_copper_bulb"),
+  Identifier("minecraft", "weathering_copper_bulb"),
   [Bool("lit", False), Bool("powered", False)],
 )
 
 pub const oxidized_copper_bulb = Block(
-  "minecraft:oxidized_copper_bulb",
-  "minecraft:weathering_copper_bulb",
+  Identifier("minecraft", "oxidized_copper_bulb"),
+  Identifier("minecraft", "weathering_copper_bulb"),
   [Bool("lit", False), Bool("powered", False)],
 )
 
 pub const waxed_copper_bulb = Block(
-  "minecraft:waxed_copper_bulb",
-  "minecraft:copper_bulb_block",
+  Identifier("minecraft", "waxed_copper_bulb"),
+  Identifier("minecraft", "copper_bulb_block"),
   [Bool("lit", False), Bool("powered", False)],
 )
 
 pub const waxed_exposed_copper_bulb = Block(
-  "minecraft:waxed_exposed_copper_bulb",
-  "minecraft:copper_bulb_block",
+  Identifier("minecraft", "waxed_exposed_copper_bulb"),
+  Identifier("minecraft", "copper_bulb_block"),
   [Bool("lit", False), Bool("powered", False)],
 )
 
 pub const waxed_weathered_copper_bulb = Block(
-  "minecraft:waxed_weathered_copper_bulb",
-  "minecraft:copper_bulb_block",
+  Identifier("minecraft", "waxed_weathered_copper_bulb"),
+  Identifier("minecraft", "copper_bulb_block"),
   [Bool("lit", False), Bool("powered", False)],
 )
 
 pub const waxed_oxidized_copper_bulb = Block(
-  "minecraft:waxed_oxidized_copper_bulb",
-  "minecraft:copper_bulb_block",
+  Identifier("minecraft", "waxed_oxidized_copper_bulb"),
+  Identifier("minecraft", "copper_bulb_block"),
   [Bool("lit", False), Bool("powered", False)],
 )
 
 pub const lightning_rod = Block(
-  "minecraft:lightning_rod",
-  "minecraft:lightning_rod",
+  Identifier("minecraft", "lightning_rod"),
+  Identifier("minecraft", "lightning_rod"),
   [
     Enum("facing", ["north", "east", "south", "west", "up", "down"], "up"),
     Bool("powered", False),
@@ -7687,8 +8224,8 @@ pub const lightning_rod = Block(
 )
 
 pub const pointed_dripstone = Block(
-  "minecraft:pointed_dripstone",
-  "minecraft:pointed_dripstone",
+  Identifier("minecraft", "pointed_dripstone"),
+  Identifier("minecraft", "pointed_dripstone"),
   [
     Enum("thickness", ["tip_merge", "tip", "frustum", "middle", "base"], "tip"),
     Enum("vertical_direction", ["up", "down"], "up"),
@@ -7697,42 +8234,50 @@ pub const pointed_dripstone = Block(
 )
 
 pub const dripstone_block = Block(
-  "minecraft:dripstone_block",
-  "minecraft:block",
+  Identifier("minecraft", "dripstone_block"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const cave_vines = Block(
-  "minecraft:cave_vines",
-  "minecraft:cave_vines",
+  Identifier("minecraft", "cave_vines"),
+  Identifier("minecraft", "cave_vines"),
   [Int("age", 0, 25, 0), Bool("berries", False)],
 )
 
 pub const cave_vines_plant = Block(
-  "minecraft:cave_vines_plant",
-  "minecraft:cave_vines_plant",
+  Identifier("minecraft", "cave_vines_plant"),
+  Identifier("minecraft", "cave_vines_plant"),
   [Bool("berries", False)],
 )
 
 pub const spore_blossom = Block(
-  "minecraft:spore_blossom",
-  "minecraft:spore_blossom",
+  Identifier("minecraft", "spore_blossom"),
+  Identifier("minecraft", "spore_blossom"),
   [],
 )
 
-pub const azalea = Block("minecraft:azalea", "minecraft:azalea", [])
+pub const azalea = Block(
+  Identifier("minecraft", "azalea"),
+  Identifier("minecraft", "azalea"),
+  [],
+)
 
 pub const flowering_azalea = Block(
-  "minecraft:flowering_azalea",
-  "minecraft:azalea",
+  Identifier("minecraft", "flowering_azalea"),
+  Identifier("minecraft", "azalea"),
   [],
 )
 
-pub const moss_carpet = Block("minecraft:moss_carpet", "minecraft:carpet", [])
+pub const moss_carpet = Block(
+  Identifier("minecraft", "moss_carpet"),
+  Identifier("minecraft", "carpet"),
+  [],
+)
 
 pub const pink_petals = Block(
-  "minecraft:pink_petals",
-  "minecraft:pink_petals",
+  Identifier("minecraft", "pink_petals"),
+  Identifier("minecraft", "pink_petals"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Int("flower_amount", 1, 4, 1),
@@ -7740,14 +8285,14 @@ pub const pink_petals = Block(
 )
 
 pub const moss_block = Block(
-  "minecraft:moss_block",
-  "minecraft:bonemealable_feature_placer",
+  Identifier("minecraft", "moss_block"),
+  Identifier("minecraft", "bonemealable_feature_placer"),
   [],
 )
 
 pub const big_dripleaf = Block(
-  "minecraft:big_dripleaf",
-  "minecraft:big_dripleaf",
+  Identifier("minecraft", "big_dripleaf"),
+  Identifier("minecraft", "big_dripleaf"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("tilt", ["none", "unstable", "partial", "full"], "none"),
@@ -7756,8 +8301,8 @@ pub const big_dripleaf = Block(
 )
 
 pub const big_dripleaf_stem = Block(
-  "minecraft:big_dripleaf_stem",
-  "minecraft:big_dripleaf_stem",
+  Identifier("minecraft", "big_dripleaf_stem"),
+  Identifier("minecraft", "big_dripleaf_stem"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("waterlogged", False),
@@ -7765,8 +8310,8 @@ pub const big_dripleaf_stem = Block(
 )
 
 pub const small_dripleaf = Block(
-  "minecraft:small_dripleaf",
-  "minecraft:small_dripleaf",
+  Identifier("minecraft", "small_dripleaf"),
+  Identifier("minecraft", "small_dripleaf"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["upper", "lower"], "lower"),
@@ -7775,34 +8320,38 @@ pub const small_dripleaf = Block(
 )
 
 pub const hanging_roots = Block(
-  "minecraft:hanging_roots",
-  "minecraft:hanging_roots",
+  Identifier("minecraft", "hanging_roots"),
+  Identifier("minecraft", "hanging_roots"),
   [Bool("waterlogged", False)],
 )
 
 pub const rooted_dirt = Block(
-  "minecraft:rooted_dirt",
-  "minecraft:rooted_dirt",
+  Identifier("minecraft", "rooted_dirt"),
+  Identifier("minecraft", "rooted_dirt"),
   [],
 )
 
-pub const mud = Block("minecraft:mud", "minecraft:mud", [])
+pub const mud = Block(
+  Identifier("minecraft", "mud"),
+  Identifier("minecraft", "mud"),
+  [],
+)
 
 pub const deepslate = Block(
-  "minecraft:deepslate",
-  "minecraft:rotated_pillar",
+  Identifier("minecraft", "deepslate"),
+  Identifier("minecraft", "rotated_pillar"),
   [Enum("axis", ["x", "y", "z"], "y")],
 )
 
 pub const cobbled_deepslate = Block(
-  "minecraft:cobbled_deepslate",
-  "minecraft:block",
+  Identifier("minecraft", "cobbled_deepslate"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const cobbled_deepslate_stairs = Block(
-  "minecraft:cobbled_deepslate_stairs",
-  "minecraft:stair",
+  Identifier("minecraft", "cobbled_deepslate_stairs"),
+  Identifier("minecraft", "stair"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -7816,8 +8365,8 @@ pub const cobbled_deepslate_stairs = Block(
 )
 
 pub const cobbled_deepslate_slab = Block(
-  "minecraft:cobbled_deepslate_slab",
-  "minecraft:slab",
+  Identifier("minecraft", "cobbled_deepslate_slab"),
+  Identifier("minecraft", "slab"),
   [
     Enum("type", ["top", "bottom", "double"], "bottom"),
     Bool("waterlogged", False),
@@ -7825,8 +8374,8 @@ pub const cobbled_deepslate_slab = Block(
 )
 
 pub const cobbled_deepslate_wall = Block(
-  "minecraft:cobbled_deepslate_wall",
-  "minecraft:wall",
+  Identifier("minecraft", "cobbled_deepslate_wall"),
+  Identifier("minecraft", "wall"),
   [
     Enum("east", ["none", "low", "tall"], "none"),
     Enum("north", ["none", "low", "tall"], "none"),
@@ -7838,14 +8387,14 @@ pub const cobbled_deepslate_wall = Block(
 )
 
 pub const polished_deepslate = Block(
-  "minecraft:polished_deepslate",
-  "minecraft:block",
+  Identifier("minecraft", "polished_deepslate"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const polished_deepslate_stairs = Block(
-  "minecraft:polished_deepslate_stairs",
-  "minecraft:stair",
+  Identifier("minecraft", "polished_deepslate_stairs"),
+  Identifier("minecraft", "stair"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -7859,8 +8408,8 @@ pub const polished_deepslate_stairs = Block(
 )
 
 pub const polished_deepslate_slab = Block(
-  "minecraft:polished_deepslate_slab",
-  "minecraft:slab",
+  Identifier("minecraft", "polished_deepslate_slab"),
+  Identifier("minecraft", "slab"),
   [
     Enum("type", ["top", "bottom", "double"], "bottom"),
     Bool("waterlogged", False),
@@ -7868,8 +8417,8 @@ pub const polished_deepslate_slab = Block(
 )
 
 pub const polished_deepslate_wall = Block(
-  "minecraft:polished_deepslate_wall",
-  "minecraft:wall",
+  Identifier("minecraft", "polished_deepslate_wall"),
+  Identifier("minecraft", "wall"),
   [
     Enum("east", ["none", "low", "tall"], "none"),
     Enum("north", ["none", "low", "tall"], "none"),
@@ -7881,14 +8430,14 @@ pub const polished_deepslate_wall = Block(
 )
 
 pub const deepslate_tiles = Block(
-  "minecraft:deepslate_tiles",
-  "minecraft:block",
+  Identifier("minecraft", "deepslate_tiles"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const deepslate_tile_stairs = Block(
-  "minecraft:deepslate_tile_stairs",
-  "minecraft:stair",
+  Identifier("minecraft", "deepslate_tile_stairs"),
+  Identifier("minecraft", "stair"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -7902,8 +8451,8 @@ pub const deepslate_tile_stairs = Block(
 )
 
 pub const deepslate_tile_slab = Block(
-  "minecraft:deepslate_tile_slab",
-  "minecraft:slab",
+  Identifier("minecraft", "deepslate_tile_slab"),
+  Identifier("minecraft", "slab"),
   [
     Enum("type", ["top", "bottom", "double"], "bottom"),
     Bool("waterlogged", False),
@@ -7911,8 +8460,8 @@ pub const deepslate_tile_slab = Block(
 )
 
 pub const deepslate_tile_wall = Block(
-  "minecraft:deepslate_tile_wall",
-  "minecraft:wall",
+  Identifier("minecraft", "deepslate_tile_wall"),
+  Identifier("minecraft", "wall"),
   [
     Enum("east", ["none", "low", "tall"], "none"),
     Enum("north", ["none", "low", "tall"], "none"),
@@ -7924,14 +8473,14 @@ pub const deepslate_tile_wall = Block(
 )
 
 pub const deepslate_bricks = Block(
-  "minecraft:deepslate_bricks",
-  "minecraft:block",
+  Identifier("minecraft", "deepslate_bricks"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const deepslate_brick_stairs = Block(
-  "minecraft:deepslate_brick_stairs",
-  "minecraft:stair",
+  Identifier("minecraft", "deepslate_brick_stairs"),
+  Identifier("minecraft", "stair"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Enum("half", ["top", "bottom"], "bottom"),
@@ -7945,8 +8494,8 @@ pub const deepslate_brick_stairs = Block(
 )
 
 pub const deepslate_brick_slab = Block(
-  "minecraft:deepslate_brick_slab",
-  "minecraft:slab",
+  Identifier("minecraft", "deepslate_brick_slab"),
+  Identifier("minecraft", "slab"),
   [
     Enum("type", ["top", "bottom", "double"], "bottom"),
     Bool("waterlogged", False),
@@ -7954,8 +8503,8 @@ pub const deepslate_brick_slab = Block(
 )
 
 pub const deepslate_brick_wall = Block(
-  "minecraft:deepslate_brick_wall",
-  "minecraft:wall",
+  Identifier("minecraft", "deepslate_brick_wall"),
+  Identifier("minecraft", "wall"),
   [
     Enum("east", ["none", "low", "tall"], "none"),
     Enum("north", ["none", "low", "tall"], "none"),
@@ -7967,91 +8516,98 @@ pub const deepslate_brick_wall = Block(
 )
 
 pub const chiseled_deepslate = Block(
-  "minecraft:chiseled_deepslate",
-  "minecraft:block",
+  Identifier("minecraft", "chiseled_deepslate"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const cracked_deepslate_bricks = Block(
-  "minecraft:cracked_deepslate_bricks",
-  "minecraft:block",
+  Identifier("minecraft", "cracked_deepslate_bricks"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const cracked_deepslate_tiles = Block(
-  "minecraft:cracked_deepslate_tiles",
-  "minecraft:block",
+  Identifier("minecraft", "cracked_deepslate_tiles"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const infested_deepslate = Block(
-  "minecraft:infested_deepslate",
-  "minecraft:infested_rotated_pillar",
+  Identifier("minecraft", "infested_deepslate"),
+  Identifier("minecraft", "infested_rotated_pillar"),
   [Enum("axis", ["x", "y", "z"], "y")],
 )
 
-pub const smooth_basalt = Block("minecraft:smooth_basalt", "minecraft:block", [],
+pub const smooth_basalt = Block(
+  Identifier("minecraft", "smooth_basalt"),
+  Identifier("minecraft", "block"),
+  [],
 )
 
 pub const raw_iron_block = Block(
-  "minecraft:raw_iron_block",
-  "minecraft:block",
+  Identifier("minecraft", "raw_iron_block"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const raw_copper_block = Block(
-  "minecraft:raw_copper_block",
-  "minecraft:block",
+  Identifier("minecraft", "raw_copper_block"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const raw_gold_block = Block(
-  "minecraft:raw_gold_block",
-  "minecraft:block",
+  Identifier("minecraft", "raw_gold_block"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const potted_azalea_bush = Block(
-  "minecraft:potted_azalea_bush",
-  "minecraft:flower_pot",
+  Identifier("minecraft", "potted_azalea_bush"),
+  Identifier("minecraft", "flower_pot"),
   [],
 )
 
 pub const potted_flowering_azalea_bush = Block(
-  "minecraft:potted_flowering_azalea_bush",
-  "minecraft:flower_pot",
+  Identifier("minecraft", "potted_flowering_azalea_bush"),
+  Identifier("minecraft", "flower_pot"),
   [],
 )
 
 pub const ochre_froglight = Block(
-  "minecraft:ochre_froglight",
-  "minecraft:rotated_pillar",
+  Identifier("minecraft", "ochre_froglight"),
+  Identifier("minecraft", "rotated_pillar"),
   [Enum("axis", ["x", "y", "z"], "y")],
 )
 
 pub const verdant_froglight = Block(
-  "minecraft:verdant_froglight",
-  "minecraft:rotated_pillar",
+  Identifier("minecraft", "verdant_froglight"),
+  Identifier("minecraft", "rotated_pillar"),
   [Enum("axis", ["x", "y", "z"], "y")],
 )
 
 pub const pearlescent_froglight = Block(
-  "minecraft:pearlescent_froglight",
-  "minecraft:rotated_pillar",
+  Identifier("minecraft", "pearlescent_froglight"),
+  Identifier("minecraft", "rotated_pillar"),
   [Enum("axis", ["x", "y", "z"], "y")],
 )
 
-pub const frogspawn = Block("minecraft:frogspawn", "minecraft:frogspawn", [])
+pub const frogspawn = Block(
+  Identifier("minecraft", "frogspawn"),
+  Identifier("minecraft", "frogspawn"),
+  [],
+)
 
 pub const reinforced_deepslate = Block(
-  "minecraft:reinforced_deepslate",
-  "minecraft:block",
+  Identifier("minecraft", "reinforced_deepslate"),
+  Identifier("minecraft", "block"),
   [],
 )
 
 pub const decorated_pot = Block(
-  "minecraft:decorated_pot",
-  "minecraft:decorated_pot",
+  Identifier("minecraft", "decorated_pot"),
+  Identifier("minecraft", "decorated_pot"),
   [
     Bool("cracked", False),
     Enum("facing", ["north", "south", "west", "east"], "north"),
@@ -8060,15 +8616,24 @@ pub const decorated_pot = Block(
 )
 
 pub const crafter = Block(
-  "minecraft:crafter",
-  "minecraft:crafter",
+  Identifier("minecraft", "crafter"),
+  Identifier("minecraft", "crafter"),
   [
     Bool("crafting", False),
     Enum(
       "orientation",
       [
-        "down_east", "down_north", "down_south", "down_west", "up_east",
-        "up_north", "up_south", "up_west", "west_up", "east_up", "north_up",
+        "down_east",
+        "down_north",
+        "down_south",
+        "down_west",
+        "up_east",
+        "up_north",
+        "up_south",
+        "up_west",
+        "west_up",
+        "east_up",
+        "north_up",
         "south_up",
       ],
       "north_up",
@@ -8078,15 +8643,19 @@ pub const crafter = Block(
 )
 
 pub const trial_spawner = Block(
-  "minecraft:trial_spawner",
-  "minecraft:trial_spawner",
+  Identifier("minecraft", "trial_spawner"),
+  Identifier("minecraft", "trial_spawner"),
   [
     Bool("ominous", False),
     Enum(
       "trial_spawner_state",
       [
-        "inactive", "waiting_for_players", "active",
-        "waiting_for_reward_ejection", "ejecting_reward", "cooldown",
+        "inactive",
+        "waiting_for_players",
+        "active",
+        "waiting_for_reward_ejection",
+        "ejecting_reward",
+        "cooldown",
       ],
       "inactive",
     ),
@@ -8094,8 +8663,8 @@ pub const trial_spawner = Block(
 )
 
 pub const vault = Block(
-  "minecraft:vault",
-  "minecraft:vault",
+  Identifier("minecraft", "vault"),
+  Identifier("minecraft", "vault"),
   [
     Enum("facing", ["north", "south", "west", "east"], "north"),
     Bool("ominous", False),
@@ -8108,20 +8677,20 @@ pub const vault = Block(
 )
 
 pub const heavy_core = Block(
-  "minecraft:heavy_core",
-  "minecraft:heavy_core",
+  Identifier("minecraft", "heavy_core"),
+  Identifier("minecraft", "heavy_core"),
   [Bool("waterlogged", False)],
 )
 
 pub const pale_moss_block = Block(
-  "minecraft:pale_moss_block",
-  "minecraft:bonemealable_feature_placer",
+  Identifier("minecraft", "pale_moss_block"),
+  Identifier("minecraft", "bonemealable_feature_placer"),
   [],
 )
 
 pub const pale_moss_carpet = Block(
-  "minecraft:pale_moss_carpet",
-  "minecraft:mossy_carpet",
+  Identifier("minecraft", "pale_moss_carpet"),
+  Identifier("minecraft", "mossy_carpet"),
   [
     Bool("bottom", True),
     Enum("east", ["none", "low", "tall"], "none"),
@@ -8132,31 +8701,31 @@ pub const pale_moss_carpet = Block(
 )
 
 pub const pale_hanging_moss = Block(
-  "minecraft:pale_hanging_moss",
-  "minecraft:hanging_moss",
+  Identifier("minecraft", "pale_hanging_moss"),
+  Identifier("minecraft", "hanging_moss"),
   [Bool("tip", True)],
 )
 
 pub const open_eyeblossom = Block(
-  "minecraft:open_eyeblossom",
-  "minecraft:eyeblossom",
+  Identifier("minecraft", "open_eyeblossom"),
+  Identifier("minecraft", "eyeblossom"),
   [],
 )
 
 pub const closed_eyeblossom = Block(
-  "minecraft:closed_eyeblossom",
-  "minecraft:eyeblossom",
+  Identifier("minecraft", "closed_eyeblossom"),
+  Identifier("minecraft", "eyeblossom"),
   [],
 )
 
 pub const potted_open_eyeblossom = Block(
-  "minecraft:potted_open_eyeblossom",
-  "minecraft:flower_pot",
+  Identifier("minecraft", "potted_open_eyeblossom"),
+  Identifier("minecraft", "flower_pot"),
   [],
 )
 
 pub const potted_closed_eyeblossom = Block(
-  "minecraft:potted_closed_eyeblossom",
-  "minecraft:flower_pot",
+  Identifier("minecraft", "potted_closed_eyeblossom"),
+  Identifier("minecraft", "flower_pot"),
   [],
 )

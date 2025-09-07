@@ -29,9 +29,7 @@ pub fn generate(version: version_number.VersionNumber) {
 
   io.println("Generating blocks")
   let assert Ok(block_registry) =
-    list.find(registries, fn(registry) {
-      registry.identifier == "minecraft:block"
-    })
+    list.find(registries, fn(registry) { registry.identifier.path == "block" })
   let blocks = decode_blocks(block_registry, relative_data_path)
   let _ = generate_blocks(blocks, module_path)
 
