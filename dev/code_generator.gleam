@@ -11,9 +11,10 @@ import gleam/json
 import gleam/list
 import gleam/result
 import simplifile
+import unzip
 
-pub fn generate(version: version_number.VersionNumber) {
-  let module_name = version_number.to_module_name(version)
+pub fn generate(version_number: version_number.VersionNumber) {
+  let module_name = version_number.to_module_name(version_number)
   let module_path = "datamine/version/" <> module_name
   let relative_code_path = "./src/" <> module_path
   let relative_data_path = "./tmp/" <> module_name
@@ -38,7 +39,15 @@ pub fn generate(version: version_number.VersionNumber) {
   let _ = generate_packets(packets, module_path)
 
   io.println("Generating version entry file")
-  let _ = generate_version(version, registries, blocks, module_path)
+  let version = decode_version(relative_data_path)
+  let _ =
+    generate_version(
+      version_number,
+      version.protocol_version,
+      registries,
+      blocks,
+      module_path,
+    )
   Nil
 }
 
@@ -121,14 +130,28 @@ fn generate_packets(phases: List(protocol.Phase), module_path: String) {
   |> simplifile.write(protocol_path, _)
 }
 
+fn decode_version(relative_data_path: String) {
+  case unzip.extract(relative_data_path <> "/server.jar", "version.json") {
+    Ok(json_string) -> {
+      let assert Ok(version) = json.parse(json_string, version.decoder())
+      version
+    }
+    _ -> {
+      io.println_error("Unable to extract protocol version number")
+      version.DecodedVersion(0)
+    }
+  }
+}
+
 fn generate_version(
   version: version_number.VersionNumber,
+  protocol_version: Int,
   registries: List(registry.Registry),
   blocks: List(block.Block),
   module_path: String,
 ) {
   let relative_path = "./src/" <> module_path <> ".gleam"
   use _ <- result.try(simplifile.create_file(relative_path))
-  version.generate(version, registries, blocks, module_path)
+  version.generate(version, protocol_version, registries, blocks, module_path)
   |> simplifile.write(relative_path, _)
 }

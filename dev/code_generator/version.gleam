@@ -4,11 +4,23 @@ import datamine/common/identifier
 import datamine/common/registry
 import datamine/common/version_number
 import glam/doc
+import gleam/dynamic/decode
+import gleam/int
 import gleam/list
 import gleam/string
 
+pub type DecodedVersion {
+  DecodedVersion(protocol_version: Int)
+}
+
+pub fn decoder() {
+  use protocol_version <- decode.field("protocol_version", decode.int)
+  decode.success(DecodedVersion(protocol_version:))
+}
+
 pub fn generate(
   version: version_number.VersionNumber,
+  protocol_version: Int,
   registries: List(registry.Registry),
   blocks: List(block.Block),
   module_path: String,
@@ -32,7 +44,11 @@ pub fn generate(
           <> version_number.to_string(version) |> string.replace(".", ", ")
           <> ")",
         ),
-        doc.from_string("protocol: common.Protocol(0, protocol.phases)"),
+        doc.from_string(
+          "protocol: common.Protocol("
+          <> int.to_string(protocol_version)
+          <> ", protocol.phases)",
+        ),
         doc.from_string("registries: ")
           |> doc.append(
             code.list_doc(
